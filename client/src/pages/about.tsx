@@ -11,6 +11,7 @@ import { useTheme } from "@/components/theme-provider";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
+import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_1770693543975.png";
 
 export default function AboutPage() {
   const { theme, toggleTheme } = useTheme();
@@ -58,13 +59,12 @@ export default function AboutPage() {
         >
           <Card className="p-5">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10">
-                <svg viewBox="0 0 32 32" className="h-6 w-6 text-primary" fill="currentColor">
-                  <path d="M16 2L14 8H8L13 12L11 18L16 14L21 18L19 12L24 8H18L16 2Z" />
-                  <rect x="14.5" y="14" width="3" height="14" rx="1" />
-                  <rect x="10" y="18" width="12" height="3" rx="1" />
-                </svg>
-              </div>
+              <img
+                src={logoPath}
+                alt="Decoded Faith Empire"
+                className="h-12 w-auto object-contain"
+                data-testid="img-about-logo"
+              />
               <div>
                 <h2 className="font-serif text-lg font-bold text-foreground">
                   Decoded Faith Empire
