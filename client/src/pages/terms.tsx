@@ -72,6 +72,13 @@ export default function TermsPage() {
             </section>
 
             <section>
+              <h2 className="font-semibold text-foreground mb-1">Premium Subscription (Coming Soon)</h2>
+              <p>
+                Decoded Faith Empire may offer a premium subscription service in the future. When available, premium subscriptions will be offered as auto-renewable subscriptions through the Apple App Store. Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase. Any unused portion of a free trial period, if offered, will be forfeited when you purchase a subscription. All subscription terms, pricing, and features will be clearly disclosed before purchase.
+              </p>
+            </section>
+
+            <section>
               <h2 className="font-semibold text-foreground mb-1">Intellectual Property</h2>
               <p>
                 The Decoded Faith Empire name, logo, decoded message content, and App design are the property of Decoded Faith Empire. All rights not explicitly granted in these terms are reserved. The King James Version Bible text is in the public domain.

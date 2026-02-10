@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Lock } from "lucide-react";
 import { SiTiktok, SiInstagram } from "react-icons/si";
 import { Link } from "wouter";
 import { useTheme } from "@/components/theme-provider";
@@ -114,6 +114,47 @@ export default function AboutPage() {
               </a>
               , rewritten sentence-by-sentence into today's language so scripture finally makes sense.
             </p>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.05 }}
+        >
+          <Card className="relative overflow-visible border-primary/30 p-5">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15">
+                <Crown className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
+                  Faith Empire Premium
+                </h3>
+                <p className="text-xs text-primary font-medium">Coming Soon</p>
+              </div>
+            </div>
+            <p className="text-sm leading-relaxed text-muted-foreground mb-3">
+              Unlock the full Faith Empire experience with exclusive premium features designed to deepen your daily walk.
+            </p>
+            <div className="flex flex-col gap-2 mb-4">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <Lock className="h-3.5 w-3.5 text-primary/70" />
+                <span>Expanded verse library with deeper commentary</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <Lock className="h-3.5 w-3.5 text-primary/70" />
+                <span>Personalized daily devotional plans</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <Lock className="h-3.5 w-3.5 text-primary/70" />
+                <span>Ad-free experience with priority support</span>
+              </div>
+            </div>
+            <Button disabled className="w-full gap-2 opacity-60" data-testid="button-premium-coming-soon">
+              <Crown className="h-4 w-4" />
+              Coming Soon
+            </Button>
           </Card>
         </motion.div>
 

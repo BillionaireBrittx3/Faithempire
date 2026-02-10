@@ -42,7 +42,7 @@ export default function Home() {
   const todayFormatted = format(new Date(), "MMMM d, yyyy");
 
   return (
-    <div className="flex min-h-[calc(100vh-7rem)] flex-col items-center justify-center pb-8">
+    <div className="flex min-h-[calc(100vh-7rem)] flex-col items-center pb-8">
       {isLoading && <TodaySkeleton />}
 
       {error && (
