@@ -97,5 +97,23 @@ export async function registerRoutes(
     }
   });
 
+  app.post("/api/unsubscribe", async (req, res) => {
+    try {
+      const { email } = req.body;
+      if (!email || typeof email !== "string" || !email.includes("@")) {
+        return res.status(400).json({ message: "Valid email is required" });
+      }
+
+      const deleted = await storage.deleteSubscriberByEmail(email);
+      if (!deleted) {
+        return res.status(404).json({ message: "Email not found in our records" });
+      }
+
+      res.json({ message: "Successfully unsubscribed and data deleted" });
+    } catch (err) {
+      res.status(500).json({ message: "Failed to unsubscribe" });
+    }
+  });
+
   return httpServer;
 }

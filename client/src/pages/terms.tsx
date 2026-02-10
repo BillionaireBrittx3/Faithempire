@@ -28,7 +28,7 @@ export default function TermsPage() {
             Last updated: February 10, 2026
           </p>
 
-          <div className="flex flex-col gap-4 text-sm leading-relaxed text-muted-foreground">
+          <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground">
             <section>
               <h2 className="font-semibold text-foreground mb-1">Acceptance of Terms</h2>
               <p>
@@ -39,63 +39,89 @@ export default function TermsPage() {
             <section>
               <h2 className="font-semibold text-foreground mb-1">Description of Service</h2>
               <p>
-                Decoded Faith Empire provides daily Bible verses from the King James Version (KJV) along with plain-language motivational messages ("decoded messages"). The App is designed for personal, non-commercial use to encourage daily faith and spiritual growth.
+                Decoded Faith Empire provides daily Bible verses from the King James Version (KJV) along with plain-language motivational messages ("decoded messages"). The App is designed for personal, non-commercial use to encourage daily faith and spiritual growth. The App is free to use and does not require an account or login.
               </p>
             </section>
 
             <section>
-              <h2 className="font-semibold text-foreground mb-1">Content</h2>
+              <h2 className="font-semibold text-foreground mb-1">No Account Required</h2>
               <p>
-                All Bible verses included in this App are from the King James Version, which is in the public domain. The decoded messages and motivational interpretations are original content created by Decoded Faith Empire and are protected by copyright. You may share individual verses and decoded messages for personal, non-commercial purposes.
+                The Decoded Faith Empire App is fully functional without creating an account or providing any personal information. All features, including viewing daily verses, browsing the archive, and saving favorites, are available without signing up. The optional email newsletter subscription is the only feature that requires providing an email address.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-semibold text-foreground mb-1">Content and Copyright</h2>
+              <p>
+                All Bible verses included in this App are from the King James Version (KJV), which is in the public domain and freely available for use. The decoded messages and motivational interpretations are original content created by Decoded Faith Empire and are protected by copyright. You may share individual verses and decoded messages for personal, non-commercial purposes with proper attribution.
               </p>
             </section>
 
             <section>
               <h2 className="font-semibold text-foreground mb-1">User Conduct</h2>
               <p>
-                You agree to use the App only for lawful purposes and in a manner that does not infringe upon the rights of others. You may not reproduce, distribute, or create derivative works from the App's decoded message content without written permission from Decoded Faith Empire.
+                You agree to use the App only for lawful purposes and in a manner that does not infringe upon the rights of others. You may not reproduce, distribute, modify, or create derivative works from the App's decoded message content without written permission from Decoded Faith Empire.
               </p>
             </section>
 
             <section>
               <h2 className="font-semibold text-foreground mb-1">Newsletter Subscription</h2>
               <p>
-                If you choose to subscribe to our daily verse newsletter, you consent to receiving daily emails containing Bible verses and decoded messages. You may unsubscribe at any time by contacting support@decodedfaithempire.org.
+                If you choose to subscribe to our daily verse newsletter, you consent to receiving daily emails containing Bible verses and decoded messages. This subscription is entirely optional and does not affect App functionality. You may unsubscribe at any time by contacting support@decodedfaithempire.org or using the unsubscribe feature in the App. Upon unsubscribing, your email address will be removed from our records.
               </p>
             </section>
 
             <section>
               <h2 className="font-semibold text-foreground mb-1">Intellectual Property</h2>
               <p>
-                The Decoded Faith Empire name, logo, and all original decoded message content are the property of Decoded Faith Empire. The App's design, layout, and user interface are also proprietary. All rights not explicitly granted herein are reserved.
+                The Decoded Faith Empire name, logo, decoded message content, and App design are the property of Decoded Faith Empire. All rights not explicitly granted in these terms are reserved. The King James Version Bible text is in the public domain.
               </p>
             </section>
 
             <section>
               <h2 className="font-semibold text-foreground mb-1">Disclaimer</h2>
               <p>
-                The App is provided "as is" without warranties of any kind, either express or implied. Decoded Faith Empire does not guarantee uninterrupted or error-free operation of the App. The spiritual content is intended for encouragement and personal reflection and should not be considered a substitute for professional counseling or advice.
+                The App is provided "as is" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. Decoded Faith Empire does not guarantee uninterrupted or error-free operation of the App. The spiritual content is intended for encouragement and personal reflection and should not be considered a substitute for professional counseling, medical, or legal advice.
               </p>
             </section>
 
             <section>
               <h2 className="font-semibold text-foreground mb-1">Limitation of Liability</h2>
               <p>
-                In no event shall Decoded Faith Empire be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of the App.
+                To the maximum extent permitted by applicable law, in no event shall Decoded Faith Empire or its owners, employees, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use of, or inability to use, the App.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-semibold text-foreground mb-1">Age Restrictions</h2>
+              <p>
+                The Decoded Faith Empire App is suitable for users of all ages. App content consists solely of Bible verses (public domain) and faith-based motivational messages. The App does not contain objectionable content, violence, gambling, or mature themes. The optional email subscription requires a valid email address and the ability to provide consent.
               </p>
             </section>
 
             <section>
               <h2 className="font-semibold text-foreground mb-1">Changes to Terms</h2>
               <p>
-                We reserve the right to modify these Terms of Use at any time. Changes will be posted within the App. Your continued use of the App after such changes constitutes acceptance of the modified terms.
+                We reserve the right to modify these Terms of Use at any time. Changes will be reflected within the App with an updated revision date. Your continued use of the App after such changes constitutes acceptance of the modified terms.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-semibold text-foreground mb-1">Governing Law</h2>
+              <p>
+                These Terms of Use shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.
               </p>
             </section>
 
             <section>
               <h2 className="font-semibold text-foreground mb-1">Contact</h2>
               <p>
-                For questions about these Terms of Use, please contact us at support@decodedfaithempire.org or visit decodedfaithempire.org.
+                For questions about these Terms of Use, please contact us at:
+              </p>
+              <p className="mt-1 text-foreground">
+                Decoded Faith Empire<br />
+                Email: support@decodedfaithempire.org<br />
+                Website: decodedfaithempire.org
               </p>
             </section>
           </div>

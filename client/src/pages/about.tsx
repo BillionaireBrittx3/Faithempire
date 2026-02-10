@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus } from "lucide-react";
 import { SiTiktok, SiInstagram } from "react-icons/si";
 import { Link } from "wouter";
 import { useTheme } from "@/components/theme-provider";
@@ -19,6 +19,32 @@ export default function AboutPage() {
   const { toast } = useToast();
   const [email, setEmail] = useState("");
   const [subscribing, setSubscribing] = useState(false);
+  const [unsubEmail, setUnsubEmail] = useState("");
+  const [unsubscribing, setUnsubscribing] = useState(false);
+
+  const handleUnsubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!unsubEmail) return;
+    setUnsubscribing(true);
+    try {
+      await apiRequest("POST", "/api/unsubscribe", { email: unsubEmail });
+      toast({
+        title: "Unsubscribed",
+        description: "Your email has been removed from our records",
+      });
+      setUnsubEmail("");
+    } catch (err: any) {
+      toast({
+        title: "Couldn't unsubscribe",
+        description: err.message?.includes("404")
+          ? "Email not found in our records"
+          : "Please try again later",
+        variant: "destructive",
+      });
+    } finally {
+      setUnsubscribing(false);
+    }
+  };
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,7 +89,7 @@ export default function AboutPage() {
               <img
                 src={logoPath}
                 alt="Decoded Faith Empire"
-                className="h-28 w-auto object-contain"
+                className="h-36 w-auto object-contain"
                 data-testid="img-about-logo"
               />
               <div className="text-center">
@@ -127,7 +153,41 @@ export default function AboutPage() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.15 }}
+        >
+          <Card className="p-5">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">
+              Unsubscribe & Delete Data
+            </h3>
+            <p className="mb-4 text-xs text-muted-foreground">
+              Enter your email to unsubscribe and permanently remove your data from our records
+            </p>
+            <form onSubmit={handleUnsubscribe} className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="your@email.com"
+                value={unsubEmail}
+                onChange={(e) => setUnsubEmail(e.target.value)}
+                required
+                data-testid="input-unsubscribe-email"
+              />
+              <Button
+                type="submit"
+                variant="outline"
+                disabled={unsubscribing}
+                data-testid="button-unsubscribe"
+              >
+                <UserMinus className="mr-1.5 h-4 w-4" />
+                {unsubscribing ? "..." : "Remove"}
+              </Button>
+            </form>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.25 }}
         >
           <Card className="p-5">
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">

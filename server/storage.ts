@@ -15,6 +15,7 @@ export interface IStorage {
   getVerseCount(): Promise<number>;
   createSubscriber(sub: InsertSubscriber): Promise<Subscriber>;
   getSubscriberByEmail(email: string): Promise<Subscriber | undefined>;
+  deleteSubscriberByEmail(email: string): Promise<boolean>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -55,6 +56,11 @@ export class DatabaseStorage implements IStorage {
   async getSubscriberByEmail(email: string): Promise<Subscriber | undefined> {
     const [sub] = await db.select().from(subscribers).where(eq(subscribers.email, email));
     return sub;
+  }
+
+  async deleteSubscriberByEmail(email: string): Promise<boolean> {
+    const result = await db.delete(subscribers).where(eq(subscribers.email, email)).returning();
+    return result.length > 0;
   }
 }
 
