@@ -5,8 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight } from "lucide-react";
 import { SiTiktok, SiInstagram } from "react-icons/si";
+import { Link } from "wouter";
 import { useTheme } from "@/components/theme-provider";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -58,17 +59,14 @@ export default function AboutPage() {
           transition={{ duration: 0.4 }}
         >
           <Card className="p-5">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col items-center gap-3">
               <img
                 src={logoPath}
                 alt="Decoded Faith Empire"
-                className="h-16 w-auto object-contain"
+                className="h-28 w-auto object-contain"
                 data-testid="img-about-logo"
               />
-              <div>
-                <h2 className="font-serif text-lg font-bold text-foreground">
-                  Decoded Faith Empire
-                </h2>
+              <div className="text-center">
                 <p className="text-xs text-muted-foreground">
                   Understanding the Bible in Plain Language
                 </p>
@@ -204,20 +202,31 @@ export default function AboutPage() {
           transition={{ duration: 0.4, delay: 0.4 }}
         >
           <Card className="p-5">
-            <div className="flex items-center gap-2 mb-3">
-              <Shield className="h-4 w-4 text-primary" />
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                Privacy Policy
-              </h3>
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">
+              Legal
+            </h3>
+            <div className="flex flex-col gap-1">
+              <Link href="/privacy">
+                <button
+                  className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                  data-testid="link-privacy-policy"
+                >
+                  <Shield className="h-4 w-4 text-primary" />
+                  <span>Privacy Policy</span>
+                  <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                </button>
+              </Link>
+              <Link href="/terms">
+                <button
+                  className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                  data-testid="link-terms"
+                >
+                  <FileText className="h-4 w-4 text-primary" />
+                  <span>Terms of Use</span>
+                  <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                </button>
+              </Link>
             </div>
-            <p className="text-xs leading-relaxed text-muted-foreground" data-testid="text-privacy-policy">
-              Faith Empire respects your privacy. We do not collect personal data 
-              beyond what you voluntarily provide (email for newsletter subscription). 
-              Favorites are stored locally on your device. We do not sell or share your 
-              information with third parties. If you subscribe, you can unsubscribe at 
-              any time by contacting us at support@decodedfaithempire.org. For questions, 
-              visit decodedfaithempire.org.
-            </p>
           </Card>
         </motion.div>
 

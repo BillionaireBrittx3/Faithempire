@@ -11,6 +11,8 @@ import Home from "@/pages/home";
 import ArchivePage from "@/pages/archive";
 import FavoritesPage from "@/pages/favorites";
 import AboutPage from "@/pages/about";
+import PrivacyPage from "@/pages/privacy";
+import TermsPage from "@/pages/terms";
 
 function Router() {
   return (
@@ -19,6 +21,8 @@ function Router() {
       <Route path="/archive" component={ArchivePage} />
       <Route path="/favorites" component={FavoritesPage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/privacy" component={PrivacyPage} />
+      <Route path="/terms" component={TermsPage} />
       <Route component={NotFound} />
     </Switch>
   );
