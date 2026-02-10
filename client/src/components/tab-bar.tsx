@@ -1,9 +1,10 @@
 import { useLocation, Link } from "wouter";
-import { BookOpen, Archive, Heart, Info } from "lucide-react";
+import { BookOpen, Archive, Heart, Info, Headphones } from "lucide-react";
 
 const tabs = [
   { path: "/", label: "Today", icon: BookOpen },
   { path: "/archive", label: "Archive", icon: Archive },
+  { path: "/podcast", label: "Podcast", icon: Headphones },
   { path: "/favorites", label: "Saved", icon: Heart },
   { path: "/about", label: "More", icon: Info },
 ];

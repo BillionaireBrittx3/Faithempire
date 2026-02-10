@@ -134,5 +134,64 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/podcast/episodes", async (_req, res) => {
+    try {
+      const response = await fetch("https://anchor.fm/s/10ee7543c/podcast/rss");
+      if (!response.ok) {
+        return res.status(502).json({ message: "Failed to fetch podcast feed" });
+      }
+      const xml = await response.text();
+
+      const episodes: Array<{
+        title: string;
+        description: string;
+        audioUrl: string;
+        pubDate: string;
+        duration: string;
+        episodeNumber: number | null;
+        link: string;
+      }> = [];
+
+      const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+      let match;
+      while ((match = itemRegex.exec(xml)) !== null) {
+        const item = match[1];
+        const getTag = (tag: string) => {
+          const m = item.match(new RegExp(`<${tag}[^>]*>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`));
+          return m ? m[1].trim() : "";
+        };
+        const getAttr = (tag: string, attr: string) => {
+          const m = item.match(new RegExp(`<${tag}[^>]*${attr}="([^"]*)"[^>]*/?>`, "i"));
+          return m ? m[1] : "";
+        };
+
+        const title = getTag("title");
+        const descRaw = getTag("description");
+        const description = descRaw.replace(/<[^>]+>/g, "").substring(0, 300);
+        const audioUrl = getAttr("enclosure", "url");
+        const pubDate = getTag("pubDate");
+        const duration = getTag("itunes:duration");
+        const epNum = getTag("itunes:episode");
+        const link = getTag("link");
+
+        if (audioUrl) {
+          episodes.push({
+            title,
+            description: description + (descRaw.length > 300 ? "..." : ""),
+            audioUrl,
+            pubDate,
+            duration,
+            episodeNumber: epNum ? parseInt(epNum) : null,
+            link,
+          });
+        }
+      }
+
+      res.json(episodes);
+    } catch (err) {
+      res.status(500).json({ message: "Failed to load podcast episodes" });
+    }
+  });
+
   return httpServer;
 }

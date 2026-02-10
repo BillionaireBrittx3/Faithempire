@@ -11,6 +11,7 @@ import Home from "@/pages/home";
 import ArchivePage from "@/pages/archive";
 import FavoritesPage from "@/pages/favorites";
 import AboutPage from "@/pages/about";
+import PodcastPage from "@/pages/podcast";
 import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
 
@@ -19,6 +20,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/archive" component={ArchivePage} />
+      <Route path="/podcast" component={PodcastPage} />
       <Route path="/favorites" component={FavoritesPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/privacy" component={PrivacyPage} />
