@@ -1,38 +1,61 @@
-import { type User, type InsertUser } from "@shared/schema";
-import { randomUUID } from "crypto";
-
-// modify the interface with any CRUD methods
-// you might need
+import {
+  type Verse, type InsertVerse,
+  type Subscriber, type InsertSubscriber,
+  verses, subscribers,
+} from "@shared/schema";
+import { db } from "./db";
+import { eq, desc, gte, lte, and, count, sql } from "drizzle-orm";
 
 export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+  getVerseByNumber(verseNumber: number): Promise<Verse | undefined>;
+  getVersesByRange(start: number, end: number): Promise<Verse[]>;
+  getAllVerses(): Promise<Verse[]>;
+  getVersesByCategory(category: string): Promise<Verse[]>;
+  insertVerse(verse: InsertVerse): Promise<Verse>;
+  getVerseCount(): Promise<number>;
+  createSubscriber(sub: InsertSubscriber): Promise<Subscriber>;
+  getSubscriberByEmail(email: string): Promise<Subscriber | undefined>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-
-  constructor() {
-    this.users = new Map();
+export class DatabaseStorage implements IStorage {
+  async getVerseByNumber(verseNumber: number): Promise<Verse | undefined> {
+    const [verse] = await db.select().from(verses).where(eq(verses.verseNumber, verseNumber));
+    return verse;
   }
 
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
-  }
-
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
+  async getVersesByRange(start: number, end: number): Promise<Verse[]> {
+    return db.select().from(verses).where(
+      and(gte(verses.verseNumber, start), lte(verses.verseNumber, end))
     );
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
+  async getAllVerses(): Promise<Verse[]> {
+    return db.select().from(verses).orderBy(verses.verseNumber);
+  }
+
+  async getVersesByCategory(category: string): Promise<Verse[]> {
+    return db.select().from(verses).where(eq(verses.category, category));
+  }
+
+  async insertVerse(verse: InsertVerse): Promise<Verse> {
+    const [created] = await db.insert(verses).values(verse).returning();
+    return created;
+  }
+
+  async getVerseCount(): Promise<number> {
+    const [result] = await db.select({ value: count() }).from(verses);
+    return result.value;
+  }
+
+  async createSubscriber(sub: InsertSubscriber): Promise<Subscriber> {
+    const [created] = await db.insert(subscribers).values(sub).returning();
+    return created;
+  }
+
+  async getSubscriberByEmail(email: string): Promise<Subscriber | undefined> {
+    const [sub] = await db.select().from(subscribers).where(eq(subscribers.email, email));
+    return sub;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

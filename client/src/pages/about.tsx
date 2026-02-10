@@ -1,0 +1,220 @@
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
+import { Switch } from "@/components/ui/switch";
+import { ExternalLink, Mail, Globe, Shield } from "lucide-react";
+import { SiTiktok, SiInstagram } from "react-icons/si";
+import { useTheme } from "@/components/theme-provider";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import { motion } from "framer-motion";
+
+export default function AboutPage() {
+  const { theme, toggleTheme } = useTheme();
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [subscribing, setSubscribing] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setSubscribing(true);
+    try {
+      await apiRequest("POST", "/api/subscribe", { email });
+      toast({
+        title: "Subscribed",
+        description: "You'll receive daily verses in your inbox",
+      });
+      setEmail("");
+    } catch (err: any) {
+      toast({
+        title: "Couldn't subscribe",
+        description: err.message?.includes("409")
+          ? "This email is already subscribed"
+          : "Please try again later",
+        variant: "destructive",
+      });
+    } finally {
+      setSubscribing(false);
+    }
+  };
+
+  return (
+    <div className="pb-20">
+      <div className="px-4 pt-5 pb-3">
+        <h1 className="font-serif text-2xl font-bold text-foreground" data-testid="text-about-title">
+          About
+        </h1>
+      </div>
+
+      <div className="flex flex-col gap-4 px-4 py-2">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Card className="p-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10">
+                <svg viewBox="0 0 32 32" className="h-6 w-6 text-primary" fill="currentColor">
+                  <path d="M16 2L14 8H8L13 12L11 18L16 14L21 18L19 12L24 8H18L16 2Z" />
+                  <rect x="14.5" y="14" width="3" height="14" rx="1" />
+                  <rect x="10" y="18" width="12" height="3" rx="1" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="font-serif text-lg font-bold text-foreground">
+                  Decoded Faith Empire
+                </h2>
+                <p className="text-xs text-muted-foreground">
+                  Understanding the Bible in Plain Language
+                </p>
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground" data-testid="text-mission">
+              Faith Empire delivers a fresh Bible verse and a plain-language
+              motivational message every single day. No church jargon. No fluff.
+              Just truth, decoded for everyday people who want scripture that
+              speaks to real life.
+            </p>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
+          <Card className="p-5">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">
+              Subscribe for Daily Verses
+            </h3>
+            <p className="mb-4 text-xs text-muted-foreground">
+              Get today's decoded verse delivered to your inbox every morning
+            </p>
+            <form onSubmit={handleSubscribe} className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                data-testid="input-email"
+              />
+              <Button
+                type="submit"
+                disabled={subscribing}
+                data-testid="button-subscribe"
+              >
+                <Mail className="mr-1.5 h-4 w-4" />
+                {subscribing ? "..." : "Join"}
+              </Button>
+            </form>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+        >
+          <Card className="p-5">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">
+              Connect
+            </h3>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://decodedfaithempire.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                data-testid="link-website"
+              >
+                <Globe className="h-4 w-4 text-primary" />
+                <span>decodedfaithempire.org</span>
+                <ExternalLink className="ml-auto h-3 w-3 text-muted-foreground" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@decodedfaithempire"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                data-testid="link-tiktok"
+              >
+                <SiTiktok className="h-4 w-4 text-primary" />
+                <span>TikTok</span>
+                <ExternalLink className="ml-auto h-3 w-3 text-muted-foreground" />
+              </a>
+              <a
+                href="https://www.instagram.com/decodedfaithempire"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                data-testid="link-instagram"
+              >
+                <SiInstagram className="h-4 w-4 text-primary" />
+                <span>Instagram</span>
+                <ExternalLink className="ml-auto h-3 w-3 text-muted-foreground" />
+              </a>
+            </div>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+        >
+          <Card className="p-5">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">
+              Settings
+            </h3>
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <div className="flex items-center gap-2">
+                <Label htmlFor="dark-mode" className="text-sm text-foreground">
+                  Dark Mode
+                </Label>
+              </div>
+              <Switch
+                id="dark-mode"
+                checked={theme === "dark"}
+                onCheckedChange={toggleTheme}
+                data-testid="switch-dark-mode"
+              />
+            </div>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+        >
+          <Card className="p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <Shield className="h-4 w-4 text-primary" />
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
+                Privacy Policy
+              </h3>
+            </div>
+            <p className="text-xs leading-relaxed text-muted-foreground" data-testid="text-privacy-policy">
+              Faith Empire respects your privacy. We do not collect personal data 
+              beyond what you voluntarily provide (email for newsletter subscription). 
+              Favorites are stored locally on your device. We do not sell or share your 
+              information with third parties. If you subscribe, you can unsubscribe at 
+              any time by contacting us at support@decodedfaithempire.org. For questions, 
+              visit decodedfaithempire.org.
+            </p>
+          </Card>
+        </motion.div>
+
+        <p className="mt-2 text-center text-[10px] text-muted-foreground pb-4">
+          Faith Empire v1.0 &middot; decodedfaithempire.org
+        </p>
+      </div>
+    </div>
+  );
+}

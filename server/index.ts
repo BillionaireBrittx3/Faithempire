@@ -59,8 +59,20 @@ app.use((req, res, next) => {
   next();
 });
 
+import { seedVerses } from "./seed";
+
 (async () => {
+  const { pool } = await import("./db");
+  await pool.query("SELECT 1");
+  console.log("Database connected successfully");
+
   await registerRoutes(httpServer, app);
+
+  try {
+    await seedVerses();
+  } catch (err) {
+    console.error("Seed error:", err);
+  }
 
   app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
