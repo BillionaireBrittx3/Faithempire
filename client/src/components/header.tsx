@@ -2,12 +2,12 @@ import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_177069354397
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 flex items-center justify-center border-b border-border bg-background/95 backdrop-blur-md px-4 py-0 pt-[env(safe-area-inset-top)]">
+    <header className="sticky top-0 z-40 flex items-center justify-center bg-background/95 backdrop-blur-md px-4 pt-[env(safe-area-inset-top)]">
       <div className="flex items-center">
         <img
           src={logoPath}
           alt="Decoded Faith Empire"
-          className="h-28 w-auto object-contain"
+          className="h-28 w-auto object-contain -mb-4"
           data-testid="img-logo"
         />
       </div>

@@ -150,7 +150,7 @@ export function VerseCard({ verse, displayDate, showFullCard = true, onFavoriteC
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="w-full"
     >
-      <div className="flex flex-col items-center px-4 pt-2 pb-3 text-center" data-testid={`verse-card-${verse.id}`}>
+      <div className="flex flex-col items-center px-4 pt-0 pb-3 text-center" data-testid={`verse-card-${verse.id}`}>
         {displayDate && (
           <p className="mb-2 text-xs font-medium uppercase tracking-[0.3em] text-primary" data-testid="text-verse-date">
             {displayDate}
