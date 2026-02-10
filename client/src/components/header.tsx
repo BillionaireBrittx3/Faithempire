@@ -7,7 +7,7 @@ export function Header() {
         <img
           src={logoPath}
           alt="Decoded Faith Empire"
-          className="h-10 w-auto object-contain"
+          className="h-14 w-auto object-contain"
           data-testid="img-logo"
         />
       </div>

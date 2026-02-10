@@ -10,11 +10,22 @@ export async function registerRoutes(
 ): Promise<Server> {
   app.get("/api/verses/today", async (_req, res) => {
     try {
-      const startOfYear = new Date(new Date().getFullYear(), 0, 1);
-      const now = new Date();
-      const dayOfYear = Math.floor(
-        (now.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24)
-      ) + 1;
+      const formatter = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      });
+      const parts = formatter.formatToParts(new Date());
+      const year = parseInt(parts.find(p => p.type === "year")!.value);
+      const month = parseInt(parts.find(p => p.type === "month")!.value);
+      const day = parseInt(parts.find(p => p.type === "day")!.value);
+
+      const daysInMonth = [31, (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      let dayOfYear = day;
+      for (let i = 0; i < month - 1; i++) {
+        dayOfYear += daysInMonth[i];
+      }
 
       const totalVerses = await storage.getVerseCount();
       if (totalVerses === 0) {

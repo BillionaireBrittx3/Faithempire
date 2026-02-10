@@ -1,0 +1,18 @@
+{
+  "name": "Decoded Faith Empire",
+  "short_name": "Faith Empire",
+  "description": "Your daily faith reset. A fresh Bible verse and plain-language motivational message every day.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["lifestyle", "education"]
+}

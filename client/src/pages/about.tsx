@@ -62,7 +62,7 @@ export default function AboutPage() {
               <img
                 src={logoPath}
                 alt="Decoded Faith Empire"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
                 data-testid="img-about-logo"
               />
               <div>
@@ -75,10 +75,20 @@ export default function AboutPage() {
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground" data-testid="text-mission">
-              Faith Empire delivers a fresh Bible verse and a plain-language
-              motivational message every single day. No church jargon. No fluff.
-              Just truth, decoded for everyday people who want scripture that
-              speaks to real life.
+              Decoded Faith Empire is your daily faith reset. Each day you'll receive a Bible verse and a motivational message explained in a way that's clear, relatable, and easy to apply to real life.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Get your copy of <span className="font-semibold text-foreground">Breaking Down the Bible (KJV)</span> at{" "}
+              <a
+                href="https://decodedfaithempire.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline"
+                data-testid="link-book"
+              >
+                decodedfaithempire.org
+              </a>
+              , rewritten sentence-by-sentence into today's language so scripture finally makes sense.
             </p>
           </Card>
         </motion.div>
