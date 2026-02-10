@@ -115,5 +115,20 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/subscribers/export", async (_req, res) => {
+    try {
+      const subscribers = await storage.getAllSubscribers();
+      const header = "Email,Subscribed Date,Source\n";
+      const rows = subscribers.map(s =>
+        `"${s.email}","${s.subscribedAt ? new Date(s.subscribedAt).toISOString() : ""}","${s.source || "app"}"`
+      ).join("\n");
+      res.setHeader("Content-Type", "text/csv");
+      res.setHeader("Content-Disposition", "attachment; filename=faith-empire-subscribers.csv");
+      res.send(header + rows);
+    } catch (err) {
+      res.status(500).json({ message: "Failed to export subscribers" });
+    }
+  });
+
   return httpServer;
 }

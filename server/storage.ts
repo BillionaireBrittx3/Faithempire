@@ -16,6 +16,7 @@ export interface IStorage {
   createSubscriber(sub: InsertSubscriber): Promise<Subscriber>;
   getSubscriberByEmail(email: string): Promise<Subscriber | undefined>;
   deleteSubscriberByEmail(email: string): Promise<boolean>;
+  getAllSubscribers(): Promise<Subscriber[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -61,6 +62,10 @@ export class DatabaseStorage implements IStorage {
   async deleteSubscriberByEmail(email: string): Promise<boolean> {
     const result = await db.delete(subscribers).where(eq(subscribers.email, email)).returning();
     return result.length > 0;
+  }
+
+  async getAllSubscribers(): Promise<Subscriber[]> {
+    return db.select().from(subscribers).where(eq(subscribers.active, true)).orderBy(desc(subscribers.subscribedAt));
   }
 }
 
