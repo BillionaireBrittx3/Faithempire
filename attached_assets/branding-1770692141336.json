@@ -1,0 +1,154 @@
+{
+  "colorScheme": "dark",
+  "fonts": [
+    {
+      "family": "Inter",
+      "role": "body"
+    },
+    {
+      "family": "Playfair Display",
+      "role": "heading"
+    },
+    {
+      "family": "Georgia",
+      "role": "unknown"
+    }
+  ],
+  "colors": {
+    "primary": "#DFAC2A",
+    "accent": "#705615",
+    "background": "#000000",
+    "textPrimary": "#000000",
+    "link": "#705615"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Inter",
+      "heading": "Playfair Display"
+    },
+    "fontStacks": {
+      "heading": [
+        "Playfair Display",
+        "Georgia",
+        "serif"
+      ],
+      "body": [
+        "Inter",
+        "system-ui",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Inter",
+        "system-ui",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "72px",
+      "h2": "48px",
+      "body": "20px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {
+    "input": {
+      "background": "#000000",
+      "textColor": "#FFFFFF",
+      "borderColor": "#1F1F1F",
+      "borderRadius": "2px",
+      "borderRadiusCorners": {
+        "topLeft": "2px",
+        "topRight": "2px",
+        "bottomRight": "2px",
+        "bottomLeft": "2px"
+      },
+      "shadow": "none"
+    },
+    "buttonPrimary": {
+      "background": "#050505",
+      "textColor": "#DFAC2A",
+      "borderColor": "#DFAC2A",
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    },
+    "buttonSecondary": {
+      "background": "#000000",
+      "textColor": "#FFFFFF",
+      "borderColor": "#43340D",
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "https://decodedfaithempire.org/assets/header-logo-bSRi7vES.png",
+    "favicon": "https://storage.googleapis.com/gpt-engineer-file-uploads/um6Gw6Q0ZBMv7Gpe7XwsS23g6Tc2/uploads/1768543481261-minimal-luxury-faith-based-logo-on-a-sol_qt2dysaoT-qFDcOdvNAc-A_3rk6q9g0T-iu91_XW3AUWQ.png",
+    "ogImage": "https://storage.googleapis.com/gpt-engineer-file-uploads/um6Gw6Q0ZBMv7Gpe7XwsS23g6Tc2/social-images/social-1768543504609-minimal-luxury-faith-based-logo-on-a-sol_qt2dysaoT-qFDcOdvNAc-A_3rk6q9g0T-iu91_XW3AUWQ.png",
+    "logoHref": "File saved at: attached_assets/logoHref.html",
+    "logoAlt": "Decoded Faith Empire"
+  },
+  "__framework_hints": [],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the brand name 'Decoded Faith Empire'.",
+    "confidence": 0.95,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 0,
+      "text": "Join the Waitlist",
+      "reasoning": "Button #0 'Join the Waitlist' stands out with a distinct background color (#050505) and a vibrant text color (#DFAC2A), making it visually prominent and action-oriented."
+    },
+    "secondary": {
+      "index": 3,
+      "text": "Learn How It Works",
+      "reasoning": "Button #3 'Learn How It Works' has a different background color (#000000) and provides additional information, making it a suitable secondary action."
+    },
+    "confidence": 0.9
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "Individuals interested in religious education"
+  },
+  "designSystem": {
+    "framework": "tailwind",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.9,
+    "colors": 0.9,
+    "overall": 0.9
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the brand name 'Decoded Faith Empire'.",
+        "confidence": 0.95
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}
