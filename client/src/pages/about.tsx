@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
 import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown } from "lucide-react";
-import { SiTiktok, SiInstagram } from "react-icons/si";
+import { SiTiktok, SiInstagram, SiSpotify } from "react-icons/si";
 import { Link } from "wouter";
 import { useTheme } from "@/components/theme-provider";
 import { useToast } from "@/hooks/use-toast";
@@ -228,6 +228,17 @@ export default function AboutPage() {
               >
                 <Globe className="h-4 w-4 text-primary" />
                 <span>decodedfaithempire.org</span>
+                <ExternalLink className="ml-auto h-3 w-3 text-muted-foreground" />
+              </a>
+              <a
+                href="https://podcasters.spotify.com/pod/show/brittany-johnson4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                data-testid="link-podcast"
+              >
+                <SiSpotify className="h-4 w-4 text-primary" />
+                <span>Podcast</span>
                 <ExternalLink className="ml-auto h-3 w-3 text-muted-foreground" />
               </a>
               <a
