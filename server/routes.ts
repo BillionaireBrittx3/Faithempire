@@ -115,8 +115,12 @@ export async function registerRoutes(
     }
   });
 
-  app.get("/api/subscribers/export", async (_req, res) => {
+  app.get("/api/subscribers/export", async (req, res) => {
     try {
+      const adminKey = req.query.key;
+      if (!adminKey || adminKey !== process.env.ADMIN_EXPORT_KEY) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
       const subscribers = await storage.getAllSubscribers();
       const header = "Email,Subscribed Date,Source\n";
       const rows = subscribers.map(s =>

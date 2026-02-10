@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Lock } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown } from "lucide-react";
 import { SiTiktok, SiInstagram } from "react-icons/si";
 import { Link } from "wouter";
 import { useTheme } from "@/components/theme-provider";
@@ -129,32 +129,16 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                  Faith Empire Premium
+                  More Features on the Way
                 </h3>
-                <p className="text-xs text-primary font-medium">Coming Soon</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground mb-3">
-              Unlock the full Faith Empire experience with exclusive premium features designed to deepen your daily walk.
+              We're working on new ways to deepen your daily faith experience. Stay tuned for updates.
             </p>
-            <div className="flex flex-col gap-2 mb-4">
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <Lock className="h-3.5 w-3.5 text-primary/70" />
-                <span>Expanded verse library with deeper commentary</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <Lock className="h-3.5 w-3.5 text-primary/70" />
-                <span>Personalized daily devotional plans</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <Lock className="h-3.5 w-3.5 text-primary/70" />
-                <span>Ad-free experience with priority support</span>
-              </div>
-            </div>
-            <Button disabled className="w-full gap-2 opacity-60" data-testid="button-premium-coming-soon">
-              <Crown className="h-4 w-4" />
-              Coming Soon
-            </Button>
+            <p className="text-[10px] text-muted-foreground/60">
+              Future features may include optional premium content. Details and pricing will be announced when available.
+            </p>
           </Card>
         </motion.div>
 
