@@ -21,11 +21,13 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `/archive` - Browse all decoded verses with category filtering (accessible from More page)
 - `/favorites` - Saved verses + Bible highlights (two tabs, localStorage)
 - `/podcast` - Podcast episodes with in-app audio player
+- `/decoded` - Decoded Books landing page (lists all available decoded books)
 - `/decoded/genesis` - The Book of Genesis Decoded reader (50 chapters, KJV + modern translation + context)
 - `/about` - Brand info, subscribe, social links, settings, privacy, quick links
 
 ## Navigation (Bottom Tab Bar)
-- Today, Bible, Podcast, Saved, More
+- Today, Bible, Podcast, Decoded, More
+- Saved Verses & Highlights accessible from More page Quick Links
 
 ## API Endpoints
 - `GET /api/verses/today` - Returns today's verse (rotates by day of year)

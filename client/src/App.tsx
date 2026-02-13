@@ -15,6 +15,7 @@ import PodcastPage from "@/pages/podcast";
 import BiblePage from "@/pages/bible";
 import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
+import DecodedPage from "@/pages/decoded";
 import DecodedBookPage from "@/pages/decoded-book";
 
 function Router() {
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/privacy" component={PrivacyPage} />
       <Route path="/terms" component={TermsPage} />
       <Route path="/decoded/genesis" component={DecodedBookPage} />
+      <Route path="/decoded" component={DecodedPage} />
       <Route component={NotFound} />
     </Switch>
   );

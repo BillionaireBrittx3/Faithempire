@@ -1,11 +1,11 @@
 import { useLocation, Link } from "wouter";
-import { BookOpen, Book, Heart, Headphones, Menu } from "lucide-react";
+import { BookOpen, Book, Cross, Headphones, Menu } from "lucide-react";
 
 const tabs = [
   { path: "/", label: "Today", icon: BookOpen },
   { path: "/bible", label: "Bible", icon: Book },
   { path: "/podcast", label: "Podcast", icon: Headphones },
-  { path: "/favorites", label: "Saved", icon: Heart },
+  { path: "/decoded", label: "Decoded", icon: Cross },
   { path: "/about", label: "More", icon: Menu },
 ];
 
@@ -19,7 +19,13 @@ export function TabBar() {
     >
       <div className="mx-auto flex max-w-lg items-center justify-around gap-1 px-2 py-1 pb-[max(0.25rem,env(safe-area-inset-bottom))]">
         {tabs.map((tab) => {
-          const isActive = location === tab.path;
+          const moreSubPages = ["/about", "/favorites", "/archive", "/privacy", "/terms"];
+          const isActive =
+            tab.path === "/"
+              ? location === "/"
+              : tab.path === "/about"
+                ? moreSubPages.some((p) => location === p || location.startsWith(p + "/"))
+                : location.startsWith(tab.path);
           const Icon = tab.icon;
           return (
             <Link key={tab.path} href={tab.path}>
