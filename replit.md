@@ -4,6 +4,7 @@
 Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.org that delivers a fresh Bible verse and plain-language motivational message every day. Built with React + Express + PostgreSQL.
 
 ## Recent Changes
+- 2026-02-13: Added "The Book of Genesis Decoded" reader with 50 chapters, 1,533 verses. Each verse shows KJV text, modern decoded translation, and optional context. Tap-to-highlight with localStorage. Accessible via More page Quick Links.
 - 2026-02-13: Added KJV Bible reader with 66 books, chapter navigation, tap-to-highlight verses (localStorage). Reorganized tabs: Today, Bible, Podcast, Saved, More. Archive moved to More page. Saved page now has Favorites + Highlights tabs.
 - 2026-02-10: Initial MVP built with 100 seeded verses, 4 pages (Today, Archive, Favorites, About), bottom tab navigation, dark/light mode, email subscription
 
@@ -20,6 +21,7 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `/archive` - Browse all decoded verses with category filtering (accessible from More page)
 - `/favorites` - Saved verses + Bible highlights (two tabs, localStorage)
 - `/podcast` - Podcast episodes with in-app audio player
+- `/decoded/genesis` - The Book of Genesis Decoded reader (50 chapters, KJV + modern translation + context)
 - `/about` - Brand info, subscribe, social links, settings, privacy, quick links
 
 ## Navigation (Bottom Tab Bar)
@@ -30,6 +32,8 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `GET /api/verses/archive` - Returns all verses
 - `GET /api/verses/:id` - Returns verse by number
 - `GET /api/bible/:book/:chapter` - Proxies KJV Bible text from bible-api.com
+- `GET /api/decoded/genesis` - Returns decoded book summary (chapters list with titles, verse counts)
+- `GET /api/decoded/genesis/:chapter` - Returns chapter data with verses (kjv, decoded, context)
 - `POST /api/subscribe` - Email subscription
 
 ## Database Tables

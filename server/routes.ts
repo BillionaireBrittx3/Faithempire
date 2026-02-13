@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertSubscriberSchema } from "@shared/schema";
 import { z } from "zod";
+import genesisDecoded from "./data/genesis-decoded.json";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -167,6 +168,44 @@ export async function registerRoutes(
       });
     } catch (err) {
       res.status(500).json({ message: "Failed to load Bible chapter" });
+    }
+  });
+
+  app.get("/api/decoded/genesis", async (_req, res) => {
+    try {
+      const summary = {
+        title: genesisDecoded.title,
+        author: genesisDecoded.author,
+        description: genesisDecoded.description,
+        copyright: genesisDecoded.copyright,
+        totalChapters: genesisDecoded.totalChapters,
+        chapters: (genesisDecoded.chapters as any[]).map((ch) => ({
+          number: ch.number,
+          title: ch.title,
+          verseCount: ch.verses.length,
+        })),
+      };
+      res.json(summary);
+    } catch (err) {
+      res.status(500).json({ message: "Failed to load decoded book" });
+    }
+  });
+
+  app.get("/api/decoded/genesis/:chapter", async (req, res) => {
+    try {
+      const chapterNum = parseInt(req.params.chapter);
+      if (isNaN(chapterNum) || chapterNum < 1 || chapterNum > 50) {
+        return res.status(400).json({ message: "Invalid chapter number (1-50)" });
+      }
+      const chapter = (genesisDecoded.chapters as any[]).find(
+        (ch) => ch.number === chapterNum
+      );
+      if (!chapter) {
+        return res.status(404).json({ message: "Chapter not found" });
+      }
+      res.json(chapter);
+    } catch (err) {
+      res.status(500).json({ message: "Failed to load chapter" });
     }
   });
 

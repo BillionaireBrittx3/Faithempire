@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Archive } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Archive, BookMarked } from "lucide-react";
 import { SiTiktok, SiInstagram, SiSpotify } from "react-icons/si";
 import { Link } from "wouter";
 import { useTheme } from "@/components/theme-provider";
@@ -127,6 +127,16 @@ export default function AboutPage() {
               Quick Links
             </h3>
             <div className="flex flex-col gap-1">
+              <Link href="/decoded/genesis">
+                <button
+                  className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                  data-testid="link-decoded-genesis"
+                >
+                  <BookMarked className="h-4 w-4 text-primary" />
+                  <span>Genesis Decoded</span>
+                  <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                </button>
+              </Link>
               <Link href="/archive">
                 <button
                   className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
