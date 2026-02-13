@@ -43,3 +43,4 @@ waitForPort = 5000
 
 [userenv.shared]
 ADMIN_EXPORT_KEY = "fe-admin-export-2026"
+EXPO_TOKEN = "BEu7Jrw6lHa8z9prkDCOmDhSO-UjUxojNVpbXb0C"
