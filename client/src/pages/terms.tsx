@@ -25,7 +25,7 @@ export default function TermsPage() {
       <div className="flex flex-col gap-4 px-4 py-2">
         <Card className="p-5">
           <p className="text-xs text-muted-foreground mb-4">
-            Last updated: February 10, 2026
+            Last updated: February 13, 2026
           </p>
 
           <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground">
@@ -39,7 +39,7 @@ export default function TermsPage() {
             <section>
               <h2 className="font-semibold text-foreground mb-1">Description of Service</h2>
               <p>
-                Decoded Faith Empire provides daily Bible verses from the King James Version (KJV) along with plain-language motivational messages ("decoded messages"). The App is designed for personal, non-commercial use to encourage daily faith and spiritual growth. The App is free to use and does not require an account or login.
+                Decoded Faith Empire provides daily Bible verses from the King James Version (KJV) along with plain-language motivational messages ("decoded messages"). The App is designed for personal, non-commercial use to encourage daily faith and spiritual growth. The App does not require an account or login. Certain features may require an active subscription.
               </p>
             </section>
 
@@ -72,9 +72,27 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="font-semibold text-foreground mb-1">Future Features</h2>
+              <h2 className="font-semibold text-foreground mb-1">Subscriptions and In-App Purchases</h2>
+              <p className="mb-2">
+                The App may offer optional auto-renewing subscription plans ("Premium Subscription") that unlock additional content and features. The current subscription price is $9.99 USD per month, though pricing may vary by region and is subject to change.
+              </p>
+              <p className="mb-2">
+                <span className="text-foreground font-medium">Payment:</span> All payments are processed through Apple's In-App Purchase system. Payment will be charged to your Apple ID account at confirmation of purchase.
+              </p>
+              <p className="mb-2">
+                <span className="text-foreground font-medium">Auto-Renewal:</span> Your subscription will automatically renew at the end of each billing period (monthly) unless you cancel at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the same rate.
+              </p>
+              <p className="mb-2">
+                <span className="text-foreground font-medium">Managing and Cancelling:</span> You can manage or cancel your subscription at any time through your Apple ID Account Settings (Settings &gt; Apple ID &gt; Subscriptions). Cancellation takes effect at the end of the current billing period — you will retain access to premium features until that date. No refunds are provided for partial billing periods.
+              </p>
+              <p className="mb-2">
+                <span className="text-foreground font-medium">Free Trial:</span> If a free trial is offered, any unused portion of the free trial period will be forfeited when you purchase a subscription. You will not be charged during the free trial period.
+              </p>
+              <p className="mb-2">
+                <span className="text-foreground font-medium">Restore Purchases:</span> If you reinstall the App or switch devices, you can restore your active subscription by using the "Restore Purchases" feature within the App.
+              </p>
               <p>
-                Decoded Faith Empire may introduce additional features or optional premium content in the future. If premium features are offered, they will comply with all applicable platform guidelines, including Apple's App Store requirements. All terms, pricing, and subscription details will be clearly disclosed and agreed to before any purchase. These Terms of Use will be updated accordingly at that time.
+                <span className="text-foreground font-medium">Price Changes:</span> We reserve the right to change subscription pricing. You will be notified in advance of any price changes, and the new price will apply at the start of your next billing period after the change.
               </p>
             </section>
 

@@ -25,7 +25,7 @@ export default function PrivacyPage() {
       <div className="flex flex-col gap-4 px-4 py-2">
         <Card className="p-5">
           <p className="text-xs text-muted-foreground mb-4">
-            Last updated: February 10, 2026
+            Last updated: February 13, 2026
           </p>
 
           <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground">
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                 <li><span className="text-foreground font-medium">Email address</span> — Collected only if you choose to subscribe to our daily verse newsletter. This is entirely optional. The App is fully functional without subscribing.</li>
               </ul>
               <p className="mt-2">
-                We do <span className="text-foreground font-medium">not</span> collect: names, phone numbers, physical addresses, payment information, device identifiers, IP addresses, location data, usage analytics, health data, contacts, photos, or any other personal information.
+                We do <span className="text-foreground font-medium">not</span> collect: names, phone numbers, physical addresses, device identifiers, IP addresses, location data, usage analytics, health data, contacts, photos, or any other personal information.
               </p>
             </section>
 
@@ -67,9 +67,22 @@ export default function PrivacyPage() {
             </section>
 
             <section>
+              <h2 className="font-semibold text-foreground mb-1">Subscriptions and Payments</h2>
+              <p className="mb-2">
+                The App may offer optional premium subscription plans that provide access to additional content and features. Subscriptions are processed entirely through Apple's In-App Purchase system. We do not collect, store, or have access to your credit card number, bank account details, or any payment credentials.
+              </p>
+              <p className="mb-2">
+                Apple handles all payment processing and may collect data in accordance with their own privacy policy. We receive only a confirmation of your subscription status (active, expired, or cancelled) and your anonymous transaction identifier from Apple — no financial details.
+              </p>
+              <p>
+                For information on how Apple handles your payment data, please refer to Apple's Privacy Policy at <span className="text-foreground">apple.com/legal/privacy</span>.
+              </p>
+            </section>
+
+            <section>
               <h2 className="font-semibold text-foreground mb-1">Third-Party Data Sharing</h2>
               <p>
-                We do not sell, trade, rent, license, or share your personal information with any third parties. Your email address is stored in our secure database and is never shared with advertisers, data brokers, analytics providers, or any other external entity.
+                We do not sell, trade, rent, license, or share your personal information with any third parties. Your email address is stored in our secure database and is never shared with advertisers, data brokers, analytics providers, or any other external entity. Payment processing is handled exclusively by Apple through their In-App Purchase system — we never receive or store your financial information.
               </p>
             </section>
 
