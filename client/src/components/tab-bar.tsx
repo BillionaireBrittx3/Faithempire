@@ -1,12 +1,12 @@
 import { useLocation, Link } from "wouter";
-import { BookOpen, Archive, Heart, Info, Headphones } from "lucide-react";
+import { BookOpen, Book, Heart, Headphones, Menu } from "lucide-react";
 
 const tabs = [
   { path: "/", label: "Today", icon: BookOpen },
-  { path: "/archive", label: "Archive", icon: Archive },
+  { path: "/bible", label: "Bible", icon: Book },
   { path: "/podcast", label: "Podcast", icon: Headphones },
   { path: "/favorites", label: "Saved", icon: Heart },
-  { path: "/about", label: "More", icon: Info },
+  { path: "/about", label: "More", icon: Menu },
 ];
 
 export function TabBar() {

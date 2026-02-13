@@ -12,6 +12,7 @@ import ArchivePage from "@/pages/archive";
 import FavoritesPage from "@/pages/favorites";
 import AboutPage from "@/pages/about";
 import PodcastPage from "@/pages/podcast";
+import BiblePage from "@/pages/bible";
 import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
 
@@ -19,6 +20,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/bible" component={BiblePage} />
       <Route path="/archive" component={ArchivePage} />
       <Route path="/podcast" component={PodcastPage} />
       <Route path="/favorites" component={FavoritesPage} />

@@ -4,6 +4,7 @@
 Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.org that delivers a fresh Bible verse and plain-language motivational message every day. Built with React + Express + PostgreSQL.
 
 ## Recent Changes
+- 2026-02-13: Added KJV Bible reader with 66 books, chapter navigation, tap-to-highlight verses (localStorage). Reorganized tabs: Today, Bible, Podcast, Saved, More. Archive moved to More page. Saved page now has Favorites + Highlights tabs.
 - 2026-02-10: Initial MVP built with 100 seeded verses, 4 pages (Today, Archive, Favorites, About), bottom tab navigation, dark/light mode, email subscription
 
 ## Architecture
@@ -15,14 +16,20 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 
 ## Key Pages
 - `/` - Today's verse (home)
-- `/archive` - Browse all verses with category filtering
-- `/favorites` - Saved verses (localStorage)
-- `/about` - Brand info, subscribe, social links, settings, privacy
+- `/bible` - KJV Bible reader (66 books, chapter navigation, tap-to-highlight)
+- `/archive` - Browse all decoded verses with category filtering (accessible from More page)
+- `/favorites` - Saved verses + Bible highlights (two tabs, localStorage)
+- `/podcast` - Podcast episodes with in-app audio player
+- `/about` - Brand info, subscribe, social links, settings, privacy, quick links
+
+## Navigation (Bottom Tab Bar)
+- Today, Bible, Podcast, Saved, More
 
 ## API Endpoints
 - `GET /api/verses/today` - Returns today's verse (rotates by day of year)
 - `GET /api/verses/archive` - Returns all verses
 - `GET /api/verses/:id` - Returns verse by number
+- `GET /api/bible/:book/:chapter` - Proxies KJV Bible text from bible-api.com
 - `POST /api/subscribe` - Email subscription
 
 ## Database Tables

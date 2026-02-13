@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Archive } from "lucide-react";
 import { SiTiktok, SiInstagram, SiSpotify } from "react-icons/si";
 import { Link } from "wouter";
 import { useTheme } from "@/components/theme-provider";
@@ -121,6 +121,30 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.05 }}
+        >
+          <Card className="p-5">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">
+              Quick Links
+            </h3>
+            <div className="flex flex-col gap-1">
+              <Link href="/archive">
+                <button
+                  className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                  data-testid="link-archive"
+                >
+                  <Archive className="h-4 w-4 text-primary" />
+                  <span>Verse Archive</span>
+                  <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                </button>
+              </Link>
+            </div>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
         >
           <Card className="relative overflow-visible border-primary/30 p-5">
             <div className="flex items-center gap-3 mb-3">

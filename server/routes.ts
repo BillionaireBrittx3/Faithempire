@@ -134,6 +134,42 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/bible/:book/:chapter", async (req, res) => {
+    try {
+      const { book, chapter } = req.params;
+      const chapterNum = parseInt(chapter);
+      if (isNaN(chapterNum) || chapterNum < 1) {
+        return res.status(400).json({ message: "Invalid chapter number" });
+      }
+
+      const query = encodeURIComponent(`${book} ${chapterNum}`);
+      const response = await fetch(
+        `https://bible-api.com/${query}?translation=kjv`
+      );
+
+      if (!response.ok) {
+        return res.status(502).json({ message: "Failed to fetch Bible text" });
+      }
+
+      const data = await response.json();
+      if (data.error) {
+        return res.status(404).json({ message: data.error });
+      }
+
+      const verses = (data.verses || []).map((v: any) => ({
+        verse: v.verse,
+        text: v.text?.trim() || "",
+      }));
+
+      res.json({
+        reference: data.reference || `${book} ${chapterNum}`,
+        verses,
+      });
+    } catch (err) {
+      res.status(500).json({ message: "Failed to load Bible chapter" });
+    }
+  });
+
   app.get("/api/podcast/episodes", async (_req, res) => {
     try {
       const response = await fetch("https://anchor.fm/s/10ee7543c/podcast/rss");
