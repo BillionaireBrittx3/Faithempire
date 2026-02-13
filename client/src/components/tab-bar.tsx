@@ -1,11 +1,28 @@
 import { useLocation, Link } from "wouter";
-import { BookOpen, Book, Cross, Headphones, Menu } from "lucide-react";
+import { BookOpen, Book, Headphones, Menu } from "lucide-react";
+
+function CrossIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <line x1="12" y1="2" x2="12" y2="22" />
+      <line x1="6" y1="7" x2="18" y2="7" />
+    </svg>
+  );
+}
 
 const tabs = [
   { path: "/", label: "Today", icon: BookOpen },
   { path: "/bible", label: "Bible", icon: Book },
   { path: "/podcast", label: "Podcast", icon: Headphones },
-  { path: "/decoded", label: "Decoded", icon: Cross },
+  { path: "/decoded", label: "Decoded", icon: CrossIcon },
   { path: "/about", label: "More", icon: Menu },
 ];
 
