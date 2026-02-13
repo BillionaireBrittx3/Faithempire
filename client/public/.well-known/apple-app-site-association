@@ -1,0 +1,28 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAM_ID.com.decodedfaithempire.faithempire",
+        "paths": [
+          "/",
+          "/bible",
+          "/bible/*",
+          "/decoded",
+          "/decoded/*",
+          "/podcast",
+          "/archive",
+          "/favorites",
+          "/about",
+          "/privacy",
+          "/terms"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "TEAM_ID.com.decodedfaithempire.faithempire"
+    ]
+  }
+}

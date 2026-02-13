@@ -1,14 +1,35 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import path from "path";
 import { storage } from "./storage";
 import { insertSubscriberSchema } from "@shared/schema";
 import { z } from "zod";
 import genesisDecoded from "./data/genesis-decoded.json";
 
+const aasaContent = {
+  applinks: {
+    apps: [],
+    details: [
+      {
+        appID: "TEAM_ID.com.decodedfaithempire.faithempire",
+        paths: ["/", "/bible", "/bible/*", "/decoded", "/decoded/*", "/podcast", "/archive", "/favorites", "/about", "/privacy", "/terms"]
+      }
+    ]
+  },
+  webcredentials: {
+    apps: ["TEAM_ID.com.decodedfaithempire.faithempire"]
+  }
+};
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  app.get("/.well-known/apple-app-site-association", (_req, res) => {
+    res.setHeader("Content-Type", "application/json");
+    res.json(aasaContent);
+  });
+
   app.get("/api/verses/today", async (_req, res) => {
     try {
       const formatter = new Intl.DateTimeFormat("en-US", {
