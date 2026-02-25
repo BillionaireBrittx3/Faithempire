@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Crown, BookOpen, Headphones, Sparkles, Lock, ChevronLeft } from "lucide-react";
 import { useSubscription } from "@/lib/subscription";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_1770693543975.png";
 
@@ -142,38 +142,59 @@ export default function PaywallPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.7 }}
-          className="mt-8 text-center max-w-xs"
+          className="mt-8 w-full max-w-sm"
         >
-          <div className="flex items-center justify-center gap-4 text-white/20 text-[10px]">
-            <Lock className="h-3 w-3" />
-            <span>Secure payment via Apple</span>
-          </div>
-          <p className="text-[10px] text-white/20 mt-2 leading-relaxed">
-            Subscription automatically renews monthly. Cancel anytime in your Apple ID settings.
-          </p>
-        </motion.div>
-
-        <div className="mt-6">
-          <div className="border-t border-white/10 pt-4 mt-2">
+          <div className="border-t border-white/10 pt-4">
             <p className="font-serif text-base font-semibold text-white/80 text-center mb-3">
               Free Features
             </p>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mb-6">
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
                 <span className="text-xs text-white/60">Daily Bible verse &amp; decoded message</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
-                <span className="text-xs text-white/60">Limited decoded chapters</span>
+                <span className="text-xs text-white/60">Full KJV Bible reader</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
-                <span className="text-xs text-white/60">Podcast previews</span>
+                <span className="text-xs text-white/60">3 decoded chapters</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
+                <span className="text-xs text-white/60">2 podcast episode previews</span>
               </div>
             </div>
           </div>
-        </div>
+
+          <div className="border-t border-white/10 pt-4">
+            <div className="flex items-center justify-center gap-2 text-white/30 text-[10px] mb-3">
+              <Lock className="h-3 w-3" />
+              <span>Secure payment via Apple</span>
+            </div>
+            <div className="text-[10px] text-white/30 leading-relaxed space-y-2" data-testid="text-subscription-legal">
+              <p>
+                A Premium subscription costs $12.22 per month. Payment will be charged to your Apple ID account at confirmation of purchase.
+              </p>
+              <p>
+                Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the rate of $12.22/month.
+              </p>
+              <p>
+                You can manage and cancel your subscription in your Apple ID Account Settings (Settings &gt; Apple ID &gt; Subscriptions). Any unused portion of a free trial period, if offered, will be forfeited when you purchase a subscription.
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-4 mt-4 text-[10px]">
+              <Link href="/terms">
+                <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-terms">Terms of Use</span>
+              </Link>
+              <span className="text-white/20">|</span>
+              <Link href="/privacy">
+                <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-privacy">Privacy Policy</span>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

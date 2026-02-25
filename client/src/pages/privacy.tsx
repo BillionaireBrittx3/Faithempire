@@ -25,7 +25,7 @@ export default function PrivacyPage() {
       <div className="flex flex-col gap-4 px-4 py-2">
         <Card className="p-5">
           <p className="text-xs text-muted-foreground mb-4">
-            Last updated: February 13, 2026
+            Last updated: February 25, 2026
           </p>
 
           <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground">

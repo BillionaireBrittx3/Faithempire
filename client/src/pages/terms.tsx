@@ -25,7 +25,7 @@ export default function TermsPage() {
       <div className="flex flex-col gap-4 px-4 py-2">
         <Card className="p-5">
           <p className="text-xs text-muted-foreground mb-4">
-            Last updated: February 13, 2026
+            Last updated: February 25, 2026
           </p>
 
           <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted-foreground">
@@ -74,7 +74,7 @@ export default function TermsPage() {
             <section>
               <h2 className="font-semibold text-foreground mb-1">Subscriptions and In-App Purchases</h2>
               <p className="mb-2">
-                The App may offer optional auto-renewing subscription plans ("Premium Subscription") that unlock additional content and features. The current subscription price is $9.99 USD per month, though pricing may vary by region and is subject to change.
+                The App offers an optional auto-renewing subscription plan ("Premium Subscription") that unlocks additional content and features including all decoded book chapters, full podcast access, exclusive devotionals, members-only audio breakdowns, and early access to new releases. The current subscription price is $12.22 USD per month, though pricing may vary by region and is subject to change.
               </p>
               <p className="mb-2">
                 <span className="text-foreground font-medium">Payment:</span> All payments are processed through Apple's In-App Purchase system. Payment will be charged to your Apple ID account at confirmation of purchase.
