@@ -47,6 +47,7 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
         if (data.type === "PURCHASE_COMPLETE") {
           setIsPremium(true);
           localStorage.setItem(STORAGE_KEY, "true");
+          setIsLoading(false);
         }
         if (data.type === "PURCHASE_FAILED") {
           setIsLoading(false);
@@ -88,6 +89,8 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
       (window as any).ReactNativeWebView.postMessage(
         JSON.stringify({ type: "RESTORE_PURCHASES" })
       );
+    } else {
+      window.open("https://apps.apple.com/app/id6759208291", "_blank");
     }
   }, []);
 

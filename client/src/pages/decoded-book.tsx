@@ -230,7 +230,7 @@ export default function DecodedBookPage() {
                 return (
                 <Card
                   key={ch.number}
-                  className={`overflow-visible p-3 ${locked ? "opacity-60" : "cursor-pointer hover-elevate"}`}
+                  className={`overflow-visible p-3 cursor-pointer ${locked ? "opacity-60" : "hover-elevate"}`}
                   onClick={() => handleChapterSelect(ch.number)}
                   data-testid={`card-decoded-chapter-${ch.number}`}
                 >
