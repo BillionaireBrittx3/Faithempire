@@ -16,6 +16,43 @@
     <link rel="manifest" href="/manifest.json" />
     <title>Decoded Faith Empire - Daily Bible Verse & Decoded Message</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Google Analytics GA4 — Measurement ID: G-742WH3Z490 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-742WH3Z490"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-742WH3Z490', {
+      'send_page_view': true,
+      'cookie_flags': 'SameSite=None;Secure',
+      'allow_google_signals': true,
+      'allow_ad_personalization_signals': true
+    });
+    // Track outbound links
+    document.addEventListener('click', function(e) {
+      var el = e.target.closest('a');
+      if (el && el.href && el.hostname !== window.location.hostname) {
+        gtag('event', 'outbound_click', {
+          'event_category': 'Outbound Link',
+          'event_label': el.href,
+          'transport_type': 'beacon'
+        });
+      }
+    });
+    // Track scroll depth
+    var scrollDepths = [25, 50, 75, 90], scrollFired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      scrollDepths.forEach(function(d) {
+        if (pct >= d && !scrollFired[d]) {
+          scrollFired[d] = true;
+          gtag('event', 'scroll_depth', {'event_category': 'Engagement', 'event_label': d + '%', 'value': d});
+        }
+      });
+    });
+  </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
