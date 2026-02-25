@@ -36,7 +36,7 @@ export function TabBar() {
     >
       <div className="mx-auto flex max-w-lg items-center justify-around gap-1 px-2 py-1 pb-[max(0.25rem,env(safe-area-inset-bottom))]">
         {tabs.map((tab) => {
-          const moreSubPages = ["/about", "/favorites", "/archive", "/privacy", "/terms"];
+          const moreSubPages = ["/about", "/favorites", "/archive", "/privacy", "/terms", "/premium"];
           const isActive =
             tab.path === "/"
               ? location === "/"

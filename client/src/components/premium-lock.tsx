@@ -46,7 +46,10 @@ export function PremiumBadge() {
 
   return (
     <button
-      onClick={() => navigate("/premium")}
+      onClick={(e) => {
+        e.stopPropagation();
+        navigate("/premium");
+      }}
       className="inline-flex items-center gap-1 rounded-full bg-[#DFAC2A]/10 px-2 py-0.5 text-[10px] font-medium text-[#DFAC2A]"
       data-testid="badge-premium"
     >

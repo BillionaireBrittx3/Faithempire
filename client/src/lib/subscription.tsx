@@ -77,6 +77,8 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
       (window as any).ReactNativeWebView.postMessage(
         JSON.stringify({ type: "PURCHASE", productId: PRODUCT_ID })
       );
+    } else {
+      window.open("https://apps.apple.com/app/id6759208291", "_blank");
     }
   }, []);
 

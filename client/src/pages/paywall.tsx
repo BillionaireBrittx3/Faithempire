@@ -123,6 +123,8 @@ export default function PaywallPage() {
                     (window as any).ReactNativeWebView.postMessage(
                       JSON.stringify({ type: "OPEN_SUBSCRIPTION_SETTINGS" })
                     );
+                  } else {
+                    window.open("https://apps.apple.com/account/subscriptions", "_blank");
                   }
                 }}
                 className="w-full border-white/20 text-white/70 hover:text-white"

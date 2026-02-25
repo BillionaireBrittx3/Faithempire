@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import { Play, Pause, SkipBack, SkipForward, Volume2, Loader2 } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { useSubscription, FREE_PODCAST_EPISODES } from "@/lib/subscription";
-import { PremiumLock, PremiumBadge } from "@/components/premium-lock";
+import { PremiumBadge } from "@/components/premium-lock";
+import { useLocation } from "wouter";
 
 interface Episode {
   title: string;
@@ -60,6 +61,9 @@ export default function PodcastPage() {
     queryKey: ["/api/podcast/episodes"],
   });
   const { isPremium } = useSubscription();
+  const [, navigate] = useLocation();
+
+  const isEpisodeLocked = (idx: number) => !isPremium && idx >= FREE_PODCAST_EPISODES;
 
   const [currentEpisode, setCurrentEpisode] = useState<Episode | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -138,7 +142,7 @@ export default function PodcastPage() {
   const playNext = () => {
     if (!episodes || !currentEpisode) return;
     const idx = episodes.findIndex(e => e.audioUrl === currentEpisode.audioUrl);
-    if (idx >= 0 && idx < episodes.length - 1) {
+    if (idx >= 0 && idx < episodes.length - 1 && !isEpisodeLocked(idx + 1)) {
       playEpisode(episodes[idx + 1]);
     }
   };
@@ -146,7 +150,7 @@ export default function PodcastPage() {
   const playPrev = () => {
     if (!episodes || !currentEpisode) return;
     const idx = episodes.findIndex(e => e.audioUrl === currentEpisode.audioUrl);
-    if (idx > 0) {
+    if (idx > 0 && !isEpisodeLocked(idx - 1)) {
       playEpisode(episodes[idx - 1]);
     }
   };
@@ -168,7 +172,7 @@ export default function PodcastPage() {
         <div className="flex flex-col gap-3 px-4 py-2">
           {episodes?.map((ep, idx) => {
             const isCurrent = currentEpisode?.audioUrl === ep.audioUrl;
-            const isLocked = !isPremium && idx >= FREE_PODCAST_EPISODES;
+            const locked = isEpisodeLocked(idx);
             return (
               <motion.div
                 key={ep.audioUrl}
@@ -177,8 +181,8 @@ export default function PodcastPage() {
                 transition={{ duration: 0.3, delay: idx * 0.03 }}
               >
                 <Card
-                  className={`p-4 ${isLocked ? "opacity-60" : "cursor-pointer hover-elevate"} ${isCurrent ? "border-primary/50" : ""}`}
-                  onClick={() => !isLocked && playEpisode(ep)}
+                  className={`p-4 ${locked ? "opacity-60 cursor-pointer" : "cursor-pointer hover-elevate"} ${isCurrent ? "border-primary/50" : ""}`}
+                  onClick={() => locked ? navigate("/premium") : playEpisode(ep)}
                   data-testid={`card-episode-${idx}`}
                 >
                   <div className="flex items-start gap-3">
@@ -186,10 +190,11 @@ export default function PodcastPage() {
                       size="icon"
                       variant={isCurrent && isPlaying ? "default" : "outline"}
                       className="shrink-0 mt-0.5"
-                      disabled={isLocked}
+                      disabled={locked}
                       onClick={(e) => {
                         e.stopPropagation();
-                        if (!isLocked) playEpisode(ep);
+                        if (locked) { navigate("/premium"); return; }
+                        playEpisode(ep);
                       }}
                       data-testid={`button-play-episode-${idx}`}
                     >
@@ -206,7 +211,7 @@ export default function PodcastPage() {
                         <h3 className={`text-sm font-semibold leading-snug ${isCurrent ? "text-primary" : "text-foreground"}`} data-testid={`text-episode-title-${idx}`}>
                           {ep.episodeNumber ? `Ep. ${ep.episodeNumber}: ` : ""}{ep.title}
                         </h3>
-                        {isLocked && <PremiumBadge />}
+                        {locked && <PremiumBadge />}
                       </div>
                       <div className="flex items-center gap-2 mt-1 flex-wrap">
                         <span className="text-[10px] text-muted-foreground">{formatDate(ep.pubDate)}</span>

@@ -76,15 +76,14 @@ export default function DecodedBookPage() {
 
   const { data: chapterData, isLoading, error: chapterError } = useQuery<ChapterData>({
     queryKey: ["/api/decoded/genesis", selectedChapter],
-    enabled: view === "reading",
+    enabled: view === "reading" && !isChapterLocked(selectedChapter),
   });
 
   const handleChapterSelect = useCallback((chapter: number) => {
-    if (isChapterLocked(chapter)) return;
     setSelectedChapter(chapter);
     setExpandedContext(new Set());
     setView("reading");
-  }, [isPremium]);
+  }, []);
 
   const handleBack = useCallback(() => {
     setView("chapters");
@@ -139,7 +138,8 @@ export default function DecodedBookPage() {
 
   const handleNextChapter = useCallback(() => {
     if (bookSummary && selectedChapter < bookSummary.totalChapters) {
-      setSelectedChapter((c) => c + 1);
+      const nextChapter = selectedChapter + 1;
+      setSelectedChapter(nextChapter);
       setExpandedContext(new Set());
     }
   }, [bookSummary, selectedChapter]);
