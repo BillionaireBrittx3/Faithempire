@@ -5,18 +5,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Archive, Heart } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Archive, Heart, Check } from "lucide-react";
 import { SiTiktok, SiInstagram, SiSpotify } from "react-icons/si";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useTheme } from "@/components/theme-provider";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
 import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_1770693543975.png";
+import { useSubscription } from "@/lib/subscription";
 
 export default function AboutPage() {
   const { theme, toggleTheme } = useTheme();
   const { toast } = useToast();
+  const { isPremium, restorePurchases } = useSubscription();
+  const [, navigate] = useLocation();
   const [email, setEmail] = useState("");
   const [subscribing, setSubscribing] = useState(false);
   const [unsubEmail, setUnsubEmail] = useState("");
@@ -163,16 +166,51 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                  More Features on the Way
+                  {isPremium ? "Premium Member" : "Unlock Premium"}
                 </h3>
+                {isPremium && (
+                  <p className="text-xs text-primary mt-0.5">Active subscription</p>
+                )}
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-muted-foreground mb-3">
-              We're working on new ways to deepen your daily faith experience. Stay tuned for updates.
-            </p>
-            <p className="text-[10px] text-muted-foreground/60">
-              Future features may include optional premium content. Details and pricing will be announced when available.
-            </p>
+            {isPremium ? (
+              <div className="flex flex-col gap-2">
+                {["Full KJV breakdown", "All decoded books", "Exclusive devotionals", "Members-only audio", "Early access"].map((f) => (
+                  <div key={f} className="flex items-center gap-2">
+                    <Check className="h-3.5 w-3.5 text-primary shrink-0" />
+                    <span className="text-xs text-foreground">{f}</span>
+                  </div>
+                ))}
+                <button
+                  onClick={restorePurchases}
+                  className="text-xs text-muted-foreground underline underline-offset-4 mt-2 self-start"
+                  data-testid="button-restore-about"
+                >
+                  Restore Purchases
+                </button>
+              </div>
+            ) : (
+              <>
+                <p className="text-sm leading-relaxed text-muted-foreground mb-3">
+                  Get full access to all decoded books, exclusive devotionals, and members-only content for $12.22/month.
+                </p>
+                <Button
+                  onClick={() => navigate("/premium")}
+                  className="w-full bg-[#DFAC2A] hover:bg-[#DFAC2A]/90 text-black font-semibold"
+                  data-testid="button-about-premium"
+                >
+                  <Crown className="h-4 w-4 mr-2" />
+                  View Premium
+                </Button>
+                <button
+                  onClick={restorePurchases}
+                  className="text-xs text-muted-foreground underline underline-offset-4 mt-3 w-full text-center"
+                  data-testid="button-restore-about"
+                >
+                  Already subscribed? Restore Purchases
+                </button>
+              </>
+            )}
           </Card>
         </motion.div>
 

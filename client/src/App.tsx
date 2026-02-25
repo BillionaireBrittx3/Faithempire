@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SubscriptionProvider } from "@/lib/subscription";
 import { Header } from "@/components/header";
 import { TabBar } from "@/components/tab-bar";
 import NotFound from "@/pages/not-found";
@@ -17,6 +18,7 @@ import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
 import DecodedPage from "@/pages/decoded";
 import DecodedBookPage from "@/pages/decoded-book";
+import PaywallPage from "@/pages/paywall";
 
 function Router() {
   return (
@@ -31,6 +33,7 @@ function Router() {
       <Route path="/terms" component={TermsPage} />
       <Route path="/decoded/genesis" component={DecodedBookPage} />
       <Route path="/decoded" component={DecodedPage} />
+      <Route path="/premium" component={PaywallPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -40,16 +43,18 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
-        <TooltipProvider>
-          <div className="flex min-h-screen flex-col bg-background">
-            <Header />
-            <main className="flex-1 mx-auto w-full max-w-lg pb-16">
-              <Router />
-            </main>
-            <TabBar />
-          </div>
-          <Toaster />
-        </TooltipProvider>
+        <SubscriptionProvider>
+          <TooltipProvider>
+            <div className="flex min-h-screen flex-col bg-background">
+              <Header />
+              <main className="flex-1 mx-auto w-full max-w-lg pb-16">
+                <Router />
+              </main>
+              <TabBar />
+            </div>
+            <Toaster />
+          </TooltipProvider>
+        </SubscriptionProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );

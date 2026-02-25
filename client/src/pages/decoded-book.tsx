@@ -7,6 +7,8 @@ import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info } from "lucide-r
 import { toggleHighlight, getHighlights } from "@/lib/highlights";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSubscription, FREE_DECODED_CHAPTERS } from "@/lib/subscription";
+import { PremiumLock, PremiumBadge } from "@/components/premium-lock";
 
 type ViewMode = "chapters" | "reading";
 
@@ -64,6 +66,9 @@ export default function DecodedBookPage() {
     () => new Set(getHighlights().filter(h => h.book === DECODED_BOOK_NAME).map(h => h.id))
   );
   const { toast } = useToast();
+  const { isPremium } = useSubscription();
+
+  const isChapterLocked = (chapterNum: number) => !isPremium && chapterNum > FREE_DECODED_CHAPTERS;
 
   const { data: bookSummary, isLoading: summaryLoading, error: summaryError } = useQuery<BookSummary>({
     queryKey: ["/api/decoded/genesis"],
@@ -75,10 +80,11 @@ export default function DecodedBookPage() {
   });
 
   const handleChapterSelect = useCallback((chapter: number) => {
+    if (isChapterLocked(chapter)) return;
     setSelectedChapter(chapter);
     setExpandedContext(new Set());
     setView("reading");
-  }, []);
+  }, [isPremium]);
 
   const handleBack = useCallback(() => {
     setView("chapters");
@@ -219,21 +225,26 @@ export default function DecodedBookPage() {
 
             {bookSummary && (
             <div className="flex flex-col gap-1.5 px-4 py-2">
-              {bookSummary.chapters.map((ch) => (
+              {bookSummary.chapters.map((ch) => {
+                const locked = isChapterLocked(ch.number);
+                return (
                 <Card
                   key={ch.number}
-                  className="cursor-pointer overflow-visible p-3 hover-elevate"
+                  className={`overflow-visible p-3 ${locked ? "opacity-60" : "cursor-pointer hover-elevate"}`}
                   onClick={() => handleChapterSelect(ch.number)}
                   data-testid={`card-decoded-chapter-${ch.number}`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-lg font-bold text-primary w-8 text-center shrink-0">
+                    <span className={`text-lg font-bold w-8 text-center shrink-0 ${locked ? "text-muted-foreground" : "text-primary"}`}>
                       {ch.number}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-foreground truncate">
-                        {ch.title}
-                      </p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-sm font-semibold text-foreground truncate">
+                          {ch.title}
+                        </p>
+                        {locked && <PremiumBadge />}
+                      </div>
                       <p className="text-[10px] text-muted-foreground">
                         {ch.verseCount} verses
                       </p>
@@ -241,13 +252,28 @@ export default function DecodedBookPage() {
                     <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" />
                   </div>
                 </Card>
-              ))}
+                );
+              })}
             </div>
             )}
           </motion.div>
         )}
 
-        {view === "reading" && (
+        {view === "reading" && isChapterLocked(selectedChapter) && (
+          <motion.div
+            key="locked"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <PremiumLock
+              title={`Chapter ${selectedChapter} is Premium`}
+              description={`Chapters ${FREE_DECODED_CHAPTERS + 1}+ require a premium subscription`}
+            />
+          </motion.div>
+        )}
+
+        {view === "reading" && !isChapterLocked(selectedChapter) && (
           <motion.div
             key={`reading-${selectedChapter}`}
             initial={{ opacity: 0, x: 20 }}

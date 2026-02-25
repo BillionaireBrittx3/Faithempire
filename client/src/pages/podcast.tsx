@@ -5,6 +5,8 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { Play, Pause, SkipBack, SkipForward, Volume2, Loader2 } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { useSubscription, FREE_PODCAST_EPISODES } from "@/lib/subscription";
+import { PremiumLock, PremiumBadge } from "@/components/premium-lock";
 
 interface Episode {
   title: string;
@@ -57,6 +59,7 @@ export default function PodcastPage() {
   const { data: episodes, isLoading } = useQuery<Episode[]>({
     queryKey: ["/api/podcast/episodes"],
   });
+  const { isPremium } = useSubscription();
 
   const [currentEpisode, setCurrentEpisode] = useState<Episode | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -165,6 +168,7 @@ export default function PodcastPage() {
         <div className="flex flex-col gap-3 px-4 py-2">
           {episodes?.map((ep, idx) => {
             const isCurrent = currentEpisode?.audioUrl === ep.audioUrl;
+            const isLocked = !isPremium && idx >= FREE_PODCAST_EPISODES;
             return (
               <motion.div
                 key={ep.audioUrl}
@@ -173,8 +177,8 @@ export default function PodcastPage() {
                 transition={{ duration: 0.3, delay: idx * 0.03 }}
               >
                 <Card
-                  className={`p-4 cursor-pointer hover-elevate ${isCurrent ? "border-primary/50" : ""}`}
-                  onClick={() => playEpisode(ep)}
+                  className={`p-4 ${isLocked ? "opacity-60" : "cursor-pointer hover-elevate"} ${isCurrent ? "border-primary/50" : ""}`}
+                  onClick={() => !isLocked && playEpisode(ep)}
                   data-testid={`card-episode-${idx}`}
                 >
                   <div className="flex items-start gap-3">
@@ -182,9 +186,10 @@ export default function PodcastPage() {
                       size="icon"
                       variant={isCurrent && isPlaying ? "default" : "outline"}
                       className="shrink-0 mt-0.5"
+                      disabled={isLocked}
                       onClick={(e) => {
                         e.stopPropagation();
-                        playEpisode(ep);
+                        if (!isLocked) playEpisode(ep);
                       }}
                       data-testid={`button-play-episode-${idx}`}
                     >
@@ -197,9 +202,12 @@ export default function PodcastPage() {
                       )}
                     </Button>
                     <div className="flex-1 min-w-0">
-                      <h3 className={`text-sm font-semibold leading-snug ${isCurrent ? "text-primary" : "text-foreground"}`} data-testid={`text-episode-title-${idx}`}>
-                        {ep.episodeNumber ? `Ep. ${ep.episodeNumber}: ` : ""}{ep.title}
-                      </h3>
+                      <div className="flex items-center gap-2">
+                        <h3 className={`text-sm font-semibold leading-snug ${isCurrent ? "text-primary" : "text-foreground"}`} data-testid={`text-episode-title-${idx}`}>
+                          {ep.episodeNumber ? `Ep. ${ep.episodeNumber}: ` : ""}{ep.title}
+                        </h3>
+                        {isLocked && <PremiumBadge />}
+                      </div>
                       <div className="flex items-center gap-2 mt-1 flex-wrap">
                         <span className="text-[10px] text-muted-foreground">{formatDate(ep.pubDate)}</span>
                         {ep.duration && (
