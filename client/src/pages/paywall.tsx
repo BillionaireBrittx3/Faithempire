@@ -14,7 +14,7 @@ const premiumFeatures = [
 ];
 
 export default function PaywallPage() {
-  const { subscribe, restorePurchases, isLoading } = useSubscription();
+  const { subscribe, restorePurchases, isLoading, isPremium } = useSubscription();
   const [, navigate] = useLocation();
 
   return (
@@ -56,10 +56,12 @@ export default function PaywallPage() {
             className="font-serif text-3xl font-bold text-white"
             data-testid="text-paywall-title"
           >
-            Unlock Premium
+            {isPremium ? "Premium Active" : "Unlock Premium"}
           </h1>
           <p className="text-sm text-white/60 mt-2 max-w-xs mx-auto leading-relaxed">
-            Get full access to all decoded books, exclusive devotionals, and members-only content
+            {isPremium
+              ? "You have full access to all premium content"
+              : "Get full access to all decoded books, exclusive devotionals, and members-only content"}
           </p>
         </motion.div>
 
@@ -72,7 +74,9 @@ export default function PaywallPage() {
           <div className="rounded-2xl border border-[#DFAC2A]/30 bg-[#DFAC2A]/5 p-5">
             <div className="flex items-center gap-2 mb-4">
               <Crown className="h-5 w-5 text-[#DFAC2A]" />
-              <span className="text-sm font-semibold text-[#DFAC2A]">Premium Membership</span>
+              <span className="text-sm font-semibold text-[#DFAC2A]">
+                {isPremium ? "Your Premium Benefits" : "Premium Membership"}
+              </span>
             </div>
 
             <div className="flex flex-col gap-3">
@@ -103,39 +107,74 @@ export default function PaywallPage() {
           transition={{ duration: 0.4, delay: 0.5 }}
           className="w-full max-w-sm flex flex-col items-center gap-3"
         >
-          <div className="text-center mb-1">
-            <p className="text-3xl font-bold text-white" data-testid="text-paywall-price">
-              $12.22<span className="text-base font-normal text-white/50">/month</span>
-            </p>
-            <p className="text-xs text-white/40 mt-1">Cancel anytime</p>
-          </div>
-
-          <Button
-            onClick={subscribe}
-            disabled={isLoading}
-            className="w-full h-14 rounded-xl text-base font-semibold bg-[#DFAC2A] hover:bg-[#DFAC2A]/90 text-black"
-            data-testid="button-subscribe"
-          >
-            {isLoading ? (
-              <span className="flex items-center gap-2">
-                <div className="h-4 w-4 animate-spin rounded-full border-2 border-black/30 border-t-black" />
-                Processing...
-              </span>
-            ) : (
-              <span className="flex items-center gap-2">
+          {isPremium ? (
+            <div className="flex flex-col items-center gap-3 w-full">
+              <div className="flex items-center gap-2 text-[#DFAC2A]">
                 <Crown className="h-5 w-5" />
-                Subscribe Now
-              </span>
-            )}
-          </Button>
+                <span className="text-base font-semibold">You're a Premium Member</span>
+              </div>
+              <p className="text-xs text-white/40 text-center">
+                Your subscription is active. You have full access to all content.
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  if (typeof (window as any).ReactNativeWebView !== "undefined") {
+                    (window as any).ReactNativeWebView.postMessage(
+                      JSON.stringify({ type: "OPEN_SUBSCRIPTION_SETTINGS" })
+                    );
+                  }
+                }}
+                className="w-full border-white/20 text-white/70 hover:text-white"
+                data-testid="button-manage-subscription"
+              >
+                Manage Subscription
+              </Button>
+              <button
+                onClick={restorePurchases}
+                className="text-xs text-white/40 underline underline-offset-4"
+                data-testid="button-restore-purchases"
+              >
+                Restore Purchases
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="text-center mb-1">
+                <p className="text-3xl font-bold text-white" data-testid="text-paywall-price">
+                  $12.22<span className="text-base font-normal text-white/50">/month</span>
+                </p>
+                <p className="text-xs text-white/40 mt-1">Cancel anytime</p>
+              </div>
 
-          <button
-            onClick={restorePurchases}
-            className="text-xs text-white/40 underline underline-offset-4"
-            data-testid="button-restore-purchases"
-          >
-            Restore Purchases
-          </button>
+              <Button
+                onClick={subscribe}
+                disabled={isLoading}
+                className="w-full h-14 rounded-xl text-base font-semibold bg-[#DFAC2A] hover:bg-[#DFAC2A]/90 text-black"
+                data-testid="button-subscribe"
+              >
+                {isLoading ? (
+                  <span className="flex items-center gap-2">
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-black/30 border-t-black" />
+                    Processing...
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <Crown className="h-5 w-5" />
+                    Subscribe Now
+                  </span>
+                )}
+              </Button>
+
+              <button
+                onClick={restorePurchases}
+                className="text-xs text-white/40 underline underline-offset-4"
+                data-testid="button-restore-purchases"
+              >
+                Restore Purchases
+              </button>
+            </>
+          )}
         </motion.div>
 
         <motion.div

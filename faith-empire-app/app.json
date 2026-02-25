@@ -7,6 +7,11 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "plugins": [
+      [
+        "expo-in-app-purchases"
+      ]
+    ],
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -21,6 +26,9 @@
       },
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
+      },
+      "entitlements": {
+        "com.apple.developer.in-app-payments": []
       }
     },
     "android": {
@@ -28,7 +36,10 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       },
-      "package": "com.decodedfaithempire.app"
+      "package": "com.decodedfaithempire.app",
+      "permissions": [
+        "com.android.vending.BILLING"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Platform, Alert } from 'react-native';
+import { SafeAreaView, StyleSheet, Platform, Alert, Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { useRef, useEffect, useState } from 'react';
 import * as InAppPurchases from 'expo-in-app-purchases';
@@ -106,6 +106,9 @@ export default function App() {
           break;
         case 'CHECK_SUBSCRIPTION':
           handleCheckSubscription();
+          break;
+        case 'OPEN_SUBSCRIPTION_SETTINGS':
+          Linking.openURL('https://apps.apple.com/account/subscriptions');
           break;
         default:
           break;
