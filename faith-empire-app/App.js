@@ -2,7 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Platform, Alert, Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { useRef, useEffect, useState } from 'react';
-import * as InAppPurchases from 'expo-in-app-purchases';
+import {
+  initConnection,
+  endConnection,
+  getProducts,
+  requestSubscription,
+  getAvailablePurchases,
+  finishTransaction,
+  purchaseUpdatedListener,
+  purchaseErrorListener,
+} from 'react-native-iap';
 
 const APP_URL = 'https://faithempire.replit.app';
 const PRODUCT_ID = 'com.decodedfaithempire.app.premium.monthly';
@@ -12,24 +21,32 @@ export default function App() {
   const [isPremium, setIsPremium] = useState(false);
 
   useEffect(() => {
+    let purchaseUpdateSubscription = null;
+    let purchaseErrorSubscription = null;
     let isMounted = true;
 
     async function initIAP() {
       try {
-        await InAppPurchases.connectAsync();
+        await initConnection();
 
-        InAppPurchases.setPurchaseListener(({ responseCode, results }) => {
+        purchaseUpdateSubscription = purchaseUpdatedListener(async (purchase) => {
           if (!isMounted) return;
 
-          if (responseCode === InAppPurchases.IAPResponseCode.OK && results) {
-            for (const purchase of results) {
-              if (!purchase.acknowledged) {
-                InAppPurchases.finishTransactionAsync(purchase, false);
-              }
+          const receipt = purchase.transactionReceipt;
+          if (receipt) {
+            try {
+              await finishTransaction({ purchase, isConsumable: false });
+            } catch (err) {
+              console.log('Finish transaction error:', err);
             }
             setIsPremium(true);
             sendToWebView({ type: 'PURCHASE_COMPLETE', isPremium: true });
-          } else if (responseCode === InAppPurchases.IAPResponseCode.USER_CANCELED) {
+          }
+        });
+
+        purchaseErrorSubscription = purchaseErrorListener((error) => {
+          if (!isMounted) return;
+          if (error.code === 'E_USER_CANCELLED') {
             sendToWebView({ type: 'PURCHASE_FAILED', reason: 'cancelled' });
           } else {
             sendToWebView({ type: 'PURCHASE_FAILED', reason: 'error' });
@@ -44,7 +61,13 @@ export default function App() {
 
     return () => {
       isMounted = false;
-      InAppPurchases.disconnectAsync().catch(() => {});
+      if (purchaseUpdateSubscription) {
+        purchaseUpdateSubscription.remove();
+      }
+      if (purchaseErrorSubscription) {
+        purchaseErrorSubscription.remove();
+      }
+      endConnection();
     };
   }, []);
 
@@ -57,9 +80,9 @@ export default function App() {
 
   async function handlePurchase() {
     try {
-      const { responseCode, results } = await InAppPurchases.getProductsAsync([PRODUCT_ID]);
-      if (responseCode === InAppPurchases.IAPResponseCode.OK && results && results.length > 0) {
-        await InAppPurchases.purchaseItemAsync(PRODUCT_ID);
+      const products = await getProducts({ skus: [PRODUCT_ID] });
+      if (products && products.length > 0) {
+        await requestSubscription({ sku: PRODUCT_ID });
       } else {
         sendToWebView({ type: 'PURCHASE_FAILED', reason: 'product_not_found' });
         Alert.alert(
@@ -75,9 +98,8 @@ export default function App() {
 
   async function handleRestore() {
     try {
-      const { responseCode, results } = await InAppPurchases.getPurchaseHistoryAsync();
-      const hasActive = responseCode === InAppPurchases.IAPResponseCode.OK &&
-        results && results.some(p => p.productId === PRODUCT_ID);
+      const purchases = await getAvailablePurchases();
+      const hasActive = purchases && purchases.some(p => p.productId === PRODUCT_ID);
       setIsPremium(hasActive);
       sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: hasActive });
       if (!hasActive) {
