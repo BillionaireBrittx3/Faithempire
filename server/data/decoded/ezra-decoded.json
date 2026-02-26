@@ -13,19 +13,19 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "Now in the first year of Cyrus king of Persia, that the word of the Lord by the mouth of Jeremiah might be fulfilled, the Lord stirred up the spirit of Cyrus king of Persia, that he made a proclamation throughout all his kingdom, and put it also in writing, saying,",
+          "kjv": "Now in the first year of Cyrus king of Persia, that the word of the LORD by the mouth of Jeremiah might be fulfilled, the LORD stirred up the spirit of Cyrus king of Persia, that he made a proclamation throughout all his kingdom, and put it also in writing, saying,",
           "decoded": "In the first year of Cyrus, king of Persia, to fulfill the word of the LORD spoken through Jeremiah, the LORD moved the heart of Cyrus, king of Persia, so that he sent a message throughout his entire kingdom and also wrote it down, saying,",
           "context": ""
         },
         {
           "verse": 2,
-          "kjv": "Thus saith Cyrus king of Persia, The Lord God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah.",
+          "kjv": "Thus saith Cyrus king of Persia, The LORD God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah.",
           "decoded": "This is what Cyrus, king of Persia, says: The LORD God of heaven has given me all the kingdoms of the earth, and he has commanded me to build a house for him in Jerusalem, which is in Judah.",
           "context": ""
         },
         {
           "verse": 3,
-          "kjv": "Who is there among you of all his people? his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of the Lord God of Israel, (he is the God,) which is in Jerusalem.",
+          "kjv": "Who is there among you of all his people? his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of the LORD God of Israel, (he is the God,) which is in Jerusalem.",
           "decoded": "Who among all his people is there? May his God be with him, and let him go to Jerusalem, which is in Judah, to build the house of the LORD God of Israel, (he is the God,) which is in Jerusalem.",
           "context": ""
         },
@@ -37,7 +37,7 @@
         },
         {
           "verse": 5,
-          "kjv": "Then rose up the chief of the fathers of Judah and Benjamin, and the priests, and the Levites, with all them whose spirit God had raised, to go up to build the house of the Lord which is in Jerusalem.",
+          "kjv": "Then rose up the chief of the fathers of Judah and Benjamin, and the priests, and the Levites, with all them whose spirit God had raised, to go up to build the house of the LORD which is in Jerusalem.",
           "decoded": "Then the leaders of the families of Judah and Benjamin, along with the priests and the Levites, and all those whose spirit God had inspired, got up to go to Jerusalem to rebuild the house of the LORD.",
           "context": ""
         },
@@ -49,7 +49,7 @@
         },
         {
           "verse": 7,
-          "kjv": "Also Cyrus the king brought forth the vessels of the house of the Lord, which Nebuchadnezzar had brought forth out of Jerusalem, and had put them in the house of his gods;",
+          "kjv": "Also Cyrus the king brought forth the vessels of the house of the LORD, which Nebuchadnezzar had brought forth out of Jerusalem, and had put them in the house of his gods;",
           "decoded": "Also King Cyrus brought out the vessels from the house of the LORD, which Nebuchadnezzar had taken out of Jerusalem and placed in the house of his gods;",
           "context": ""
         },
@@ -91,7 +91,7 @@
         },
         {
           "verse": 2,
-          "kjv": "Which came with Zerubbabel: Jeshua, Nehemiah, Seraiah, Reelaiah, Mordecai, Bilshan, Mispar, Bigvai, Rehum, Baanah. The number of the men of the people of Israel:",
+          "kjv": "Which came with Zerubbabel: Jeshua, Nehemiah, Seraiah, Reelaiah, Mordecai, Bilshan, Mizpar, Bigvai, Rehum, Baanah. The number of the men of the people of Israel:",
           "decoded": "Those who came with Zerubbabel were Jeshua, Nehemiah, Seraiah, Reelaiah, Mordecai, Bilshan, Mizpar, Bigvai, Rehum, and Baanah. This is the number of the men from the people of Israel:",
           "context": ""
         },
@@ -115,7 +115,7 @@
         },
         {
           "verse": 6,
-          "kjv": "The children of Pahath-moab, of the children of Jeshua and Joab, two thousand eight hundred and twelve.",
+          "kjv": "The children of Pahathmoab, of the children of Jeshua and Joab, two thousand eight hundred and twelve.",
           "decoded": "The descendants of Pahath-moab, from the descendants of Jeshua and Joab, two thousand eight hundred and twelve.",
           "context": ""
         },
@@ -205,7 +205,7 @@
         },
         {
           "verse": 21,
-          "kjv": "The children of Beth-lehem, an hundred twenty and three.",
+          "kjv": "The children of Bethlehem, an hundred twenty and three.",
           "decoded": "The people of Bethlehem, one hundred twenty-three.",
           "context": ""
         },
@@ -229,13 +229,13 @@
         },
         {
           "verse": 25,
-          "kjv": "The children of Kirjath-arim, Chephirah, and Beeroth, seven hundred and forty and three.",
+          "kjv": "The children of Kirjatharim, Chephirah, and Beeroth, seven hundred and forty and three.",
           "decoded": "The descendants of Kirjath-arim, Chephirah, and Beeroth were seven hundred forty-three.",
           "context": ""
         },
         {
           "verse": 26,
-          "kjv": "The children of Ramah and Geba, six hundred twenty and one.",
+          "kjv": "The children of Ramah and Gaba, six hundred twenty and one.",
           "decoded": "The descendants of Ramah and Gaba, six hundred twenty-one.",
           "context": ""
         },
@@ -247,7 +247,7 @@
         },
         {
           "verse": 28,
-          "kjv": "The men of Beth-el and Ai, two hundred twenty and three.",
+          "kjv": "The men of Bethel and Ai, two hundred twenty and three.",
           "decoded": "The men from Bethel and Ai were two hundred twenty-three.",
           "context": ""
         },
@@ -433,7 +433,7 @@
         },
         {
           "verse": 59,
-          "kjv": "And these were they which went up from Tel-melah, Tel-harsa, Cherub, Addan, and Immer: but they could not shew their father’s house, and their seed, whether they were of Israel:",
+          "kjv": "And these were they which went up from Telmelah, Telharsa, Cherub, Addan, and Immer: but they could not shew their father’s house, and their seed, whether they were of Israel:",
           "decoded": "These are the people who came up from Tel-melah, Tel-harsa, Cherub, Addan, and Immer, but they could not prove their family lineage or their descendants to show whether they belonged to Israel.",
           "context": ""
         },
@@ -487,7 +487,7 @@
         },
         {
           "verse": 68,
-          "kjv": "And some of the chief of the fathers, when they came to the house of the Lord which is at Jerusalem, offered freely for the house of God to set it up in his place:",
+          "kjv": "And some of the chief of the fathers, when they came to the house of the LORD which is at Jerusalem, offered freely for the house of God to set it up in his place:",
           "decoded": "And some of the leaders of the families, when they came to the house of the LORD in Jerusalem, gave freely to support the house of God and to restore it in its place:",
           "context": ""
         },
@@ -523,7 +523,7 @@
         },
         {
           "verse": 3,
-          "kjv": "And they set the altar upon his bases; for fear was upon them because of the people of those countries: and they offered burnt offerings thereon unto the Lord, even burnt offerings morning and evening.",
+          "kjv": "And they set the altar upon his bases; for fear was upon them because of the people of those countries: and they offered burnt offerings thereon unto the LORD, even burnt offerings morning and evening.",
           "decoded": "They placed the altar on its foundation because they were afraid of the people from those countries. They offered burnt offerings on it to the LORD, morning and evening.",
           "context": ""
         },
@@ -535,13 +535,13 @@
         },
         {
           "verse": 5,
-          "kjv": "And afterward offered the continual burnt offering, both of the new moons, and of all the set feasts of the Lord that were consecrated, and of every one that willingly offered a freewill offering unto the Lord.",
+          "kjv": "And afterward offered the continual burnt offering, both of the new moons, and of all the set feasts of the LORD that were consecrated, and of every one that willingly offered a freewill offering unto the LORD.",
           "decoded": "And afterward they offered the regular burnt offering, including those for the new moons, all the appointed festivals of the LORD that were made holy, and every person who voluntarily gave a freewill offering to the LORD.",
           "context": ""
         },
         {
           "verse": 6,
-          "kjv": "From the first day of the seventh month began they to offer burnt offerings unto the Lord. But the foundation of the temple of the Lord was not yet laid.",
+          "kjv": "From the first day of the seventh month began they to offer burnt offerings unto the LORD. But the foundation of the temple of the LORD was not yet laid.",
           "decoded": "Starting on the first day of the seventh month, they began to offer burnt offerings to the LORD. However, the foundation of the LORD's temple had not yet been laid.",
           "context": ""
         },
@@ -553,7 +553,7 @@
         },
         {
           "verse": 8,
-          "kjv": "Now in the second year of their coming unto the house of God at Jerusalem, in the second month, began Zerubbabel the son of Shealtiel, and Jeshua the son of Jozadak, and the remnant of their brethren the priests and the Levites, and all they that were come out of the captivity unto Jerusalem; and appointed the Levites, from twenty years old and upward, to set forward the work of the house of the Lord.",
+          "kjv": "Now in the second year of their coming unto the house of God at Jerusalem, in the second month, began Zerubbabel the son of Shealtiel, and Jeshua the son of Jozadak, and the remnant of their brethren the priests and the Levites, and all they that were come out of the captivity unto Jerusalem; and appointed the Levites, from twenty years old and upward, to set forward the work of the house of the LORD.",
           "decoded": "In the second year after they arrived at the house of God in Jerusalem, in the second month, Zerubbabel son of Shealtiel, Jeshua son of Jozadak, the remaining priests and Levites, and all the people who had returned from captivity to Jerusalem began their work; they appointed the Levites who were twenty years old and older to lead the work on the house of the Lord.",
           "context": ""
         },
@@ -565,13 +565,13 @@
         },
         {
           "verse": 10,
-          "kjv": "And when the builders laid the foundation of the temple of the Lord, they set the priests in their apparel with trumpets, and the Levites the sons of Asaph with cymbals, to praise the Lord, after the ordinance of David king of Israel.",
+          "kjv": "And when the builders laid the foundation of the temple of the LORD, they set the priests in their apparel with trumpets, and the Levites the sons of Asaph with cymbals, to praise the LORD, after the ordinance of David king of Israel.",
           "decoded": "When the builders laid the foundation of the LORD's temple, they placed the priests dressed in their garments with trumpets, and the Levites, the sons of Asaph, with cymbals, to praise the LORD, following the instructions of David, king of Israel.",
           "context": ""
         },
         {
           "verse": 11,
-          "kjv": "And they sang together by course in praising and giving thanks unto the Lord; because he is good, for his mercy endureth for ever toward Israel. And all the people shouted with a great shout, when they praised the Lord, because the foundation of the house of the Lord was laid.",
+          "kjv": "And they sang together by course in praising and giving thanks unto the LORD; because he is good, for his mercy endureth for ever toward Israel. And all the people shouted with a great shout, when they praised the LORD, because the foundation of the house of the LORD was laid.",
           "decoded": "And they sang together in order, praising and giving thanks to the LORD; because he is good, and his mercy lasts forever toward Israel. And all the people shouted loudly when they praised the LORD, because the foundation of the LORD's house was laid.",
           "context": ""
         },
@@ -595,19 +595,19 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "Now when the adversaries of Judah and Benjamin heard that the children of the captivity builded the temple unto the Lord God of Israel;",
+          "kjv": "Now when the adversaries of Judah and Benjamin heard that the children of the captivity builded the temple unto the LORD God of Israel;",
           "decoded": "Now when the enemies of Judah and Benjamin heard that the people who had been taken captive were rebuilding the temple of the LORD God of Israel,",
           "context": ""
         },
         {
           "verse": 2,
-          "kjv": "Then they came to Zerubbabel, and to the chief of the fathers, and said unto them, Let us build with you: for we seek your God, as ye do; and we do sacrifice unto him since the days of Esar-haddon king of Assur, which brought us up hither.",
+          "kjv": "Then they came to Zerubbabel, and to the chief of the fathers, and said unto them, Let us build with you: for we seek your God, as ye do; and we do sacrifice unto him since the days of Esarhaddon king of Assur, which brought us up hither.",
           "decoded": "Then they came to Zerubbabel and to the leaders of the families and said to them, Let us build with you, because we worship your God just as you do; and we have been sacrificing to him since the days of Esar-haddon, king of Assyria, who brought us here.",
           "context": ""
         },
         {
           "verse": 3,
-          "kjv": "But Zerubbabel, and Jeshua, and the rest of the chief of the fathers of Israel, said unto them, Ye have nothing to do with us to build an house unto our God; but we ourselves together will build unto the Lord God of Israel, as king Cyrus the king of Persia hath commanded us.",
+          "kjv": "But Zerubbabel, and Jeshua, and the rest of the chief of the fathers of Israel, said unto them, Ye have nothing to do with us to build an house unto our God; but we ourselves together will build unto the LORD God of Israel, as king Cyrus the king of Persia hath commanded us.",
           "decoded": "But Zerubbabel, Jeshua, and the rest of the leaders of the families of Israel said to them, You have nothing to do with us in building a house for our God; we ourselves will build the house for the LORD God of Israel, as King Cyrus, the king of Persia, has commanded us.",
           "context": ""
         },
@@ -619,7 +619,7 @@
         },
         {
           "verse": 5,
-          "kjv": "And hired counsellers against them, to frustrate their purpose, all the days of Cyrus king of Persia, even until the reign of Darius king of Persia.",
+          "kjv": "And hired counsellors against them, to frustrate their purpose, all the days of Cyrus king of Persia, even until the reign of Darius king of Persia.",
           "decoded": "They hired advisors to oppose them and to stop their plans during the entire reign of Cyrus, king of Persia, and continued until the reign of Darius, king of Persia.",
           "context": ""
         },
@@ -649,7 +649,7 @@
         },
         {
           "verse": 10,
-          "kjv": "And the rest of the nations whom the great and noble Asnappar brought over, and set in the cities of Samaria, and the rest that are on this side the river, and at such a time.",
+          "kjv": "And the rest of the nations whom the great and noble Asnapper brought over, and set in the cities of Samaria, and the rest that are on this side the river, and at such a time.",
           "decoded": "And the other nations whom the great and noble Asnapper brought over and settled in the cities of Samaria, and the others who are on this side of the river, at that time.",
           "context": ""
         },
@@ -757,7 +757,7 @@
         },
         {
           "verse": 3,
-          "kjv": "At the same time came to them Tatnai, governor on this side the river, and Shethar-boznai, and their companions, and said thus unto them, Who hath commanded you to build this house, and to make up this wall?",
+          "kjv": "At the same time came to them Tatnai, governor on this side the river, and Shetharboznai, and their companions, and said thus unto them, Who hath commanded you to build this house, and to make up this wall?",
           "decoded": "At the same time, Tatnai, the governor on this side of the river, and Shethar-boznai, along with their companions, came to them and asked, \"Who has given you permission to build this house and to finish this wall?\"",
           "context": ""
         },
@@ -775,7 +775,7 @@
         },
         {
           "verse": 6,
-          "kjv": "The copy of the letter that Tatnai, governor on this side the river, and Shethar-boznai, and his companions the Apharsachites, which were on this side the river, sent unto Darius the king:",
+          "kjv": "The copy of the letter that Tatnai, governor on this side the river, and Shetharboznai, and his companions the Apharsachites, which were on this side the river, sent unto Darius the king:",
           "decoded": "This is a copy of the letter that Tatnai, the governor on this side of the river, and Shethar-boznai, and his companions the Apharsachites, who were on this side of the river, sent to King Darius:",
           "context": ""
         },
@@ -871,7 +871,7 @@
         },
         {
           "verse": 4,
-          "kjv": "With three rows of great stones, and a row of new timber: and let the expences be given out of the king’s house:",
+          "kjv": "With three rows of great stones, and a row of new timber: and let the expenses be given out of the king’s house:",
           "decoded": "Use three rows of large stones and one row of new timber. Let the expenses be paid from the king’s treasury.",
           "context": ""
         },
@@ -883,7 +883,7 @@
         },
         {
           "verse": 6,
-          "kjv": "Now therefore, Tatnai, governor beyond the river, Shethar-boznai, and your companions the Apharsachites, which are beyond the river, be ye far from thence:",
+          "kjv": "Now therefore, Tatnai, governor beyond the river, Shetharboznai, and your companions the Apharsachites, which are beyond the river, be ye far from thence:",
           "decoded": "So now, Tatnai, governor beyond the river, Shethar-boznai, and your companions the Apharsachites who are beyond the river, stay far away from there:",
           "context": ""
         },
@@ -895,7 +895,7 @@
         },
         {
           "verse": 8,
-          "kjv": "Moreover I make a decree what ye shall do to the elders of these Jews for the building of this house of God: that of the king’s goods, even of the tribute beyond the river, forthwith expences be given unto these men, that they be not hindered.",
+          "kjv": "Moreover I make a decree what ye shall do to the elders of these Jews for the building of this house of God: that of the king’s goods, even of the tribute beyond the river, forthwith expenses be given unto these men, that they be not hindered.",
           "decoded": "Also, I issue a decree about what you should do for the elders of these Jews for the construction of this house of God: that from the king’s property, even from the tax collected beyond the river, immediate expenses be given to these men so that they are not delayed.",
           "context": ""
         },
@@ -925,7 +925,7 @@
         },
         {
           "verse": 13,
-          "kjv": "Then Tatnai, governor on this side the river, Shethar-boznai, and their companions, according to that which Darius the king had sent, so they did speedily.",
+          "kjv": "Then Tatnai, governor on this side the river, Shetharboznai, and their companions, according to that which Darius the king had sent, so they did speedily.",
           "decoded": "Then Tatnai, the governor on this side of the river, Shethar-boznai, and their companions, followed exactly what King Darius had commanded, and they acted quickly.",
           "context": ""
         },
@@ -973,13 +973,13 @@
         },
         {
           "verse": 21,
-          "kjv": "And the children of Israel, which were come again out of captivity, and all such as had separated themselves unto them from the filthiness of the heathen of the land, to seek the Lord God of Israel, did eat,",
+          "kjv": "And the children of Israel, which were come again out of captivity, and all such as had separated themselves unto them from the filthiness of the heathen of the land, to seek the LORD God of Israel, did eat,",
           "decoded": "And the people of Israel, who had returned from captivity, and all who had separated themselves from the impurities of the non-Israelite people of the land to seek the LORD God of Israel, ate,",
           "context": ""
         },
         {
           "verse": 22,
-          "kjv": "And kept the feast of unleavened bread seven days with joy: for the Lord had made them joyful, and turned the heart of the king of Assyria unto them, to strengthen their hands in the work of the house of God, the God of Israel.",
+          "kjv": "And kept the feast of unleavened bread seven days with joy: for the LORD had made them joyful, and turned the heart of the king of Assyria unto them, to strengthen their hands in the work of the house of God, the God of Israel.",
           "decoded": "They celebrated the Feast of Unleavened Bread for seven days with happiness because the LORD made them joyful and changed the heart of the king of Assyria toward them to encourage them in the work on the house of God, the God of Israel.",
           "context": ""
         }
@@ -1021,7 +1021,7 @@
         },
         {
           "verse": 6,
-          "kjv": "This Ezra went up from Babylon; and he was a ready scribe in the law of Moses, which the Lord God of Israel had given: and the king granted him all his request, according to the hand of the Lord his God upon him.",
+          "kjv": "This Ezra went up from Babylon; and he was a ready scribe in the law of Moses, which the LORD God of Israel had given: and the king granted him all his request, according to the hand of the LORD his God upon him.",
           "decoded": "Ezra came up from Babylon, and he was an expert scribe in the law of Moses, which the LORD God of Israel had given. The king gave him everything he asked for, because the LORD his God was helping him.",
           "context": ""
         },
@@ -1045,13 +1045,13 @@
         },
         {
           "verse": 10,
-          "kjv": "For Ezra had prepared his heart to seek the law of the Lord, and to do it, and to teach in Israel statutes and judgments.",
+          "kjv": "For Ezra had prepared his heart to seek the law of the LORD, and to do it, and to teach in Israel statutes and judgments.",
           "decoded": "Ezra had made up his mind to study the law of the LORD, to obey it, and to teach the people of Israel the rules and decisions.",
           "context": ""
         },
         {
           "verse": 11,
-          "kjv": "Now this is the copy of the letter that the king Artaxerxes gave unto Ezra the priest, the scribe, even a scribe of the words of the commandments of the Lord, and of his statutes to Israel.",
+          "kjv": "Now this is the copy of the letter that the king Artaxerxes gave unto Ezra the priest, the scribe, even a scribe of the words of the commandments of the LORD, and of his statutes to Israel.",
           "decoded": "This is the copy of the letter that King Artaxerxes gave to Ezra the priest, the scribe, who was a scribe of the words of the commandments of the LORD and of his laws to Israel.",
           "context": ""
         },
@@ -1069,13 +1069,13 @@
         },
         {
           "verse": 14,
-          "kjv": "Forasmuch as thou art sent of the king, and of his seven counsellers, to inquire concerning Judah and Jerusalem, according to the law of thy God which is in thine hand;",
+          "kjv": "Forasmuch as thou art sent of the king, and of his seven counsellors, to enquire concerning Judah and Jerusalem, according to the law of thy God which is in thine hand;",
           "decoded": "Because you have been sent by the king and his seven counselors to investigate matters concerning Judah and Jerusalem, according to the law of your God which is in your hand;",
           "context": ""
         },
         {
           "verse": 15,
-          "kjv": "And to carry the silver and gold, which the king and his counsellers have freely offered unto the God of Israel, whose habitation is in Jerusalem,",
+          "kjv": "And to carry the silver and gold, which the king and his counsellors have freely offered unto the God of Israel, whose habitation is in Jerusalem,",
           "decoded": "And to carry the silver and gold, which the king and his advisors have freely given to the God of Israel, whose home is in Jerusalem,",
           "context": ""
         },
@@ -1147,13 +1147,13 @@
         },
         {
           "verse": 27,
-          "kjv": "Blessed be the Lord God of our fathers, which hath put such a thing as this in the king’s heart, to beautify the house of the Lord which is in Jerusalem:",
+          "kjv": "Blessed be the LORD God of our fathers, which hath put such a thing as this in the king’s heart, to beautify the house of the LORD which is in Jerusalem:",
           "decoded": "Praise the LORD God of our ancestors, who has put this idea into the king’s heart to beautify the house of the LORD in Jerusalem.",
           "context": ""
         },
         {
           "verse": 28,
-          "kjv": "And hath extended mercy unto me before the king, and his counsellers, and before all the king’s mighty princes. And I was strengthened as the hand of the Lord my God was upon me, and I gathered together out of Israel chief men to go up with me.",
+          "kjv": "And hath extended mercy unto me before the king, and his counsellors, and before all the king’s mighty princes. And I was strengthened as the hand of the LORD my God was upon me, and I gathered together out of Israel chief men to go up with me.",
           "decoded": "And he has shown mercy to me in front of the king, his advisors, and all the king’s powerful princes. I was strengthened because the LORD my God was with me, and I gathered leading men from Israel to go with me.",
           "context": ""
         }
@@ -1183,7 +1183,7 @@
         },
         {
           "verse": 4,
-          "kjv": "Of the sons of Pahath-moab; Elihoenai the son of Zerahiah, and with him two hundred males.",
+          "kjv": "Of the sons of Pahathmoab; Elihoenai the son of Zerahiah, and with him two hundred males.",
           "decoded": "From the descendants of Pahath-moab: Elihoenai, the son of Zerahiah, and with him two hundred men.",
           "context": ""
         },
@@ -1309,7 +1309,7 @@
         },
         {
           "verse": 25,
-          "kjv": "And weighed unto them the silver, and the gold, and the vessels, even the offering of the house of our God, which the king, and his counsellers, and his lords, and all Israel there present, had offered:",
+          "kjv": "And weighed unto them the silver, and the gold, and the vessels, even the offering of the house of our God, which the king, and his counsellors, and his lords, and all Israel there present, had offered:",
           "decoded": "And they weighed the silver, the gold, and the vessels, which were the offering for the house of our God, that the king, his counselors, his officials, and all Israel present had offered.",
           "context": ""
         },
@@ -1327,13 +1327,13 @@
         },
         {
           "verse": 28,
-          "kjv": "And I said unto them, Ye are holy unto the Lord; the vessels are holy also; and the silver and the gold are a freewill offering unto the Lord God of your fathers.",
+          "kjv": "And I said unto them, Ye are holy unto the LORD; the vessels are holy also; and the silver and the gold are a freewill offering unto the LORD God of your fathers.",
           "decoded": "And I said to them, You are holy to the LORD; the vessels are holy also; and the silver and the gold are a voluntary offering to the LORD God of your ancestors.",
           "context": ""
         },
         {
           "verse": 29,
-          "kjv": "Watch ye, and keep them, until ye weigh them before the chief of the priests and the Levites, and chief of the fathers of Israel, at Jerusalem, in the chambers of the house of the Lord.",
+          "kjv": "Watch ye, and keep them, until ye weigh them before the chief of the priests and the Levites, and chief of the fathers of Israel, at Jerusalem, in the chambers of the house of the LORD.",
           "decoded": "Watch and guard them until you weigh them in front of the chief priests, the Levites, and the leaders of the families of Israel, in Jerusalem, inside the rooms of the house of the LORD.",
           "context": ""
         },
@@ -1369,7 +1369,7 @@
         },
         {
           "verse": 35,
-          "kjv": "Also the children of those that had been carried away, which were come out of the captivity, offered burnt offerings unto the God of Israel, twelve bullocks for all Israel, ninety and six rams, seventy and seven lambs, twelve he goats for a sin offering: all this was a burnt offering unto the Lord.",
+          "kjv": "Also the children of those that had been carried away, which were come out of the captivity, offered burnt offerings unto the God of Israel, twelve bullocks for all Israel, ninety and six rams, seventy and seven lambs, twelve he goats for a sin offering: all this was a burnt offering unto the LORD.",
           "decoded": "Also the descendants of those who had been taken captive, who had come out of captivity, offered burnt offerings to the God of Israel: twelve bulls for all Israel, ninety-six rams, seventy-seven lambs, and twelve male goats as a sin offering; all of these were burnt offerings to the LORD.",
           "context": ""
         },
@@ -1411,7 +1411,7 @@
         },
         {
           "verse": 5,
-          "kjv": "And at the evening sacrifice I arose up from my heaviness; and having rent my garment and my mantle, I fell upon my knees, and spread out my hands unto the Lord my God,",
+          "kjv": "And at the evening sacrifice I arose up from my heaviness; and having rent my garment and my mantle, I fell upon my knees, and spread out my hands unto the LORD my God,",
           "decoded": "At the time of the evening sacrifice, I got up from my sadness; and after tearing my clothes and my outer garment, I knelt down and stretched out my hands to the LORD my God.",
           "context": ""
         },
@@ -1429,7 +1429,7 @@
         },
         {
           "verse": 8,
-          "kjv": "And now for a little space grace hath been shewed from the Lord our God, to leave us a remnant to escape, and to give us a nail in his holy place, that our God may lighten our eyes, and give us a little reviving in our bondage.",
+          "kjv": "And now for a little space grace hath been shewed from the LORD our God, to leave us a remnant to escape, and to give us a nail in his holy place, that our God may lighten our eyes, and give us a little reviving in our bondage.",
           "decoded": "And now, for a short time, the LORD our God has shown us kindness by leaving us a small group to escape and by giving us a secure place in his holy temple, so that our God may give us hope and restore us a little while we are in captivity.",
           "context": ""
         },
@@ -1471,7 +1471,7 @@
         },
         {
           "verse": 15,
-          "kjv": "O Lord God of Israel, thou art righteous: for we remain yet escaped, as it is this day: behold, we are before thee in our trespasses: for we cannot stand before thee because of this.",
+          "kjv": "O LORD God of Israel, thou art righteous: for we remain yet escaped, as it is this day: behold, we are before thee in our trespasses: for we cannot stand before thee because of this.",
           "decoded": "O LORD God of Israel, you are righteous, because we have escaped so far, as it is today. Look, we are here before you because of our sins; we cannot stand in your presence because of this.",
           "context": ""
         }
@@ -1543,7 +1543,7 @@
         },
         {
           "verse": 11,
-          "kjv": "Now therefore make confession unto the Lord God of your fathers, and do his pleasure: and separate yourselves from the people of the land, and from the strange wives.",
+          "kjv": "Now therefore make confession unto the LORD God of your fathers, and do his pleasure: and separate yourselves from the people of the land, and from the strange wives.",
           "decoded": "So now, confess to the LORD God of your ancestors, and do what pleases him: separate yourselves from the people of the land and from the foreign wives.",
           "context": ""
         },
@@ -1657,7 +1657,7 @@
         },
         {
           "verse": 30,
-          "kjv": "And of the sons of Pahath-moab; Adna, and Chelal, Benaiah, Maaseiah, Mattaniah, Bezaleel, and Binnui, and Manasseh.",
+          "kjv": "And of the sons of Pahathmoab; Adna, and Chelal, Benaiah, Maaseiah, Mattaniah, Bezaleel, and Binnui, and Manasseh.",
           "decoded": "And from the descendants of Pahath-moab: Adna, Chelal, Benaiah, Maaseiah, Mattaniah, Bezaleel, Binnui, and Manasseh.",
           "context": ""
         },
@@ -1741,7 +1741,7 @@
         },
         {
           "verse": 44,
-          "kjv": "All these had taken strange wives: and some of them had wives by whom they had children. THE",
+          "kjv": "All these had taken strange wives: and some of them had wives by whom they had children.",
           "decoded": "All of these men had married foreign women, and some of them had children with these wives.",
           "context": ""
         }

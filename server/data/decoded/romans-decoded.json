@@ -685,13 +685,13 @@
         },
         {
           "verse": 18,
-          "kjv": "Who against hope believed in hope, that he might become the father of many nations; according to that which was spoken, So shall thy seed be.",
+          "kjv": "Who against hope believed in hope, that he might become the father of many nations, according to that which was spoken, So shall thy seed be.",
           "decoded": "Against all hope, Abraham believed with hope, trusting that he would become the father of many nations, just as God had promised: 'Your descendants will be this many.'",
           "context": ""
         },
         {
           "verse": 19,
-          "kjv": "And being not weak in faith, he considered not his own body now dead, when he was about an hundred years old, neither yet the deadness of Sara’s womb:",
+          "kjv": "And being not weak in faith, he considered not his own body now dead, when he was about an hundred years old, neither yet the deadness of Sarah’s womb:",
           "decoded": "He did not weaken in faith when he thought about his own body, which was as good as dead since he was about 100 years old, or about Sarah’s womb, which was also dead.",
           "context": ""
         },
@@ -1171,7 +1171,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "",
+          "kjv": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.",
           "decoded": "So now, there is no punishment for those who belong to Christ Jesus and live by the Spirit, not by their sinful nature.",
           "context": ""
         },
@@ -1411,7 +1411,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "I SAY the truth in Christ, I lie not, my conscience also bearing me witness in the Holy Ghost,",
+          "kjv": "I say the truth in Christ, I lie not, my conscience also bearing me witness in the Holy Ghost,",
           "decoded": "I am telling the truth in Christ—I am not lying—and my conscience confirms this through the Holy Spirit.",
           "context": ""
         },
@@ -1459,7 +1459,7 @@
         },
         {
           "verse": 9,
-          "kjv": "For this is the word of promise, At this time will I come, and Sara shall have a son.",
+          "kjv": "For this is the word of promise, At this time will I come, and Sarah shall have a son.",
           "decoded": "This is the promise: 'At this time next year, Sarah will have a son.'",
           "context": ""
         },
@@ -1747,7 +1747,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "I SAY then, Hath God cast away his people? God forbid. For I also am an Israelite, of the seed of Abraham, of the tribe of Benjamin.",
+          "kjv": "I say then, Hath God cast away his people? God forbid. For I also am an Israelite, of the seed of Abraham, of the tribe of Benjamin.",
           "decoded": "So I ask, has God rejected His people? Absolutely not! I am also an Israelite, a descendant of Abraham, from the tribe of Benjamin.",
           "context": ""
         },
@@ -1783,7 +1783,7 @@
         },
         {
           "verse": 7,
-          "kjv": "What then? Israel hath not obtained that which he seeketh for; but the election hath obtained it, and the rest were blinded",
+          "kjv": "What then? Israel hath not obtained that which he seeketh for; but the election hath obtained it, and the rest were blinded.",
           "decoded": "So what? Israel did not get what it was looking for, but the chosen ones did, and the rest were hardened.",
           "context": ""
         },
@@ -1945,7 +1945,7 @@
         },
         {
           "verse": 34,
-          "kjv": "For who hath known the mind of the Lord? or who hath been his counseller?",
+          "kjv": "For who hath known the mind of the Lord? or who hath been his counsellor?",
           "decoded": "Who has ever understood the mind of the Lord? Or who has given Him advice?",
           "context": ""
         },
@@ -1969,7 +1969,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "I BESEECH you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service.",
+          "kjv": "I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service.",
           "decoded": "Therefore, brothers and sisters, because of God's mercy, I urge you to offer your bodies as a living sacrifice, holy and pleasing to God—this is your true and proper worship.",
           "context": ""
         },
@@ -2515,7 +2515,7 @@
         },
         {
           "verse": 31,
-          "kjv": "That I may be delivered from them that do not believe in Judæa; and that my service which I have for Jerusalem may be accepted of the saints;",
+          "kjv": "That I may be delivered from them that do not believe in Judaea; and that my service which I have for Jerusalem may be accepted of the saints;",
           "decoded": "I pray that I will be protected from those who refuse to believe in Judea, and that the work I am doing for the believers in Jerusalem will be welcomed.",
           "context": ""
         },
@@ -2539,7 +2539,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "I COMMEND unto you Phebe our sister, which is a servant of the church which is at Cenchrea:",
+          "kjv": "I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea:",
           "decoded": "I recommend to you our sister Phoebe, who serves the church in Cenchrea.",
           "context": ""
         },
@@ -2563,7 +2563,7 @@
         },
         {
           "verse": 5,
-          "kjv": "Likewise greet the church that is in their house. Salute my wellbeloved Epænetus, who is the firstfruits of Achaia unto Christ.",
+          "kjv": "Likewise greet the church that is in their house. Salute my well-beloved Epaenetus, who is the firstfruits of Achaia unto Christ.",
           "decoded": "Also greet the church that meets in their home. Say hello to my dear friend Epaenetus, the first believer from Achaia to follow Christ.",
           "context": ""
         },
@@ -2575,7 +2575,7 @@
         },
         {
           "verse": 7,
-          "kjv": "Salute Andronicus and Junia, my kinsmen, and my fellowprisoners, who are of note among the apostles, who also were in Christ before me.",
+          "kjv": "Salute Andronicus and Junia, my kinsmen, and my fellow-prisoners, who are of note among the apostles, who also were in Christ before me.",
           "decoded": "Greet Andronicus and Junia, my relatives and fellow prisoners. They are well known among the apostles and were believers before I was.",
           "context": ""
         },

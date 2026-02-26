@@ -13,13 +13,13 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "Now it came to pass in the days when the judges ruled, that there was a famine in the land. And a certain man of Beth-lehem-judah went to sojourn in the country of Moab, he, and his wife, and his two sons.",
+          "kjv": "Now it came to pass in the days when the judges ruled, that there was a famine in the land. And a certain man of Bethlehemjudah went to sojourn in the country of Moab, he, and his wife, and his two sons.",
           "decoded": "During the time when the judges were leading, there was a famine in the land. A man from Bethlehem in Judah went to live temporarily in the country of Moab, along with his wife and his two sons.",
           "context": ""
         },
         {
           "verse": 2,
-          "kjv": "And the name of the man was Elimelech, and the name of his wife Naomi, and the name of his two sons Mahlon and Chilion, Ephrathites of Beth-lehem-judah. And they came into the country of Moab, and continued there.",
+          "kjv": "And the name of the man was Elimelech, and the name of his wife Naomi, and the name of his two sons Mahlon and Chilion, Ephrathites of Bethlehemjudah. And they came into the country of Moab, and continued there.",
           "decoded": "The man's name was Elimelech, his wife's name was Naomi, and his two sons were named Mahlon and Chilion. They were from Ephrath, which is Bethlehem in Judah. They went to the country of Moab and stayed there.",
           "context": ""
         },
@@ -43,7 +43,7 @@
         },
         {
           "verse": 6,
-          "kjv": "Then she arose with her daughters in law, that she might return from the country of Moab: for she had heard in the country of Moab how that the Lord had visited his people in giving them bread.",
+          "kjv": "Then she arose with her daughters in law, that she might return from the country of Moab: for she had heard in the country of Moab how that the LORD had visited his people in giving them bread.",
           "decoded": "Then she got up with her daughters-in-law to return from the country of Moab because she had heard in Moab that the LORD had taken care of his people by providing them with food.",
           "context": ""
         },
@@ -55,13 +55,13 @@
         },
         {
           "verse": 8,
-          "kjv": "And Naomi said unto her two daughters in law, Go, return each to her mother’s house: the Lord deal kindly with you, as ye have dealt with the dead, and with me.",
+          "kjv": "And Naomi said unto her two daughters in law, Go, return each to her mother’s house: the LORD deal kindly with you, as ye have dealt with the dead, and with me.",
           "decoded": "And Naomi said to her two daughters-in-law, Go, return each of you to your mother’s house: may the LORD be kind to you, just as you have been kind to the dead and to me.",
           "context": ""
         },
         {
           "verse": 9,
-          "kjv": "The Lord grant you that ye may find rest, each of you in the house of her husband. Then she kissed them; and they lifted up their voice, and wept.",
+          "kjv": "The LORD grant you that ye may find rest, each of you in the house of her husband. Then she kissed them; and they lifted up their voice, and wept.",
           "decoded": "May the LORD give you the blessing of finding peace, each of you in your husband's home. Then she kissed them, and they raised their voices and cried.",
           "context": ""
         },
@@ -85,7 +85,7 @@
         },
         {
           "verse": 13,
-          "kjv": "Would ye tarry for them till they were grown? would ye stay for them from having husbands? nay, my daughters; for it grieveth me much for your sakes that the hand of the Lord is gone out against me.",
+          "kjv": "Would ye tarry for them till they were grown? would ye stay for them from having husbands? nay, my daughters; for it grieveth me much for your sakes that the hand of the LORD is gone out against me.",
           "decoded": "Would you wait for them until they are grown? Would you wait for them to have husbands? No, my daughters; because it makes me very sad for your sake that the LORD's hand has come against me.",
           "context": ""
         },
@@ -109,7 +109,7 @@
         },
         {
           "verse": 17,
-          "kjv": "Where thou diest, will I die, and there will I be buried: the Lord do so to me, and more also, if ought but death part thee and me.",
+          "kjv": "Where thou diest, will I die, and there will I be buried: the LORD do so to me, and more also, if ought but death part thee and me.",
           "decoded": "Where you die, I will die, and there I will be buried. May the LORD do the same to me, and even more, if anything but death separates you and me.",
           "context": ""
         },
@@ -121,7 +121,7 @@
         },
         {
           "verse": 19,
-          "kjv": "So they two went until they came to Beth-lehem. And it came to pass, when they were come to Beth-lehem, that all the city was moved about them, and they said, Is this Naomi?",
+          "kjv": "So they two went until they came to Bethlehem. And it came to pass, when they were come to Bethlehem, that all the city was moved about them, and they said, Is this Naomi?",
           "decoded": "So the two of them went until they arrived in Bethlehem. When they got to Bethlehem, the whole city was stirred up around them, and people asked, \"Is this Naomi?\"",
           "context": ""
         },
@@ -133,13 +133,13 @@
         },
         {
           "verse": 21,
-          "kjv": "I went out full, and the Lord hath brought me home again empty: why then call ye me Naomi, seeing the Lord hath testified against me, and the Almighty hath afflicted me?",
+          "kjv": "I went out full, and the LORD hath brought me home again empty: why then call ye me Naomi, seeing the LORD hath testified against me, and the Almighty hath afflicted me?",
           "decoded": "I left full, and the LORD has brought me back empty: so why do you call me Naomi, since the LORD has testified against me, and the Almighty has caused me suffering?",
           "context": ""
         },
         {
           "verse": 22,
-          "kjv": "So Naomi returned, and Ruth the Moabitess, her daughter in law, with her, which returned out of the country of Moab: and they came to Beth-lehem in the beginning of barley harvest.",
+          "kjv": "So Naomi returned, and Ruth the Moabitess, her daughter in law, with her, which returned out of the country of Moab: and they came to Bethlehem in the beginning of barley harvest.",
           "decoded": "So Naomi returned, and Ruth the Moabitess, her daughter-in-law, returned with her from the country of Moab; and they came to Bethlehem at the beginning of the barley harvest.",
           "context": ""
         }
@@ -169,7 +169,7 @@
         },
         {
           "verse": 4,
-          "kjv": "And, behold, Boaz came from Beth-lehem, and said unto the reapers, The Lord be with you. And they answered him, The Lord bless thee.",
+          "kjv": "And, behold, Boaz came from Bethlehem, and said unto the reapers, The LORD be with you. And they answered him, The LORD bless thee.",
           "decoded": "And look, Boaz came from Bethlehem and said to the harvesters, 'The LORD be with you.' And they answered him, 'The LORD bless you.'",
           "context": ""
         },
@@ -217,7 +217,7 @@
         },
         {
           "verse": 12,
-          "kjv": "The Lord recompense thy work, and a full reward be given thee of the Lord God of Israel, under whose wings thou art come to trust.",
+          "kjv": "The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust.",
           "decoded": "The LORD will repay your work, and a full reward will be given to you by the LORD God of Israel, under whose protection you have come to trust.",
           "context": ""
         },
@@ -265,7 +265,7 @@
         },
         {
           "verse": 20,
-          "kjv": "And Naomi said unto her daughter in law, Blessed be he of the Lord, who hath not left off his kindness to the living and to the dead. And Naomi said unto her, The man is near of kin unto us, one of our next kinsmen.",
+          "kjv": "And Naomi said unto her daughter in law, Blessed be he of the LORD, who hath not left off his kindness to the living and to the dead. And Naomi said unto her, The man is near of kin unto us, one of our next kinsmen.",
           "decoded": "And Naomi said to her daughter-in-law, Blessed be the LORD, who has not stopped showing kindness to the living and to the dead. And Naomi said to her, The man is closely related to us, one of our nearest relatives.",
           "context": ""
         },
@@ -349,7 +349,7 @@
         },
         {
           "verse": 10,
-          "kjv": "And he said, Blessed be thou of the Lord, my daughter: for thou hast shewed more kindness in the latter end than at the beginning, inasmuch as thou followedst not young men, whether poor or rich.",
+          "kjv": "And he said, Blessed be thou of the LORD, my daughter: for thou hast shewed more kindness in the latter end than at the beginning, inasmuch as thou followedst not young men, whether poor or rich.",
           "decoded": "And he said, Blessed are you by the LORD, my daughter, because you have shown more kindness at the end than at the beginning, since you did not pursue young men, whether poor or rich.",
           "context": ""
         },
@@ -367,7 +367,7 @@
         },
         {
           "verse": 13,
-          "kjv": "Tarry this night, and it shall be in the morning, that if he will perform unto thee the part of a kinsman, well; let him do the kinsman’s part: but if he will not do the part of a kinsman to thee, then will I do the part of a kinsman to thee, as the Lord liveth: lie down until the morning.",
+          "kjv": "Tarry this night, and it shall be in the morning, that if he will perform unto thee the part of a kinsman, well; let him do the kinsman’s part: but if he will not do the part of a kinsman to thee, then will I do the part of a kinsman to thee, as the LORD liveth: lie down until the morning.",
           "decoded": "Stay here tonight, and in the morning, if he is willing to act as your relative, good; let him do his duty as a relative. But if he is not willing to act as your relative, then I will do my duty as your relative, as the LORD lives. Lie down until morning.",
           "context": ""
         },
@@ -469,25 +469,25 @@
         },
         {
           "verse": 11,
-          "kjv": "And all the people that were in the gate, and the elders, said, We are witnesses. The Lord make the woman that is come into thine house like Rachel and like Leah, which two did build the house of Israel: and do thou worthily in Ephratah, and be famous in Beth-lehem:",
+          "kjv": "And all the people that were in the gate, and the elders, said, We are witnesses. The LORD make the woman that is come into thine house like Rachel and like Leah, which two did build the house of Israel: and do thou worthily in Ephratah, and be famous in Bethlehem:",
           "decoded": "All the people who were at the city gate, along with the elders, said, \"We are witnesses. May the LORD make the woman who has come into your house like Rachel and Leah, who together built the house of Israel. May you act honorably in Ephrathah and become well known in Bethlehem.\"",
           "context": ""
         },
         {
           "verse": 12,
-          "kjv": "And let thy house be like the house of Pharez, whom Tamar bare unto Judah, of the seed which the Lord shall give thee of this young woman.",
+          "kjv": "And let thy house be like the house of Pharez, whom Tamar bare unto Judah, of the seed which the LORD shall give thee of this young woman.",
           "decoded": "And may your family be like the family of Pharez, whom Tamar gave birth to for Judah, from the offspring that the LORD will give you from this young woman.",
           "context": ""
         },
         {
           "verse": 13,
-          "kjv": "So Boaz took Ruth, and she was his wife: and when he went in unto her, the Lord gave her conception, and she bare a son.",
+          "kjv": "So Boaz took Ruth, and she was his wife: and when he went in unto her, the LORD gave her conception, and she bare a son.",
           "decoded": "So Boaz married Ruth, and she became his wife. When he slept with her, the LORD enabled her to become pregnant, and she gave birth to a son.",
           "context": ""
         },
         {
           "verse": 14,
-          "kjv": "And the women said unto Naomi, Blessed be the Lord, which hath not left thee this day without a kinsman, that his name may be famous in Israel.",
+          "kjv": "And the women said unto Naomi, Blessed be the LORD, which hath not left thee this day without a kinsman, that his name may be famous in Israel.",
           "decoded": "And the women said to Naomi, Blessed be the LORD, who has not left you today without a relative, so that his name may be well known in Israel.",
           "context": ""
         },

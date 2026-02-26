@@ -13,13 +13,13 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "Now after the death of Joshua it came to pass, that the children of Israel asked the Lord, saying, Who shall go up for us against the Canaanites first, to fight against them?",
+          "kjv": "Now after the death of Joshua it came to pass, that the children of Israel asked the LORD, saying, Who shall go up for us against the Canaanites first, to fight against them?",
           "decoded": "After Joshua died, the people of Israel asked the LORD, \"Who will go up first to fight against the Canaanites for us?\"",
           "context": ""
         },
         {
           "verse": 2,
-          "kjv": "And the Lord said, Judah shall go up: behold, I have delivered the land into his hand.",
+          "kjv": "And the LORD said, Judah shall go up: behold, I have delivered the land into his hand.",
           "decoded": "And the LORD said, Judah will go up; look, I have given the land into his hand.",
           "context": ""
         },
@@ -31,25 +31,25 @@
         },
         {
           "verse": 4,
-          "kjv": "And Judah went up; and the Lord delivered the Canaanites and the Perizzites into their hand: and they slew of them in Bezek ten thousand men.",
+          "kjv": "And Judah went up; and the LORD delivered the Canaanites and the Perizzites into their hand: and they slew of them in Bezek ten thousand men.",
           "decoded": "Judah went up, and the LORD gave the Canaanites and the Perizzites into their hands; they killed ten thousand of them in Bezek.",
           "context": ""
         },
         {
           "verse": 5,
-          "kjv": "And they found Adoni-bezek in Bezek: and they fought against him, and they slew the Canaanites and the Perizzites.",
+          "kjv": "And they found Adonibezek in Bezek: and they fought against him, and they slew the Canaanites and the Perizzites.",
           "decoded": "They found Adoni-bezek in Bezek, and they fought against him, killing the Canaanites and the Perizzites.",
           "context": ""
         },
         {
           "verse": 6,
-          "kjv": "But Adoni-bezek fled; and they pursued after him, and caught him, and cut off his thumbs and his great toes.",
+          "kjv": "But Adonibezek fled; and they pursued after him, and caught him, and cut off his thumbs and his great toes.",
           "decoded": "But Adoni-bezek ran away; they chased him, caught him, and cut off his thumbs and big toes.",
           "context": ""
         },
         {
           "verse": 7,
-          "kjv": "And Adoni-bezek said, Threescore and ten kings, having their thumbs and their great toes cut off, gathered their meat under my table: as I have done, so God hath requited me. And they brought him to Jerusalem, and there he died.",
+          "kjv": "And Adonibezek said, Threescore and ten kings, having their thumbs and their great toes cut off, gathered their meat under my table: as I have done, so God hath requited me. And they brought him to Jerusalem, and there he died.",
           "decoded": "And Adoni-bezek said, Seventy kings, who had their thumbs and big toes cut off, gathered their food under my table: as I have done to them, so God has rewarded me. And they brought him to Jerusalem, and there he died.",
           "context": ""
         },
@@ -67,19 +67,19 @@
         },
         {
           "verse": 10,
-          "kjv": "And Judah went against the Canaanites that dwelt in Hebron: (now the name of Hebron before was Kirjath-arba:) and they slew Sheshai, and Ahiman, and Talmai.",
+          "kjv": "And Judah went against the Canaanites that dwelt in Hebron: (now the name of Hebron before was Kirjatharba:) and they slew Sheshai, and Ahiman, and Talmai.",
           "decoded": "Judah attacked the Canaanites living in Hebron. (The name of Hebron used to be Kirjath-arba.) They killed Sheshai, Ahiman, and Talmai.",
           "context": ""
         },
         {
           "verse": 11,
-          "kjv": "And from thence he went against the inhabitants of Debir: and the name of Debir before was Kirjath-sepher:",
+          "kjv": "And from thence he went against the inhabitants of Debir: and the name of Debir before was Kirjathsepher:",
           "decoded": "And from there he went against the people living in Debir; and the name of Debir was formerly Kirjath-sepher.",
           "context": ""
         },
         {
           "verse": 12,
-          "kjv": "And Caleb said, He that smiteth Kirjath-sepher, and taketh it, to him will I give Achsah my daughter to wife.",
+          "kjv": "And Caleb said, He that smiteth Kirjathsepher, and taketh it, to him will I give Achsah my daughter to wife.",
           "decoded": "And Caleb said, Whoever attacks Kirjath-sepher and captures it, I will give him my daughter Achsah as a wife.",
           "context": ""
         },
@@ -121,7 +121,7 @@
         },
         {
           "verse": 19,
-          "kjv": "And the Lord was with Judah; and he drave out the inhabitants of the mountain; but could not drive out the inhabitants of the valley, because they had chariots of iron.",
+          "kjv": "And the LORD was with Judah; and he drave out the inhabitants of the mountain; but could not drive out the inhabitants of the valley, because they had chariots of iron.",
           "decoded": "The LORD was with Judah, and he forced out the people living in the mountains, but he could not force out the people living in the valley because they had iron chariots.",
           "context": ""
         },
@@ -139,13 +139,13 @@
         },
         {
           "verse": 22,
-          "kjv": "And the house of Joseph, they also went up against Beth-el: and the Lord was with them.",
+          "kjv": "And the house of Joseph, they also went up against Bethel: and the LORD was with them.",
           "decoded": "The family of Joseph also went up to attack Bethel, and the LORD was with them.",
           "context": ""
         },
         {
           "verse": 23,
-          "kjv": "And the house of Joseph sent to descry Beth-el. (Now the name of the city before was Luz.)",
+          "kjv": "And the house of Joseph sent to descry Bethel. (Now the name of the city before was Luz.)",
           "decoded": "The family of Joseph sent people to scout out Bethel. (The city was previously called Luz.)",
           "context": ""
         },
@@ -169,7 +169,7 @@
         },
         {
           "verse": 27,
-          "kjv": "Neither did Manasseh drive out the inhabitants of Beth-shean and her towns, nor Taanach and her towns, nor the inhabitants of Dor and her towns, nor the inhabitants of Ibleam and her towns, nor the inhabitants of Megiddo and her towns: but the Canaanites would dwell in that land.",
+          "kjv": "Neither did Manasseh drive out the inhabitants of Bethshean and her towns, nor Taanach and her towns, nor the inhabitants of Dor and her towns, nor the inhabitants of Ibleam and her towns, nor the inhabitants of Megiddo and her towns: but the Canaanites would dwell in that land.",
           "decoded": "Manasseh did not drive out the people living in Beth-shean and its towns, nor in Taanach and its towns, nor the people living in Dor and its towns, nor the people living in Ibleam and its towns, nor the people living in Megiddo and its towns; instead, the Canaanites continued to live in that land.",
           "context": ""
         },
@@ -205,7 +205,7 @@
         },
         {
           "verse": 33,
-          "kjv": "Neither did Naphtali drive out the inhabitants of Beth-shemesh, nor the inhabitants of Beth-anath; but he dwelt among the Canaanites, the inhabitants of the land: nevertheless the inhabitants of Beth-shemesh and of Beth-anath became tributaries unto them.",
+          "kjv": "Neither did Naphtali drive out the inhabitants of Bethshemesh, nor the inhabitants of Bethanath; but he dwelt among the Canaanites, the inhabitants of the land: nevertheless the inhabitants of Bethshemesh and of Bethanath became tributaries unto them.",
           "decoded": "Naphtali did not drive out the people living in Beth-shemesh, nor the people living in Beth-anath; instead, he lived among the Canaanites, the people living in the land. However, the people of Beth-shemesh and Beth-anath became subject to them and paid tribute.",
           "context": ""
         },
@@ -235,7 +235,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "And an angel of the Lord came up from Gilgal to Bochim, and said, I made you to go up out of Egypt, and have brought you unto the land which I sware unto your fathers; and I said, I will never break my covenant with you.",
+          "kjv": "And an angel of the LORD came up from Gilgal to Bochim, and said, I made you to go up out of Egypt, and have brought you unto the land which I sware unto your fathers; and I said, I will never break my covenant with you.",
           "decoded": "An angel of the LORD came up from Gilgal to Bochim and said, I brought you up out of Egypt and brought you to the land I promised your ancestors; and I said, I will never break my agreement with you.",
           "context": ""
         },
@@ -253,13 +253,13 @@
         },
         {
           "verse": 4,
-          "kjv": "And it came to pass, when the angel of the Lord spake these words unto all the children of Israel, that the people lifted up their voice, and wept.",
+          "kjv": "And it came to pass, when the angel of the LORD spake these words unto all the children of Israel, that the people lifted up their voice, and wept.",
           "decoded": "When the angel of the LORD spoke these words to all the people of Israel, the people raised their voices and cried.",
           "context": ""
         },
         {
           "verse": 5,
-          "kjv": "And they called the name of that place Bochim: and they sacrificed there unto the Lord.",
+          "kjv": "And they called the name of that place Bochim: and they sacrificed there unto the LORD.",
           "decoded": "They named that place Bochim, and they offered sacrifices to the LORD there.",
           "context": ""
         },
@@ -271,73 +271,73 @@
         },
         {
           "verse": 7,
-          "kjv": "And the people served the Lord all the days of Joshua, and all the days of the elders that outlived Joshua, who had seen all the great works of the Lord, that he did for Israel.",
+          "kjv": "And the people served the LORD all the days of Joshua, and all the days of the elders that outlived Joshua, who had seen all the great works of the LORD, that he did for Israel.",
           "decoded": "The people worshiped the LORD throughout the lifetime of Joshua and during the lives of the elders who lived longer than Joshua, who had witnessed all the amazing things the LORD did for Israel.",
           "context": ""
         },
         {
           "verse": 8,
-          "kjv": "And Joshua the son of Nun, the servant of the Lord, died, being an hundred and ten years old.",
+          "kjv": "And Joshua the son of Nun, the servant of the LORD, died, being an hundred and ten years old.",
           "decoded": "Joshua, the son of Nun, the servant of the LORD, died at the age of one hundred and ten years.",
           "context": ""
         },
         {
           "verse": 9,
-          "kjv": "And they buried him in the border of his inheritance in Timnath-heres, in the mount of Ephraim, on the north side of the hill Gaash.",
+          "kjv": "And they buried him in the border of his inheritance in Timnathheres, in the mount of Ephraim, on the north side of the hill Gaash.",
           "decoded": "They buried him at the boundary of his inheritance in Timnath-heres, on the mountain of Ephraim, on the north side of the hill Gaash.",
           "context": ""
         },
         {
           "verse": 10,
-          "kjv": "And also all that generation were gathered unto their fathers: and there arose another generation after them, which knew not the Lord, nor yet the works which he had done for Israel.",
+          "kjv": "And also all that generation were gathered unto their fathers: and there arose another generation after them, which knew not the LORD, nor yet the works which he had done for Israel.",
           "decoded": "And all that generation died and were buried with their ancestors; then a new generation came after them who did not know the LORD or the things he had done for Israel.",
           "context": ""
         },
         {
           "verse": 11,
-          "kjv": "And the children of Israel did evil in the sight of the Lord, and served Baalim:",
+          "kjv": "And the children of Israel did evil in the sight of the LORD, and served Baalim:",
           "decoded": "The people of Israel did what was wrong in the eyes of the LORD and worshiped Baalim.",
           "context": ""
         },
         {
           "verse": 12,
-          "kjv": "And they forsook the Lord God of their fathers, which brought them out of the land of Egypt, and followed other gods, of the gods of the people that were round about them, and bowed themselves unto them, and provoked the Lord to anger.",
+          "kjv": "And they forsook the LORD God of their fathers, which brought them out of the land of Egypt, and followed other gods, of the gods of the people that were round about them, and bowed themselves unto them, and provoked the LORD to anger.",
           "decoded": "They abandoned the LORD God of their ancestors, who had brought them out of Egypt, and they followed other gods, the gods of the surrounding peoples, and they bowed down to them, which angered the LORD.",
           "context": ""
         },
         {
           "verse": 13,
-          "kjv": "And they forsook the Lord, and served Baal and Ashtaroth.",
+          "kjv": "And they forsook the LORD, and served Baal and Ashtaroth.",
           "decoded": "They abandoned the LORD and worshiped Baal and Ashtaroth.",
           "context": ""
         },
         {
           "verse": 14,
-          "kjv": "And the anger of the Lord was hot against Israel, and he delivered them into the hands of spoilers that spoiled them, and he sold them into the hands of their enemies round about, so that they could not any longer stand before their enemies.",
+          "kjv": "And the anger of the LORD was hot against Israel, and he delivered them into the hands of spoilers that spoiled them, and he sold them into the hands of their enemies round about, so that they could not any longer stand before their enemies.",
           "decoded": "The LORD was very angry with Israel, and he handed them over to raiders who plundered them, and he sold them into the hands of their enemies all around, so they could no longer resist their enemies.",
           "context": ""
         },
         {
           "verse": 15,
-          "kjv": "Whithersoever they went out, the hand of the Lord was against them for evil, as the Lord had said, and as the Lord had sworn unto them: and they were greatly distressed.",
+          "kjv": "Whithersoever they went out, the hand of the LORD was against them for evil, as the LORD had said, and as the LORD had sworn unto them: and they were greatly distressed.",
           "decoded": "Wherever they went out, the power of the LORD was against them to bring trouble, just as the LORD had said and as the LORD had promised them; and they were very distressed.",
           "context": ""
         },
         {
           "verse": 16,
-          "kjv": "Nevertheless the Lord raised up judges, which delivered them out of the hand of those that spoiled them.",
+          "kjv": "Nevertheless the LORD raised up judges, which delivered them out of the hand of those that spoiled them.",
           "decoded": "However, the LORD raised up judges who saved them from the people who were oppressing them.",
           "context": ""
         },
         {
           "verse": 17,
-          "kjv": "And yet they would not hearken unto their judges, but they went a whoring after other gods, and bowed themselves unto them: they turned quickly out of the way which their fathers walked in, obeying the commandments of the Lord; but they did not so.",
+          "kjv": "And yet they would not hearken unto their judges, but they went a whoring after other gods, and bowed themselves unto them: they turned quickly out of the way which their fathers walked in, obeying the commandments of the LORD; but they did not so.",
           "decoded": "And yet they did not listen to their judges, but they went after other gods and worshiped them: they quickly turned away from the path their ancestors followed, obeying the commandments of the LORD; but they did not do that.",
           "context": ""
         },
         {
           "verse": 18,
-          "kjv": "And when the Lord raised them up judges, then the Lord was with the judge, and delivered them out of the hand of their enemies all the days of the judge: for it repented the Lord because of their groanings by reason of them that oppressed them and vexed them.",
+          "kjv": "And when the LORD raised them up judges, then the LORD was with the judge, and delivered them out of the hand of their enemies all the days of the judge: for it repented the LORD because of their groanings by reason of them that oppressed them and vexed them.",
           "decoded": "And when the LORD raised up judges for them, the LORD was with the judge and rescued them from the power of their enemies during the entire time the judge led: because the LORD felt sorry for their groaning due to those who oppressed and troubled them.",
           "context": ""
         },
@@ -349,7 +349,7 @@
         },
         {
           "verse": 20,
-          "kjv": "And the anger of the Lord was hot against Israel; and he said, Because that this people hath transgressed my covenant which I commanded their fathers, and have not hearkened unto my voice;",
+          "kjv": "And the anger of the LORD was hot against Israel; and he said, Because that this people hath transgressed my covenant which I commanded their fathers, and have not hearkened unto my voice;",
           "decoded": "The LORD was very angry with Israel and said, Because these people have broken the covenant I commanded their ancestors to keep, and they have not listened to my voice;",
           "context": ""
         },
@@ -361,13 +361,13 @@
         },
         {
           "verse": 22,
-          "kjv": "That through them I may prove Israel, whether they will keep the way of the Lord to walk therein, as their fathers did keep it, or not.",
+          "kjv": "That through them I may prove Israel, whether they will keep the way of the LORD to walk therein, as their fathers did keep it, or not.",
           "decoded": "That through them I may test Israel to see if they will follow the LORD's way and live by it, just as their ancestors did, or not.",
           "context": ""
         },
         {
           "verse": 23,
-          "kjv": "Therefore the Lord left those nations, without driving them out hastily; neither delivered he them into the hand of Joshua.",
+          "kjv": "Therefore the LORD left those nations, without driving them out hastily; neither delivered he them into the hand of Joshua.",
           "decoded": "So the LORD allowed those nations to remain, not forcing them out quickly; and he did not give them into Joshua's control.",
           "context": ""
         }
@@ -379,7 +379,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "Now these are the nations which the Lord left, to prove Israel by them, even as many of Israel as had not known all the wars of Canaan;",
+          "kjv": "Now these are the nations which the LORD left, to prove Israel by them, even as many of Israel as had not known all the wars of Canaan;",
           "decoded": "Now these are the nations that the LORD left to test Israel through them, especially those Israelites who had not experienced all the wars of Canaan;",
           "context": ""
         },
@@ -391,13 +391,13 @@
         },
         {
           "verse": 3,
-          "kjv": "Namely, five lords of the Philistines, and all the Canaanites, and the Sidonians, and the Hivites that dwelt in mount Lebanon, from mount Baal-hermon unto the entering in of Hamath.",
+          "kjv": "Namely, five lords of the Philistines, and all the Canaanites, and the Sidonians, and the Hivites that dwelt in mount Lebanon, from mount Baalhermon unto the entering in of Hamath.",
           "decoded": "Specifically, five rulers of the Philistines, and all the Canaanites, and the Sidonians, and the Hivites who lived in Mount Lebanon, from Mount Baal-Hermon to the entrance of Hamath.",
           "context": ""
         },
         {
           "verse": 4,
-          "kjv": "And they were to prove Israel by them, to know whether they would hearken unto the commandments of the Lord, which he commanded their fathers by the hand of Moses.",
+          "kjv": "And they were to prove Israel by them, to know whether they would hearken unto the commandments of the LORD, which he commanded their fathers by the hand of Moses.",
           "decoded": "They were meant to test Israel through them, to see if they would listen to the commandments of the LORD, which He gave to their ancestors through Moses.",
           "context": ""
         },
@@ -415,25 +415,25 @@
         },
         {
           "verse": 7,
-          "kjv": "And the children of Israel did evil in the sight of the Lord, and forgat the Lord their God, and served Baalim and the groves.",
+          "kjv": "And the children of Israel did evil in the sight of the LORD, and forgat the LORD their God, and served Baalim and the groves.",
           "decoded": "The people of Israel did evil in the eyes of the LORD, forgot the LORD their God, and worshiped Baalim and the sacred trees.",
           "context": ""
         },
         {
           "verse": 8,
-          "kjv": "Therefore the anger of the Lord was hot against Israel, and he sold them into the hand of Chushan-rishathaim king of Mesopotamia: and the children of Israel served Chushan-rishathaim eight years.",
+          "kjv": "Therefore the anger of the LORD was hot against Israel, and he sold them into the hand of Chushanrishathaim king of Mesopotamia: and the children of Israel served Chushanrishathaim eight years.",
           "decoded": "So the LORD was very angry with Israel, and he allowed them to be controlled by Chushan-rishathaim, king of Mesopotamia. The people of Israel served Chushan-rishathaim for eight years.",
           "context": ""
         },
         {
           "verse": 9,
-          "kjv": "And when the children of Israel cried unto the Lord, the Lord raised up a deliverer to the children of Israel, who delivered them, even Othniel the son of Kenaz, Caleb’s younger brother.",
+          "kjv": "And when the children of Israel cried unto the LORD, the LORD raised up a deliverer to the children of Israel, who delivered them, even Othniel the son of Kenaz, Caleb’s younger brother.",
           "decoded": "When the people of Israel cried out to the LORD, the LORD raised up a rescuer for the people of Israel, who saved them, Othniel the son of Kenaz, Caleb’s younger brother.",
           "context": ""
         },
         {
           "verse": 10,
-          "kjv": "And the Spirit of the Lord came upon him, and he judged Israel, and went out to war: and the Lord delivered Chushan-rishathaim king of Mesopotamia into his hand; and his hand prevailed against Chushan-rishathaim.",
+          "kjv": "And the Spirit of the LORD came upon him, and he judged Israel, and went out to war: and the LORD delivered Chushanrishathaim king of Mesopotamia into his hand; and his hand prevailed against Chushanrishathaim.",
           "decoded": "The Spirit of the LORD came upon him, and he led Israel as a judge, and went out to fight. The LORD gave Chushan-rishathaim, king of Mesopotamia, into his control, and he was victorious over Chushan-rishathaim.",
           "context": ""
         },
@@ -445,7 +445,7 @@
         },
         {
           "verse": 12,
-          "kjv": "And the children of Israel did evil again in the sight of the Lord: and the Lord strengthened Eglon the king of Moab against Israel, because they had done evil in the sight of the Lord.",
+          "kjv": "And the children of Israel did evil again in the sight of the LORD: and the LORD strengthened Eglon the king of Moab against Israel, because they had done evil in the sight of the LORD.",
           "decoded": "The Israelites did evil again in the eyes of the LORD, so the LORD made Eglon, the king of Moab, strong against Israel because they had done evil in the eyes of the LORD.",
           "context": ""
         },
@@ -463,7 +463,7 @@
         },
         {
           "verse": 15,
-          "kjv": "But when the children of Israel cried unto the Lord, the Lord raised them up a deliverer, Ehud the son of Gera, a Benjamite, a man lefthanded: and by him the children of Israel sent a present unto Eglon the king of Moab.",
+          "kjv": "But when the children of Israel cried unto the LORD, the LORD raised them up a deliverer, Ehud the son of Gera, a Benjamite, a man lefthanded: and by him the children of Israel sent a present unto Eglon the king of Moab.",
           "decoded": "But when the people of Israel cried out to the LORD, the LORD raised up a deliverer for them, Ehud the son of Gera, a Benjamite, a left-handed man; and through him the people of Israel sent a gift to Eglon, the king of Moab.",
           "context": ""
         },
@@ -541,7 +541,7 @@
         },
         {
           "verse": 28,
-          "kjv": "And he said unto them, Follow after me: for the Lord hath delivered your enemies the Moabites into your hand. And they went down after him, and took the fords of Jordan toward Moab, and suffered not a man to pass over.",
+          "kjv": "And he said unto them, Follow after me: for the LORD hath delivered your enemies the Moabites into your hand. And they went down after him, and took the fords of Jordan toward Moab, and suffered not a man to pass over.",
           "decoded": "And he said to them, Follow me, because the LORD has given your enemies, the Moabites, into your hands. So they went down after him, took control of the crossing points of the Jordan River toward Moab, and did not allow anyone to cross.",
           "context": ""
         },
@@ -571,19 +571,19 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "And the children of Israel again did evil in the sight of the Lord, when Ehud was dead.",
+          "kjv": "And the children of Israel again did evil in the sight of the LORD, when Ehud was dead.",
           "decoded": "The people of Israel did evil again in the eyes of the LORD after Ehud died.",
           "context": ""
         },
         {
           "verse": 2,
-          "kjv": "And the Lord sold them into the hand of Jabin king of Canaan, that reigned in Hazor; the captain of whose host was Sisera, which dwelt in Harosheth of the Gentiles.",
+          "kjv": "And the LORD sold them into the hand of Jabin king of Canaan, that reigned in Hazor; the captain of whose host was Sisera, which dwelt in Harosheth of the Gentiles.",
           "decoded": "The LORD allowed them to be defeated by Jabin, king of Canaan, who ruled in Hazor. The commander of his army was Sisera, who lived in Harosheth of the Gentiles.",
           "context": ""
         },
         {
           "verse": 3,
-          "kjv": "And the children of Israel cried unto the Lord: for he had nine hundred chariots of iron; and twenty years he mightily oppressed the children of Israel.",
+          "kjv": "And the children of Israel cried unto the LORD: for he had nine hundred chariots of iron; and twenty years he mightily oppressed the children of Israel.",
           "decoded": "The people of Israel cried out to the LORD because he had nine hundred iron chariots and oppressed the people of Israel powerfully for twenty years.",
           "context": ""
         },
@@ -595,13 +595,13 @@
         },
         {
           "verse": 5,
-          "kjv": "And she dwelt under the palm tree of Deborah between Ramah and Beth-el in mount Ephraim: and the children of Israel came up to her for judgment.",
+          "kjv": "And she dwelt under the palm tree of Deborah between Ramah and Bethel in mount Ephraim: and the children of Israel came up to her for judgment.",
           "decoded": "She lived under the palm tree of Deborah between Ramah and Bethel in the hill country of Ephraim, and the people of Israel came to her to receive judgment.",
           "context": ""
         },
         {
           "verse": 6,
-          "kjv": "And she sent and called Barak the son of Abinoam out of Kedesh-naphtali, and said unto him, Hath not the Lord God of Israel commanded, saying, Go and draw toward mount Tabor, and take with thee ten thousand men of the children of Naphtali and of the children of Zebulun?",
+          "kjv": "And she sent and called Barak the son of Abinoam out of Kedeshnaphtali, and said unto him, Hath not the LORD God of Israel commanded, saying, Go and draw toward mount Tabor, and take with thee ten thousand men of the children of Naphtali and of the children of Zebulun?",
           "decoded": "She sent for Barak, the son of Abinoam, from Kedesh-naphtali, and said to him, Has not the LORD God of Israel commanded you, saying, Go and march toward Mount Tabor, and take with you ten thousand men from the tribes of Naphtali and Zebulun?",
           "context": ""
         },
@@ -619,7 +619,7 @@
         },
         {
           "verse": 9,
-          "kjv": "And she said, I will surely go with thee: notwithstanding the journey that thou takest shall not be for thine honour; for the Lord shall sell Sisera into the hand of a woman. And Deborah arose, and went with Barak to Kedesh.",
+          "kjv": "And she said, I will surely go with thee: notwithstanding the journey that thou takest shall not be for thine honour; for the LORD shall sell Sisera into the hand of a woman. And Deborah arose, and went with Barak to Kedesh.",
           "decoded": "And she said, I will definitely go with you: however, the journey you are taking will not bring you honor; because the LORD will deliver Sisera into the hands of a woman. Then Deborah got up and went with Barak to Kedesh.",
           "context": ""
         },
@@ -649,13 +649,13 @@
         },
         {
           "verse": 14,
-          "kjv": "And Deborah said unto Barak, Up; for this is the day in which the Lord hath delivered Sisera into thine hand: is not the Lord gone out before thee? So Barak went down from mount Tabor, and ten thousand men after him.",
+          "kjv": "And Deborah said unto Barak, Up; for this is the day in which the LORD hath delivered Sisera into thine hand: is not the LORD gone out before thee? So Barak went down from mount Tabor, and ten thousand men after him.",
           "decoded": "And Deborah said to Barak, Get up; because this is the day the LORD has given Sisera into your hand: has the LORD not gone ahead of you? So Barak went down from Mount Tabor, with ten thousand men following him.",
           "context": ""
         },
         {
           "verse": 15,
-          "kjv": "And the Lord discomfited Sisera, and all his chariots, and all his host, with the edge of the sword before Barak; so that Sisera lighted down off his chariot, and fled away on his feet.",
+          "kjv": "And the LORD discomfited Sisera, and all his chariots, and all his host, with the edge of the sword before Barak; so that Sisera lighted down off his chariot, and fled away on his feet.",
           "decoded": "And the LORD defeated Sisera, and all his chariots, and all his army, with the sword in front of Barak; so Sisera got down from his chariot and ran away on foot.",
           "context": ""
         },
@@ -685,7 +685,7 @@
         },
         {
           "verse": 20,
-          "kjv": "Again he said unto her, Stand in the door of the tent, and it shall be, when any man doth come and inquire of thee, and say, Is there any man here? that thou shalt say, No.",
+          "kjv": "Again he said unto her, Stand in the door of the tent, and it shall be, when any man doth come and enquire of thee, and say, Is there any man here? that thou shalt say, No.",
           "decoded": "Again he said to her, Stand at the entrance of the tent, and when any man comes and asks you, saying, Is there any man here? you shall say, No.",
           "context": ""
         },
@@ -727,25 +727,25 @@
         },
         {
           "verse": 2,
-          "kjv": "Praise ye the Lord for the avenging of Israel, when the people willingly offered themselves.",
+          "kjv": "Praise ye the LORD for the avenging of Israel, when the people willingly offered themselves.",
           "decoded": "Praise the LORD for defending Israel, when the people willingly offered themselves.",
           "context": ""
         },
         {
           "verse": 3,
-          "kjv": "Hear, O ye kings; give ear, O ye princes; I, even I, will sing unto the Lord; I will sing praise to the Lord God of Israel.",
+          "kjv": "Hear, O ye kings; give ear, O ye princes; I, even I, will sing unto the LORD; I will sing praise to the LORD God of Israel.",
           "decoded": "Listen, you kings; pay attention, you princes; I, yes I, will sing to the LORD; I will sing praise to the LORD God of Israel.",
           "context": ""
         },
         {
           "verse": 4,
-          "kjv": "Lord, when thou wentest out of Seir, when thou marchedst out of the field of Edom, the earth trembled, and the heavens dropped, the clouds also dropped water.",
+          "kjv": "LORD, when thou wentest out of Seir, when thou marchedst out of the field of Edom, the earth trembled, and the heavens dropped, the clouds also dropped water.",
           "decoded": "LORD, when you came out of Seir, when you marched out of the field of Edom, the earth shook, and the skies poured down rain, the clouds also poured water.",
           "context": ""
         },
         {
           "verse": 5,
-          "kjv": "The mountains melted from before the Lord, even that Sinai from before the Lord God of Israel.",
+          "kjv": "The mountains melted from before the LORD, even that Sinai from before the LORD God of Israel.",
           "decoded": "The mountains melted away in front of the LORD, even Mount Sinai melted away in front of the LORD God of Israel.",
           "context": ""
         },
@@ -769,7 +769,7 @@
         },
         {
           "verse": 9,
-          "kjv": "My heart is toward the governors of Israel, that offered themselves willingly among the people. Bless ye the Lord.",
+          "kjv": "My heart is toward the governors of Israel, that offered themselves willingly among the people. Bless ye the LORD.",
           "decoded": "My heart is with the leaders of Israel, who willingly offered themselves among the people. Praise the LORD.",
           "context": ""
         },
@@ -781,7 +781,7 @@
         },
         {
           "verse": 11,
-          "kjv": "They that are delivered from the noise of archers in the places of drawing water, there shall they rehearse the righteous acts of the Lord, even the righteous acts toward the inhabitants of his villages in Israel: then shall the people of the Lord go down to the gates.",
+          "kjv": "They that are delivered from the noise of archers in the places of drawing water, there shall they rehearse the righteous acts of the LORD, even the righteous acts toward the inhabitants of his villages in Israel: then shall the people of the LORD go down to the gates.",
           "decoded": "Those who are saved from the sound of archers at the water-drawing places will there tell about the righteous deeds of the LORD, the righteous deeds done for the people living in his villages in Israel. Then the people of the LORD will go down to the city gates.",
           "context": ""
         },
@@ -793,7 +793,7 @@
         },
         {
           "verse": 13,
-          "kjv": "Then he made him that remaineth have dominion over the nobles among the people: the Lord made me have dominion over the mighty.",
+          "kjv": "Then he made him that remaineth have dominion over the nobles among the people: the LORD made me have dominion over the mighty.",
           "decoded": "Then he made the one who remains have authority over the leaders among the people: the LORD gave me authority over the powerful.",
           "context": ""
         },
@@ -853,7 +853,7 @@
         },
         {
           "verse": 23,
-          "kjv": "Curse ye Meroz, said the angel of the Lord, curse ye bitterly the inhabitants thereof; because they came not to the help of the Lord, to the help of the Lord against the mighty.",
+          "kjv": "Curse ye Meroz, said the angel of the LORD, curse ye bitterly the inhabitants thereof; because they came not to the help of the LORD, to the help of the LORD against the mighty.",
           "decoded": "Curse Meroz, said the angel of the LORD; curse bitterly its inhabitants because they did not come to help the LORD, to help the LORD against the mighty.",
           "context": ""
         },
@@ -901,7 +901,7 @@
         },
         {
           "verse": 31,
-          "kjv": "So let all thine enemies perish, O Lord: but let them that love him be as the sun when he goeth forth in his might. And the land had rest forty years.",
+          "kjv": "So let all thine enemies perish, O LORD: but let them that love him be as the sun when he goeth forth in his might. And the land had rest forty years.",
           "decoded": "So let all your enemies perish, O LORD; but let those who love him be like the sun when it rises in its strength. And the land had peace for forty years.",
           "context": ""
         }
@@ -913,7 +913,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "And the children of Israel did evil in the sight of the Lord: and the Lord delivered them into the hand of Midian seven years.",
+          "kjv": "And the children of Israel did evil in the sight of the LORD: and the LORD delivered them into the hand of Midian seven years.",
           "decoded": "The people of Israel did what was wrong in the eyes of the LORD, so the LORD allowed Midian to control them for seven years.",
           "context": ""
         },
@@ -943,19 +943,19 @@
         },
         {
           "verse": 6,
-          "kjv": "And Israel was greatly impoverished because of the Midianites; and the children of Israel cried unto the Lord.",
+          "kjv": "And Israel was greatly impoverished because of the Midianites; and the children of Israel cried unto the LORD.",
           "decoded": "Israel became very poor because of the Midianites, and the people of Israel cried out to the LORD.",
           "context": ""
         },
         {
           "verse": 7,
-          "kjv": "And it came to pass, when the children of Israel cried unto the Lord because of the Midianites,",
+          "kjv": "And it came to pass, when the children of Israel cried unto the LORD because of the Midianites,",
           "decoded": "It happened when the people of Israel cried out to the LORD because of the Midianites,",
           "context": ""
         },
         {
           "verse": 8,
-          "kjv": "That the Lord sent a prophet unto the children of Israel, which said unto them, Thus saith the Lord God of Israel, I brought you up from Egypt, and brought you forth out of the house of bondage;",
+          "kjv": "That the LORD sent a prophet unto the children of Israel, which said unto them, Thus saith the LORD God of Israel, I brought you up from Egypt, and brought you forth out of the house of bondage;",
           "decoded": "The LORD sent a prophet to the children of Israel, who said to them, 'This is what the LORD God of Israel says: I brought you up from Egypt and led you out of slavery;'",
           "context": ""
         },
@@ -967,31 +967,31 @@
         },
         {
           "verse": 10,
-          "kjv": "And I said unto you, I am the Lord your God; fear not the gods of the Amorites, in whose land ye dwell: but ye have not obeyed my voice.",
+          "kjv": "And I said unto you, I am the LORD your God; fear not the gods of the Amorites, in whose land ye dwell: but ye have not obeyed my voice.",
           "decoded": "And I said to you, I am the LORD your God; do not be afraid of the gods of the Amorites, in whose land you live: but you have not obeyed my voice.",
           "context": ""
         },
         {
           "verse": 11,
-          "kjv": "And there came an angel of the Lord, and sat under an oak which was in Ophrah, that pertained unto Joash the Abi-ezrite: and his son Gideon threshed wheat by the winepress, to hide it from the Midianites.",
+          "kjv": "And there came an angel of the LORD, and sat under an oak which was in Ophrah, that pertained unto Joash the Abiezrite: and his son Gideon threshed wheat by the winepress, to hide it from the Midianites.",
           "decoded": "An angel of the LORD came and sat under an oak tree in Ophrah, which belonged to Joash the Abi-ezrite. His son Gideon was threshing wheat near the winepress to keep it hidden from the Midianites.",
           "context": ""
         },
         {
           "verse": 12,
-          "kjv": "And the angel of the Lord appeared unto him, and said unto him, The Lord is with thee, thou mighty man of valour.",
+          "kjv": "And the angel of the LORD appeared unto him, and said unto him, The LORD is with thee, thou mighty man of valour.",
           "decoded": "And the angel of the LORD appeared to him and said to him, The LORD is with you, you mighty man of courage.",
           "context": ""
         },
         {
           "verse": 13,
-          "kjv": "And Gideon said unto him, Oh my Lord, if the Lord be with us, why then is all this befallen us? and where be all his miracles which our fathers told us of, saying, Did not the Lord bring us up from Egypt? but now the Lord hath forsaken us, and delivered us into the hands of the Midianites.",
+          "kjv": "And Gideon said unto him, Oh my Lord, if the LORD be with us, why then is all this befallen us? and where be all his miracles which our fathers told us of, saying, Did not the LORD bring us up from Egypt? but now the LORD hath forsaken us, and delivered us into the hands of the Midianites.",
           "decoded": "And Gideon said to him, My Lord, if the LORD is with us, why has all this happened to us? And where are all his miracles that our ancestors told us about, saying, Did not the LORD bring us up from Egypt? But now the LORD has abandoned us and handed us over to the Midianites.",
           "context": ""
         },
         {
           "verse": 14,
-          "kjv": "And the Lord looked upon him, and said, Go in this thy might, and thou shalt save Israel from the hand of the Midianites: have not I sent thee?",
+          "kjv": "And the LORD looked upon him, and said, Go in this thy might, and thou shalt save Israel from the hand of the Midianites: have not I sent thee?",
           "decoded": "The LORD looked at him and said, Go with your strength, and you will save Israel from the Midianites' control. Did I not send you?",
           "context": ""
         },
@@ -1003,7 +1003,7 @@
         },
         {
           "verse": 16,
-          "kjv": "And the Lord said unto him, Surely I will be with thee, and thou shalt smite the Midianites as one man.",
+          "kjv": "And the LORD said unto him, Surely I will be with thee, and thou shalt smite the Midianites as one man.",
           "decoded": "And the LORD said to him, Surely I will be with you, and you will defeat the Midianites as if you were one man.",
           "context": ""
         },
@@ -1033,43 +1033,43 @@
         },
         {
           "verse": 21,
-          "kjv": "Then the angel of the Lord put forth the end of the staff that was in his hand, and touched the flesh and the unleavened cakes; and there rose up fire out of the rock, and consumed the flesh and the unleavened cakes. Then the angel of the Lord departed out of his sight.",
+          "kjv": "Then the angel of the LORD put forth the end of the staff that was in his hand, and touched the flesh and the unleavened cakes; and there rose up fire out of the rock, and consumed the flesh and the unleavened cakes. Then the angel of the LORD departed out of his sight.",
           "decoded": "Then the angel of the LORD stretched out the end of the staff that was in his hand and touched the meat and the unleavened cakes; fire came up from the rock and burned the meat and the unleavened cakes. Then the angel of the LORD left from his sight.",
           "context": ""
         },
         {
           "verse": 22,
-          "kjv": "And when Gideon perceived that he was an angel of the Lord, Gideon said, Alas, O Lord God! for because I have seen an angel of the Lord face to face.",
+          "kjv": "And when Gideon perceived that he was an angel of the LORD, Gideon said, Alas, O LORD God! for because I have seen an angel of the LORD face to face.",
           "decoded": "When Gideon realized that he was an angel of the LORD, Gideon said, \"Oh no, Lord GOD! I have seen an angel of the LORD face to face.\"",
           "context": ""
         },
         {
           "verse": 23,
-          "kjv": "And the Lord said unto him, Peace be unto thee; fear not: thou shalt not die.",
+          "kjv": "And the LORD said unto him, Peace be unto thee; fear not: thou shalt not die.",
           "decoded": "And the LORD said to him, Peace be with you; do not be afraid: you will not die.",
           "context": ""
         },
         {
           "verse": 24,
-          "kjv": "Then Gideon built an altar there unto the Lord, and called it Jehovah-shalom: unto this day it is yet in Ophrah of the Abi-ezrites.",
+          "kjv": "Then Gideon built an altar there unto the LORD, and called it Jehovahshalom: unto this day it is yet in Ophrah of the Abiezrites.",
           "decoded": "Then Gideon built an altar there to the LORD, and named it Jehovah-shalom; it is still there today in Ophrah of the Abi-ezrites.",
           "context": ""
         },
         {
           "verse": 25,
-          "kjv": "And it came to pass the same night, that the Lord said unto him, Take thy father’s young bullock, even the second bullock of seven years old, and throw down the altar of Baal that thy father hath, and cut down the grove that is by it:",
+          "kjv": "And it came to pass the same night, that the LORD said unto him, Take thy father’s young bullock, even the second bullock of seven years old, and throw down the altar of Baal that thy father hath, and cut down the grove that is by it:",
           "decoded": "That same night, the LORD said to him, 'Take your father's young bull, the second bull that is seven years old, and tear down the altar of Baal that your father has, and cut down the sacred tree beside it.'",
           "context": ""
         },
         {
           "verse": 26,
-          "kjv": "And build an altar unto the Lord thy God upon the top of this rock, in the ordered place, and take the second bullock, and offer a burnt sacrifice with the wood of the grove which thou shalt cut down.",
+          "kjv": "And build an altar unto the LORD thy God upon the top of this rock, in the ordered place, and take the second bullock, and offer a burnt sacrifice with the wood of the grove which thou shalt cut down.",
           "decoded": "And build an altar to the LORD your God on top of this rock, in the designated place, and take the second bull, and offer a burnt sacrifice using the wood from the tree you will cut down.",
           "context": ""
         },
         {
           "verse": 27,
-          "kjv": "Then Gideon took ten men of his servants, and did as the Lord had said unto him: and so it was, because he feared his father’s household, and the men of the city, that he could not do it by day, that he did it by night.",
+          "kjv": "Then Gideon took ten men of his servants, and did as the LORD had said unto him: and so it was, because he feared his father’s household, and the men of the city, that he could not do it by day, that he did it by night.",
           "decoded": "Then Gideon took ten of his servants and did as the LORD had told him. Because he was afraid of his father's household and the men of the city, he could not do it during the day, so he did it at night.",
           "context": ""
         },
@@ -1081,7 +1081,7 @@
         },
         {
           "verse": 29,
-          "kjv": "And they said one to another, Who hath done this thing? And when they inquired and asked, they said, Gideon the son of Joash hath done this thing.",
+          "kjv": "And they said one to another, Who hath done this thing? And when they enquired and asked, they said, Gideon the son of Joash hath done this thing.",
           "decoded": "And they said to each other, Who has done this thing? When they investigated and asked, they said, Gideon the son of Joash has done this thing.",
           "context": ""
         },
@@ -1111,7 +1111,7 @@
         },
         {
           "verse": 34,
-          "kjv": "But the Spirit of the Lord came upon Gideon, and he blew a trumpet; and Abi-ezer was gathered after him.",
+          "kjv": "But the Spirit of the LORD came upon Gideon, and he blew a trumpet; and Abiezer was gathered after him.",
           "decoded": "But the Spirit of the LORD came upon Gideon, and he blew a trumpet; and the men of Abi-ezer gathered behind him.",
           "context": ""
         },
@@ -1165,7 +1165,7 @@
         },
         {
           "verse": 2,
-          "kjv": "And the Lord said unto Gideon, The people that are with thee are too many for me to give the Midianites into their hands, lest Israel vaunt themselves against me, saying, Mine own hand hath saved me.",
+          "kjv": "And the LORD said unto Gideon, The people that are with thee are too many for me to give the Midianites into their hands, lest Israel vaunt themselves against me, saying, Mine own hand hath saved me.",
           "decoded": "And the LORD said to Gideon, The people with you are too many for me to give the Midianites into their hands, because Israel might boast against me, saying, My own strength saved me.",
           "context": ""
         },
@@ -1177,13 +1177,13 @@
         },
         {
           "verse": 4,
-          "kjv": "And the Lord said unto Gideon, The people are yet too many; bring them down unto the water, and I will try them for thee there: and it shall be, that of whom I say unto thee, This shall go with thee, the same shall go with thee; and of whomsoever I say unto thee, This shall not go with thee, the same shall not go.",
+          "kjv": "And the LORD said unto Gideon, The people are yet too many; bring them down unto the water, and I will try them for thee there: and it shall be, that of whom I say unto thee, This shall go with thee, the same shall go with thee; and of whomsoever I say unto thee, This shall not go with thee, the same shall not go.",
           "decoded": "And the LORD said to Gideon, The people are still too many; bring them down to the water, and I will test them for you there: and it will be that whoever I say to you, This one shall go with you, that one shall go with you; and whoever I say to you, This one shall not go with you, that one shall not go.",
           "context": ""
         },
         {
           "verse": 5,
-          "kjv": "So he brought down the people unto the water: and the Lord said unto Gideon, Every one that lappeth of the water with his tongue, as a dog lappeth, him shalt thou set by himself; likewise every one that boweth down upon his knees to drink.",
+          "kjv": "So he brought down the people unto the water: and the LORD said unto Gideon, Every one that lappeth of the water with his tongue, as a dog lappeth, him shalt thou set by himself; likewise every one that boweth down upon his knees to drink.",
           "decoded": "So he brought the people down to the water, and the LORD said to Gideon, \"Everyone who drinks water by licking it with his tongue, like a dog licks, you shall set apart by himself; and everyone who kneels down to drink, you shall also set apart.\"",
           "context": ""
         },
@@ -1195,7 +1195,7 @@
         },
         {
           "verse": 7,
-          "kjv": "And the Lord said unto Gideon, By the three hundred men that lapped will I save you, and deliver the Midianites into thine hand: and let all the other people go every man unto his place.",
+          "kjv": "And the LORD said unto Gideon, By the three hundred men that lapped will I save you, and deliver the Midianites into thine hand: and let all the other people go every man unto his place.",
           "decoded": "And the LORD said to Gideon, I will save you by the three hundred men who drank water by lapping, and I will deliver the Midianites into your hand; and let all the other people return each to his own place.",
           "context": ""
         },
@@ -1207,7 +1207,7 @@
         },
         {
           "verse": 9,
-          "kjv": "And it came to pass the same night, that the Lord said unto him, Arise, get thee down unto the host; for I have delivered it into thine hand.",
+          "kjv": "And it came to pass the same night, that the LORD said unto him, Arise, get thee down unto the host; for I have delivered it into thine hand.",
           "decoded": "That same night, the LORD said to him, 'Get up and go down to the army, because I have given it into your hand.'",
           "context": ""
         },
@@ -1243,7 +1243,7 @@
         },
         {
           "verse": 15,
-          "kjv": "And it was so, when Gideon heard the telling of the dream, and the interpretation thereof, that he worshipped, and returned into the host of Israel, and said, Arise; for the Lord hath delivered into your hand the host of Midian.",
+          "kjv": "And it was so, when Gideon heard the telling of the dream, and the interpretation thereof, that he worshipped, and returned into the host of Israel, and said, Arise; for the LORD hath delivered into your hand the host of Midian.",
           "decoded": "And it happened that when Gideon heard the dream and its interpretation, he worshiped and returned to the army of Israel and said, Get up; because the LORD has given the army of Midian into your hands.",
           "context": ""
         },
@@ -1261,7 +1261,7 @@
         },
         {
           "verse": 18,
-          "kjv": "When I blow with a trumpet, I and all that are with me, then blow ye the trumpets also on every side of all the camp, and say, The sword of the Lord, and of Gideon.",
+          "kjv": "When I blow with a trumpet, I and all that are with me, then blow ye the trumpets also on every side of all the camp, and say, The sword of the LORD, and of Gideon.",
           "decoded": "When I blow the trumpet, I and everyone with me will blow the trumpets too on every side of the entire camp, and say, 'The sword of the LORD and of Gideon.'",
           "context": ""
         },
@@ -1273,19 +1273,19 @@
         },
         {
           "verse": 20,
-          "kjv": "And the three companies blew the trumpets, and brake the pitchers, and held the lamps in their left hands, and the trumpets in their right hands to blow withal: and they cried, The sword of the Lord, and of Gideon.",
+          "kjv": "And the three companies blew the trumpets, and brake the pitchers, and held the lamps in their left hands, and the trumpets in their right hands to blow withal: and they cried, The sword of the LORD, and of Gideon.",
           "decoded": "And the three groups blew the trumpets, broke the pitchers, held the lamps in their left hands, and held the trumpets in their right hands to blow them; and they shouted, 'The sword of the LORD and of Gideon!'",
           "context": ""
         },
         {
           "verse": 21,
-          "kjv": "And they stood every man in his place round about the camp: and all the host ran, and cried, and fled.",
+          "kjv": "And they stood every man in his place round about the camp; and all the host ran, and cried, and fled.",
           "decoded": "And each man stood in his position all around the camp, and the entire army ran, shouted, and fled.",
           "context": ""
         },
         {
           "verse": 22,
-          "kjv": "And the three hundred blew the trumpets, and the Lord set every man’s sword against his fellow, even throughout all the host: and the host fled to Beth-shittah in Zererath, and to the border of Abel-meholah, unto Tabbath.",
+          "kjv": "And the three hundred blew the trumpets, and the LORD set every man’s sword against his fellow, even throughout all the host: and the host fled to Bethshittah in Zererath, and to the border of Abelmeholah, unto Tabbath.",
           "decoded": "And the three hundred blew the trumpets, and the LORD caused each man's sword to turn against his companion throughout the entire army; and the army fled to Beth-shittah in Zererath, and to the border of Abel-meholah, up to Tabbath.",
           "context": ""
         },
@@ -1297,7 +1297,7 @@
         },
         {
           "verse": 24,
-          "kjv": "And Gideon sent messengers throughout all mount Ephraim, saying, Come down against the Midianites, and take before them the waters unto Beth-barah and Jordan. Then all the men of Ephraim gathered themselves together, and took the waters unto Beth-barah and Jordan.",
+          "kjv": "And Gideon sent messengers throughout all mount Ephraim, saying, Come down against the Midianites, and take before them the waters unto Bethbarah and Jordan. Then all the men of Ephraim gathered themselves together, and took the waters unto Bethbarah and Jordan.",
           "decoded": "Gideon sent messengers throughout all of Mount Ephraim, saying, 'Come down against the Midianites and seize the water sources before them at Beth-barah and the Jordan.' Then all the men of Ephraim gathered together and seized the water sources at Beth-barah and the Jordan.",
           "context": ""
         },
@@ -1321,7 +1321,7 @@
         },
         {
           "verse": 2,
-          "kjv": "And he said unto them, What have I done now in comparison of you? Is not the gleaning of the grapes of Ephraim better than the vintage of Abi-ezer?",
+          "kjv": "And he said unto them, What have I done now in comparison of you? Is not the gleaning of the grapes of Ephraim better than the vintage of Abiezer?",
           "decoded": "And he said to them, What have I done now compared to you? Is not the gathering of the leftover grapes of Ephraim better than the full grape harvest of Abi-ezer?",
           "context": ""
         },
@@ -1351,7 +1351,7 @@
         },
         {
           "verse": 7,
-          "kjv": "And Gideon said, Therefore when the Lord hath delivered Zebah and Zalmunna into mine hand, then I will tear your flesh with the thorns of the wilderness and with briers.",
+          "kjv": "And Gideon said, Therefore when the LORD hath delivered Zebah and Zalmunna into mine hand, then I will tear your flesh with the thorns of the wilderness and with briers.",
           "decoded": "And Gideon said, Therefore when the LORD has delivered Zebah and Zalmunna into my hand, then I will tear your flesh with the thorns of the wilderness and with briers.",
           "context": ""
         },
@@ -1393,7 +1393,7 @@
         },
         {
           "verse": 14,
-          "kjv": "And caught a young man of the men of Succoth, and inquired of him: and he described unto him the princes of Succoth, and the elders thereof, even threescore and seventeen men.",
+          "kjv": "And caught a young man of the men of Succoth, and enquired of him: and he described unto him the princes of Succoth, and the elders thereof, even threescore and seventeen men.",
           "decoded": "And they caught a young man from the men of Succoth and asked him questions; he told them about the leaders of Succoth and its elders, a total of seventy-seven men.",
           "context": ""
         },
@@ -1423,7 +1423,7 @@
         },
         {
           "verse": 19,
-          "kjv": "And he said, They were my brethren, even the sons of my mother: as the Lord liveth, if ye had saved them alive, I would not slay you.",
+          "kjv": "And he said, They were my brethren, even the sons of my mother: as the LORD liveth, if ye had saved them alive, I would not slay you.",
           "decoded": "And he said, They were my brothers, the sons of my mother: as the LORD lives, if you had kept them alive, I would not kill you.",
           "context": ""
         },
@@ -1447,7 +1447,7 @@
         },
         {
           "verse": 23,
-          "kjv": "And Gideon said unto them, I will not rule over you, neither shall my son rule over you: the Lord shall rule over you.",
+          "kjv": "And Gideon said unto them, I will not rule over you, neither shall my son rule over you: the LORD shall rule over you.",
           "decoded": "And Gideon said to them, I will not rule over you, nor will my son rule over you; the LORD will rule over you.",
           "context": ""
         },
@@ -1501,19 +1501,19 @@
         },
         {
           "verse": 32,
-          "kjv": "And Gideon the son of Joash died in a good old age, and was buried in the sepulchre of Joash his father, in Ophrah of the Abi-ezrites.",
+          "kjv": "And Gideon the son of Joash died in a good old age, and was buried in the sepulchre of Joash his father, in Ophrah of the Abiezrites.",
           "decoded": "Gideon, the son of Joash, died at a good old age, and was buried in the tomb of Joash his father, in Ophrah of the Abi-ezrites.",
           "context": ""
         },
         {
           "verse": 33,
-          "kjv": "And it came to pass, as soon as Gideon was dead, that the children of Israel turned again, and went a whoring after Baalim, and made Baal-berith their god.",
+          "kjv": "And it came to pass, as soon as Gideon was dead, that the children of Israel turned again, and went a whoring after Baalim, and made Baalberith their god.",
           "decoded": "After Gideon died, the people of Israel turned back and started worshiping the Baals, and they made Baal-berith their god.",
           "context": ""
         },
         {
           "verse": 34,
-          "kjv": "And the children of Israel remembered not the Lord their God, who had delivered them out of the hands of all their enemies on every side:",
+          "kjv": "And the children of Israel remembered not the LORD their God, who had delivered them out of the hands of all their enemies on every side:",
           "decoded": "The people of Israel did not remember the LORD their God, who had saved them from the hands of all their enemies around them.",
           "context": ""
         },
@@ -1549,7 +1549,7 @@
         },
         {
           "verse": 4,
-          "kjv": "And they gave him threescore and ten pieces of silver out of the house of Baal-berith, wherewith Abimelech hired vain and light persons, which followed him.",
+          "kjv": "And they gave him threescore and ten pieces of silver out of the house of Baalberith, wherewith Abimelech hired vain and light persons, which followed him.",
           "decoded": "They gave him seventy pieces of silver from the house of Baal-berith, with which Abimelech hired worthless and unreliable men who followed him.",
           "context": ""
         },
@@ -1897,7 +1897,7 @@
         },
         {
           "verse": 4,
-          "kjv": "And he had thirty sons that rode on thirty ass colts, and they had thirty cities, which are called Havoth-jair unto this day, which are in the land of Gilead.",
+          "kjv": "And he had thirty sons that rode on thirty ass colts, and they had thirty cities, which are called Havothjair unto this day, which are in the land of Gilead.",
           "decoded": "He had thirty sons who rode on thirty young donkeys, and they owned thirty cities, which are still called Havoth-jair today, located in the land of Gilead.",
           "context": ""
         },
@@ -1909,13 +1909,13 @@
         },
         {
           "verse": 6,
-          "kjv": "And the children of Israel did evil again in the sight of the Lord, and served Baalim, and Ashtaroth, and the gods of Syria, and the gods of Zidon, and the gods of Moab, and the gods of the children of Ammon, and the gods of the Philistines, and forsook the Lord, and served not him.",
+          "kjv": "And the children of Israel did evil again in the sight of the LORD, and served Baalim, and Ashtaroth, and the gods of Syria, and the gods of Zidon, and the gods of Moab, and the gods of the children of Ammon, and the gods of the Philistines, and forsook the LORD, and served not him.",
           "decoded": "The people of Israel did evil again in the eyes of the LORD, and they worshiped Baalim, and Ashtaroth, and the gods of Syria, and the gods of Zidon, and the gods of Moab, and the gods of the people of Ammon, and the gods of the Philistines, and they abandoned the LORD and did not serve him.",
           "context": ""
         },
         {
           "verse": 7,
-          "kjv": "And the anger of the Lord was hot against Israel, and he sold them into the hands of the Philistines, and into the hands of the children of Ammon.",
+          "kjv": "And the anger of the LORD was hot against Israel, and he sold them into the hands of the Philistines, and into the hands of the children of Ammon.",
           "decoded": "The LORD was very angry with Israel, and he allowed them to be captured by the Philistines and the people of Ammon.",
           "context": ""
         },
@@ -1933,13 +1933,13 @@
         },
         {
           "verse": 10,
-          "kjv": "And the children of Israel cried unto the Lord, saying, We have sinned against thee, both because we have forsaken our God, and also served Baalim.",
+          "kjv": "And the children of Israel cried unto the LORD, saying, We have sinned against thee, both because we have forsaken our God, and also served Baalim.",
           "decoded": "The children of Israel cried out to the LORD, saying, We have sinned against you because we have abandoned our God and also served Baalim.",
           "context": ""
         },
         {
           "verse": 11,
-          "kjv": "And the Lord said unto the children of Israel, Did not I deliver you from the Egyptians, and from the Amorites, from the children of Ammon, and from the Philistines?",
+          "kjv": "And the LORD said unto the children of Israel, Did not I deliver you from the Egyptians, and from the Amorites, from the children of Ammon, and from the Philistines?",
           "decoded": "And the LORD said to the children of Israel, Did I not rescue you from the Egyptians, and from the Amorites, from the people of Ammon, and from the Philistines?",
           "context": ""
         },
@@ -1963,13 +1963,13 @@
         },
         {
           "verse": 15,
-          "kjv": "And the children of Israel said unto the Lord, We have sinned: do thou unto us whatsoever seemeth good unto thee; deliver us only, we pray thee, this day.",
+          "kjv": "And the children of Israel said unto the LORD, We have sinned: do thou unto us whatsoever seemeth good unto thee; deliver us only, we pray thee, this day.",
           "decoded": "And the children of Israel said to the LORD, We have sinned: do to us whatever seems good to you; only save us, we pray, today.",
           "context": ""
         },
         {
           "verse": 16,
-          "kjv": "And they put away the strange gods from among them, and served the Lord: and his soul was grieved for the misery of Israel.",
+          "kjv": "And they put away the strange gods from among them, and served the LORD: and his soul was grieved for the misery of Israel.",
           "decoded": "They removed the foreign gods from among them and served the LORD; and He was deeply troubled by the suffering of Israel.",
           "context": ""
         },
@@ -2041,19 +2041,19 @@
         },
         {
           "verse": 9,
-          "kjv": "And Jephthah said unto the elders of Gilead, If ye bring me home again to fight against the children of Ammon, and the Lord deliver them before me, shall I be your head?",
+          "kjv": "And Jephthah said unto the elders of Gilead, If ye bring me home again to fight against the children of Ammon, and the LORD deliver them before me, shall I be your head?",
           "decoded": "And Jephthah said to the elders of Gilead, If you bring me back to fight against the children of Ammon, and the LORD delivers them into my hands, will I be your leader?",
           "context": ""
         },
         {
           "verse": 10,
-          "kjv": "And the elders of Gilead said unto Jephthah, The Lord be witness between us, if we do not so according to thy words.",
+          "kjv": "And the elders of Gilead said unto Jephthah, The LORD be witness between us, if we do not so according to thy words.",
           "decoded": "And the elders of Gilead said to Jephthah, The LORD is witness between us if we do not do as you say.",
           "context": ""
         },
         {
           "verse": 11,
-          "kjv": "Then Jephthah went with the elders of Gilead, and the people made him head and captain over them: and Jephthah uttered all his words before the Lord in Mizpeh.",
+          "kjv": "Then Jephthah went with the elders of Gilead, and the people made him head and captain over them: and Jephthah uttered all his words before the LORD in Mizpeh.",
           "decoded": "Then Jephthah went with the elders of Gilead, and the people made him their leader and commander; and Jephthah spoke all his words before the LORD at Mizpeh.",
           "context": ""
         },
@@ -2113,7 +2113,7 @@
         },
         {
           "verse": 21,
-          "kjv": "And the Lord God of Israel delivered Sihon and all his people into the hand of Israel, and they smote them: so Israel possessed all the land of the Amorites, the inhabitants of that country.",
+          "kjv": "And the LORD God of Israel delivered Sihon and all his people into the hand of Israel, and they smote them: so Israel possessed all the land of the Amorites, the inhabitants of that country.",
           "decoded": "The LORD God of Israel gave Sihon and all his people into the control of Israel, and they defeated them; so Israel took possession of all the land of the Amorites, who lived in that region.",
           "context": ""
         },
@@ -2125,13 +2125,13 @@
         },
         {
           "verse": 23,
-          "kjv": "So now the Lord God of Israel hath dispossessed the Amorites from before his people Israel, and shouldest thou possess it?",
+          "kjv": "So now the LORD God of Israel hath dispossessed the Amorites from before his people Israel, and shouldest thou possess it?",
           "decoded": "So now the LORD God of Israel has driven out the Amorites from in front of his people Israel, and should you take possession of it?",
           "context": ""
         },
         {
           "verse": 24,
-          "kjv": "Wilt not thou possess that which Chemosh thy god giveth thee to possess? So whomsoever the Lord our God shall drive out from before us, them will we possess.",
+          "kjv": "Wilt not thou possess that which Chemosh thy god giveth thee to possess? So whomsoever the LORD our God shall drive out from before us, them will we possess.",
           "decoded": "Will you not take possession of what Chemosh your god gives you to possess? So whoever the LORD our God drives out from before us, we will take possession of them.",
           "context": ""
         },
@@ -2149,7 +2149,7 @@
         },
         {
           "verse": 27,
-          "kjv": "Wherefore I have not sinned against thee, but thou doest me wrong to war against me: the Lord the Judge be judge this day between the children of Israel and the children of Ammon.",
+          "kjv": "Wherefore I have not sinned against thee, but thou doest me wrong to war against me: the LORD the Judge be judge this day between the children of Israel and the children of Ammon.",
           "decoded": "Therefore I have not sinned against you, but you are wronging me by making war against me. May the LORD, the Judge, decide today between the children of Israel and the children of Ammon.",
           "context": ""
         },
@@ -2161,25 +2161,25 @@
         },
         {
           "verse": 29,
-          "kjv": "Then the Spirit of the Lord came upon Jephthah, and he passed over Gilead, and Manasseh, and passed over Mizpeh of Gilead, and from Mizpeh of Gilead he passed over unto the children of Ammon.",
+          "kjv": "Then the Spirit of the LORD came upon Jephthah, and he passed over Gilead, and Manasseh, and passed over Mizpeh of Gilead, and from Mizpeh of Gilead he passed over unto the children of Ammon.",
           "decoded": "Then the Spirit of the LORD came upon Jephthah, and he crossed over Gilead and Manasseh, and crossed over Mizpeh of Gilead, and from Mizpeh of Gilead he crossed over to the people of Ammon.",
           "context": ""
         },
         {
           "verse": 30,
-          "kjv": "And Jephthah vowed a vow unto the Lord, and said, If thou shalt without fail deliver the children of Ammon into mine hands,",
+          "kjv": "And Jephthah vowed a vow unto the LORD, and said, If thou shalt without fail deliver the children of Ammon into mine hands,",
           "decoded": "And Jephthah made a promise to the LORD and said, If you definitely deliver the people of Ammon into my hands,",
           "context": ""
         },
         {
           "verse": 31,
-          "kjv": "Then it shall be, that whatsoever cometh forth of the doors of my house to meet me, when I return in peace from the children of Ammon, shall surely be the Lord’s, and I will offer it up for a burnt offering.",
+          "kjv": "Then it shall be, that whatsoever cometh forth of the doors of my house to meet me, when I return in peace from the children of Ammon, shall surely be the LORD’s, and I will offer it up for a burnt offering.",
           "decoded": "Then it will happen that whatever comes out of the doors of my house to meet me when I return safely from the children of Ammon will definitely belong to the LORD, and I will offer it as a burnt offering.",
           "context": ""
         },
         {
           "verse": 32,
-          "kjv": "So Jephthah passed over unto the children of Ammon to fight against them; and the Lord delivered them into his hands.",
+          "kjv": "So Jephthah passed over unto the children of Ammon to fight against them; and the LORD delivered them into his hands.",
           "decoded": "So Jephthah went to the people of Ammon to fight against them, and the LORD gave them into his hands.",
           "context": ""
         },
@@ -2197,13 +2197,13 @@
         },
         {
           "verse": 35,
-          "kjv": "And it came to pass, when he saw her, that he rent his clothes, and said, Alas, my daughter! thou hast brought me very low, and thou art one of them that trouble me: for I have opened my mouth unto the Lord, and I cannot go back.",
+          "kjv": "And it came to pass, when he saw her, that he rent his clothes, and said, Alas, my daughter! thou hast brought me very low, and thou art one of them that trouble me: for I have opened my mouth unto the LORD, and I cannot go back.",
           "decoded": "When he saw her, he tore his clothes and said, \"Oh no, my daughter! You have brought me great sorrow, and you are one of those who trouble me, because I have made a promise to the LORD, and I cannot take it back.\"",
           "context": ""
         },
         {
           "verse": 36,
-          "kjv": "And she said unto him, My father, if thou hast opened thy mouth unto the Lord, do to me according to that which hath proceeded out of thy mouth; forasmuch as the Lord hath taken vengeance for thee of thine enemies, even of the children of Ammon.",
+          "kjv": "And she said unto him, My father, if thou hast opened thy mouth unto the LORD, do to me according to that which hath proceeded out of thy mouth; forasmuch as the LORD hath taken vengeance for thee of thine enemies, even of the children of Ammon.",
           "decoded": "And she said to him, My father, if you have made a promise to the LORD, do to me what you said; because the LORD has taken revenge for you on your enemies, the people of Ammon.",
           "context": ""
         },
@@ -2251,7 +2251,7 @@
         },
         {
           "verse": 3,
-          "kjv": "And when I saw that ye delivered me not, I put my life in my hands, and passed over against the children of Ammon, and the Lord delivered them into my hand: wherefore then are ye come up unto me this day, to fight against me?",
+          "kjv": "And when I saw that ye delivered me not, I put my life in my hands, and passed over against the children of Ammon, and the LORD delivered them into my hand: wherefore then are ye come up unto me this day, to fight against me?",
           "decoded": "And when I saw that you did not rescue me, I risked my life and crossed over to fight against the children of Ammon, and the LORD gave them into my hand. So why have you come up to me today to fight against me?",
           "context": ""
         },
@@ -2281,7 +2281,7 @@
         },
         {
           "verse": 8,
-          "kjv": "And after him Ibzan of Beth-lehem judged Israel.",
+          "kjv": "And after him Ibzan of Bethlehem judged Israel.",
           "decoded": "After him, Ibzan from Bethlehem was the judge over Israel.",
           "context": ""
         },
@@ -2293,7 +2293,7 @@
         },
         {
           "verse": 10,
-          "kjv": "Then died Ibzan, and was buried at Beth-lehem.",
+          "kjv": "Then died Ibzan, and was buried at Bethlehem.",
           "decoded": "Then Ibzan died, and he was buried in Bethlehem.",
           "context": ""
         },
@@ -2335,7 +2335,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "And the children of Israel did evil again in the sight of the Lord; and the Lord delivered them into the hand of the Philistines forty years.",
+          "kjv": "And the children of Israel did evil again in the sight of the LORD; and the LORD delivered them into the hand of the Philistines forty years.",
           "decoded": "The Israelites did evil again in the eyes of the LORD, and the LORD handed them over to the Philistines for forty years.",
           "context": ""
         },
@@ -2347,7 +2347,7 @@
         },
         {
           "verse": 3,
-          "kjv": "And the angel of the Lord appeared unto the woman, and said unto her, Behold now, thou art barren, and bearest not: but thou shalt conceive, and bear a son.",
+          "kjv": "And the angel of the LORD appeared unto the woman, and said unto her, Behold now, thou art barren, and bearest not: but thou shalt conceive, and bear a son.",
           "decoded": "And the angel of the LORD appeared to the woman and said to her, Look now, you are barren and do not have children, but you will become pregnant and give birth to a son.",
           "context": ""
         },
@@ -2359,7 +2359,7 @@
         },
         {
           "verse": 5,
-          "kjv": "For, lo, thou shalt conceive, and bear a son; and no rasor shall come on his head: for the child shall be a Nazarite unto God from the womb: and he shall begin to deliver Israel out of the hand of the Philistines.",
+          "kjv": "For, lo, thou shalt conceive, and bear a son; and no razor shall come on his head: for the child shall be a Nazarite unto God from the womb: and he shall begin to deliver Israel out of the hand of the Philistines.",
           "decoded": "For, look, you will become pregnant and give birth to a son; no razor will come near his head: because the child will be a Nazarite dedicated to God from the womb: and he will start to rescue Israel from the power of the Philistines.",
           "context": ""
         },
@@ -2377,7 +2377,7 @@
         },
         {
           "verse": 8,
-          "kjv": "Then Manoah intreated the Lord, and said, O my Lord, let the man of God which thou didst send come again unto us, and teach us what we shall do unto the child that shall be born.",
+          "kjv": "Then Manoah intreated the LORD, and said, O my Lord, let the man of God which thou didst send come again unto us, and teach us what we shall do unto the child that shall be born.",
           "decoded": "Then Manoah pleaded with the LORD and said, O my Lord, please let the man of God whom you sent come back to us and teach us what we should do for the child who will be born.",
           "context": ""
         },
@@ -2407,7 +2407,7 @@
         },
         {
           "verse": 13,
-          "kjv": "And the angel of the Lord said unto Manoah, Of all that I said unto the woman let her beware.",
+          "kjv": "And the angel of the LORD said unto Manoah, Of all that I said unto the woman let her beware.",
           "decoded": "And the angel of the LORD said to Manoah, Let the woman be careful to follow everything I told her.",
           "context": ""
         },
@@ -2419,43 +2419,43 @@
         },
         {
           "verse": 15,
-          "kjv": "And Manoah said unto the angel of the Lord, I pray thee, let us detain thee, until we shall have made ready a kid for thee.",
+          "kjv": "And Manoah said unto the angel of the LORD, I pray thee, let us detain thee, until we shall have made ready a kid for thee.",
           "decoded": "And Manoah said to the angel of the LORD, Please stay with us until we prepare a young goat for you.",
           "context": ""
         },
         {
           "verse": 16,
-          "kjv": "And the angel of the Lord said unto Manoah, Though thou detain me, I will not eat of thy bread: and if thou wilt offer a burnt offering, thou must offer it unto the Lord. For Manoah knew not that he was an angel of the Lord.",
+          "kjv": "And the angel of the LORD said unto Manoah, Though thou detain me, I will not eat of thy bread: and if thou wilt offer a burnt offering, thou must offer it unto the LORD. For Manoah knew not that he was an angel of the LORD.",
           "decoded": "And the angel of the LORD said to Manoah, Even if you ask me to stay, I will not eat your bread; and if you want to offer a burnt offering, you must offer it to the LORD. For Manoah did not know that he was an angel of the LORD.",
           "context": ""
         },
         {
           "verse": 17,
-          "kjv": "And Manoah said unto the angel of the Lord, What is thy name, that when thy sayings come to pass we may do thee honour?",
+          "kjv": "And Manoah said unto the angel of the LORD, What is thy name, that when thy sayings come to pass we may do thee honour?",
           "decoded": "And Manoah said to the angel of the LORD, What is your name, so that when your words come true we may honor you?",
           "context": ""
         },
         {
           "verse": 18,
-          "kjv": "And the angel of the Lord said unto him, Why askest thou thus after my name, seeing it is secret?",
+          "kjv": "And the angel of the LORD said unto him, Why askest thou thus after my name, seeing it is secret?",
           "decoded": "And the angel of the LORD said to him, Why do you ask me my name, since it is a secret?",
           "context": ""
         },
         {
           "verse": 19,
-          "kjv": "So Manoah took a kid with a meat offering, and offered it upon a rock unto the Lord: and the angel did wondrously; and Manoah and his wife looked on.",
+          "kjv": "So Manoah took a kid with a meat offering, and offered it upon a rock unto the LORD: and the angel did wonderously; and Manoah and his wife looked on.",
           "decoded": "So Manoah took a young goat along with a grain offering and offered it on a rock to the LORD; and the angel performed wonders, and Manoah and his wife watched.",
           "context": ""
         },
         {
           "verse": 20,
-          "kjv": "For it came to pass, when the flame went up toward heaven from off the altar, that the angel of the Lord ascended in the flame of the altar. And Manoah and his wife looked on it, and fell on their faces to the ground.",
+          "kjv": "For it came to pass, when the flame went up toward heaven from off the altar, that the angel of the LORD ascended in the flame of the altar. And Manoah and his wife looked on it, and fell on their faces to the ground.",
           "decoded": "It happened that when the flame rose toward heaven from the altar, the angel of the LORD went up in the flame of the altar. Manoah and his wife watched it and fell face down to the ground.",
           "context": ""
         },
         {
           "verse": 21,
-          "kjv": "But the angel of the Lord did no more appear to Manoah and to his wife. Then Manoah knew that he was an angel of the Lord.",
+          "kjv": "But the angel of the LORD did no more appear to Manoah and to his wife. Then Manoah knew that he was an angel of the LORD.",
           "decoded": "But the angel of the LORD did not appear again to Manoah and his wife. Then Manoah realized that he was an angel of the LORD.",
           "context": ""
         },
@@ -2467,19 +2467,19 @@
         },
         {
           "verse": 23,
-          "kjv": "But his wife said unto him, If the Lord were pleased to kill us, he would not have received a burnt offering and a meat offering at our hands, neither would he have shewed us all these things, nor would as at this time have told us such things as these.",
+          "kjv": "But his wife said unto him, If the LORD were pleased to kill us, he would not have received a burnt offering and a meat offering at our hands, neither would he have shewed us all these things, nor would as at this time have told us such things as these.",
           "decoded": "But his wife said to him, If the LORD wanted to kill us, he would not have accepted a burnt offering and a grain offering from us, nor would he have shown us all these things, or told us these things at this time.",
           "context": ""
         },
         {
           "verse": 24,
-          "kjv": "And the woman bare a son, and called his name Samson: and the child grew, and the Lord blessed him.",
+          "kjv": "And the woman bare a son, and called his name Samson: and the child grew, and the LORD blessed him.",
           "decoded": "The woman gave birth to a son and named him Samson. The child grew, and the LORD blessed him.",
           "context": ""
         },
         {
           "verse": 25,
-          "kjv": "And the Spirit of the Lord began to move him at times in the camp of Dan between Zorah and Eshtaol.",
+          "kjv": "And the Spirit of the LORD began to move him at times in the camp of Dan between Zorah and Eshtaol.",
           "decoded": "And the Spirit of the LORD began to influence him occasionally in the camp of Dan, located between Zorah and Eshtaol.",
           "context": ""
         }
@@ -2509,7 +2509,7 @@
         },
         {
           "verse": 4,
-          "kjv": "But his father and his mother knew not that it was of the Lord, that he sought an occasion against the Philistines: for at that time the Philistines had dominion over Israel.",
+          "kjv": "But his father and his mother knew not that it was of the LORD, that he sought an occasion against the Philistines: for at that time the Philistines had dominion over Israel.",
           "decoded": "But his father and his mother did not know that it was from the LORD, because he was looking for a reason to confront the Philistines, since at that time the Philistines ruled over Israel.",
           "context": ""
         },
@@ -2521,7 +2521,7 @@
         },
         {
           "verse": 6,
-          "kjv": "And the Spirit of the Lord came mightily upon him, and he rent him as he would have rent a kid, and he had nothing in his hand: but he told not his father or his mother what he had done.",
+          "kjv": "And the Spirit of the LORD came mightily upon him, and he rent him as he would have rent a kid, and he had nothing in his hand: but he told not his father or his mother what he had done.",
           "decoded": "And the Spirit of the LORD came powerfully upon him, and he tore him apart as easily as he would tear a young goat, and he had nothing in his hand; but he did not tell his father or his mother what he had done.",
           "context": ""
         },
@@ -2593,13 +2593,13 @@
         },
         {
           "verse": 18,
-          "kjv": "And the men of the city said unto him on the seventh day before the sun went down, What is sweeter than honey? and what is stronger than a lion? And he said unto them, If ye had not plowed with my heifer, ye had not found out my riddle.",
+          "kjv": "And the men of the city said unto him on the seventh day before the sun went down, What is sweeter than honey? And what is stronger than a lion? And he said unto them, If ye had not plowed with my heifer, ye had not found out my riddle.",
           "decoded": "And the men of the city said to him on the seventh day before the sun went down, What is sweeter than honey? And what is stronger than a lion? And he said to them, If you had not plowed with my heifer, you would not have found out my riddle.",
           "context": ""
         },
         {
           "verse": 19,
-          "kjv": "And the Spirit of the Lord came upon him, and he went down to Ashkelon, and slew thirty men of them, and took their spoil, and gave change of garments unto them which expounded the riddle. And his anger was kindled, and he went up to his father’s house.",
+          "kjv": "And the Spirit of the LORD came upon him, and he went down to Ashkelon, and slew thirty men of them, and took their spoil, and gave change of garments unto them which expounded the riddle. And his anger was kindled, and he went up to his father’s house.",
           "decoded": "The Spirit of the LORD came upon him, and he went down to Ashkelon, killed thirty men there, took their belongings, and gave new clothes to the men who explained the riddle. Then he became angry and went back to his father’s house.",
           "context": ""
         },
@@ -2695,7 +2695,7 @@
         },
         {
           "verse": 14,
-          "kjv": "And when he came unto Lehi, the Philistines shouted against him: and the Spirit of the Lord came mightily upon him, and the cords that were upon his arms became as flax that was burnt with fire, and his bands loosed from off his hands.",
+          "kjv": "And when he came unto Lehi, the Philistines shouted against him: and the Spirit of the LORD came mightily upon him, and the cords that were upon his arms became as flax that was burnt with fire, and his bands loosed from off his hands.",
           "decoded": "When he arrived at Lehi, the Philistines shouted at him, but the Spirit of the LORD came powerfully upon him, and the cords on his arms became like flax that has been burned by fire, and the bands fell off his hands.",
           "context": ""
         },
@@ -2713,19 +2713,19 @@
         },
         {
           "verse": 17,
-          "kjv": "And it came to pass, when he had made an end of speaking, that he cast away the jawbone out of his hand, and called that place Ramath-lehi.",
+          "kjv": "And it came to pass, when he had made an end of speaking, that he cast away the jawbone out of his hand, and called that place Ramathlehi.",
           "decoded": "After he finished speaking, he threw the jawbone out of his hand and named that place Ramath-lehi.",
           "context": ""
         },
         {
           "verse": 18,
-          "kjv": "And he was sore athirst, and called on the Lord, and said, Thou hast given this great deliverance into the hand of thy servant: and now shall I die for thirst, and fall into the hand of the uncircumcised?",
+          "kjv": "And he was sore athirst, and called on the LORD, and said, Thou hast given this great deliverance into the hand of thy servant: and now shall I die for thirst, and fall into the hand of the uncircumcised?",
           "decoded": "And he was very thirsty, and called on the LORD, and said, You have given this great victory into the hand of your servant; and now will I die from thirst and be captured by the uncircumcised?",
           "context": ""
         },
         {
           "verse": 19,
-          "kjv": "But God clave an hollow place that was in the jaw, and there came water thereout; and when he had drunk, his spirit came again, and he revived: wherefore he called the name thereof En-hakkore, which is in Lehi unto this day.",
+          "kjv": "But God clave an hollow place that was in the jaw, and there came water thereout; and when he had drunk, his spirit came again, and he revived: wherefore he called the name thereof Enhakkore, which is in Lehi unto this day.",
           "decoded": "But God split open a hollow place in the jawbone, and water came out of it; and when he drank, his strength returned, and he was revived. Therefore, he called the place En-hakkore, which means 'Spring of the Caller,' in Lehi to this day.",
           "context": ""
         },
@@ -2839,7 +2839,7 @@
         },
         {
           "verse": 17,
-          "kjv": "That he told her all his heart, and said unto her, There hath not come a rasor upon mine head; for I have been a Nazarite unto God from my mother’s womb: if I be shaven, then my strength will go from me, and I shall become weak, and be like any other man.",
+          "kjv": "That he told her all his heart, and said unto her, There hath not come a razor upon mine head; for I have been a Nazarite unto God from my mother’s womb: if I be shaven, then my strength will go from me, and I shall become weak, and be like any other man.",
           "decoded": "He told her everything in his heart and said to her, No razor has ever touched my head, because I have been a Nazarite dedicated to God from my mother's womb. If my head is shaved, my strength will leave me, and I will become weak and be like any other man.",
           "context": ""
         },
@@ -2857,7 +2857,7 @@
         },
         {
           "verse": 20,
-          "kjv": "And she said, The Philistines be upon thee, Samson. And he awoke out of his sleep, and said, I will go out as at other times before, and shake myself. And he wist not that the Lord was departed from him.",
+          "kjv": "And she said, The Philistines be upon thee, Samson. And he awoke out of his sleep, and said, I will go out as at other times before, and shake myself. And he wist not that the LORD was departed from him.",
           "decoded": "And she said, The Philistines are attacking you, Samson. And he woke up from his sleep and said, I will go out as I have before and shake myself free. But he did not know that the LORD had left him.",
           "context": ""
         },
@@ -2905,7 +2905,7 @@
         },
         {
           "verse": 28,
-          "kjv": "And Samson called unto the Lord, and said, O Lord God, remember me, I pray thee, and strengthen me, I pray thee, only this once, O God, that I may be at once avenged of the Philistines for my two eyes.",
+          "kjv": "And Samson called unto the LORD, and said, O Lord God, remember me, I pray thee, and strengthen me, I pray thee, only this once, O God, that I may be at once avenged of the Philistines for my two eyes.",
           "decoded": "And Samson called to the LORD and said, O Lord GOD, please remember me and give me strength, I ask you, just this once, O God, so that I may immediately take revenge on the Philistines for my two eyes.",
           "context": ""
         },
@@ -2941,13 +2941,13 @@
         },
         {
           "verse": 2,
-          "kjv": "And he said unto his mother, The eleven hundred shekels of silver that were taken from thee, about which thou cursedst, and spakest of also in mine ears, behold, the silver is with me; I took it. And his mother said, Blessed be thou of the Lord, my son.",
+          "kjv": "And he said unto his mother, The eleven hundred shekels of silver that were taken from thee, about which thou cursedst, and spakest of also in mine ears, behold, the silver is with me; I took it. And his mother said, Blessed be thou of the LORD, my son.",
           "decoded": "And he said to his mother, The eleven hundred shekels of silver that were taken from you, about which you cursed and also spoke to me about, look, the silver is with me; I took it. And his mother said, May the LORD bless you, my son.",
           "context": ""
         },
         {
           "verse": 3,
-          "kjv": "And when he had restored the eleven hundred shekels of silver to his mother, his mother said, I had wholly dedicated the silver unto the Lord from my hand for my son, to make a graven image and a molten image: now therefore I will restore it unto thee.",
+          "kjv": "And when he had restored the eleven hundred shekels of silver to his mother, his mother said, I had wholly dedicated the silver unto the LORD from my hand for my son, to make a graven image and a molten image: now therefore I will restore it unto thee.",
           "decoded": "And when he had returned the eleven hundred shekels of silver to his mother, his mother said, I had completely dedicated the silver to the LORD from my hand for my son, to make a carved image and a cast image; now therefore I will return it to you.",
           "context": ""
         },
@@ -2971,19 +2971,19 @@
         },
         {
           "verse": 7,
-          "kjv": "And there was a young man out of Beth-lehem-judah of the family of Judah, who was a Levite, and he sojourned there.",
+          "kjv": "And there was a young man out of Bethlehemjudah of the family of Judah, who was a Levite, and he sojourned there.",
           "decoded": "There was a young man from Bethlehemjudah, from the family of Judah, who was a Levite, and he was living there temporarily.",
           "context": ""
         },
         {
           "verse": 8,
-          "kjv": "And the man departed out of the city from Beth-lehem-judah to sojourn where he could find a place: and he came to mount Ephraim to the house of Micah, as he journeyed.",
+          "kjv": "And the man departed out of the city from Bethlehemjudah to sojourn where he could find a place: and he came to mount Ephraim to the house of Micah, as he journeyed.",
           "decoded": "The man left the city of Bethlehem in Judah to live temporarily wherever he could find a place, and he came to Mount Ephraim to the house of Micah as he traveled.",
           "context": ""
         },
         {
           "verse": 9,
-          "kjv": "And Micah said unto him, Whence comest thou? And he said unto him, I am a Levite of Beth-lehem-judah, and I go to sojourn where I may find a place.",
+          "kjv": "And Micah said unto him, Whence comest thou? And he said unto him, I am a Levite of Bethlehemjudah, and I go to sojourn where I may find a place.",
           "decoded": "And Micah asked him, Where do you come from? And he answered him, I am a Levite from Bethlehemjudah, and I am going to stay temporarily wherever I can find a place.",
           "context": ""
         },
@@ -3007,7 +3007,7 @@
         },
         {
           "verse": 13,
-          "kjv": "Then said Micah, Now know I that the Lord will do me good, seeing I have a Levite to my priest.",
+          "kjv": "Then said Micah, Now know I that the LORD will do me good, seeing I have a Levite to my priest.",
           "decoded": "Then Micah said, Now I know that the LORD will bless me because I have a Levite as my priest.",
           "context": ""
         }
@@ -3049,7 +3049,7 @@
         },
         {
           "verse": 6,
-          "kjv": "And the priest said unto them, Go in peace: before the Lord is your way wherein ye go.",
+          "kjv": "And the priest said unto them, Go in peace: before the LORD is your way wherein ye go.",
           "decoded": "And the priest said to them, Go in peace; the way you are going is before the LORD.",
           "context": ""
         },
@@ -3085,7 +3085,7 @@
         },
         {
           "verse": 12,
-          "kjv": "And they went up, and pitched in Kirjath-jearim, in Judah: wherefore they called that place Mahaneh-dan unto this day: behold, it is behind Kirjath-jearim.",
+          "kjv": "And they went up, and pitched in Kirjathjearim, in Judah: wherefore they called that place Mahanehdan unto this day: behold, it is behind Kirjathjearim.",
           "decoded": "They went up and camped at Kirjath-jearim in Judah. Because of this, they named that place Mahaneh-dan until today. Look, it is behind Kirjath-jearim.",
           "context": ""
         },
@@ -3181,7 +3181,7 @@
         },
         {
           "verse": 28,
-          "kjv": "And there was no deliverer, because it was far from Zidon, and they had no business with any man; and it was in the valley that lieth by Beth-rehob. And they built a city, and dwelt therein.",
+          "kjv": "And there was no deliverer, because it was far from Zidon, and they had no business with any man; and it was in the valley that lieth by Bethrehob. And they built a city, and dwelt therein.",
           "decoded": "There was no one to rescue them because it was far from Zidon, and they had no dealings with anyone; it was in the valley near Beth-rehob. They built a city there and lived in it.",
           "context": ""
         },
@@ -3211,13 +3211,13 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "And it came to pass in those days, when there was no king in Israel, that there was a certain Levite sojourning on the side of mount Ephraim, who took to him a concubine out of Beth-lehem-judah.",
+          "kjv": "And it came to pass in those days, when there was no king in Israel, that there was a certain Levite sojourning on the side of mount Ephraim, who took to him a concubine out of Bethlehemjudah.",
           "decoded": "At that time, when Israel had no king, there was a Levite living in the region of Mount Ephraim who took a concubine from Bethlehem in Judah.",
           "context": ""
         },
         {
           "verse": 2,
-          "kjv": "And his concubine played the whore against him, and went away from him unto her father’s house to Beth-lehem-judah, and was there four whole months.",
+          "kjv": "And his concubine played the whore against him, and went away from him unto her father’s house to Bethlehemjudah, and was there four whole months.",
           "decoded": "And his concubine was unfaithful to him, and she left him and went to her father's house in Bethlehem Judah, and stayed there for four full months.",
           "context": ""
         },
@@ -3313,7 +3313,7 @@
         },
         {
           "verse": 18,
-          "kjv": "And he said unto him, We are passing from Beth-lehem-judah toward the side of mount Ephraim; from thence am I: and I went to Beth-lehem-judah, but I am now going to the house of the Lord; and there is no man that receiveth me to house.",
+          "kjv": "And he said unto him, We are passing from Bethlehemjudah toward the side of mount Ephraim; from thence am I: and I went to Bethlehemjudah, but I am now going to the house of the LORD; and there is no man that receiveth me to house.",
           "decoded": "And he said to him, We are traveling from Bethlehem in Judah toward the area of Mount Ephraim; that is where I am from: and I went to Bethlehem in Judah, but now I am going to the house of the LORD; and there is no one who will take me into their home.",
           "context": ""
         },
@@ -3397,7 +3397,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "Then all the children of Israel went out, and the congregation was gathered together as one man, from Dan even to Beer-sheba, with the land of Gilead, unto the Lord in Mizpeh.",
+          "kjv": "Then all the children of Israel went out, and the congregation was gathered together as one man, from Dan even to Beersheba, with the land of Gilead, unto the LORD in Mizpeh.",
           "decoded": "Then all the people of Israel went out, and the assembly gathered together as one group, from Dan all the way to Beer-sheba, including the land of Gilead, to the LORD at Mizpeh.",
           "context": ""
         },
@@ -3499,7 +3499,7 @@
         },
         {
           "verse": 18,
-          "kjv": "And the children of Israel arose, and went up to the house of God, and asked counsel of God, and said, Which of us shall go up first to the battle against the children of Benjamin? And the Lord said, Judah shall go up first.",
+          "kjv": "And the children of Israel arose, and went up to the house of God, and asked counsel of God, and said, Which of us shall go up first to the battle against the children of Benjamin? And the LORD said, Judah shall go up first.",
           "decoded": "The people of Israel got up and went to the house of God, asked God for advice, and said, 'Who among us should go first to fight against the people of Benjamin?' The LORD said, 'Judah will go first.'",
           "context": ""
         },
@@ -3529,7 +3529,7 @@
         },
         {
           "verse": 23,
-          "kjv": "(And the children of Israel went up and wept before the Lord until even, and asked counsel of the Lord, saying, Shall I go up again to battle against the children of Benjamin my brother? And the Lord said, Go up against him.)",
+          "kjv": "(And the children of Israel went up and wept before the LORD until even, and asked counsel of the LORD, saying, Shall I go up again to battle against the children of Benjamin my brother? And the LORD said, Go up against him.)",
           "decoded": "The Israelites went up and cried out to the LORD until evening, and they asked the LORD for advice, saying, Should I go up again to fight against the people of Benjamin, my brother? The LORD said, Go and fight against them.",
           "context": ""
         },
@@ -3547,19 +3547,19 @@
         },
         {
           "verse": 26,
-          "kjv": "Then all the children of Israel, and all the people, went up, and came unto the house of God, and wept, and sat there before the Lord, and fasted that day until even, and offered burnt offerings and peace offerings before the Lord.",
+          "kjv": "Then all the children of Israel, and all the people, went up, and came unto the house of God, and wept, and sat there before the LORD, and fasted that day until even, and offered burnt offerings and peace offerings before the LORD.",
           "decoded": "Then all the Israelites and all the people went up and came to the house of God, and they wept and sat there before the LORD, and fasted that day until evening, and offered burnt offerings and peace offerings before the LORD.",
           "context": ""
         },
         {
           "verse": 27,
-          "kjv": "And the children of Israel inquired of the Lord, (for the ark of the covenant of God was there in those days,",
+          "kjv": "And the children of Israel enquired of the LORD, (for the ark of the covenant of God was there in those days,",
           "decoded": "The Israelites asked the LORD for guidance, because the ark of the covenant of God was there at that time,",
           "context": ""
         },
         {
           "verse": 28,
-          "kjv": "And Phinehas, the son of Eleazar, the son of Aaron, stood before it in those days,) saying, Shall I yet again go out to battle against the children of Benjamin my brother, or shall I cease? And the Lord said, Go up; for to morrow I will deliver them into thine hand.",
+          "kjv": "And Phinehas, the son of Eleazar, the son of Aaron, stood before it in those days,) saying, Shall I yet again go out to battle against the children of Benjamin my brother, or shall I cease? And the LORD said, Go up; for to morrow I will deliver them into thine hand.",
           "decoded": "And Phinehas, the son of Eleazar, the son of Aaron, stood before it in those days, saying, Should I go out to battle again against the children of Benjamin, my brother, or should I stop? And the LORD said, Go up; because tomorrow I will give them into your hand.",
           "context": ""
         },
@@ -3589,7 +3589,7 @@
         },
         {
           "verse": 33,
-          "kjv": "And all the men of Israel rose up out of their place, and put themselves in array at Baal-tamar: and the liers in wait of Israel came forth out of their places, even out of the meadows of Gibeah.",
+          "kjv": "And all the men of Israel rose up out of their place, and put themselves in array at Baaltamar: and the liers in wait of Israel came forth out of their places, even out of the meadows of Gibeah.",
           "decoded": "And all the men of Israel got up from where they were and arranged themselves in battle formation at Baal-tamar; and the men lying in wait for Israel came out from their hiding places, even from the meadows of Gibeah.",
           "context": ""
         },
@@ -3601,7 +3601,7 @@
         },
         {
           "verse": 35,
-          "kjv": "And the Lord smote Benjamin before Israel: and the children of Israel destroyed of the Benjamites that day twenty and five thousand and an hundred men: all these drew the sword.",
+          "kjv": "And the LORD smote Benjamin before Israel: and the children of Israel destroyed of the Benjamites that day twenty and five thousand and an hundred men: all these drew the sword.",
           "decoded": "And the LORD defeated Benjamin in front of Israel, and the Israelites killed twenty-five thousand one hundred men of Benjamin that day; all of them fought with the sword.",
           "context": ""
         },
@@ -3703,7 +3703,7 @@
         },
         {
           "verse": 3,
-          "kjv": "And said, O Lord God of Israel, why is this come to pass in Israel, that there should be to day one tribe lacking in Israel?",
+          "kjv": "And said, O LORD God of Israel, why is this come to pass in Israel, that there should be to day one tribe lacking in Israel?",
           "decoded": "And said, O LORD God of Israel, why has this happened in Israel, that today there is one tribe missing in Israel?",
           "context": ""
         },
@@ -3715,7 +3715,7 @@
         },
         {
           "verse": 5,
-          "kjv": "And the children of Israel said, Who is there among all the tribes of Israel that came not up with the congregation unto the Lord? For they had made a great oath concerning him that came not up to the Lord to Mizpeh, saying, He shall surely be put to death.",
+          "kjv": "And the children of Israel said, Who is there among all the tribes of Israel that came not up with the congregation unto the LORD? For they had made a great oath concerning him that came not up to the LORD to Mizpeh, saying, He shall surely be put to death.",
           "decoded": "The people of Israel asked, Who among all the tribes of Israel did not come with the group to the LORD? Because they had made a serious oath about anyone who did not come to the LORD at Mizpeh, saying, That person must be put to death.",
           "context": ""
         },
@@ -3727,25 +3727,25 @@
         },
         {
           "verse": 7,
-          "kjv": "How shall we do for wives for them that remain, seeing we have sworn by the Lord that we will not give them of our daughters to wives?",
+          "kjv": "How shall we do for wives for them that remain, seeing we have sworn by the LORD that we will not give them of our daughters to wives?",
           "decoded": "How can we provide wives for those who remain, since we have sworn by the LORD that we will not give them any of our daughters as wives?",
           "context": ""
         },
         {
           "verse": 8,
-          "kjv": "And they said, What one is there of the tribes of Israel that came not up to Mizpeh to the Lord? And, behold, there came none to the camp from Jabesh-gilead to the assembly.",
+          "kjv": "And they said, What one is there of the tribes of Israel that came not up to Mizpeh to the LORD? And, behold, there came none to the camp from Jabeshgilead to the assembly.",
           "decoded": "And they asked, Which one of the tribes of Israel did not come up to Mizpeh to the LORD? And, look, no one came to the camp from Jabesh-gilead to the assembly.",
           "context": ""
         },
         {
           "verse": 9,
-          "kjv": "For the people were numbered, and, behold, there were none of the inhabitants of Jabesh-gilead there.",
+          "kjv": "For the people were numbered, and, behold, there were none of the inhabitants of Jabeshgilead there.",
           "decoded": "The people were counted, and look, there were no inhabitants of Jabesh-gilead there.",
           "context": ""
         },
         {
           "verse": 10,
-          "kjv": "And the congregation sent thither twelve thousand men of the valiantest, and commanded them, saying, Go and smite the inhabitants of Jabesh-gilead with the edge of the sword, with the women and the children.",
+          "kjv": "And the congregation sent thither twelve thousand men of the valiantest, and commanded them, saying, Go and smite the inhabitants of Jabeshgilead with the edge of the sword, with the women and the children.",
           "decoded": "The assembly sent there twelve thousand of the strongest men and commanded them, saying, Go and kill the people of Jabesh-gilead with the sword, including the women and the children.",
           "context": ""
         },
@@ -3757,7 +3757,7 @@
         },
         {
           "verse": 12,
-          "kjv": "And they found among the inhabitants of Jabesh-gilead four hundred young virgins, that had known no man by lying with any male: and they brought them unto the camp to Shiloh, which is in the land of Canaan.",
+          "kjv": "And they found among the inhabitants of Jabeshgilead four hundred young virgins, that had known no man by lying with any male: and they brought them unto the camp to Shiloh, which is in the land of Canaan.",
           "decoded": "They found among the people living in Jabesh-gilead four hundred young women who had never slept with a man, and they brought them to the camp at Shiloh, which is in the land of Canaan.",
           "context": ""
         },
@@ -3769,13 +3769,13 @@
         },
         {
           "verse": 14,
-          "kjv": "And Benjamin came again at that time; and they gave them wives which they had saved alive of the women of Jabesh-gilead: and yet so they sufficed them not.",
+          "kjv": "And Benjamin came again at that time; and they gave them wives which they had saved alive of the women of Jabeshgilead: and yet so they sufficed them not.",
           "decoded": "And Benjamin returned at that time; and they gave them wives whom they had kept alive from the women of Jabesh-gilead; but even so, they were not enough for them.",
           "context": ""
         },
         {
           "verse": 15,
-          "kjv": "And the people repented them for Benjamin, because that the Lord had made a breach in the tribes of Israel.",
+          "kjv": "And the people repented them for Benjamin, because that the LORD had made a breach in the tribes of Israel.",
           "decoded": "And the people felt sorry for Benjamin because the LORD had caused a gap in the tribes of Israel.",
           "context": ""
         },
@@ -3799,7 +3799,7 @@
         },
         {
           "verse": 19,
-          "kjv": "Then they said, Behold, there is a feast of the Lord in Shiloh yearly in a place which is on the north side of Beth-el, on the east side of the highway that goeth up from Beth-el to Shechem, and on the south of Lebonah.",
+          "kjv": "Then they said, Behold, there is a feast of the LORD in Shiloh yearly in a place which is on the north side of Bethel, on the east side of the highway that goeth up from Bethel to Shechem, and on the south of Lebonah.",
           "decoded": "Then they said, Look, there is a feast of the LORD in Shiloh every year in a place that is on the north side of Bethel, on the east side of the road that goes up from Bethel to Shechem, and on the south of Lebonah.",
           "context": ""
         },

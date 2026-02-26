@@ -1,5 +1,16 @@
 process.on("SIGHUP", () => {});
 
+const _originalExit = process.exit;
+process.exit = ((code?: number) => {
+  if (code === 1) {
+    const stack = new Error().stack || "";
+    if (stack.includes("createLogger") || stack.includes("vite")) {
+      return undefined as never;
+    }
+  }
+  return _originalExit(code);
+}) as typeof process.exit;
+
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";

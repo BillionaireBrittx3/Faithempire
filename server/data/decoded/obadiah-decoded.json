@@ -13,7 +13,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "The vision of Obadiah. Thus saith the Lord God concerning Edom; We have heard a rumour from the Lord, and an ambassador is sent among the heathen, Arise ye, and let us rise up against her in battle.",
+          "kjv": "The vision of Obadiah. Thus saith the Lord GOD concerning Edom; We have heard a rumour from the LORD, and an ambassador is sent among the heathen, Arise ye, and let us rise up against her in battle.",
           "decoded": "This is the message from Obadiah. The Lord God says about Edom: We have heard a report from the Lord, and a messenger has been sent to the nations. Get ready, and let us attack her in battle.",
           "context": ""
         },
@@ -31,7 +31,7 @@
         },
         {
           "verse": 4,
-          "kjv": "Though thou exalt thyself as the eagle, and though thou set thy nest among the stars, thence will I bring thee down, saith the Lord.",
+          "kjv": "Though thou exalt thyself as the eagle, and though thou set thy nest among the stars, thence will I bring thee down, saith the LORD.",
           "decoded": "Even if you soar like an eagle and build your nest among the stars, I will bring you down from there, says the Lord.",
           "context": ""
         },
@@ -55,7 +55,7 @@
         },
         {
           "verse": 8,
-          "kjv": "Shall I not in that day, saith the Lord, even destroy the wise men out of Edom, and understanding out of the mount of Esau?",
+          "kjv": "Shall I not in that day, saith the LORD, even destroy the wise men out of Edom, and understanding out of the mount of Esau?",
           "decoded": "On that day, says the Lord, I will destroy the wise men of Edom and the understanding from the mountain of Esau.",
           "context": ""
         },
@@ -97,7 +97,7 @@
         },
         {
           "verse": 15,
-          "kjv": "For the day of the Lord is near upon all the heathen: as thou hast done, it shall be done unto thee: thy reward shall return upon thine own head.",
+          "kjv": "For the day of the LORD is near upon all the heathen: as thou hast done, it shall be done unto thee: thy reward shall return upon thine own head.",
           "decoded": "The day of the Lord is coming soon for all nations. What you have done will be done to you; your punishment will come back on your own head.",
           "context": ""
         },
@@ -115,7 +115,7 @@
         },
         {
           "verse": 18,
-          "kjv": "And the house of Jacob shall be a fire, and the house of Joseph a flame, and the house of Esau for stubble, and they shall kindle in them, and devour them; and there shall not be any remaining of the house of Esau; for the Lord hath spoken it.",
+          "kjv": "And the house of Jacob shall be a fire, and the house of Joseph a flame, and the house of Esau for stubble, and they shall kindle in them, and devour them; and there shall not be any remaining of the house of Esau; for the LORD hath spoken it.",
           "decoded": "The house of Jacob will be like a fire, and the house of Joseph like a flame, while the house of Esau will be like dry stubble. They will be set on fire and burned up, leaving nothing left of Esau’s family, because the Lord has declared it.",
           "context": ""
         },
@@ -133,7 +133,7 @@
         },
         {
           "verse": 21,
-          "kjv": "And saviours shall come up on mount Zion to judge the mount of Esau; and the kingdom shall be the Lord’s.",
+          "kjv": "And saviours shall come up on mount Zion to judge the mount of Esau; and the kingdom shall be the LORD’s.",
           "decoded": "Deliverers will come to Mount Zion to judge the mountain of Esau, and the kingdom will belong to the Lord.",
           "context": ""
         }
