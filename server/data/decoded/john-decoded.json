@@ -1,0 +1,701 @@
+{
+  "title": "The Book of John Decoded",
+  "bookName": "John",
+  "slug": "john",
+  "author": "Brittany Johnson",
+  "description": "The Book of John — every verse decoded into plain, modern English (DMLV).",
+  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "totalChapters": 3,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+          "decoded": "From the very start, the Word existed; the Word was with God, and the Word was God.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "The same was in the beginning with God.",
+          "decoded": "The Word was present with God from the beginning.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "All things were made by him; and without him was not any thing made that was made.",
+          "decoded": "Everything was created through him; nothing came into existence without him.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "In him was life; and the life was the light of men.",
+          "decoded": "In him was life, and that life was the light that shines for all people.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "And the light shineth in darkness; and the darkness comprehended it not.",
+          "decoded": "The light shines in the darkness, but the darkness has not understood or overcome it.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "There was a man sent from God, whose name was John.",
+          "decoded": "God sent a man named John.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "The same came for a witness, to bear witness of the Light, that all men through him might believe.",
+          "decoded": "He came to testify about the Light so that everyone might believe through him.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "He was not that Light, but was sent to bear witness of that Light.",
+          "decoded": "He himself was not the Light, but was sent to testify about the Light.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "That was the true Light, which lighteth every man that cometh into the world.",
+          "decoded": "The true Light, which gives light to everyone, was coming into the world.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "He was in the world, and the world was made by him, and the world knew him not.",
+          "decoded": "He was in the world, which was created through him, but the world did not recognize him.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "He came unto his own, and his own received him not.",
+          "decoded": "He came to his own people, but they did not accept him.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:",
+          "decoded": "But to all who accepted him, he gave the right to become children of God—those who believe in his name.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
+          "decoded": "They were born not by natural descent, human decision, or a husband’s choice, but by God.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.",
+          "decoded": "The Word became human and lived among us. We saw his glory—the glory of the Father’s only Son—full of grace and truth.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "John bare witness of him, and cried, saying, This was he of whom I spake, He that cometh after me is preferred before me: for he was before me.",
+          "decoded": "John testified about him, shouting, “This is the one I was talking about—the one who comes after me is greater than I am because he existed before me.”",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "And of his fulness have all we received, and grace for grace.",
+          "decoded": "From his fullness we have all received grace upon grace.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "For the law was given by Moses, but grace and truth came by Jesus Christ.",
+          "decoded": "Moses gave the law, but grace and truth came through Jesus Christ.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.",
+          "decoded": "No one has ever seen God, but the only Son, who is close to the Father, has made him known.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "And this is the record of John, when the Jews sent priests and Levites from Jerusalem to ask him, Who art thou?",
+          "decoded": "This is John’s testimony when the Jewish leaders sent priests and Levites from Jerusalem to ask him, “Who are you?”",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "And he confessed, and denied not; but confessed, I am not the Christ.",
+          "decoded": "John admitted it openly and did not deny it: “I am not the Messiah.”",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "And they asked him, What then? Art thou Elias? And he saith, I am not. Art thou that prophet? And he answered, No.",
+          "decoded": "They asked him, “Then who are you? Are you Elijah?” He said, “No.” “Are you the Prophet?” He answered, “No.”",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "Then said they unto him, Who art thou? that we may give an answer to them that sent us. What sayest thou of thyself?",
+          "decoded": "So they asked him, “Who are you? Tell us so we can give an answer to those who sent us. What do you say about yourself?”",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "He said, I am the voice of one crying in the wilderness, Make straight the way of the Lord, as said the prophet Esaias.",
+          "decoded": "He replied, “I am the voice calling out in the wilderness, ‘Prepare the way for the Lord,’ as the prophet Isaiah said.”",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "And they which were sent were of the Pharisees.",
+          "decoded": "The people who had been sent were Pharisees.",
+          "context": ""
+        },
+        {
+          "verse": 25,
+          "kjv": "And they asked him, and said unto him, Why baptizest thou then, if thou be not that Christ, nor Elias, neither that prophet?",
+          "decoded": "They asked him, “Why then do you baptize if you are not the Messiah, Elijah, or the Prophet?”",
+          "context": ""
+        },
+        {
+          "verse": 26,
+          "kjv": "John answered them, saying, I baptize with water: but there standeth one among you, whom ye know not;",
+          "decoded": "John answered, “I baptize with water, but there is someone among you whom you do not know.”",
+          "context": ""
+        },
+        {
+          "verse": 27,
+          "kjv": "He it is, who coming after me is preferred before me, whose shoe’s latchet I am not worthy to unloose.",
+          "decoded": "He is the one who comes after me and is greater than I am—I am not even worthy to untie his sandals.",
+          "context": ""
+        },
+        {
+          "verse": 28,
+          "kjv": "These things were done in Bethabara beyond Jordan, where John was baptizing.",
+          "decoded": "This all happened at Bethany across the Jordan River, where John was baptizing.",
+          "context": ""
+        },
+        {
+          "verse": 29,
+          "kjv": "The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world.",
+          "decoded": "The next day, John saw Jesus coming toward him and said, “Look, the Lamb of God who takes away the sin of the world!”",
+          "context": ""
+        },
+        {
+          "verse": 30,
+          "kjv": "This is he of whom I said, After me cometh a man which is preferred before me: for he was before me.",
+          "decoded": "This is the one I was talking about when I said, ‘A man who comes after me is greater than I am because he existed before me.’",
+          "context": ""
+        },
+        {
+          "verse": 31,
+          "kjv": "And I knew him not: but that he should be made manifest to Israel, therefore am I come baptizing with water.",
+          "decoded": "I did not know him before, but I came baptizing with water so that he might be revealed to Israel.",
+          "context": ""
+        },
+        {
+          "verse": 32,
+          "kjv": "And John bare record, saying, I saw the Spirit descending from heaven like a dove, and it abode upon him.",
+          "decoded": "John testified, “I saw the Spirit come down from heaven like a dove and rest on him.”",
+          "context": ""
+        },
+        {
+          "verse": 33,
+          "kjv": "And I knew him not: but he that sent me to baptize with water, the same said unto me, Upon whom thou shalt see the Spirit descending, and remaining on him, the same is he which baptizeth with the Holy Ghost.",
+          "decoded": "I did not know him before, but the one who sent me to baptize with water told me, ‘The one on whom you see the Spirit come down and stay is the one who will baptize with the Holy Spirit.’",
+          "context": ""
+        },
+        {
+          "verse": 34,
+          "kjv": "And I saw, and bare record that this is the Son of God.",
+          "decoded": "I saw it and testified that this is the Son of God.",
+          "context": ""
+        },
+        {
+          "verse": 35,
+          "kjv": "Again the next day after John stood, and two of his disciples;",
+          "decoded": "The next day, John was standing there again with two of his disciples.",
+          "context": ""
+        },
+        {
+          "verse": 36,
+          "kjv": "And looking upon Jesus as he walked, he saith, Behold the Lamb of God!",
+          "decoded": "When he saw Jesus walking by, he said, “Look, the Lamb of God!”",
+          "context": ""
+        },
+        {
+          "verse": 37,
+          "kjv": "And the two disciples heard him speak, and they followed Jesus.",
+          "decoded": "The two disciples heard him say this and began to follow Jesus.",
+          "context": ""
+        },
+        {
+          "verse": 38,
+          "kjv": "Then Jesus turned, and saw them following, and saith unto them, What seek ye? They said unto him, Rabbi, (which is to say, being interpreted, Master,) where dwellest thou?",
+          "decoded": "Jesus turned around, saw them following, and asked, “What do you want?” They said, “Teacher, where are you staying?”",
+          "context": ""
+        },
+        {
+          "verse": 39,
+          "kjv": "He saith unto them, Come and see. They came and saw where he dwelt, and abode with him that day: for it was about the tenth hour.",
+          "decoded": "He told them, “Come and see.” So they went with him and stayed that day because it was about 4 p.m.",
+          "context": ""
+        },
+        {
+          "verse": 40,
+          "kjv": "One of the two which heard John speak, and followed him, was Andrew, Simon Peter’s brother.",
+          "decoded": "One of the two who heard John and followed Jesus was Andrew, Simon Peter’s brother.",
+          "context": ""
+        },
+        {
+          "verse": 41,
+          "kjv": "He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ.",
+          "decoded": "Andrew first found his brother Simon and told him, “We have found the Messiah” (which means Christ).",
+          "context": ""
+        },
+        {
+          "verse": 42,
+          "kjv": "And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas, which is by interpretation, A stone.",
+          "decoded": "Then Andrew brought Simon to Jesus. Jesus looked at him and said, “You are Simon, son of Jonah; you will be called Cephas” (which means Peter).",
+          "context": ""
+        },
+        {
+          "verse": 43,
+          "kjv": "The day following Jesus would go forth into Galilee, and findeth Philip, and saith unto him, Follow me.",
+          "decoded": "The next day Jesus decided to go to Galilee. He found Philip and said, “Follow me.”",
+          "context": ""
+        },
+        {
+          "verse": 44,
+          "kjv": "Now Philip was of Bethsaida, the city of Andrew and Peter.",
+          "decoded": "Philip was from Bethsaida, the same town as Andrew and Peter.",
+          "context": ""
+        },
+        {
+          "verse": 45,
+          "kjv": "Philip findeth Nathanael, and saith unto him, We have found him, of whom Moses in the law, and the prophets, did write, Jesus of Nazareth, the son of Joseph.",
+          "decoded": "Philip found Nathanael and told him, “We have found the one Moses and the prophets wrote about—Jesus of Nazareth, Joseph’s son.”",
+          "context": ""
+        },
+        {
+          "verse": 46,
+          "kjv": "And Nathanael said unto him, Can there any good thing come out of Nazareth? Philip saith unto him, Come and see.",
+          "decoded": "Nathanael asked, “Can anything good come from Nazareth?” Philip replied, “Come and see.”",
+          "context": ""
+        },
+        {
+          "verse": 47,
+          "kjv": "Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile!",
+          "decoded": "Jesus saw Nathanael approaching and said, “Here is a true Israelite, a man without deceit.”",
+          "context": ""
+        },
+        {
+          "verse": 48,
+          "kjv": "Nathanael saith unto him, Whence knowest thou me? Jesus answered and said unto him, Before that Philip called thee, when thou wast under the fig tree, I saw thee.",
+          "decoded": "Nathanael asked, “How do you know me?” Jesus answered, “I saw you earlier under the fig tree before Philip called you.”",
+          "context": ""
+        },
+        {
+          "verse": 49,
+          "kjv": "Nathanael answered and saith unto him, Rabbi, thou art the Son of God; thou art the King of Israel.",
+          "decoded": "Nathanael replied, “Teacher, you are the Son of God; you are the King of Israel.”",
+          "context": ""
+        },
+        {
+          "verse": 50,
+          "kjv": "Jesus answered and said unto him, Because I said unto thee, I saw thee under the fig tree, believest thou? thou shalt see greater things than these.",
+          "decoded": "Jesus said, “You believe because I told you I saw you under the fig tree? You will see even greater things than this.”",
+          "context": ""
+        },
+        {
+          "verse": 51,
+          "kjv": "And he saith unto him, Verily, verily, I say unto you, Hereafter ye shall see heaven open, and the angels of God ascending and descending upon the Son of man.",
+          "decoded": "Jesus said, “Truly, truly, I tell you, from now on you will see heaven open and God’s angels going up and down on the Son of Man.”",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "And the third day there was a marriage in Cana of Galilee; and the mother of Jesus was there:",
+          "decoded": "On the third day, there was a wedding in Cana of Galilee, and Jesus’ mother was there.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "And both Jesus was called, and his disciples, to the marriage.",
+          "decoded": "Jesus and his disciples were also invited to the wedding.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "And when they wanted wine, the mother of Jesus saith unto him, They have no wine.",
+          "decoded": "When the wine ran out, Jesus’ mother told him, “They have no more wine.”",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "Jesus saith unto her, Woman, what have I to do with thee? mine hour is not yet come.",
+          "decoded": "Jesus replied, “Woman, why do you involve me? My time has not yet come.”",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "His mother saith unto the servants, Whatsoever he saith unto you, do it.",
+          "decoded": "His mother told the servants, “Do whatever he tells you.”",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "And there were set there six waterpots of stone, after the manner of the purifying of the Jews, containing two or three firkins apiece.",
+          "decoded": "Nearby were six stone water jars used for Jewish purification rituals, each holding about 20 to 30 gallons.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Jesus saith unto them, Fill the waterpots with water. And they filled them up to the brim.",
+          "decoded": "Jesus told them, “Fill the jars with water.” So they filled them to the top.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "And he saith unto them, Draw out now, and bear unto the governor of the feast. And they bare it.",
+          "decoded": "Then he said, “Now draw some out and take it to the master of the banquet.” They did as he said.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "When the ruler of the feast had tasted the water that was made wine, and knew not whence it was: (but the servants which drew the water knew;) the governor of the feast called the bridegroom,",
+          "decoded": "The master of the banquet tasted the water that had become wine, not knowing where it came from (though the servants who drew the water knew). He called the bridegroom.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "And saith unto him, Every man at the beginning doth set forth good wine; and when men have well drunk, then that which is worse: but thou hast kept the good wine until now.",
+          "decoded": "He said, “Usually the best wine is served first, and after people have drunk freely, the cheaper wine is served. But you have saved the best wine until now.”",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "This beginning of miracles did Jesus in Cana of Galilee, and manifested forth his glory; and his disciples believed on him.",
+          "decoded": "This was the first miracle Jesus performed in Cana of Galilee, revealing his glory, and his disciples believed in him.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "After this he went down to Capernaum, he, and his mother, and his brethren, and his disciples: and they continued there not many days.",
+          "decoded": "After this, Jesus went down to Capernaum with his mother, brothers, and disciples, and stayed there only a few days.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "And the Jews’ passover was at hand, and Jesus went up to Jerusalem,",
+          "decoded": "The Jewish Passover was near, so Jesus went up to Jerusalem.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "And found in the temple those that sold oxen and sheep and doves, and the changers of money sitting:",
+          "decoded": "In the temple, he found people selling oxen, sheep, and doves, and money changers sitting there.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "And when he had made a scourge of small cords, he drove them all out of the temple, and the sheep, and the oxen; and poured out the changers’ money, and overthrew the tables;",
+          "decoded": "Jesus made a whip from cords and drove all of them out of the temple, including the sheep and oxen. He scattered the money changers’ coins and overturned their tables.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "And said unto them that sold doves, Take these things hence; make not my Father’s house an house of merchandise.",
+          "decoded": "He told those selling doves, “Take these things away; don’t turn my Father’s house into a marketplace.”",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "And his disciples remembered that it was written, The zeal of thine house hath eaten me up.",
+          "decoded": "His disciples remembered the scripture that says, “Zeal for your house will consume me.”",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Then answered the Jews and said unto him, What sign shewest thou unto us, seeing that thou doest these things?",
+          "decoded": "The Jewish leaders asked him, “What proof can you show us to justify what you are doing?”",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "Jesus answered and said unto them, Destroy this temple, and in three days I will raise it up.",
+          "decoded": "Jesus replied, “Destroy this temple, and in three days I will raise it up.”",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "Then said the Jews, Forty and six years was this temple in building, and wilt thou rear it up in three days?",
+          "decoded": "The Jews said, “It took 46 years to build this temple, and you will raise it up in three days?”",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "But he spake of the temple of his body.",
+          "decoded": "But Jesus was speaking about the temple of his body.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "When therefore he was risen from the dead, his disciples remembered that he had said this unto them; and they believed the scripture, and the word which Jesus had said.",
+          "decoded": "After he was raised from the dead, his disciples remembered what he had said and believed both the scripture and Jesus’ words.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "Now when he was in Jerusalem at the passover, in the feast day, many believed in his name, when they saw the miracles which he did.",
+          "decoded": "During the Passover festival in Jerusalem, many believed in Jesus’ name when they saw the miracles he performed.",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "But Jesus did not commit himself unto them, because he knew all men,",
+          "decoded": "But Jesus did not trust them because he knew what was in everyone’s heart.",
+          "context": ""
+        },
+        {
+          "verse": 25,
+          "kjv": "And needed not that any should testify of man: for he knew what was in man.",
+          "decoded": "He didn’t need anyone to tell him about people because he already knew what was inside them.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "There was a man of the Pharisees, named Nicodemus, a ruler of the Jews:",
+          "decoded": "There was a Pharisee named Nicodemus, a Jewish leader.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "The same came to Jesus by night, and said unto him, Rabbi, we know that thou art a teacher come from God: for no man can do these miracles that thou doest, except God be with him.",
+          "decoded": "He came to Jesus at night and said, “Teacher, we know you are from God because no one could perform these miracles unless God is with him.”",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.",
+          "decoded": "Jesus replied, “Truly, I tell you, no one can see God’s kingdom unless they are born again.”",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "Nicodemus saith unto him, How can a man be born when he is old? can he enter the second time into his mother’s womb, and be born?",
+          "decoded": "Nicodemus asked, “How can someone be born again when they are old? Can they enter their mother’s womb a second time and be born?”",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God.",
+          "decoded": "Jesus answered, “Truly, I tell you, no one can enter God’s kingdom unless they are born of water and the Spirit.”",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "That which is born of the flesh is flesh; and that which is born of the Spirit is spirit.",
+          "decoded": "What is born from human parents is human, but what is born from the Spirit is spiritual.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Marvel not that I said unto thee, Ye must be born again.",
+          "decoded": "Don’t be surprised when I say you must be born again.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit.",
+          "decoded": "The wind blows wherever it wants, and you hear its sound but don’t know where it comes from or where it’s going. That’s how it is with everyone born of the Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "Nicodemus answered and said unto him, How can these things be?",
+          "decoded": "Nicodemus asked, “How can this happen?”",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Jesus answered and said unto him, Art thou a master of Israel, and knowest not these things?",
+          "decoded": "Jesus replied, “You are a teacher of Israel, and yet you don’t understand these things?”",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "Verily, verily, I say unto thee, We speak that we do know, and testify that we have seen; and ye receive not our witness.",
+          "decoded": "Truly, I tell you, we speak about what we know and testify to what we have seen, but you don’t accept our testimony.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "If I have told you earthly things, and ye believe not, how shall ye believe, if I tell you of heavenly things?",
+          "decoded": "If you don’t believe me when I talk about earthly things, how will you believe when I talk about heavenly things?",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "And no man hath ascended up to heaven, but he that came down from heaven, even the Son of man which is in heaven.",
+          "decoded": "No one has gone up to heaven except the one who came down from heaven—the Son of Man who is in heaven.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up:",
+          "decoded": "Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "That whosoever believeth in him should not perish, but have eternal life.",
+          "decoded": "So that everyone who believes in him will not die but have eternal life.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+          "decoded": "God loved the world so much that he gave his only Son, so that whoever believes in him will not die but have eternal life.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "For God sent not his Son into the world to condemn the world; but that the world through him might be saved.",
+          "decoded": "God did not send his Son to judge the world, but to save the world through him.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God.",
+          "decoded": "Whoever believes in him is not judged guilty, but whoever does not believe is already judged guilty because they have not believed in God’s only Son.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "And this is the condemnation, that light is come into the world, and men loved darkness rather than light, because their deeds were evil.",
+          "decoded": "This is the judgment: the light has come into the world, but people loved darkness instead of light because their actions were evil.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "For every one that doeth evil hateth the light, neither cometh to the light, lest his deeds should be reproved.",
+          "decoded": "Everyone who does evil hates the light and avoids it because they don’t want their actions exposed.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "But he that doeth truth cometh to the light, that his deeds may be made manifest, that they are wrought in God.",
+          "decoded": "But anyone who lives by the truth comes to the light so that it may be clear that their actions are done through God.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "After these things came Jesus and his disciples into the land of Judæa; and there he tarried with them, and baptized.",
+          "decoded": "After this, Jesus and his disciples went into Judea, where he stayed and baptized people.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "And John also was baptizing in Ænon near to Salim, because there was much water there: and they came, and were baptized.",
+          "decoded": "John was also baptizing at Aenon near Salim because there was plenty of water, and people were coming to be baptized.",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "For John was not yet cast into prison.",
+          "decoded": "This was before John was put in prison.",
+          "context": ""
+        },
+        {
+          "verse": 25,
+          "kjv": "Then there arose a question between some of John’s disciples and the Jews about purifying.",
+          "decoded": "Some of John’s disciples and a group of Jews began arguing about ceremonial washing.",
+          "context": ""
+        },
+        {
+          "verse": 26,
+          "kjv": "And they came unto John, and said unto him, Rabbi, he that was with thee beyond Jordan, to whom thou barest witness, behold, the same baptizeth, and all men come to him.",
+          "decoded": "They came to John and said, “Teacher, the man you testified about who was beyond the Jordan is now baptizing, and everyone is going to him.”",
+          "context": ""
+        },
+        {
+          "verse": 27,
+          "kjv": "John answered and said, A man can receive nothing, except it be given him from heaven.",
+          "decoded": "John answered, “No one can receive anything unless it is given from heaven.”",
+          "context": ""
+        },
+        {
+          "verse": 28,
+          "kjv": "Ye yourselves bear me witness, that I said, I am not the Christ, but that I am sent before him.",
+          "decoded": "You yourselves can confirm that I said, ‘I am not the Messiah, but I have been sent ahead of him.’",
+          "context": ""
+        },
+        {
+          "verse": 29,
+          "kjv": "He that hath the bride is the bridegroom: but the friend of the bridegroom, which standeth and heareth him, rejoiceth greatly because of the bridegroom’s voice: this my joy therefore is fulfilled.",
+          "decoded": "The bride belongs to the bridegroom, but the friend of the bridegroom who stands and listens is filled with joy because of the bridegroom’s voice. This is why my joy is complete.",
+          "context": ""
+        },
+        {
+          "verse": 30,
+          "kjv": "He must increase, but I must decrease.",
+          "decoded": "He must become greater, and I must become less.",
+          "context": ""
+        },
+        {
+          "verse": 31,
+          "kjv": "He that cometh from above is above all: he that is of the earth is earthly, and speaketh of the earth: he that cometh from heaven is above all.",
+          "decoded": "The one who comes from above is greater than everyone. The one who belongs to the earth speaks about earthly things, but the one who comes from heaven is above all.",
+          "context": ""
+        },
+        {
+          "verse": 32,
+          "kjv": "And what he hath seen and heard, that he testifieth; and no man receiveth his testimony.",
+          "decoded": "He testifies about what he has seen and heard, but no one accepts his testimony.",
+          "context": ""
+        },
+        {
+          "verse": 33,
+          "kjv": "He that hath received his testimony hath set to his seal that God is true.",
+          "decoded": "Whoever accepts his testimony confirms that God is truthful.",
+          "context": ""
+        },
+        {
+          "verse": 34,
+          "kjv": "For he whom God hath sent speaketh the words of God: for God giveth not the Spirit by measure unto him.",
+          "decoded": "The one God sends speaks God’s words because God gives the Spirit fully to him without limit.",
+          "context": ""
+        },
+        {
+          "verse": 35,
+          "kjv": "The Father loveth the Son, and hath given all things into his hand.",
+          "decoded": "The Father loves the Son and has given him complete authority.",
+          "context": ""
+        },
+        {
+          "verse": 36,
+          "kjv": "He that believeth on the Son hath everlasting life: and he that believeth not the Son shall not see life; but the wrath of God abideth on him.",
+          "decoded": "Whoever believes in the Son has eternal life, but whoever does not believe in the Son will not see life, and God’s judgment remains on them.",
+          "context": ""
+        }
+      ]
+    }
+  ]
+}

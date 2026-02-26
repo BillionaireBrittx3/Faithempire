@@ -1,0 +1,575 @@
+{
+  "title": "The Book of 1 Thessalonians Decoded",
+  "bookName": "1 Thessalonians",
+  "slug": "1-thessalonians",
+  "author": "Brittany Johnson",
+  "description": "The Book of 1 Thessalonians — every verse decoded into plain, modern English (DMLV).",
+  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "totalChapters": 5,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians which is in God the Father and in the Lord Jesus Christ: Grace be unto you, and peace, from God our Father, and the Lord Jesus Christ.",
+          "decoded": "Paul, Silvanus, and Timothy send greetings to the church of the Thessalonians, who belong to God the Father and the Lord Jesus Christ. May grace and peace be with you from God our Father and the Lord Jesus Christ.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "We give thanks to God always for you all, making mention of you in our prayers;",
+          "decoded": "We always thank God for all of you and continually mention you in our prayers.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "Remembering without ceasing your work of faith, and labour of love, and patience of hope in our Lord Jesus Christ, in the sight of God and our Father;",
+          "decoded": "We never stop remembering your faith in action, your loving work, and your patient hope in our Lord Jesus Christ, all seen by God our Father.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "Knowing, brethren beloved, your election of God.",
+          "decoded": "Dear brothers and sisters, we know that God has chosen you.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance; as ye know what manner of men we were among you for your sake.",
+          "decoded": "Our message to you was not just words, but came with power, the Holy Spirit, and deep conviction. You know how we lived among you for your benefit.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "And ye became followers of us, and of the Lord, having received the word in much affliction, with joy of the Holy Ghost:",
+          "decoded": "You became imitators of us and of the Lord, accepting the message even though you suffered many hardships, and you received it with the joy given by the Holy Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "So that ye were ensamples to all that believe in Macedonia and Achaia.",
+          "decoded": "You became examples for all believers in Macedonia and Achaia.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "For from you sounded out the word of the Lord not only in Macedonia and Achaia, but also in every place your faith to God-ward is spread abroad; so that we need not to speak any thing.",
+          "decoded": "The message of the Lord spread from you not only throughout Macedonia and Achaia but everywhere your faith in God has become known. Because of this, we don’t need to say anything more.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "For they themselves shew of us what manner of entering in we had unto you, and how ye turned to God from idols to serve the living and true God;",
+          "decoded": "Others tell how we came to you and how you turned away from idols to serve the living and true God.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "And to wait for his Son from heaven, whom he raised from the dead, even Jesus, which delivered us from the wrath to come.",
+          "decoded": "You wait for His Son from heaven, Jesus, whom God raised from the dead. He rescues us from the coming judgment.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "For yourselves, brethren, know our entrance in unto you, that it was not in vain:",
+          "decoded": "Brothers and sisters, you know how we came to you, and it was not without purpose.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "But even after that we had suffered before, and were shamefully entreated, as ye know, at Philippi, we were bold in our God to speak unto you the gospel of God with much contention.",
+          "decoded": "Even though we had already suffered and been treated badly, as you know happened in Philippi, we boldly preached God's message to you despite opposition.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "For our exhortation was not of deceit, nor of uncleanness, nor in guile:",
+          "decoded": "Our encouragement to you was sincere, pure, and honest—not deceitful or dishonest.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "But as we were allowed of God to be put in trust with the gospel, even so we speak; not as pleasing men, but God, which trieth our hearts.",
+          "decoded": "We were entrusted by God with the gospel, so we speak not to please people but to please God, who examines our hearts.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "For neither at any time used we flattering words, as ye know, nor a cloke of covetousness; God is witness:",
+          "decoded": "We never used flattering speech or pretended to be greedy, as you know; God is our witness.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "Nor of men sought we glory, neither of you, nor yet of others, when we might have been burdensome, as the apostles of Christ.",
+          "decoded": "We didn’t seek praise from you or anyone else, even though we had the right to demand support like other apostles of Christ.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "But we were gentle among you, even as a nurse cherisheth her children:",
+          "decoded": "Instead, we were gentle with you, like a mother caring tenderly for her own children.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "So being affectionately desirous of you, we were willing to have imparted unto you, not the gospel of God only, but also our own souls, because ye were dear unto us.",
+          "decoded": "Because we cared so deeply for you, we were willing to share not just God’s message but even our own lives, since you meant so much to us.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "For ye remember, brethren, our labour and travail: for labouring night and day, because we would not be chargeable unto any of you, we preached unto you the gospel of God.",
+          "decoded": "You remember, brothers and sisters, how hard we worked day and night so we wouldn’t be a burden to you while preaching God’s gospel.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Ye are witnesses, and God also, how holily and justly and unblameably we behaved ourselves among you that believe:",
+          "decoded": "You and God are witnesses to how pure, just, and blameless we lived among you who believe.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "As ye know how we exhorted and comforted and charged every one of you, as a father doth his children,",
+          "decoded": "You know how we encouraged, comforted, and urged each of you like a father does his children.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "That ye would walk worthy of God, who hath called you unto his kingdom and glory.",
+          "decoded": "We urged you to live in a way that honors God, who has called you into His kingdom and glory.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "For this cause also thank we God without ceasing, because, when ye received the word of God which ye heard of us, ye received it not as the word of men, but as it is in truth, the word of God, which effectually worketh also in you that believe.",
+          "decoded": "For this reason, we constantly thank God because when you accepted the message we shared, you didn’t treat it as merely human words but as God’s true word, which is actively working in those who believe.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "For ye, brethren, became followers of the churches of God which in Judæa are in Christ Jesus: for ye also have suffered like things of your own countrymen, even as they have of the Jews:",
+          "decoded": "You, brothers and sisters, have followed the example of God’s churches in Judea who belong to Christ Jesus, because you have also suffered similar persecution from your own people, just as they did from the Jews.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "Who both killed the Lord Jesus, and their own prophets, and have persecuted us; and they please not God, and are contrary to all men:",
+          "decoded": "Those people killed the Lord Jesus and their own prophets, and they have persecuted us too. They do not please God and are against everyone.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "Forbidding us to speak to the Gentiles that they might be saved, to fill up their sins alway: for the wrath is come upon them to the uttermost.",
+          "decoded": "They tried to stop us from preaching to the Gentiles so they could continue in their sins, and now God's full anger has come upon them.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "But we, brethren, being taken from you for a short time in presence, not in heart, endeavoured the more abundantly to see your face with great desire.",
+          "decoded": "Brothers and sisters, even though we were separated from you for a short time physically, we were always close to you in our hearts and eagerly tried even harder to visit you.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Wherefore we would have come unto you, even I Paul, once and again; but Satan hindered us.",
+          "decoded": "I, Paul, wanted to come to you repeatedly, but Satan blocked our plans.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "For what is our hope, or joy, or crown of rejoicing? Are not even ye in the presence of our Lord Jesus Christ at his coming?",
+          "decoded": "What is our hope, joy, or reward? Isn't it you standing before our Lord Jesus Christ when He returns?",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "For ye are our glory and joy.",
+          "decoded": "You are our pride and happiness.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Wherefore when we could no longer forbear, we thought it good to be left at Athens alone;",
+          "decoded": "So when we could no longer wait, we decided it was best for me to stay alone in Athens;",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "And sent Timotheus, our brother, and minister of God, and our fellowlabourer in the gospel of Christ, to establish you, and to comfort you concerning your faith:",
+          "decoded": "and sent Timothy, our brother and God's servant, and our partner in spreading the gospel of Christ, to strengthen and encourage you in your faith.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "That no man should be moved by these afflictions: for yourselves know that we are appointed thereunto.",
+          "decoded": "So that no one would be shaken by these troubles, because you know that we are destined to face them.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "For verily, when we were with you, we told you before that we should suffer tribulation; even as it came to pass, and ye know.",
+          "decoded": "When we were with you, we warned you that we would suffer hardships, and it happened just as we said, as you know.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "For this cause, when I could no longer forbear, I sent to know your faith, lest by some means the tempter have tempted you, and our labour be in vain.",
+          "decoded": "Because of this, when I could no longer wait, I sent someone to find out how your faith was doing, so that the enemy might not have tempted you and our work would be wasted.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "But now when Timotheus came from you unto us, and brought us good tidings of your faith and charity, and that ye have good remembrance of us always, desiring greatly to see us, as we also to see you:",
+          "decoded": "But Timothy came to us from you and brought good news about your faith and love, and that you always remember us kindly and want to see us as much as we want to see you.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Therefore, brethren, we were comforted over you in all our affliction and distress by your faith:",
+          "decoded": "So, brothers and sisters, we were comforted in all our troubles and hardships because of your faith.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "For now we live, if ye stand fast in the Lord.",
+          "decoded": "For we truly live if you remain strong and faithful in the Lord.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "For what thanks can we render to God again for you, for all the joy wherewith we joy for your sakes before our God;",
+          "decoded": "How can we thank God enough for you and all the joy we feel because of you when we pray to our God?",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Night and day praying exceedingly that we might see your face, and might perfect that which is lacking in your faith?",
+          "decoded": "We pray very earnestly, day and night, that we may see you again and help complete what is missing in your faith.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "Now God himself and our Father, and our Lord Jesus Christ, direct our way unto you.",
+          "decoded": "Now may God himself, our Father, and the Lord Jesus Christ guide us on our way to you.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "And the Lord make you to increase and abound in love one toward another, and toward all men, even as we do toward you:",
+          "decoded": "And may the Lord make your love grow and overflow for each other and for everyone else, just as we have for you.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "To the end he may stablish your hearts unblameable in holiness before God, even our Father, at the coming of our Lord Jesus Christ with all his saints.",
+          "decoded": "So that your hearts may be strong, pure, and blameless before God our Father when our Lord Jesus Christ comes with all his holy people.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Furthermore then we beseech you, brethren, and exhort you by the Lord Jesus, that as ye have received of us how ye ought to walk and to please God, so ye would abound more and more.",
+          "decoded": "Therefore, brothers and sisters, we earnestly ask you, in the name of the Lord Jesus, to continue living as you have learned from us—how to live in a way that pleases God—and to keep growing in this.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "For ye know what commandments we gave you by the Lord Jesus.",
+          "decoded": "You already know the instructions we gave you through the Lord Jesus.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "For this is the will of God, even your sanctification, that ye should abstain from fornication:",
+          "decoded": "God’s will for you is your holiness, which means you should avoid sexual immorality.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "That every one of you should know how to possess his vessel in sanctification and honour;",
+          "decoded": "Each of you should learn to control your own body in a way that is holy and honorable.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Not in the lust of concupiscence, even as the Gentiles which know not God:",
+          "decoded": "Not driven by passionate lust like those who do not know God.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "That no man go beyond and defraud his brother in any matter: because that the Lord is the avenger of all such, as we also have forewarned you and testified.",
+          "decoded": "No one should take advantage of or cheat a fellow believer in any way, because the Lord will punish those who do. We have warned you about this before and testified to it.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "For God hath not called us unto uncleanness, but unto holiness.",
+          "decoded": "God has called us to be holy, not to live in impurity.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "He therefore that despiseth, despiseth not man, but God, who hath also given unto us his holy Spirit.",
+          "decoded": "So anyone who rejects these instructions is not rejecting people but God, who has given us his Holy Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "But as touching brotherly love ye need not that I write unto you: for ye yourselves are taught of God to love one another.",
+          "decoded": "About loving each other as brothers and sisters, you don’t need me to write to you because God has already taught you to love one another.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "And indeed ye do it toward all the brethren which are in all Macedonia: but we beseech you, brethren, that ye increase more and more;",
+          "decoded": "And you are already showing love to all the believers throughout Macedonia, but we urge you to keep growing in this love.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And that ye study to be quiet, and to do your own business, and to work with your own hands, as we commanded you;",
+          "decoded": "Also, make an effort to live quietly, mind your own affairs, and work with your hands, just as we told you.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "That ye may walk honestly toward them that are without, and that ye may have lack of nothing.",
+          "decoded": "This way, you will live honorably among outsiders and won’t be dependent on anyone.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "But I would not have you to be ignorant, brethren, concerning them which are asleep, that ye sorrow not, even as others which have no hope.",
+          "decoded": "Brothers and sisters, I don’t want you to be uninformed about those who have died, so you won’t grieve like people who have no hope.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "For if we believe that Jesus died and rose again, even so them also which sleep in Jesus will God bring with him.",
+          "decoded": "Because if we believe that Jesus died and rose again, then God will also bring with Jesus those who have died trusting in Him.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "For this we say unto you by the word of the Lord, that we which are alive and remain unto the coming of the Lord shall not prevent them which are asleep.",
+          "decoded": "This is what we tell you by the Lord’s word: those of us who are still alive when the Lord returns will not get ahead of those who have died.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:",
+          "decoded": "The Lord will come down from heaven with a loud command, with the voice of the chief angel, and with the trumpet call of God. Then, those who have died believing in Christ will be raised first.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord.",
+          "decoded": "After that, those of us who are still alive will be caught up together with them in the clouds to meet the Lord in the air. And we will be with the Lord forever.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Wherefore comfort one another with these words.",
+          "decoded": "Therefore, encourage and strengthen each other with these promises.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "But of the times and the seasons, brethren, ye have no need that I write unto you.",
+          "decoded": "Brothers and sisters, you don’t need me to write to you about the times and seasons.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "For yourselves know perfectly that the day of the Lord so cometh as a thief in the night.",
+          "decoded": "You already know very well that the day of the Lord will come unexpectedly, like a thief in the night.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "For when they shall say, Peace and safety; then sudden destruction cometh upon them, as travail upon a woman with child; and they shall not escape.",
+          "decoded": "When people say 'Peace and safety,' then sudden destruction will come on them, like labor pains on a pregnant woman, and they won’t escape.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "But ye, brethren, are not in darkness, that that day should overtake you as a thief.",
+          "decoded": "But you, brothers and sisters, are not in darkness, so that day won’t surprise you like a thief.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Ye are all the children of light, and the children of the day: we are not of the night, nor of darkness.",
+          "decoded": "You are all children of the light and of the day; we don’t belong to the night or darkness.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "Therefore let us not sleep, as do others; but let us watch and be sober.",
+          "decoded": "So let’s not be like others who are asleep, but let’s stay alert and self-controlled.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "For they that sleep sleep in the night; and they that be drunken are drunken in the night.",
+          "decoded": "Those who sleep do so at night, and those who get drunk do so at night.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.",
+          "decoded": "But since we belong to the day, let’s be sober, wearing faith and love as a breastplate, and the hope of salvation as a helmet.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ,",
+          "decoded": "God did not choose us to face his anger, but to receive salvation through our Lord Jesus Christ.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Who died for us, that, whether we wake or sleep, we should live together with him.",
+          "decoded": "Jesus died for us so that whether we are awake or asleep, we will live with him.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+          "decoded": "So encourage and build each other up, just as you are already doing.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "And we beseech you, brethren, to know them which labour among you, and are over you in the Lord, and admonish you;",
+          "decoded": "We urge you, brothers and sisters, to recognize those who work hard among you, lead you in the Lord, and warn you.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "And to esteem them very highly in love for their work’s sake. And be at peace among yourselves.",
+          "decoded": "Hold them in high honor and love because of their work. Live peacefully with each other.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "Now we exhort you, brethren, warn them that are unruly, comfort the feebleminded, support the weak, be patient toward all men.",
+          "decoded": "We urge you, brothers and sisters, to warn those who are disruptive, encourage those who are discouraged, help the weak, and be patient with everyone.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "See that none render evil for evil unto any man; but ever follow that which is good, both among yourselves, and to all men.",
+          "decoded": "Make sure no one pays back evil for evil, but always try to do good to everyone, both inside and outside the community.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "Rejoice evermore.",
+          "decoded": "Always be joyful.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "Pray without ceasing.",
+          "decoded": "Keep praying continually.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+          "decoded": "Give thanks in all circumstances because this is God’s will for you through Christ Jesus.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "Quench not the Spirit.",
+          "decoded": "Don’t suppress or ignore the Holy Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "Despise not prophesyings.",
+          "decoded": "Don’t reject or look down on prophecies.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "Prove all things; hold fast that which is good.",
+          "decoded": "Test everything carefully and keep what is good.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "Abstain from all appearance of evil.",
+          "decoded": "Avoid anything that even looks evil.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "And the very God of peace sanctify you wholly; and I pray God your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.",
+          "decoded": "May God, who gives peace, make you completely holy, and I pray that your spirit, soul, and body remain pure and blameless until Jesus Christ returns.",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "Faithful is he that calleth you, who also will do it.",
+          "decoded": "God, who has called you, is faithful and will do what He has promised.",
+          "context": ""
+        },
+        {
+          "verse": 25,
+          "kjv": "Brethren, pray for us.",
+          "decoded": "Brothers and sisters, please pray for us.",
+          "context": ""
+        },
+        {
+          "verse": 26,
+          "kjv": "Greet all the brethren with an holy kiss.",
+          "decoded": "Send a holy greeting to all the believers.",
+          "context": ""
+        },
+        {
+          "verse": 27,
+          "kjv": "I charge you by the Lord that this epistle be read unto all the holy brethren.",
+          "decoded": "I solemnly command you, in the name of the Lord, to have this letter read to all the believers.",
+          "context": ""
+        },
+        {
+          "verse": 28,
+          "kjv": "The grace of our Lord Jesus Christ be with you. Amen.",
+          "decoded": "May the grace of our Lord Jesus Christ be with you. Amen.",
+          "context": ""
+        }
+      ]
+    }
+  ]
+}

@@ -27,6 +27,8 @@ interface ChapterSummary {
 
 interface BookSummary {
   title: string;
+  bookName: string;
+  slug: string;
   author: string;
   description: string;
   copyright: string;
@@ -56,14 +58,12 @@ function ChapterSkeleton() {
   );
 }
 
-const DECODED_BOOK_NAME = "Genesis Decoded";
-
-export default function DecodedBookPage() {
+export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   const [view, setView] = useState<ViewMode>("chapters");
   const [selectedChapter, setSelectedChapter] = useState(1);
   const [expandedContext, setExpandedContext] = useState<Set<number>>(new Set());
   const [highlightedVerses, setHighlightedVerses] = useState<Set<string>>(
-    () => new Set(getHighlights().filter(h => h.book === DECODED_BOOK_NAME).map(h => h.id))
+    () => new Set(getHighlights().filter(h => h.book.includes("Decoded")).map(h => h.id))
   );
   const { toast } = useToast();
   const { isPremium } = useSubscription();
@@ -71,11 +71,14 @@ export default function DecodedBookPage() {
   const isChapterLocked = (chapterNum: number) => !isPremium && chapterNum > FREE_DECODED_CHAPTERS;
 
   const { data: bookSummary, isLoading: summaryLoading, error: summaryError } = useQuery<BookSummary>({
-    queryKey: ["/api/decoded/genesis"],
+    queryKey: ["/api/decoded", bookSlug],
   });
 
+  const bookName = bookSummary?.bookName || bookSlug;
+  const decodedBookName = `${bookName} Decoded`;
+
   const { data: chapterData, isLoading, error: chapterError } = useQuery<ChapterData>({
-    queryKey: ["/api/decoded/genesis", selectedChapter],
+    queryKey: ["/api/decoded", bookSlug, selectedChapter],
     enabled: view === "reading" && !isChapterLocked(selectedChapter),
   });
 
@@ -93,12 +96,12 @@ export default function DecodedBookPage() {
   const handleVerseHighlight = useCallback(
     (verse: DecodedVerse) => {
       const wasHighlighted = toggleHighlight(
-        DECODED_BOOK_NAME,
+        decodedBookName,
         selectedChapter,
         verse.verse,
         verse.decoded
       );
-      const id = `${DECODED_BOOK_NAME}-${selectedChapter}-${verse.verse}`;
+      const id = `${decodedBookName}-${selectedChapter}-${verse.verse}`;
       setHighlightedVerses((prev) => {
         const next = new Set(prev);
         if (wasHighlighted) {
@@ -110,10 +113,10 @@ export default function DecodedBookPage() {
       });
       toast({
         title: wasHighlighted ? "Verse Highlighted" : "Highlight Removed",
-        description: `Genesis ${selectedChapter}:${verse.verse}`,
+        description: `${bookName} ${selectedChapter}:${verse.verse}`,
       });
     },
-    [selectedChapter, toast]
+    [selectedChapter, toast, bookName, decodedBookName]
   );
 
   const toggleContext = useCallback((verseNum: number, e: MouseEvent<HTMLButtonElement>) => {
@@ -138,8 +141,7 @@ export default function DecodedBookPage() {
 
   const handleNextChapter = useCallback(() => {
     if (bookSummary && selectedChapter < bookSummary.totalChapters) {
-      const nextChapter = selectedChapter + 1;
-      setSelectedChapter(nextChapter);
+      setSelectedChapter((c) => c + 1);
       setExpandedContext(new Set());
     }
   }, [bookSummary, selectedChapter]);
@@ -167,15 +169,15 @@ export default function DecodedBookPage() {
               className="font-serif text-2xl font-bold text-foreground"
               data-testid="text-decoded-title"
             >
-              {view === "chapters" && "Genesis Decoded"}
+              {view === "chapters" && (bookSummary?.bookName || bookSlug)}
               {view === "reading" && `Chapter ${selectedChapter}`}
             </h1>
             {view === "chapters" && (
               <p className="mt-1 text-sm text-muted-foreground">
-                KJV translated into modern language
+                Decoded into modern language (DMLV)
               </p>
             )}
-            {view === "reading" && currentChapterInfo && (
+            {view === "reading" && currentChapterInfo?.title && (
               <p className="mt-0.5 text-xs text-primary">
                 {currentChapterInfo.title}
               </p>
@@ -196,10 +198,10 @@ export default function DecodedBookPage() {
             <div className="px-4 pb-3">
               <Card className="p-4">
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  {bookSummary?.description || "Every sentence of Genesis translated into modern, plain English with contextual clarification."}
+                  {bookSummary?.description || "Every verse decoded into plain, modern English."}
                 </p>
                 <p className="mt-2 text-[10px] text-muted-foreground/70">
-                  By {bookSummary?.author || "Brittany Johnson"} &middot; {bookSummary?.copyright || "\u00a9 2025"}
+                  By {bookSummary?.author || "Brittany Johnson"} &middot; {bookSummary?.copyright || "© 2026"}
                 </p>
               </Card>
             </div>
@@ -241,7 +243,7 @@ export default function DecodedBookPage() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
                         <p className="text-sm font-semibold text-foreground truncate">
-                          {ch.title}
+                          {ch.title || `Chapter ${ch.number}`}
                         </p>
                         {locked && <PremiumBadge />}
                       </div>
@@ -304,7 +306,7 @@ export default function DecodedBookPage() {
             {chapterData && (
               <div className="flex flex-col gap-2 px-4 py-2">
                 {chapterData.verses.map((verse) => {
-                  const id = `${DECODED_BOOK_NAME}-${selectedChapter}-${verse.verse}`;
+                  const id = `${decodedBookName}-${selectedChapter}-${verse.verse}`;
                   const highlighted = highlightedVerses.has(id);
                   const showContext = expandedContext.has(verse.verse);
                   return (
@@ -380,12 +382,12 @@ export default function DecodedBookPage() {
                 Previous
               </Button>
               <span className="text-sm text-muted-foreground">
-                {selectedChapter} of {bookSummary?.totalChapters || 50}
+                {selectedChapter} of {bookSummary?.totalChapters || "?"}
               </span>
               <Button
                 variant="outline"
                 onClick={handleNextChapter}
-                disabled={selectedChapter >= (bookSummary?.totalChapters || 50)}
+                disabled={selectedChapter >= (bookSummary?.totalChapters || 1)}
                 data-testid="button-decoded-next"
               >
                 Next
@@ -395,7 +397,7 @@ export default function DecodedBookPage() {
 
             <div className="px-4 pb-4">
               <p className="text-[10px] text-center text-muted-foreground/60">
-                {bookSummary?.copyright || "\u00a9 2025 Brittany Johnson. All rights reserved."}
+                {bookSummary?.copyright || "© 2026 Brittany Johnson. All rights reserved."}
               </p>
             </div>
           </motion.div>

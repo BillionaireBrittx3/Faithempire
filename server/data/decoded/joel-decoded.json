@@ -1,0 +1,467 @@
+{
+  "title": "The Book of Joel Decoded",
+  "bookName": "Joel",
+  "slug": "joel",
+  "author": "Brittany Johnson",
+  "description": "The Book of Joel — every verse decoded into plain, modern English (DMLV).",
+  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "totalChapters": 3,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "The word of the Lord that came to Joel the son of Pethuel.",
+          "decoded": "This is the message from the LORD given to Joel, son of Pethuel.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "Hear this, ye old men, and give ear, all ye inhabitants of the land. Hath this been in your days, or even in the days of your fathers?",
+          "decoded": "Listen carefully, elders, and all who live in the land. Has anything like this happened in your lifetime or in the days of your ancestors?",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "Tell ye your children of it, and let your children tell their children, and their children another generation.",
+          "decoded": "Tell your children about it, and let them tell their children, and their children tell the next generation.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "That which the palmerworm hath left hath the locust eaten; and that which the locust hath left hath the cankerworm eaten; and that which the cankerworm hath left hath the caterpiller eaten.",
+          "decoded": "What the palmerworm didn’t eat, the locust ate; what the locust didn’t eat, the cankerworm ate; and what the cankerworm didn’t eat, the caterpillar ate.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Awake, ye drunkards, and weep; and howl, all ye drinkers of wine, because of the new wine; for it is cut off from your mouth.",
+          "decoded": "Wake up, you drunkards, and cry; all you who enjoy wine, wail because the new wine is gone and you have none to drink.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "For a nation is come up upon my land, strong, and without number, whose teeth are the teeth of a lion, and he hath the cheek teeth of a great lion.",
+          "decoded": "A powerful and countless army has invaded my land, with teeth like a lion’s and strong jaws like a great lion’s.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "He hath laid my vine waste, and barked my fig tree: he hath made it clean bare, and cast it away; the branches thereof are made white.",
+          "decoded": "It has destroyed my vineyards and stripped the bark from my fig trees, leaving them completely bare; the branches look white and lifeless.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Lament like a virgin girded with sackcloth for the husband of her youth.",
+          "decoded": "Mourn deeply, like a young bride dressed in sackcloth grieving for her first love.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "The meat offering and the drink offering is cut off from the house of the Lord; the priests, the Lord’s ministers, mourn.",
+          "decoded": "The grain and drink offerings have stopped at the LORD’s temple, and the priests who serve the LORD are in mourning.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "The field is wasted, the land mourneth; for the corn is wasted: the new wine is dried up, the oil languisheth.",
+          "decoded": "The fields are ruined, the land is grieving because the grain is destroyed; the new wine is gone, and the olive oil is failing.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "Be ye ashamed, O ye husbandmen; howl, O ye vinedressers, for the wheat and for the barley; because the harvest of the field is perished.",
+          "decoded": "Farmers, be ashamed and cry out; grape growers, wail for the wheat and barley because the harvest is lost.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "The vine is dried up, and the fig tree languisheth; the pomegranate tree, the palm tree also, and the apple tree, even all the trees of the field, are withered: because joy is withered away from the sons of men.",
+          "decoded": "The grapevines are dried up, the fig trees are weak; the pomegranate, palm, and apple trees, and all the trees in the fields, are withered because people’s joy has disappeared.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Gird yourselves, and lament, ye priests: howl, ye ministers of the altar: come, lie all night in sackcloth, ye ministers of my God: for the meat offering and the drink offering is withholden from the house of your God.",
+          "decoded": "Put on sackcloth and mourn, priests; cry out, ministers of the altar. Spend the night in sackcloth, servants of my God, because grain and drink offerings have stopped at the temple.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "Sanctify ye a fast, call a solemn assembly, gather the elders and all the inhabitants of the land into the house of the Lord your God, and cry unto the Lord,",
+          "decoded": "Declare a fast, call a sacred meeting, gather the elders and all the people into the LORD’s temple, and cry out to the LORD in a solemn assembly.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "Alas for the day! for the day of the Lord is at hand, and as a destruction from the Almighty shall it come.",
+          "decoded": "Woe to that day! The day of the LORD is near, coming like destruction from the Almighty.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "Is not the meat cut off before our eyes, yea, joy and gladness from the house of our God?",
+          "decoded": "Isn't our food taken away right before us? Even joy and celebration have disappeared from the temple of our God.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "The seed is rotten under their clods, the garners are laid desolate, the barns are broken down; for the corn is withered.",
+          "decoded": "The seeds are rotting in the ground, the storage places are empty and ruined, and the barns are broken because the crops have dried up.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "How do the beasts groan! the herds of cattle are perplexed, because they have no pasture; yea, the flocks of sheep are made desolate.",
+          "decoded": "The animals are crying out in pain; the cattle are confused because there is no grass to eat, and the sheep are left abandoned.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "O Lord, to thee will I cry: for the fire hath devoured the pastures of the wilderness, and the flame hath burned all the trees of the field.",
+          "decoded": "Lord, I will call out to you because fire has destroyed the wild grasslands and flames have burned all the trees in the fields.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "The beasts of the field cry also unto thee: for the rivers of waters are dried up, and the fire hath devoured the pastures of the wilderness.",
+          "decoded": "The wild animals also cry out to you because the rivers have dried up and fire has destroyed the grasslands.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Blow ye the trumpet in Zion, and sound an alarm in my holy mountain: let all the inhabitants of the land tremble: for the day of the Lord cometh, for it is nigh at hand;",
+          "decoded": "Sound the trumpet in Zion and raise an alarm on my holy mountain. Let everyone in the land be afraid, because the day of the LORD is coming soon.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "A day of darkness and of gloominess, a day of clouds and of thick darkness, as the morning spread upon the mountains: a great people and a strong; there hath not been ever the like, neither shall be any more after it, even to the years of many generations.",
+          "decoded": "It will be a day of darkness and deep gloom, with clouds and thick darkness covering the mountains like the dawn spreading across them. A vast and powerful army is coming—nothing like it has ever been seen before, nor will ever be again for many generations.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "A fire devoureth before them; and behind them a flame burneth: the land is as the garden of Eden before them, and behind them a desolate wilderness; yea, and nothing shall escape them.",
+          "decoded": "A fire blazes ahead of them and flames follow behind. The land before them looks like the Garden of Eden, but behind them it becomes a wasteland. Nothing will be able to escape them.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "The appearance of them is as the appearance of horses; and as horsemen, so shall they run.",
+          "decoded": "They look like horses, and they run like horsemen charging into battle.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Like the noise of chariots on the tops of mountains shall they leap, like the noise of a flame of fire that devoureth the stubble, as a strong people set in battle array.",
+          "decoded": "They leap like the sound of chariots racing over mountain tops, like a fire burning through dry grass—an organized and powerful army ready for battle.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "Before their face the people shall be much pained: all faces shall gather blackness.",
+          "decoded": "People will be terrified in their presence; everyone’s faces will turn dark with fear.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "They shall run like mighty men; they shall climb the wall like men of war; and they shall march every one on his ways, and they shall not break their ranks:",
+          "decoded": "They will run with great strength, climb walls like soldiers in battle, and each will march in formation without breaking ranks.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Neither shall one thrust another; they shall walk every one in his path: and when they fall upon the sword, they shall not be wounded.",
+          "decoded": "No one will push another; each will follow their own path. Even when they fight with swords, they will not be harmed.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "They shall run to and fro in the city; they shall run upon the wall, they shall climb up upon the houses; they shall enter in at the windows like a thief.",
+          "decoded": "They will rush through the city, run along the walls, climb onto the roofs, and enter through windows like thieves.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "The earth shall quake before them; the heavens shall tremble: the sun and the moon shall be dark, and the stars shall withdraw their shining:",
+          "decoded": "The earth will shake before them; the sky will tremble. The sun and moon will go dark, and the stars will stop shining.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And the Lord shall utter his voice before his army: for his camp is very great: for he is strong that executeth his word: for the day of the Lord is great and very terrible; and who can abide it?",
+          "decoded": "The LORD will shout before his army, because his forces are vast. He is powerful and carries out his commands. The Day of the LORD is awesome and terrifying—who can survive it?",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "Therefore also now, saith the Lord, turn ye even to me with all your heart, and with fasting, and with weeping, and with mourning:",
+          "decoded": "So now, says the LORD, return to me with all your heart, fasting, weeping, and mourning.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "And rend your heart, and not your garments, and turn unto the Lord your God: for he is gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil.",
+          "decoded": "Tear your hearts, not your clothes, and turn to the LORD your God. He is gracious and merciful, slow to anger, full of kindness, and willing to change his mind about bringing disaster.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "Who knoweth if he will return and repent, and leave a blessing behind him; even a meat offering and a drink offering unto the Lord your God?",
+          "decoded": "Who knows if he will come back and show mercy, leaving blessings like grain and drink offerings for the LORD your God?",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "Blow the trumpet in Zion, sanctify a fast, call a solemn assembly:",
+          "decoded": "Sound the trumpet in Zion, declare a fast, and call a sacred gathering.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "Gather the people, sanctify the congregation, assemble the elders, gather the children, and those that suck the breasts: let the bridegroom go forth of his chamber, and the bride out of her closet.",
+          "decoded": "Bring everyone together—set apart the assembly, call the elders, gather the children and even the nursing babies. Let the bridegroom come out of his room, and the bride leave her private chamber.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "Let the priests, the ministers of the Lord, weep between the porch and the altar, and let them say, Spare thy people, O Lord, and give not thine heritage to reproach, that the heathen should rule over them: wherefore should they say among the people, Where is their God?",
+          "decoded": "Let the priests, God’s servants, cry and mourn between the entrance and the altar, pleading, “Lord, spare your people. Don’t let your inheritance become a disgrace, allowing foreigners to rule over them. Why should other nations mock us and ask, ‘Where is their God?’”",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Then will the Lord be jealous for his land, and pity his people.",
+          "decoded": "Then the LORD will be passionate about His land and will have compassion on His people.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "Yea, the Lord will answer and say unto his people, Behold, I will send you corn, and wine, and oil, and ye shall be satisfied therewith: and I will no more make you a reproach among the heathen:",
+          "decoded": "The LORD will reply to His people, “Look, I will provide you with grain, wine, and oil, and you will have enough. I will no longer let you be a disgrace among the nations.”",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "But I will remove far off from you the northern army, and will drive him into a land barren and desolate, with his face toward the east sea, and his hinder part toward the utmost sea, and his stink shall come up, and his ill savour shall come up, because he hath done great things.",
+          "decoded": "I will drive the northern army far away from you and send them into a desolate, empty land, facing the eastern sea with their backs to the farthest sea. Their dead bodies will rot and smell terrible because they did terrible things.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "Fear not, O land; be glad and rejoice: for the Lord will do great things.",
+          "decoded": "Don’t be afraid, land. Be happy and celebrate, because the LORD will do amazing things.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "Be not afraid, ye beasts of the field: for the pastures of the wilderness do spring, for the tree beareth her fruit, the fig tree and the vine do yield their strength.",
+          "decoded": "Don’t be afraid, wild animals, because the desert pastures will grow green again. Trees will bear fruit, and the fig tree and grapevine will produce their crops.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "Be glad then, ye children of Zion, and rejoice in the Lord your God: for he hath given you the former rain moderately, and he will cause to come down for you the rain, the former rain, and the latter rain in the first month.",
+          "decoded": "So be joyful, people of Zion, and celebrate the LORD your God. He has given you the early rain in the right amount, and He will also send the early and late rains at the proper time.",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "And the floors shall be full of wheat, and the fats shall overflow with wine and oil.",
+          "decoded": "The threshing floors will be full of wheat, and there will be an abundance of wine and oil.",
+          "context": ""
+        },
+        {
+          "verse": 25,
+          "kjv": "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.",
+          "decoded": "I will restore to you the years that the locusts, caterpillars, and other destructive insects—my powerful army—have eaten.",
+          "context": ""
+        },
+        {
+          "verse": 26,
+          "kjv": "And ye shall eat in plenty, and be satisfied, and praise the name of the Lord your God, that hath dealt wondrously with you: and my people shall never be ashamed.",
+          "decoded": "You will eat plenty of food, be fully satisfied, and praise the name of the LORD your God, who has done amazing things for you. My people will never be put to shame.",
+          "context": ""
+        },
+        {
+          "verse": 27,
+          "kjv": "And ye shall know that I am in the midst of Israel, and that I am the Lord your God, and none else: and my people shall never be ashamed.",
+          "decoded": "You will realize that I am present among Israel, that I am the LORD your God and there is no other. My people will never be disgraced.",
+          "context": ""
+        },
+        {
+          "verse": 28,
+          "kjv": "And it shall come to pass afterward, that I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions:",
+          "decoded": "Afterward, I will pour out my Spirit on everyone. Your sons and daughters will prophesy, your old men will have dreams, and your young men will see visions.",
+          "context": ""
+        },
+        {
+          "verse": 29,
+          "kjv": "And also upon the servants and upon the handmaids in those days will I pour out my spirit.",
+          "decoded": "Even servants and maidservants will receive my Spirit in those days.",
+          "context": ""
+        },
+        {
+          "verse": 30,
+          "kjv": "And I will shew wonders in the heavens and in the earth, blood, and fire, and pillars of smoke.",
+          "decoded": "I will show amazing signs in the sky and on the earth—blood, fire, and columns of smoke.",
+          "context": ""
+        },
+        {
+          "verse": 31,
+          "kjv": "The sun shall be turned into darkness, and the moon into blood, before the great and the terrible day of the Lord come.",
+          "decoded": "Before the great and dreadful day of the LORD arrives, the sun will go dark and the moon will appear red like blood.",
+          "context": ""
+        },
+        {
+          "verse": 32,
+          "kjv": "And it shall come to pass, that whosoever shall call on the name of the Lord shall be delivered: for in mount Zion and in Jerusalem shall be deliverance, as the Lord hath said, and in the remnant whom the Lord shall call.",
+          "decoded": "Everyone who calls on the LORD's name will be saved. Deliverance will come in Mount Zion and Jerusalem, just as the LORD promised, to the remaining people whom He chooses.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "For, behold, in those days, and in that time, when I shall bring again the captivity of Judah and Jerusalem,",
+          "decoded": "Look, in those days and at that time, when I restore the people of Judah and Jerusalem from captivity,",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "I will also gather all nations, and will bring them down into the valley of Jehoshaphat, and will plead with them there for my people and for my heritage Israel, whom they have scattered among the nations, and parted my land.",
+          "decoded": "I will gather all nations and bring them to the Valley of Jehoshaphat, where I will judge them for what they did to my people Israel, whom they scattered among the nations and divided my land.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "And they have cast lots for my people; and have given a boy for an harlot, and sold a girl for wine, that they might drink.",
+          "decoded": "They have gambled for my people like property; they traded boys for prostitutes and sold girls for wine to drink.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "Yea, and what have ye to do with me, O Tyre, and Zidon, and all the coasts of Palestine? will ye render me a recompence? and if ye recompense me, swiftly and speedily will I return your recompence upon your own head;",
+          "decoded": "What do Tyre, Sidon, and the coastal regions of Palestine have to do with me? If you try to repay me, I will quickly repay you back.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Because ye have taken my silver and my gold, and have carried into your temples my goodly pleasant things:",
+          "decoded": "Because you took my silver and gold and brought my valuable treasures into your temples,",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "The children also of Judah and the children of Jerusalem have ye sold unto the Grecians, that ye might remove them far from their border.",
+          "decoded": "You have sold the people of Judah and Jerusalem to the Greeks to take them far from their homeland.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Behold, I will raise them out of the place whither ye have sold them, and will return your recompence upon your own head:",
+          "decoded": "But I will bring them back from the places where you sold them and repay you for what you did.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "And I will sell your sons and your daughters into the hand of the children of Judah, and they shall sell them to the Sabeans, to a people far off: for the Lord hath spoken it.",
+          "decoded": "I will sell your sons and daughters to the people of Judah, and they will sell them to the distant Sabeans, because the LORD has declared it.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "Proclaim ye this among the Gentiles; Prepare war, wake up the mighty men, let all the men of war draw near; let them come up:",
+          "decoded": "Announce this to the nations: prepare for war, wake up your warriors, let all soldiers come forward and gather.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Beat your plowshares into swords, and your pruninghooks into spears: let the weak say, I am strong.",
+          "decoded": "Turn your farming tools into weapons and your pruning hooks into spears; even the weak should say, 'I am strong.'",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "Assemble yourselves, and come, all ye heathen, and gather yourselves together round about: thither cause thy mighty ones to come down, O Lord.",
+          "decoded": "Come together, all nations, and gather around; LORD, bring down your mighty warriors to this place.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "Let the heathen be wakened, and come up to the valley of Jehoshaphat: for there will I sit to judge all the heathen round about.",
+          "decoded": "Let the nations be roused and come to the Valley of Jehoshaphat, where I will sit to judge all the surrounding nations.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Put ye in the sickle, for the harvest is ripe: come, get you down; for the press is full, the fats overflow; for their wickedness is great.",
+          "decoded": "Bring in the sickle, because the harvest is ready; come quickly, because the winepress is full and the grapes are overflowing—their evil is great.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "Multitudes, multitudes in the valley of decision: for the day of the Lord is near in the valley of decision.",
+          "decoded": "There are many people in the Valley of Decision, because the day of the LORD is near in that valley.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "The sun and the moon shall be darkened, and the stars shall withdraw their shining.",
+          "decoded": "The sun and moon will grow dark, and the stars will stop shining.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "The Lord also shall roar out of Zion, and utter his voice from Jerusalem; and the heavens and the earth shall shake: but the Lord will be the hope of his people, and the strength of the children of Israel.",
+          "decoded": "The LORD will roar from Zion and shout from Jerusalem; the heavens and the earth will tremble. But the LORD will be a safe place and strength for his people, the children of Israel.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "So shall ye know that I am the Lord your God dwelling in Zion, my holy mountain: then shall Jerusalem be holy, and there shall no strangers pass through her any more.",
+          "decoded": "Then you will know that I am the LORD your God, living in Zion, my holy mountain. Jerusalem will be sacred, and no foreigners will pass through her anymore.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "And it shall come to pass in that day, that the mountains shall drop down new wine, and the hills shall flow with milk, and all the rivers of Judah shall flow with waters, and a fountain shall come forth of the house of the Lord, and shall water the valley of Shittim.",
+          "decoded": "On that day, the mountains will produce fresh wine, the hills will flow with milk, the rivers of Judah will run with water, and a spring will flow from the LORD’s temple to water the valley of Shittim.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "Egypt shall be a desolation, and Edom shall be a desolate wilderness, for the violence against the children of Judah, because they have shed innocent blood in their land.",
+          "decoded": "Egypt will become a wasteland, and Edom will be a deserted wilderness because of the violence they committed against Judah’s people and the innocent blood they shed in their land.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "But Judah shall dwell for ever, and Jerusalem from generation to generation.",
+          "decoded": "But Judah will live forever, and Jerusalem will exist from generation to generation.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "For I will cleanse their blood that I have not cleansed: for the Lord dwelleth in Zion.",
+          "decoded": "I will cleanse the blood of my people that I have not yet cleansed, because the LORD lives in Zion.",
+          "context": ""
+        }
+      ]
+    }
+  ]
+}

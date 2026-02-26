@@ -4,10 +4,11 @@
 Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.org that delivers a fresh Bible verse and plain-language motivational message every day. Built with React + Express + PostgreSQL.
 
 ## Recent Changes
-- 2026-02-25: Added premium subscription system ($12.22/month Apple IAP). Paywall UI at /premium, content gating on decoded chapters (3 free) and podcast episodes (2 free), subscription context with WebView-to-native bridge, restore purchases support. Expo app updated with expo-in-app-purchases for StoreKit integration.
-- 2026-02-13: Added "The Book of Genesis Decoded" reader with 50 chapters, 1,533 verses. Each verse shows KJV text, modern decoded translation, and optional context. Tap-to-highlight with localStorage. Accessible via More page Quick Links.
-- 2026-02-13: Added KJV Bible reader with 66 books, chapter navigation, tap-to-highlight verses (localStorage). Reorganized tabs: Today, Bible, Podcast, Saved, More. Archive moved to More page. Saved page now has Favorites + Highlights tabs.
-- 2026-02-10: Initial MVP built with 100 seeded verses, 4 pages (Today, Archive, Favorites, About), bottom tab navigation, dark/light mode, email subscription
+- 2026-02-26: Expanded Decoded section from 1 book (Genesis) to all 66 books of the Bible. Each book parsed from DOCX files with KJV + DMLV (Decoded Modern Language Version) text. Books organized by Old Testament / New Testament sections on landing page. Dynamic routing via `/decoded/:bookSlug`. Data stored as JSON in `server/data/decoded/`. Note: Mark (6/16 ch) and John (3/21 ch) are partial in Series IV source files.
+- 2026-02-26: Created custom local Expo module (storekit-module) with pure Swift StoreKit wrapper, replacing deprecated expo-in-app-purchases and react-native-iap. EAS build v1.1.0 succeeded (build 11).
+- 2026-02-25: Added premium subscription system ($12.22/month Apple IAP). Paywall UI at /premium, content gating on decoded chapters (3 free) and podcast episodes (2 free), subscription context with WebView-to-native bridge, restore purchases support.
+- 2026-02-13: Added KJV Bible reader with 66 books, chapter navigation, tap-to-highlight verses (localStorage). Reorganized tabs: Today, Bible, Podcast, Saved, More.
+- 2026-02-10: Initial MVP built with 100 seeded verses, 4 pages, bottom tab navigation, dark/light mode, email subscription
 
 ## Architecture
 - **Frontend**: React (Vite) with Tailwind CSS, Shadcn UI components, Framer Motion animations
@@ -22,17 +23,25 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `/archive` - Browse all decoded verses with category filtering (accessible from More page)
 - `/favorites` - Saved verses + Bible highlights (two tabs, localStorage)
 - `/podcast` - Podcast episodes with in-app audio player (first 2 free, rest premium)
-- `/decoded` - Decoded Books landing page (lists all available decoded books)
-- `/decoded/genesis` - The Book of Genesis Decoded reader (first 3 chapters free, rest premium)
+- `/decoded` - Decoded Books landing page (all 66 books organized by OT/NT sections)
+- `/decoded/:bookSlug` - Individual decoded book reader (e.g. /decoded/genesis, /decoded/exodus)
 - `/about` - Brand info, subscribe, social links, settings, privacy, quick links
 - `/premium` - Paywall/subscription page ($12.22/month Apple IAP)
+
+## Decoded Books System
+- **Data**: 66 JSON files in `server/data/decoded/` (one per book, ~11MB total)
+- **Index**: `server/data/decoded/books-index.json` lists all books with stats
+- **Format**: Each book JSON has chapters array, each chapter has verses with `kjv`, `decoded`, `context` fields
+- **Genesis**: Original file with context annotations preserved
+- **Caching**: Books loaded lazily and cached in memory via `decodedBooksCache` Map
+- **Series**: I (Genesis-Deuteronomy), II (Joshua-Job), III (Psalms-Malachi), IV (Matthew-Revelation)
 
 ## Subscription System
 - **Product ID**: com.decodedfaithempire.app.premium.monthly
 - **Price**: $12.22/month (Apple IAP auto-renewable subscription)
-- **Free content**: Daily verse, KJV Bible reader, 3 decoded chapters, 2 podcast episodes
+- **Free content**: Daily verse, KJV Bible reader, 3 decoded chapters per book, 2 podcast episodes
 - **Premium content**: All decoded chapters/books, all podcasts, exclusive devotionals, members-only audio, early access
-- **Tech**: WebView-to-native bridge via postMessage, expo-in-app-purchases for StoreKit, localStorage for state persistence
+- **Tech**: WebView-to-native bridge via postMessage, custom StoreKit module (modules/storekit-module/), localStorage for state persistence
 - **Files**: client/src/lib/subscription.tsx (context), client/src/pages/paywall.tsx (UI), client/src/components/premium-lock.tsx (gating), faith-empire-app/App.js (native bridge)
 
 ## Navigation (Bottom Tab Bar)
@@ -44,8 +53,9 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `GET /api/verses/archive` - Returns all verses
 - `GET /api/verses/:id` - Returns verse by number
 - `GET /api/bible/:book/:chapter` - Proxies KJV Bible text from bible-api.com
-- `GET /api/decoded/genesis` - Returns decoded book summary (chapters list with titles, verse counts)
-- `GET /api/decoded/genesis/:chapter` - Returns chapter data with verses (kjv, decoded, context)
+- `GET /api/decoded/books` - Returns index of all 66 decoded books with stats
+- `GET /api/decoded/:bookSlug` - Returns decoded book summary (chapters list with titles, verse counts)
+- `GET /api/decoded/:bookSlug/:chapter` - Returns chapter data with verses (kjv, decoded, context)
 - `POST /api/subscribe` - Email subscription
 
 ## Database Tables

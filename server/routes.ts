@@ -4,7 +4,34 @@ import path from "path";
 import { storage } from "./storage";
 import { insertSubscriberSchema } from "@shared/schema";
 import { z } from "zod";
-import genesisDecoded from "./data/genesis-decoded.json";
+import fs from "fs";
+
+const decodedBooksCache: Map<string, any> = new Map();
+
+const DECODED_DATA_DIR = path.resolve(process.cwd(), "server", "data", "decoded");
+
+function loadDecodedBook(slug: string): any | null {
+  if (decodedBooksCache.has(slug)) {
+    return decodedBooksCache.get(slug);
+  }
+  const filePath = path.join(DECODED_DATA_DIR, `${slug}-decoded.json`);
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  decodedBooksCache.set(slug, data);
+  return data;
+}
+
+let booksIndexCache: any[] | null = null;
+
+function loadBooksIndex(): any[] {
+  if (booksIndexCache) return booksIndexCache;
+  const filePath = path.join(DECODED_DATA_DIR, "books-index.json");
+  if (!fs.existsSync(filePath)) return [];
+  booksIndexCache = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  return booksIndexCache!;
+}
 
 const aasaContent = {
   applinks: {
@@ -192,15 +219,31 @@ export async function registerRoutes(
     }
   });
 
-  app.get("/api/decoded/genesis", async (_req, res) => {
+  app.get("/api/decoded/books", async (_req, res) => {
     try {
+      const index = loadBooksIndex();
+      res.json(index);
+    } catch (err) {
+      res.status(500).json({ message: "Failed to load decoded books index" });
+    }
+  });
+
+  app.get("/api/decoded/:bookSlug", async (req, res) => {
+    try {
+      const { bookSlug } = req.params;
+      const bookData = loadDecodedBook(bookSlug);
+      if (!bookData) {
+        return res.status(404).json({ message: "Decoded book not found" });
+      }
       const summary = {
-        title: genesisDecoded.title,
-        author: genesisDecoded.author,
-        description: genesisDecoded.description,
-        copyright: genesisDecoded.copyright,
-        totalChapters: genesisDecoded.totalChapters,
-        chapters: (genesisDecoded.chapters as any[]).map((ch) => ({
+        title: bookData.title,
+        bookName: bookData.bookName,
+        slug: bookData.slug,
+        author: bookData.author,
+        description: bookData.description,
+        copyright: bookData.copyright,
+        totalChapters: bookData.totalChapters,
+        chapters: (bookData.chapters as any[]).map((ch: any) => ({
           number: ch.number,
           title: ch.title,
           verseCount: ch.verses.length,
@@ -212,14 +255,19 @@ export async function registerRoutes(
     }
   });
 
-  app.get("/api/decoded/genesis/:chapter", async (req, res) => {
+  app.get("/api/decoded/:bookSlug/:chapter", async (req, res) => {
     try {
+      const { bookSlug } = req.params;
       const chapterNum = parseInt(req.params.chapter);
-      if (isNaN(chapterNum) || chapterNum < 1 || chapterNum > 50) {
-        return res.status(400).json({ message: "Invalid chapter number (1-50)" });
+      if (isNaN(chapterNum) || chapterNum < 1) {
+        return res.status(400).json({ message: "Invalid chapter number" });
       }
-      const chapter = (genesisDecoded.chapters as any[]).find(
-        (ch) => ch.number === chapterNum
+      const bookData = loadDecodedBook(bookSlug);
+      if (!bookData) {
+        return res.status(404).json({ message: "Decoded book not found" });
+      }
+      const chapter = (bookData.chapters as any[]).find(
+        (ch: any) => ch.number === chapterNum
       );
       if (!chapter) {
         return res.status(404).json({ message: "Chapter not found" });

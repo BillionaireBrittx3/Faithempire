@@ -1,0 +1,977 @@
+{
+  "title": "The Book of Ephesians Decoded",
+  "bookName": "Ephesians",
+  "slug": "ephesians",
+  "author": "Brittany Johnson",
+  "description": "The Book of Ephesians — every verse decoded into plain, modern English (DMLV).",
+  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "totalChapters": 6,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus, and to the faithful in Christ Jesus:",
+          "decoded": "Paul, chosen as an apostle of Jesus Christ by God's will, writes to the holy believers in Ephesus who are faithful in Christ Jesus.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "Grace be to you, and peace, from God our Father, and from the Lord Jesus Christ.",
+          "decoded": "May you receive grace and peace from God our Father and the Lord Jesus Christ.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "Blessed be the God and Father of our Lord Jesus Christ, who hath blessed us with all spiritual blessings in heavenly places in Christ:",
+          "decoded": "Praise be to God, the Father of our Lord Jesus Christ, who has given us every spiritual blessing in the heavenly realms because we belong to Christ.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "According as he hath chosen us in him before the foundation of the world, that we should be holy and without blame before him in love:",
+          "decoded": "God chose us to belong to him before the world was created so that we would be holy and blameless in his sight, living in love.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will,",
+          "decoded": "He decided in advance to adopt us as his children through Jesus Christ, according to his own good plan and purpose.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "To the praise of the glory of his grace, wherein he hath made us accepted in the beloved.",
+          "decoded": "This is to praise the glorious grace God has freely given us, in which we are accepted because of Jesus, his beloved Son.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace;",
+          "decoded": "Through Jesus, we have been redeemed by his blood and have received forgiveness for our sins, all because of God's abundant grace.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Wherein he hath abounded toward us in all wisdom and prudence;",
+          "decoded": "God has poured out his wisdom and understanding on us generously.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "Having made known unto us the mystery of his will, according to his good pleasure which he hath purposed in himself:",
+          "decoded": "He has revealed to us the secret of his will, according to the plan he set forth in himself.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "That in the dispensation of the fulness of times he might gather together in one all things in Christ, both which are in heaven, and which are on earth; even in him:",
+          "decoded": "His plan is that when the time is right, he will bring everything together under Christ—everything in heaven and on earth.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "In whom also we have obtained an inheritance, being predestinated according to the purpose of him who worketh all things after the counsel of his own will:",
+          "decoded": "In Christ, we have received an inheritance because God chose us according to his purpose, who works out everything according to his will.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "That we should be to the praise of his glory, who first trusted in Christ.",
+          "decoded": "This is so that we, who believed in Christ first, would bring praise to God's glory.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise,",
+          "decoded": "You also believed in Christ after hearing the true message of salvation, and when you believed, you were marked with the promised Holy Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "Which is the earnest of our inheritance until the redemption of the purchased possession, unto the praise of his glory.",
+          "decoded": "The Holy Spirit is a deposit guaranteeing our inheritance until we receive full redemption, all to bring praise to God's glory.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "Wherefore I also, after I heard of your faith in the Lord Jesus, and love unto all the saints,",
+          "decoded": "That is why, after hearing about your faith in the Lord Jesus and your love for all God's people,",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "Cease not to give thanks for you, making mention of you in my prayers;",
+          "decoded": "I never stop giving thanks for you and always mention you in my prayers;",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "That the God of our Lord Jesus Christ, the Father of glory, may give unto you the spirit of wisdom and revelation in the knowledge of him:",
+          "decoded": "I pray that the God of our Lord Jesus Christ, the glorious Father, will give you the Spirit of wisdom and revelation so you can truly know Him;",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "The eyes of your understanding being enlightened; that ye may know what is the hope of his calling, and what the riches of the glory of his inheritance in the saints,",
+          "decoded": "May the eyes of your heart be opened so you can understand the hope He has called you to and the glorious riches He has promised to His people,",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "And what is the exceeding greatness of his power to us-ward who believe, according to the working of his mighty power,",
+          "decoded": "And to know how incredibly great His power is toward those who believe, demonstrated by His mighty strength,",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "Which he wrought in Christ, when he raised him from the dead, and set him at his own right hand in the heavenly places,",
+          "decoded": "This power was shown when God raised Christ from the dead and seated Him at His right hand in heaven,",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "Far above all principality, and power, and might, and dominion, and every name that is named, not only in this world, but also in that which is to come:",
+          "decoded": "placing Him far above all rulers, authorities, powers, and every name that is named, not only in this world but also in the world to come.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "And hath put all things under his feet, and gave him to be the head over all things to the church,",
+          "decoded": "God put everything under Christ’s control and made Him the head over everything for the benefit of the church,",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "Which is his body, the fulness of him that filleth all in all.",
+          "decoded": "which is His body, the church, the complete expression of Him who fills everything in every way.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "And you hath he quickened, who were dead in trespasses and sins;",
+          "decoded": "And God has made you alive, even though you were dead because of your sins and wrongdoings;",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:",
+          "decoded": "In the past, you lived following the ways of this world and under the influence of the spiritual ruler of the air, the spirit who now controls those who disobey God;",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "Among whom also we all had our conversation in times past in the lusts of our flesh, fulfilling the desires of the flesh and of the mind; and were by nature the children of wrath, even as others.",
+          "decoded": "Like them, we all used to live in the desires of our sinful nature, doing what our bodies and minds wanted, and by nature we were subject to God's anger, just like everyone else.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "But God, who is rich in mercy, for his great love wherewith he loved us,",
+          "decoded": "But God, who is full of mercy because of his great love for us,",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;)",
+          "decoded": "Even when we were spiritually dead because of our sins, made us alive with Christ. It is by grace that you have been saved;",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "And hath raised us up together, and made us sit together in heavenly places in Christ Jesus:",
+          "decoded": "God raised us up with Christ and seated us with him in the heavenly realms;",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "That in the ages to come he might shew the exceeding riches of his grace in his kindness toward us through Christ Jesus.",
+          "decoded": "This is so that in the coming ages, God might show the incredible richness of his grace and kindness toward us through Christ Jesus.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
+          "decoded": "For you have been saved by God's grace through faith. This is not something you did yourselves; it is a gift from God.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "Not of works, lest any man should boast.",
+          "decoded": "It is not a result of works, so that no one can boast about earning it.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+          "decoded": "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "Wherefore remember, that ye being in time past Gentiles in the flesh, who are called Uncircumcision by that which is called the Circumcision in the flesh made by hands;",
+          "decoded": "So remember that in the past you were Gentiles in your physical bodies, called 'uncircumcised' by those who are called 'circumcised'—a physical circumcision done by human hands;",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "That at that time ye were without Christ, being aliens from the commonwealth of Israel, and strangers from the covenants of promise, having no hope, and without God in the world:",
+          "decoded": "At that time, you were without Christ, separated from Israel's citizenship, strangers to the promises God made, having no hope and without God in the world.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "But now in Christ Jesus ye who sometimes were far off are made nigh by the blood of Christ.",
+          "decoded": "But now, through Christ Jesus, you who were once far away have been brought near by the blood of Christ.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "For he is our peace, who hath made both one, and hath broken down the middle wall of partition between us;",
+          "decoded": "For Christ himself is our peace; he has made both groups one and has destroyed the barrier that separated them;",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "Having abolished in his flesh the enmity, even the law of commandments contained in ordinances; for to make in himself of twain one new man, so making peace;",
+          "decoded": "By his physical death, he ended the hostility—the law with its commandments and regulations—so that he could create one new humanity from the two, thus establishing peace;",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "And that he might reconcile both unto God in one body by the cross, having slain the enmity thereby:",
+          "decoded": "He came to bring both groups together and make peace with God through the cross, ending the hostility between them.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "And came and preached peace to you which were afar off, and to them that were nigh.",
+          "decoded": "He came and announced peace to those who were far away and to those who were near.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "For through him we both have access by one Spirit unto the Father.",
+          "decoded": "Because of him, both groups can come to the Father through the same Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "Now therefore ye are no more strangers and foreigners, but fellowcitizens with the saints, and of the household of God;",
+          "decoded": "So now you are no longer outsiders but members of God's family and citizens alongside the holy people.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "And are built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone;",
+          "decoded": "You are built on the foundation laid by the apostles and prophets, with Jesus Christ as the main cornerstone.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "In whom all the building fitly framed together groweth unto an holy temple in the Lord:",
+          "decoded": "In him, the whole structure is joined together and grows into a holy temple for the Lord.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "In whom ye also are builded together for an habitation of God through the Spirit.",
+          "decoded": "And in him, you too are being built together to become a place where God lives by his Spirit.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "For this cause I Paul, the prisoner of Jesus Christ for you Gentiles,",
+          "decoded": "Because of this, I Paul, a prisoner of Jesus Christ for the sake of you Gentiles,",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "If ye have heard of the dispensation of the grace of God which is given me to you-ward:",
+          "decoded": "If you have heard about the special plan of God's grace that was given to me for your benefit,",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "How that by revelation he made known unto me the mystery; (as I wrote afore in few words,",
+          "decoded": "how God revealed to me the mystery by a revelation, as I briefly wrote earlier,",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "Whereby, when ye read, ye may understand my knowledge in the mystery of Christ)",
+          "decoded": "so that when you read it, you can understand my insight into the mystery of Christ.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Which in other ages was not made known unto the sons of men, as it is now revealed unto his holy apostles and prophets by the Spirit;",
+          "decoded": "This mystery was not made known to people in past generations, but now it has been revealed by the Spirit to God's holy apostles and prophets.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "That the Gentiles should be fellowheirs, and of the same body, and partakers of his promise in Christ by the gospel:",
+          "decoded": "That the Gentiles are now included as co-heirs, members of the same body, and sharers in the promise given through the gospel of Christ.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Whereof I was made a minister, according to the gift of the grace of God given unto me by the effectual working of his power.",
+          "decoded": "I was made a servant of this gospel by the grace God gave me, which works powerfully within me.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ;",
+          "decoded": "Although I am the least important of all believers, God’s grace was given to me to preach to the Gentiles about the endless riches of Christ,",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "And to make all men see what is the fellowship of the mystery, which from the beginning of the world hath been hid in God, who created all things by Jesus Christ:",
+          "decoded": "and to reveal to everyone the mystery that was hidden by God from the beginning of time, who created everything through Jesus Christ.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "To the intent that now unto the principalities and powers in heavenly places might be known by the church the manifold wisdom of God,",
+          "decoded": "This was so that the church might now reveal to the spiritual rulers and authorities in heaven the many wisdoms of God,",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "According to the eternal purpose which he purposed in Christ Jesus our Lord:",
+          "decoded": "according to the eternal plan God made in Christ Jesus our Lord.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "In whom we have boldness and access with confidence by the faith of him.",
+          "decoded": "Through Christ, we have boldness and confident access to God because of our faith in Him.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Wherefore I desire that ye faint not at my tribulations for you, which is your glory.",
+          "decoded": "So I want you not to be discouraged because of the hardships I suffer for you, which actually bring you glory.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "For this cause I bow my knees unto the Father of our Lord Jesus Christ,",
+          "decoded": "Because of this, I kneel before the Father of our Lord Jesus Christ,",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "Of whom the whole family in heaven and earth is named,",
+          "decoded": "from whom every family in heaven and on earth gets its name.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "That he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man;",
+          "decoded": "I pray that God, in his glorious riches, will give you inner strength through his Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "That Christ may dwell in your hearts by faith; that ye, being rooted and grounded in love,",
+          "decoded": "May Christ live in your hearts through faith, and may you be firmly established and grounded in love.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "May be able to comprehend with all saints what is the breadth, and length, and depth, and height;",
+          "decoded": "So that together with all God’s people, you can understand the vastness—how wide, long, deep, and high—of Christ’s love.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "And to know the love of Christ, which passeth knowledge, that ye might be filled with all the fulness of God.",
+          "decoded": "And to truly know Christ’s love, which is beyond human understanding, so that you may be filled completely with God’s presence.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us,",
+          "decoded": "Now to God, who can do far more than we could ever ask or imagine, by the power working within us,",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "Unto him be glory in the church by Christ Jesus throughout all ages, world without end. Amen.",
+          "decoded": "Be glory given to him in the church through Christ Jesus forever and ever. Amen.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "I THEREFORE, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called,",
+          "decoded": "As someone imprisoned for serving the Lord, I earnestly urge you to live in a way that honors the calling you have received.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "With all lowliness and meekness, with longsuffering, forbearing one another in love;",
+          "decoded": "Be humble and gentle, patient, and always ready to forgive each other because of your love.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "Endeavouring to keep the unity of the Spirit in the bond of peace.",
+          "decoded": "Do your best to maintain the unity that the Spirit gives, binding us together in peace.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "There is one body, and one Spirit, even as ye are called in one hope of your calling;",
+          "decoded": "There is one body and one Spirit, just as you were all called to one hope.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "One Lord, one faith, one baptism,",
+          "decoded": "One Lord, one faith, and one baptism unite us all.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "One God and Father of all, who is above all, and through all, and in you all.",
+          "decoded": "There is one God and Father of everyone, who is over all, works through all, and lives in all of us.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "But unto every one of us is given grace according to the measure of the gift of Christ.",
+          "decoded": "Each of us has been given grace in proportion to the gift that Christ has given.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Wherefore he saith, When he ascended up on high, he led captivity captive, and gave gifts unto men.",
+          "decoded": "That is why the Scripture says: When Christ ascended to heaven, he took many captives with him and gave gifts to people.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "(Now that he ascended, what is it but that he also descended first into the lower parts of the earth?",
+          "decoded": "Before he ascended, he first came down to the lowest parts of the earth.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "He that descended is the same also that ascended up far above all heavens, that he might fill all things.)",
+          "decoded": "The one who came down is the same one who went up far above all the heavens, so that he could fill everything completely.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers;",
+          "decoded": "He gave some people to be apostles, some prophets, some evangelists, and some pastors and teachers.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ:",
+          "decoded": "Their purpose is to prepare God's people for works of service and to build up the body of Christ.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Till we all come in the unity of the faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the stature of the fulness of Christ:",
+          "decoded": "Until we all reach unity in our faith and knowledge of the Son of God, becoming mature and fully like Christ in every way.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "That we henceforth be no more children, tossed to and fro, and carried about with every wind of doctrine, by the sleight of men, and cunning craftiness, whereby they lie in wait to deceive;",
+          "decoded": "Then we won’t be like children, easily confused and blown around by every new teaching, tricked by people who lie and try to deceive us.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "But speaking the truth in love, may grow up into him in all things, which is the head, even Christ:",
+          "decoded": "Instead, by speaking the truth with love, we will grow in every way to become more like Christ, who is the head of the church.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "From whom the whole body fitly joined together and compacted by that which every joint supplieth, according to the effectual working in the measure of every part, maketh increase of the body unto the edifying of itself in love.",
+          "decoded": "From Christ, the whole body is joined and held together by every supporting joint, working effectively as each part does its share, helping the body grow and build itself up in love.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "This I say therefore, and testify in the Lord, that ye henceforth walk not as other Gentiles walk, in the vanity of their mind,",
+          "decoded": "So I say this and testify in the Lord: from now on, don’t live like the Gentiles do, following the empty thoughts of their minds.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Having the understanding darkened, being alienated from the life of God through the ignorance that is in them, because of the blindness of their heart:",
+          "decoded": "Their understanding is darkened, and they are separated from God’s life because of their ignorance and the hardness of their hearts.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "Who being past feeling have given themselves over unto lasciviousness, to work all uncleanness with greediness.",
+          "decoded": "They have become insensitive and given themselves over to immoral desires, eagerly doing every kind of impurity.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "But ye have not so learned Christ;",
+          "decoded": "But you did not learn Christ that way;",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "If so be that ye have heard him, and have been taught by him, as the truth is in Jesus:",
+          "decoded": "If you have truly heard Him and been taught by Him, because the truth is in Jesus.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "That ye put off concerning the former conversation the old man, which is corrupt according to the deceitful lusts;",
+          "decoded": "Then you must get rid of your old way of life, which is corrupted by deceitful desires.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "And be renewed in the spirit of your mind;",
+          "decoded": "And be made new in the attitude of your mind;",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "And that ye put on the new man, which after God is created in righteousness and true holiness.",
+          "decoded": "And put on the new self, created to be like God in true righteousness and holiness.",
+          "context": ""
+        },
+        {
+          "verse": 25,
+          "kjv": "Wherefore putting away lying, speak every man truth with his neighbour: for we are members one of another.",
+          "decoded": "So stop lying and speak the truth to each other, because we are all part of one body.",
+          "context": ""
+        },
+        {
+          "verse": 26,
+          "kjv": "Be ye angry, and sin not: let not the sun go down upon your wrath:",
+          "decoded": "Be angry but don’t sin; don’t let the sun go down while you are still angry.",
+          "context": ""
+        },
+        {
+          "verse": 27,
+          "kjv": "Neither give place to the devil.",
+          "decoded": "Don’t give the devil a chance to control you.",
+          "context": ""
+        },
+        {
+          "verse": 28,
+          "kjv": "Let him that stole steal no more: but rather let him labour, working with his hands the thing which is good, that he may have to give to him that needeth.",
+          "decoded": "If you used to steal, stop stealing. Instead, work hard with your hands so you can do good and share with those in need.",
+          "context": ""
+        },
+        {
+          "verse": 29,
+          "kjv": "Let no corrupt communication proceed out of your mouth, but that which is good to the use of edifying, that it may minister grace unto the hearers.",
+          "decoded": "Don’t say anything harmful or dirty. Instead, say what is helpful and builds others up, so your words bring grace to those who hear them.",
+          "context": ""
+        },
+        {
+          "verse": 30,
+          "kjv": "And grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption.",
+          "decoded": "Don’t make the Holy Spirit sad, who has marked you as God’s own until the day you are fully saved.",
+          "context": ""
+        },
+        {
+          "verse": 31,
+          "kjv": "Let all bitterness, and wrath, and anger, and clamour, and evil speaking, be put away from you, with all malice:",
+          "decoded": "Get rid of all bitterness, anger, rage, shouting, and slander, along with every form of evil.",
+          "context": ""
+        },
+        {
+          "verse": 32,
+          "kjv": "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.",
+          "decoded": "Instead, be kind and compassionate to each other, forgiving one another just as God forgave you because of Christ.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Be ye therefore followers of God, as dear children;",
+          "decoded": "So, be imitators of God, just like beloved children.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "And walk in love, as Christ also hath loved us, and hath given himself for us an offering and a sacrifice to God for a sweetsmelling savour.",
+          "decoded": "Live a life full of love, just as Christ loved us and gave himself for us as a sacrifice pleasing to God.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "But fornication, and all uncleanness, or covetousness, let it not be once named among you, as becometh saints;",
+          "decoded": "But sexual immorality, impurity, and greed should never even be mentioned among you, since you are holy people.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "Neither filthiness, nor foolish talking, nor jesting, which are not convenient: but rather giving of thanks.",
+          "decoded": "Don’t use dirty language, silly talk, or crude jokes, which are inappropriate; instead, be thankful.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "For this ye know, that no whoremonger, nor unclean person, nor covetous man, who is an idolater, hath any inheritance in the kingdom of Christ and of God.",
+          "decoded": "You should know that no immoral person, impure person, greedy person, or idol worshiper has any share in God’s kingdom.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "Let no man deceive you with vain words: for because of these things cometh the wrath of God upon the children of disobedience.",
+          "decoded": "Don’t let anyone fool you with empty words, because God’s anger comes on those who disobey Him because of these sins.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Be not ye therefore partakers with them.",
+          "decoded": "So don’t join in with those who live this way.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "For ye were sometimes darkness, but now are ye light in the Lord: walk as children of light:",
+          "decoded": "You used to live in darkness, but now you are light in the Lord; live like people who belong to the light.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "(For the fruit of the Spirit is in all goodness and righteousness and truth;)",
+          "decoded": "The Spirit produces goodness, righteousness, and truth in your life.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Proving what is acceptable unto the Lord.",
+          "decoded": "You should test and approve what pleases the Lord.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And have no fellowship with the unfruitful works of darkness, but rather reprove them.",
+          "decoded": "Don’t take part in worthless deeds done in darkness; instead, expose them.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "For it is a shame even to speak of those things which are done of them in secret.",
+          "decoded": "It’s shameful even to talk about the secret things they do.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "But all things that are reproved are made manifest by the light: for whatsoever doth make manifest is light.",
+          "decoded": "But everything exposed by the light becomes clear, because light reveals the truth.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "Wherefore he saith, Awake thou that sleepest, and arise from the dead, and Christ shall give thee light.",
+          "decoded": "That’s why it says, 'Wake up, sleeper, rise from the dead, and Christ will shine light on you.'",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "See then that ye walk circumspectly, not as fools, but as wise,",
+          "decoded": "So be careful how you live—not as unwise people, but as wise ones.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "Redeeming the time, because the days are evil.",
+          "decoded": "Make the most of every opportunity because these are difficult times.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "Wherefore be ye not unwise, but understanding what the will of the Lord is.",
+          "decoded": "So don’t act foolishly, but learn what God wants you to do.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "And be not drunk with wine, wherein is excess; but be filled with the Spirit;",
+          "decoded": "Don’t get drunk on wine, which leads to reckless behavior; instead, be controlled and empowered by the Holy Spirit.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "Speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord;",
+          "decoded": "Encourage each other by singing psalms, hymns, and spiritual songs, making music in your hearts to the Lord.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;",
+          "decoded": "Always give thanks to God the Father for everything, through Jesus Christ our Lord.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "Submitting yourselves one to another in the fear of God.",
+          "decoded": "Respect and submit to one another because of your reverence for God.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "Wives, submit yourselves unto your own husbands, as unto the Lord.",
+          "decoded": "Wives, respect and support your husbands as you would respect the Lord.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "For the husband is the head of the wife, even as Christ is the head of the church: and he is the saviour of the body.",
+          "decoded": "Husbands are the leaders of their wives, just as Christ leads the church and saves it.",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "Therefore as the church is subject unto Christ, so let the wives be to their own husbands in every thing.",
+          "decoded": "So just as the church follows Christ’s leadership, wives should respect their husbands in everything.",
+          "context": ""
+        },
+        {
+          "verse": 25,
+          "kjv": "Husbands, love your wives, even as Christ also loved the church, and gave himself for it;",
+          "decoded": "Husbands, love your wives just as Christ loved the church and gave his life for her.",
+          "context": ""
+        },
+        {
+          "verse": 26,
+          "kjv": "That he might sanctify and cleanse it with the washing of water by the word,",
+          "decoded": "Christ did this to make the church holy and clean by cleansing her through the word of God.",
+          "context": ""
+        },
+        {
+          "verse": 27,
+          "kjv": "That he might present it to himself a glorious church, not having spot, or wrinkle, or any such thing; but that it should be holy and without blemish.",
+          "decoded": "He wants to present the church to himself as glorious, without any flaws or imperfections, holy and pure.",
+          "context": ""
+        },
+        {
+          "verse": 28,
+          "kjv": "So ought men to love their wives as their own bodies. He that loveth his wife loveth himself.",
+          "decoded": "Husbands should love their wives as they love their own bodies. Loving your wife is the same as loving yourself.",
+          "context": ""
+        },
+        {
+          "verse": 29,
+          "kjv": "For no man ever yet hated his own flesh; but nourisheth and cherisheth it, even as the Lord the church:",
+          "decoded": "No one hates their own body but cares for and nurtures it, just as the Lord cares for the church.",
+          "context": ""
+        },
+        {
+          "verse": 30,
+          "kjv": "For we are members of his body, of his flesh, and of his bones.",
+          "decoded": "We are all part of Christ’s body, sharing in his life and being closely connected to him.",
+          "context": ""
+        },
+        {
+          "verse": 31,
+          "kjv": "For this cause shall a man leave his father and mother, and shall be joined unto his wife, and they two shall be one flesh.",
+          "decoded": "Because of this, a man will leave his father and mother and be united with his wife, and the two will become one.",
+          "context": ""
+        },
+        {
+          "verse": 32,
+          "kjv": "This is a great mystery: but I speak concerning Christ and the church.",
+          "decoded": "This is a profound truth, but I am talking about Christ and the church.",
+          "context": ""
+        },
+        {
+          "verse": 33,
+          "kjv": "Nevertheless let every one of you in particular so love his wife even as himself; and the wife see that she reverence her husband.",
+          "decoded": "Each husband should love his wife just as much as he loves himself, and each wife should respect her husband.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Children, obey your parents in the Lord: for this is right.",
+          "decoded": "Children, obey your parents because this is the right thing to do in the Lord.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "Honour thy father and mother; (which is the first commandment with promise;)",
+          "decoded": "Respect and honor your father and mother, which is the first commandment that comes with a promise.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "That it may be well with thee, and thou mayest live long on the earth.",
+          "decoded": "So that things will go well for you and you may live a long life on earth.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord.",
+          "decoded": "Fathers, don’t make your children angry or discouraged, but raise them with care and guidance according to the Lord’s teachings.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Servants, be obedient to them that are your masters according to the flesh, with fear and trembling, in singleness of your heart, as unto Christ;",
+          "decoded": "Servants, obey your earthly masters sincerely and respectfully, as if you were serving Christ himself.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "Not with eyeservice, as menpleasers; but as the servants of Christ, doing the will of God from the heart;",
+          "decoded": "Don’t just work to be seen by others or to please people, but serve sincerely as if you are serving Christ, doing God’s will from your heart.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "With good will doing service, as to the Lord, and not to men:",
+          "decoded": "Serve willingly and cheerfully, as if you are serving the Lord, not just people.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Knowing that whatsoever good thing any man doeth, the same shall he receive of the Lord, whether he be bond or free.",
+          "decoded": "Remember that whatever good anyone does, they will receive a reward from the Lord, whether they are a slave or free.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "And, ye masters, do the same things unto them, forbearing threatening: knowing that your Master also is in heaven; neither is there respect of persons with him.",
+          "decoded": "Masters, treat your servants the same way, without threats, because you know that your Master is in heaven and shows no favoritism.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+          "decoded": "Finally, brothers and sisters, be strong through the Lord and rely on his mighty power.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+          "decoded": "Put on all of God’s armor so you can stand firm against the devil’s schemes.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places.",
+          "decoded": "Our struggle is not against people, but against spiritual forces of evil in the heavenly realms.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Wherefore take unto you the whole armour of God, that ye may be able to withstand in the evil day, and having done all, to stand.",
+          "decoded": "Therefore, put on all of God’s armor so you can stand firm on difficult days, and after you have done everything, still stand strong.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "Stand therefore, having your loins girt about with truth, and having on the breastplate of righteousness;",
+          "decoded": "So stand firm, with truth around your waist and righteousness protecting your chest.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "And your feet shod with the preparation of the gospel of peace;",
+          "decoded": "And have your feet ready with the message of peace from the gospel.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.",
+          "decoded": "Most importantly, take up the shield of faith, which will protect you and allow you to extinguish all the flaming arrows shot by the evil one.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "And take the helmet of salvation, and the sword of the Spirit, which is the word of God:",
+          "decoded": "Put on the helmet of salvation to protect your mind, and take the sword of the Spirit, which is the word of God.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints;",
+          "decoded": "Pray continually in every kind of prayer and request, guided by the Spirit, and stay alert with persistent prayer for all believers.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "And for me, that utterance may be given unto me, that I may open my mouth boldly, to make known the mystery of the gospel,",
+          "decoded": "Also pray for me, that I may be given the ability to speak clearly and confidently to reveal the secret truths of the gospel.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "For which I am an ambassador in bonds: that therein I may speak boldly, as I ought to speak.",
+          "decoded": "I am a representative of Christ while imprisoned, and I want to speak boldly and appropriately about Him.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "But that ye also may know my affairs, and how I do, Tychicus, a beloved brother and faithful minister in the Lord, shall make known to you all things:",
+          "decoded": "So that you may know how I am doing, I am sending Tychicus, a dear brother and trustworthy servant of the Lord, to tell you everything.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "Whom I have sent unto you for the same purpose, that ye might know our affairs, and that he might comfort your hearts.",
+          "decoded": "I sent him to you for this very reason: to inform you about us and to encourage and strengthen your hearts.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "Peace be to the brethren, and love with faith, from God the Father and the Lord Jesus Christ.",
+          "decoded": "May peace be with all the brothers and sisters, along with love and faith, coming from God the Father and the Lord Jesus Christ.",
+          "context": ""
+        },
+        {
+          "verse": 24,
+          "kjv": "Grace be with all them that love our Lord Jesus Christ in sincerity. Amen.",
+          "decoded": "May God’s grace be with everyone who truly loves our Lord Jesus Christ. Amen.",
+          "context": ""
+        }
+      ]
+    }
+  ]
+}

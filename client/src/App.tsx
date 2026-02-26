@@ -31,7 +31,9 @@ function Router() {
       <Route path="/about" component={AboutPage} />
       <Route path="/privacy" component={PrivacyPage} />
       <Route path="/terms" component={TermsPage} />
-      <Route path="/decoded/genesis" component={DecodedBookPage} />
+      <Route path="/decoded/:bookSlug">
+        {(params) => <DecodedBookPage bookSlug={params.bookSlug} />}
+      </Route>
       <Route path="/decoded" component={DecodedPage} />
       <Route path="/premium" component={PaywallPage} />
       <Route component={NotFound} />
