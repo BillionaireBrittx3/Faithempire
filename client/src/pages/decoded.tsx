@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronRight, BookOpen } from "lucide-react";
+import { ChevronRight, BookOpen, Cross } from "lucide-react";
 import { Link } from "wouter";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface BookEntry {
   bookName: string;
@@ -13,20 +15,35 @@ interface BookEntry {
   description: string;
 }
 
-const OT_SECTIONS = [
-  { label: "The Law", range: ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"] },
-  { label: "History", range: ["Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther"] },
-  { label: "Wisdom & Poetry", range: ["Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon"] },
-  { label: "Major Prophets", range: ["Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel"] },
-  { label: "Minor Prophets", range: ["Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi"] },
-];
-
-const NT_SECTIONS = [
-  { label: "Gospels", range: ["Matthew", "Mark", "Luke", "John"] },
-  { label: "History", range: ["Acts"] },
-  { label: "Paul's Letters", range: ["Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon"] },
-  { label: "General Letters", range: ["Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude"] },
-  { label: "Prophecy", range: ["Revelation"] },
+const SERIES = [
+  {
+    id: 1,
+    label: "Series I",
+    title: "The Law",
+    subtitle: "Genesis – Deuteronomy",
+    books: ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"],
+  },
+  {
+    id: 2,
+    label: "Series II",
+    title: "History",
+    subtitle: "Joshua – Job",
+    books: ["Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job"],
+  },
+  {
+    id: 3,
+    label: "Series III",
+    title: "Wisdom, Poetry & Prophets",
+    subtitle: "Psalms – Malachi",
+    books: ["Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi"],
+  },
+  {
+    id: 4,
+    label: "Series IV",
+    title: "The New Testament",
+    subtitle: "Matthew – Revelation",
+    books: ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
+  },
 ];
 
 function BookCard({ book, index }: { book: BookEntry; index: number }) {
@@ -34,7 +51,7 @@ function BookCard({ book, index }: { book: BookEntry; index: number }) {
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.2, delay: Math.min(index * 0.02, 0.5) }}
+      transition={{ duration: 0.2, delay: Math.min(index * 0.03, 0.6) }}
     >
       <Link href={`/decoded/${book.slug}`}>
         <Card
@@ -61,28 +78,9 @@ function BookCard({ book, index }: { book: BookEntry; index: number }) {
   );
 }
 
-function SectionGroup({ label, bookNames, allBooks, startIndex }: { label: string; bookNames: string[]; allBooks: BookEntry[]; startIndex: number }) {
-  const books = bookNames
-    .map(name => allBooks.find(b => b.bookName === name))
-    .filter((b): b is BookEntry => !!b);
-
-  if (books.length === 0) return null;
-
-  return (
-    <div className="mb-4">
-      <p className="text-[10px] font-semibold uppercase tracking-wider text-primary/70 px-1 mb-1.5">
-        {label}
-      </p>
-      <div className="flex flex-col gap-1.5">
-        {books.map((book, i) => (
-          <BookCard key={book.slug} book={book} index={startIndex + i} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function DecodedPage() {
+  const [activeSeriesId, setActiveSeriesId] = useState(1);
+
   const { data: books, isLoading } = useQuery<BookEntry[]>({
     queryKey: ["/api/decoded/books"],
   });
@@ -90,19 +88,27 @@ export default function DecodedPage() {
   const totalBooks = books?.length || 0;
   const totalVerses = books?.reduce((sum, b) => sum + b.totalVerses, 0) || 0;
 
-  let runningIndex = 0;
+  const activeSeries = SERIES.find(s => s.id === activeSeriesId)!;
+  const seriesBooks = activeSeries.books
+    .map(name => books?.find(b => b.bookName === name))
+    .filter((b): b is BookEntry => !!b);
+
+  const seriesVerses = seriesBooks.reduce((sum, b) => sum + b.totalVerses, 0);
 
   return (
     <div className="pb-20">
-      <div className="px-4 pt-5 pb-3">
-        <h1
-          className="font-serif text-2xl font-bold text-foreground"
-          data-testid="text-decoded-landing-title"
-        >
-          Decoded Books
-        </h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          The entire Bible decoded sentence-by-sentence into plain, modern English
+      <div className="px-4 pt-5 pb-2">
+        <div className="flex items-center gap-2 mb-1">
+          <Cross className="h-5 w-5 text-primary" />
+          <h1
+            className="font-serif text-2xl font-bold text-foreground"
+            data-testid="text-decoded-landing-title"
+          >
+            Breaking Down the Bible
+          </h1>
+        </div>
+        <p className="text-sm text-muted-foreground">
+          The entire Bible decoded sentence-by-sentence into today's language
         </p>
         {books && (
           <p className="mt-1 text-xs text-primary/80">
@@ -111,59 +117,70 @@ export default function DecodedPage() {
         )}
       </div>
 
+      <div className="px-4 pt-3 pb-1">
+        <div
+          className="flex flex-wrap gap-2"
+          data-testid="tabs-series"
+        >
+          {SERIES.map(series => (
+            <Button
+              key={series.id}
+              size="sm"
+              variant={activeSeriesId === series.id ? "default" : "outline"}
+              onClick={() => setActiveSeriesId(series.id)}
+              data-testid={`tab-series-${series.id}`}
+            >
+              {series.label}
+            </Button>
+          ))}
+        </div>
+      </div>
+
+      <div className="px-4 pt-3 pb-2">
+        <Card className="p-4 border-primary/20 bg-primary/5" data-testid="card-series-summary">
+          <h2
+            className="font-serif text-lg font-bold text-foreground"
+            data-testid="text-series-title"
+          >
+            {activeSeries.label}: {activeSeries.title}
+          </h2>
+          <p className="text-xs text-muted-foreground mt-0.5" data-testid="text-series-subtitle">
+            {activeSeries.subtitle}
+          </p>
+          {books && (
+            <p className="text-[10px] text-primary mt-1" data-testid="text-series-stats">
+              {seriesBooks.length} books &middot; {seriesVerses.toLocaleString()} verses
+            </p>
+          )}
+        </Card>
+      </div>
+
       {isLoading && (
-        <div className="flex flex-col gap-2 px-4">
-          {Array.from({ length: 8 }).map((_, i) => (
+        <div className="flex flex-col gap-2 px-4 pt-2">
+          {Array.from({ length: 6 }).map((_, i) => (
             <Skeleton key={i} className="h-16 w-full rounded-md" />
           ))}
         </div>
       )}
 
-      {books && (
-        <div className="px-4">
-          <div className="mb-5">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-foreground/80 mb-3 border-b border-border pb-1">
-              Old Testament
-            </h2>
-            {OT_SECTIONS.map(section => {
-              const idx = runningIndex;
-              const count = section.range.filter(n => books.some(b => b.bookName === n)).length;
-              runningIndex += count;
-              return (
-                <SectionGroup
-                  key={section.label + "-ot"}
-                  label={section.label}
-                  bookNames={section.range}
-                  allBooks={books}
-                  startIndex={idx}
-                />
-              );
-            })}
-          </div>
+      <AnimatePresence mode="wait">
+        {books && (
+          <motion.div
+            key={activeSeriesId}
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -10 }}
+            transition={{ duration: 0.2 }}
+            className="flex flex-col gap-1.5 px-4 pt-2"
+          >
+            {seriesBooks.map((book, i) => (
+              <BookCard key={book.slug} book={book} index={i} />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-          <div className="mb-4">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-foreground/80 mb-3 border-b border-border pb-1">
-              New Testament
-            </h2>
-            {NT_SECTIONS.map(section => {
-              const idx = runningIndex;
-              const count = section.range.filter(n => books.some(b => b.bookName === n)).length;
-              runningIndex += count;
-              return (
-                <SectionGroup
-                  key={section.label + "-nt"}
-                  label={section.label}
-                  bookNames={section.range}
-                  allBooks={books}
-                  startIndex={idx}
-                />
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      <div className="px-4 pt-2">
+      <div className="px-4 pt-4">
         <p className="text-[10px] text-center text-muted-foreground/60">
           By Brittany Johnson &middot; decodedfaithempire.org
         </p>
