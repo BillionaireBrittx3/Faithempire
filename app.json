@@ -29,7 +29,9 @@
         "backgroundColor": "#000000"
       },
       "package": "com.decodedfaithempire.app",
-      "permissions": ["com.android.vending.BILLING"]
+      "permissions": [
+        "com.android.vending.BILLING"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -39,6 +41,9 @@
         "projectId": "1eafd19c-0d82-4857-bd15-5e978f23ff9d"
       }
     },
-    "owner": "brittanyj19"
+    "owner": "brittanyj19",
+    "plugins": [
+      "expo-asset"
+    ]
   }
 }
