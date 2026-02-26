@@ -1,17 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Platform, Alert, Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import {
-  initConnection,
-  endConnection,
-  getProducts,
-  requestSubscription,
-  getAvailablePurchases,
-  finishTransaction,
-  purchaseUpdatedListener,
-  purchaseErrorListener,
-} from 'react-native-iap';
+  purchase,
+  restorePurchases,
+  addPurchaseCompleteListener,
+  addPurchaseFailedListener,
+  addRestoreCompleteListener,
+} from './modules/storekit-module';
 
 const APP_URL = 'https://faithempire.replit.app';
 const PRODUCT_ID = 'com.decodedfaithempire.app.premium.monthly';
@@ -20,57 +17,6 @@ export default function App() {
   const webViewRef = useRef(null);
   const [isPremium, setIsPremium] = useState(false);
 
-  useEffect(() => {
-    let purchaseUpdateSubscription = null;
-    let purchaseErrorSubscription = null;
-    let isMounted = true;
-
-    async function initIAP() {
-      try {
-        await initConnection();
-
-        purchaseUpdateSubscription = purchaseUpdatedListener(async (purchase) => {
-          if (!isMounted) return;
-
-          const receipt = purchase.transactionReceipt;
-          if (receipt) {
-            try {
-              await finishTransaction({ purchase, isConsumable: false });
-            } catch (err) {
-              console.log('Finish transaction error:', err);
-            }
-            setIsPremium(true);
-            sendToWebView({ type: 'PURCHASE_COMPLETE', isPremium: true });
-          }
-        });
-
-        purchaseErrorSubscription = purchaseErrorListener((error) => {
-          if (!isMounted) return;
-          if (error.code === 'E_USER_CANCELLED') {
-            sendToWebView({ type: 'PURCHASE_FAILED', reason: 'cancelled' });
-          } else {
-            sendToWebView({ type: 'PURCHASE_FAILED', reason: 'error' });
-          }
-        });
-      } catch (err) {
-        console.log('IAP init error:', err);
-      }
-    }
-
-    initIAP();
-
-    return () => {
-      isMounted = false;
-      if (purchaseUpdateSubscription) {
-        purchaseUpdateSubscription.remove();
-      }
-      if (purchaseErrorSubscription) {
-        purchaseErrorSubscription.remove();
-      }
-      endConnection();
-    };
-  }, []);
-
   function sendToWebView(data) {
     if (webViewRef.current) {
       const script = `window.postMessage(${JSON.stringify(JSON.stringify(data))}, '*'); true;`;
@@ -78,33 +24,48 @@ export default function App() {
     }
   }
 
-  async function handlePurchase() {
-    try {
-      const products = await getProducts({ skus: [PRODUCT_ID] });
-      if (products && products.length > 0) {
-        await requestSubscription({ sku: PRODUCT_ID });
+  useEffect(() => {
+    const purchaseSub = addPurchaseCompleteListener(({ productId }) => {
+      setIsPremium(true);
+      sendToWebView({ type: 'PURCHASE_COMPLETE', isPremium: true });
+    });
+
+    const failedSub = addPurchaseFailedListener(({ reason }) => {
+      if (reason === 'cancelled') {
+        sendToWebView({ type: 'PURCHASE_FAILED', reason: 'cancelled' });
       } else {
-        sendToWebView({ type: 'PURCHASE_FAILED', reason: 'product_not_found' });
-        Alert.alert(
-          'Subscription Unavailable',
-          'The subscription product is not yet configured. Please try again later.'
-        );
+        sendToWebView({ type: 'PURCHASE_FAILED', reason });
       }
+    });
+
+    const restoreSub = addRestoreCompleteListener(({ productIds }) => {
+      const hasActive = productIds && productIds.includes(PRODUCT_ID);
+      setIsPremium(hasActive);
+      sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: hasActive });
+      if (!hasActive) {
+        Alert.alert('No Subscription Found', 'No active premium subscription was found for this Apple ID.');
+      }
+    });
+
+    return () => {
+      purchaseSub.remove();
+      failedSub.remove();
+      restoreSub.remove();
+    };
+  }, []);
+
+  function handlePurchase() {
+    try {
+      purchase(PRODUCT_ID);
     } catch (err) {
       console.log('Purchase error:', err);
       sendToWebView({ type: 'PURCHASE_FAILED', reason: 'error' });
     }
   }
 
-  async function handleRestore() {
+  function handleRestore() {
     try {
-      const purchases = await getAvailablePurchases();
-      const hasActive = purchases && purchases.some(p => p.productId === PRODUCT_ID);
-      setIsPremium(hasActive);
-      sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: hasActive });
-      if (!hasActive) {
-        Alert.alert('No Subscription Found', 'No active premium subscription was found for this Apple ID.');
-      }
+      restorePurchases();
     } catch (err) {
       console.log('Restore error:', err);
       sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: false });
@@ -115,7 +76,7 @@ export default function App() {
     sendToWebView({ type: 'SUBSCRIPTION_STATUS', isPremium });
   }
 
-  function handleWebViewMessage(event) {
+  const handleWebViewMessage = useCallback((event) => {
     try {
       const data = JSON.parse(event.nativeEvent.data);
 
@@ -138,7 +99,7 @@ export default function App() {
     } catch (err) {
       console.log('Message parse error:', err);
     }
-  }
+  }, [isPremium]);
 
   return (
     <SafeAreaView style={styles.container}>
