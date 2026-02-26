@@ -1,0 +1,13 @@
+{
+  "name": "storekit-iap",
+  "version": "1.0.0",
+  "description": "Native StoreKit IAP module for Faith Empire",
+  "main": "index.js",
+  "expo": {
+    "autolinking": {
+      "ios": {
+        "modules": ["StoreKitIAPModule"]
+      }
+    }
+  }
+}
