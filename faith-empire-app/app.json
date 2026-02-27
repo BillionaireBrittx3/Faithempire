@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.decodedfaithempire.app",
-      "buildNumber": "2",
+      "buildNumber": "23",
       "config": {
         "usesNonExemptEncryption": false
       },
