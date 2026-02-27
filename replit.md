@@ -4,7 +4,8 @@
 Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.org that delivers a fresh Bible verse and plain-language motivational message every day. Built with React + Express + PostgreSQL.
 
 ## Recent Changes
-- 2026-02-26: Fixed server crash stability issues: (1) SIGHUP signal handler added, (2) process.exit(1) override to prevent Vite esbuild crash from killing server. Server now stays stable through esbuild service restarts.
+- 2026-02-27: Switched from Vite dev server to pre-built production mode for stability. Vite's esbuild child process was crashing persistently in the Replit environment. Server now always serves pre-built static files from `dist/public/`. Run `npm run build` before `npm run start` (or `npm run dev`). The `.replit` workflow uses `npm run start` directly.
+- 2026-02-26: Fixed server crash stability issues: (1) SIGHUP signal handler added. Server now stays stable.
 - 2026-02-26: Fixed 7,127 KJV text accuracy issues across 55 decoded books: 313 truncated verses restored, 4 empty verses filled, 5,510 LORD/Lord case corrections, "THE END." removed from Revelation 22:21.
 - 2026-02-26: Expanded Decoded section from 1 book (Genesis) to all 66 books of the Bible. Each book parsed from DOCX files with KJV + DMLV (Decoded Modern Language Version) text. Books organized by Old Testament / New Testament sections on landing page. Dynamic routing via `/decoded/:bookSlug`. Data stored as JSON in `server/data/decoded/`. Note: Mark (6/16 ch) and John (3/21 ch) are partial in Series IV source files.
 - 2026-02-26: Created custom local Expo module (storekit-module) with pure Swift StoreKit wrapper, replacing deprecated expo-in-app-purchases and react-native-iap. EAS build v1.1.0 succeeded (build 11).
@@ -13,9 +14,10 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - 2026-02-10: Initial MVP built with 100 seeded verses, 4 pages, bottom tab navigation, dark/light mode, email subscription
 
 ## Server Stability
+- **Production mode always**: Server always serves pre-built static files (no Vite dev server). This avoids esbuild child process crashes.
 - **SIGHUP handler**: `process.on("SIGHUP", () => {})` in server/index.ts prevents signal-based crashes
-- **process.exit override**: Intercepts `process.exit(1)` calls from Vite's logger (esbuild crash) to prevent server termination; only blocks Vite-originated exits via stack inspection
-- **PostCSS warning**: Patched in node_modules (may reset on reinstall)
+- **Build before serve**: Always run `npm run build` before starting. The workflow uses `npm run start` (production mode).
+- **Static fallback**: `server/static.ts` checks both `__dirname/public` (production build) and `dist/public` (dev with tsx) for the build directory.
 
 ## Architecture
 - **Frontend**: React (Vite) with Tailwind CSS, Shadcn UI components, Framer Motion animations
