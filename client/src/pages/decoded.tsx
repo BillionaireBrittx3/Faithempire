@@ -81,7 +81,7 @@ function BookCard({ book, index }: { book: BookEntry; index: number }) {
 export default function DecodedPage() {
   const [activeSeriesId, setActiveSeriesId] = useState(1);
 
-  const { data: books, isLoading } = useQuery<BookEntry[]>({
+  const { data: books, isLoading, error } = useQuery<BookEntry[]>({
     queryKey: ["/api/decoded/books"],
   });
 
@@ -160,6 +160,17 @@ export default function DecodedPage() {
           {Array.from({ length: 6 }).map((_, i) => (
             <Skeleton key={i} className="h-16 w-full rounded-md" />
           ))}
+        </div>
+      )}
+
+      {error && !isLoading && (
+        <div className="flex flex-col items-center gap-4 px-4 py-16 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+            <BookOpen className="h-7 w-7 text-primary" />
+          </div>
+          <p className="text-sm text-muted-foreground" data-testid="text-decoded-list-error">
+            Unable to load the decoded books. Please try again later.
+          </p>
         </div>
       )}
 

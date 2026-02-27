@@ -47,7 +47,7 @@ export default function ArchivePage() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const { data: verses, isLoading } = useQuery<Verse[]>({
+  const { data: verses, isLoading, error } = useQuery<Verse[]>({
     queryKey: ["/api/verses/archive"],
   });
 
@@ -85,6 +85,17 @@ export default function ArchivePage() {
       </div>
 
       {isLoading && <ArchiveSkeleton />}
+
+      {error && !isLoading && (
+        <div className="flex flex-col items-center gap-4 px-4 py-16 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+            <ChevronDown className="h-7 w-7 text-primary" />
+          </div>
+          <p className="text-sm text-muted-foreground" data-testid="text-archive-error">
+            Unable to load the archive. Please try again later.
+          </p>
+        </div>
+      )}
 
       {filteredVerses && filteredVerses.length === 0 && (
         <div className="flex flex-col items-center gap-3 px-4 py-16 text-center">

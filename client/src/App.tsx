@@ -1,3 +1,4 @@
+import { Component, type ErrorInfo, type ReactNode } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -19,6 +20,53 @@ import TermsPage from "@/pages/terms";
 import DecodedPage from "@/pages/decoded";
 import DecodedBookPage from "@/pages/decoded-book";
 import PaywallPage from "@/pages/paywall";
+
+class ErrorBoundary extends Component<
+  { children: ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error("App ErrorBoundary:", error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="flex min-h-screen flex-col items-center justify-center bg-black px-6 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#DFAC2A]/10 mb-4">
+            <span className="font-serif text-2xl text-[#DFAC2A]">!</span>
+          </div>
+          <h1 className="font-serif text-xl font-bold text-white mb-2">
+            Something went wrong
+          </h1>
+          <p className="text-sm text-white/60 mb-6">
+            Please restart the app to continue.
+          </p>
+          <button
+            onClick={() => {
+              this.setState({ hasError: false });
+              window.location.href = "/";
+            }}
+            className="rounded-xl bg-[#DFAC2A] px-6 py-3 text-sm font-semibold text-black"
+            data-testid="button-error-restart"
+          >
+            Restart App
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function Router() {
   return (
@@ -43,22 +91,24 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <SubscriptionProvider>
-          <TooltipProvider>
-            <div className="flex min-h-screen flex-col bg-background">
-              <Header />
-              <main className="flex-1 mx-auto w-full max-w-lg pb-16">
-                <Router />
-              </main>
-              <TabBar />
-            </div>
-            <Toaster />
-          </TooltipProvider>
-        </SubscriptionProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider>
+          <SubscriptionProvider>
+            <TooltipProvider>
+              <div className="flex min-h-screen flex-col bg-background">
+                <Header />
+                <main className="flex-1 mx-auto w-full max-w-lg pb-16">
+                  <Router />
+                </main>
+                <TabBar />
+              </div>
+              <Toaster />
+            </TooltipProvider>
+          </SubscriptionProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 

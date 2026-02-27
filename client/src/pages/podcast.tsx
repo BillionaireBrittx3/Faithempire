@@ -57,7 +57,7 @@ function formatTime(seconds: number): string {
 }
 
 export default function PodcastPage() {
-  const { data: episodes, isLoading } = useQuery<Episode[]>({
+  const { data: episodes, isLoading, error } = useQuery<Episode[]>({
     queryKey: ["/api/podcast/episodes"],
   });
   const { isPremium } = useSubscription();
@@ -167,6 +167,15 @@ export default function PodcastPage() {
       {isLoading ? (
         <div className="flex items-center justify-center py-20">
           <Loader2 className="h-6 w-6 animate-spin text-primary" />
+        </div>
+      ) : error ? (
+        <div className="flex flex-col items-center gap-4 px-4 py-16 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+            <Volume2 className="h-7 w-7 text-primary" />
+          </div>
+          <p className="text-sm text-muted-foreground" data-testid="text-podcast-error">
+            Unable to load podcast episodes. Please try again later.
+          </p>
         </div>
       ) : (
         <div className="flex flex-col gap-3 px-4 py-2">
