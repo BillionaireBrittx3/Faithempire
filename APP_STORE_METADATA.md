@@ -12,14 +12,14 @@ Every day at midnight Eastern Time, a new Bible verse appears on your home scree
 FULL KJV BIBLE READER
 Read the complete King James Version Bible with all 66 books organized by Old and New Testament. Tap any verse to highlight it and build your personal collection of meaningful passages.
 
-THE BOOK OF GENESIS DECODED
-Experience Genesis like never before. All 50 chapters with 1,533 verses presented side-by-side: the original KJV text alongside a modern decoded translation, plus optional context notes that illuminate the deeper meaning behind every verse.
+ALL 66 BOOKS DECODED
+Experience the entire Bible decoded sentence-by-sentence into today's language. All 66 books — from Genesis to Revelation — with over 31,000 verses presented side-by-side: the original KJV text alongside a modern decoded translation (DMLV), plus optional context notes that illuminate the deeper meaning behind every verse. Organized into four series: The Law, History, Wisdom/Poetry & Prophets, and The New Testament.
 
 PODCAST
 Listen to faith-based podcast episodes directly in the app with a built-in audio player. Stay inspired on the go with teachings that complement your daily verse.
 
 SAVE AND HIGHLIGHT
-Tap to highlight verses across the Bible and Genesis Decoded. Save your favorite daily decoded verses for quick reference. All your saved content is organized in one place.
+Tap to highlight verses across the Bible and all decoded books. Save your favorite daily decoded verses for quick reference. All your saved content is organized in one place.
 
 VERSE ARCHIVE
 Browse the complete collection of decoded verses. Filter by category to find exactly what speaks to your current season of life — whether you need encouragement, wisdom, strength, or peace.
@@ -34,10 +34,10 @@ DESIGNED FOR YOUR FAITH JOURNEY
 Faith Empire is built by Decoded Faith Empire (decodedfaithempire.org) to make the Bible accessible to everyone. Updated daily with fresh content to keep your faith growing.
 
 SUBSCRIPTION INFORMATION
-Faith Empire offers an optional Premium Subscription for $9.99/month that unlocks additional content and features. Payment is charged to your Apple ID account. Subscription automatically renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel anytime in your Apple ID Account Settings. Terms of Use: https://faithempire.replit.app/terms | Privacy Policy: https://faithempire.replit.app/privacy
+Faith Empire offers an optional Premium Subscription for $12.22/month that unlocks additional content and features including all 66 decoded books, full podcast access, exclusive devotionals, and early access to new releases. Payment is charged to your Apple ID account. Subscription automatically renews unless cancelled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. Manage or cancel anytime in your Apple ID Account Settings. Terms of Use: https://faithempire.replit.app/terms | Privacy Policy: https://faithempire.replit.app/privacy
 
 ## Keywords (100 characters max, comma-separated)
-Bible,verse,daily,devotional,KJV,Genesis,decoded,faith,scripture,Christian,motivation,inspiration
+Bible,verse,daily,devotional,KJV,decoded,faith,scripture,Christian,motivation,inspiration,DMLV
 
 ## Marketing URL
 https://decodedfaithempire.org
@@ -56,7 +56,7 @@ Secondary: Lifestyle
 4+ (No objectionable content)
 
 ## Copyright
-2025 Brittany Johnson
+2026 Brittany Johnson
 
 ## In-App Purchase Details (for App Store Connect)
 
@@ -66,11 +66,11 @@ Faith Empire Premium
 ### Subscription Reference Name
 Monthly Premium
 
-### Product ID (suggested)
-com.decodedfaithempire.faithempire.premium.monthly
+### Product ID
+com.decodedfaithempire.app.premium.monthly
 
 ### Price
-$9.99 USD / month
+$12.22 USD / month
 
 ### Subscription Description (for App Store listing)
-Unlock the full Faith Empire experience with premium access to all decoded books, advanced features, and exclusive content. Auto-renews monthly.
+Unlock the full Faith Empire experience with premium access to all 66 decoded books, full podcast library, exclusive devotionals, and early access to new releases. Auto-renews monthly.
