@@ -3,8 +3,8 @@
   "bookName": "Revelation",
   "slug": "revelation",
   "author": "Brittany Johnson",
-  "description": "The Book of Revelation — every verse decoded into plain, modern English (DMLV).",
-  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "description": "The Book of Revelation \u2014 every verse decoded into plain, modern English (DMLV).",
+  "copyright": "\u00a9 2026 Brittany Johnson. All rights reserved.",
   "totalChapters": 22,
   "chapters": [
     {
@@ -50,25 +50,25 @@
         {
           "verse": 7,
           "kjv": "Behold, he cometh with clouds; and every eye shall see him, and they also which pierced him: and all kindreds of the earth shall wail because of him. Even so, Amen.",
-          "decoded": "Look, he is coming with the clouds, and everyone will see him—even those who pierced him. All peoples on earth will mourn because of him. Yes, this is true.",
+          "decoded": "Look, he is coming with the clouds, and everyone will see him\u2014even those who pierced him. All peoples on earth will mourn because of him. Yes, this is true.",
           "context": ""
         },
         {
           "verse": 8,
           "kjv": "I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty.",
-          "decoded": "I am the Alpha and Omega—the first and the last—says the Lord, who exists now, who existed before, and who will come again, the Almighty.",
+          "decoded": "I am the Alpha and Omega\u2014the first and the last\u2014says the Lord, who exists now, who existed before, and who will come again, the Almighty.",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "I John, who also am your brother, and companion in tribulation, and in the kingdom and patience of Jesus Christ, was in the isle that is called Patmos, for the word of God, and for the testimony of Jesus Christ.",
-          "decoded": "I, John, your brother and partner in suffering, in God’s kingdom, and in patient endurance because of Jesus Christ, was on the island of Patmos because of my work spreading God’s word and testifying about Jesus.",
+          "decoded": "I, John, your brother and partner in suffering, in God\u2019s kingdom, and in patient endurance because of Jesus Christ, was on the island of Patmos because of my work spreading God\u2019s word and testifying about Jesus.",
           "context": ""
         },
         {
           "verse": 10,
-          "kjv": "I was in the Spirit on the Lord’s day, and heard behind me a great voice, as of a trumpet,",
-          "decoded": "On the Lord’s day, I was filled with the Spirit and heard a loud voice behind me, sounding like a trumpet.",
+          "kjv": "I was in the Spirit on the Lord\u2019s day, and heard behind me a great voice, as of a trumpet,",
+          "decoded": "On the Lord\u2019s day, I was filled with the Spirit and heard a loud voice behind me, sounding like a trumpet.",
           "context": ""
         },
         {
@@ -110,7 +110,7 @@
         {
           "verse": 17,
           "kjv": "And when I saw him, I fell at his feet as dead. And he laid his right hand upon me, saying unto me, Fear not; I am the first and the last:",
-          "decoded": "When I saw him, I was so overwhelmed that I collapsed at his feet, feeling lifeless. But he placed his right hand on me and said, 'Don’t be afraid. I am the beginning and the end.'",
+          "decoded": "When I saw him, I was so overwhelmed that I collapsed at his feet, feeling lifeless. But he placed his right hand on me and said, 'Don\u2019t be afraid. I am the beginning and the end.'",
           "context": ""
         },
         {
@@ -151,7 +151,7 @@
         },
         {
           "verse": 3,
-          "kjv": "And hast borne, and hast patience, and for my name’s sake hast laboured, and hast not fainted.",
+          "kjv": "And hast borne, and hast patience, and for my name\u2019s sake hast laboured, and hast not fainted.",
           "decoded": "You have endured hardships and remained patient. You have worked hard for my name and have not given up.",
           "context": ""
         },
@@ -164,7 +164,7 @@
         {
           "verse": 5,
           "kjv": "Remember therefore from whence thou art fallen, and repent, and do the first works; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent.",
-          "decoded": "Think about how far you have fallen, turn back to God, and do the things you did at first. If you don’t, I will come to you soon and remove your lampstand from its place unless you repent.",
+          "decoded": "Think about how far you have fallen, turn back to God, and do the things you did at first. If you don\u2019t, I will come to you soon and remove your lampstand from its place unless you repent.",
           "context": ""
         },
         {
@@ -176,7 +176,7 @@
         {
           "verse": 7,
           "kjv": "He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the tree of life, which is in the midst of the paradise of God.",
-          "decoded": "Anyone who has ears should listen to what the Spirit says to the churches: To those who overcome, I will give the right to eat from the tree of life, which is in God’s paradise.",
+          "decoded": "Anyone who has ears should listen to what the Spirit says to the churches: To those who overcome, I will give the right to eat from the tree of life, which is in God\u2019s paradise.",
           "context": ""
         },
         {
@@ -188,13 +188,13 @@
         {
           "verse": 9,
           "kjv": "I know thy works, and tribulation, and poverty, (but thou art rich) and I know the blasphemy of them which say they are Jews, and are not, but are the synagogue of Satan.",
-          "decoded": "I know your deeds, your suffering, and your poverty — yet you are spiritually rich. I also know about those who say they are Jews but are not; they are actually part of Satan’s group.",
+          "decoded": "I know your deeds, your suffering, and your poverty \u2014 yet you are spiritually rich. I also know about those who say they are Jews but are not; they are actually part of Satan\u2019s group.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "Fear none of those things which thou shalt suffer: behold, the devil shall cast some of you into prison, that ye may be tried; and ye shall have tribulation ten days: be thou faithful unto death, and I will give thee a crown of life.",
-          "decoded": "Don’t be afraid of the suffering you will face. The devil will put some of you in prison to test you for a limited time. Be faithful even to the point of death, and I will give you the crown of life.",
+          "decoded": "Don\u2019t be afraid of the suffering you will face. The devil will put some of you in prison to test you for a limited time. Be faithful even to the point of death, and I will give you the crown of life.",
           "context": ""
         },
         {
@@ -211,8 +211,8 @@
         },
         {
           "verse": 13,
-          "kjv": "I know thy works, and where thou dwellest, even where Satan’s seat is: and thou holdest fast my name, and hast not denied my faith, even in those days wherein Antipas was my faithful martyr, who was slain among you, where Satan dwelleth.",
-          "decoded": "I know what you do and where you live — where Satan’s throne is. Yet you remain faithful to my name and have not denied your faith, even when Antipas, my faithful witness, was killed among you where Satan lives.",
+          "kjv": "I know thy works, and where thou dwellest, even where Satan\u2019s seat is: and thou holdest fast my name, and hast not denied my faith, even in those days wherein Antipas was my faithful martyr, who was slain among you, where Satan dwelleth.",
+          "decoded": "I know what you do and where you live \u2014 where Satan\u2019s throne is. Yet you remain faithful to my name and have not denied your faith, even when Antipas, my faithful witness, was killed among you where Satan lives.",
           "context": ""
         },
         {
@@ -272,13 +272,13 @@
         {
           "verse": 23,
           "kjv": "And I will kill her children with death; and all the churches shall know that I am he which searcheth the reins and hearts: and I will give unto every one of you according to your works.",
-          "decoded": "I will bring death to her followers, and all the churches will understand that I am the one who examines people’s inner thoughts and feelings. I will reward each person according to what they have done.",
+          "decoded": "I will bring death to her followers, and all the churches will understand that I am the one who examines people\u2019s inner thoughts and feelings. I will reward each person according to what they have done.",
           "context": ""
         },
         {
           "verse": 24,
           "kjv": "But unto you I say, and unto the rest in Thyatira, as many as have not this doctrine, and which have not known the depths of Satan, as they speak; I will put upon you none other burden.",
-          "decoded": "But to you and the others in Thyatira who do not follow this teaching and have not learned about Satan’s evil ways as some claim, I will not place any additional burdens on you.",
+          "decoded": "But to you and the others in Thyatira who do not follow this teaching and have not learned about Satan\u2019s evil ways as some claim, I will not place any additional burdens on you.",
           "context": ""
         },
         {
@@ -332,7 +332,7 @@
         {
           "verse": 3,
           "kjv": "Remember therefore how thou hast received and heard, and hold fast, and repent. If therefore thou shalt not watch, I will come on thee as a thief, and thou shalt not know what hour I will come upon thee.",
-          "decoded": "Remember how you received and accepted the message; hold on to it firmly and turn back from your wrong ways. If you don’t stay alert, I will come unexpectedly like a thief, and you won’t know when.",
+          "decoded": "Remember how you received and accepted the message; hold on to it firmly and turn back from your wrong ways. If you don\u2019t stay alert, I will come unexpectedly like a thief, and you won\u2019t know when.",
           "context": ""
         },
         {
@@ -368,7 +368,7 @@
         {
           "verse": 9,
           "kjv": "Behold, I will make them of the synagogue of Satan, which say they are Jews, and are not, but do lie; behold, I will make them to come and worship before thy feet, and to know that I have loved thee.",
-          "decoded": "Look, I will make those who claim to be Jews but are not—who are actually liars—come and bow down at your feet. They will realize that I truly love you.",
+          "decoded": "Look, I will make those who claim to be Jews but are not\u2014who are actually liars\u2014come and bow down at your feet. They will realize that I truly love you.",
           "context": ""
         },
         {
@@ -386,7 +386,7 @@
         {
           "verse": 12,
           "kjv": "Him that overcometh will I make a pillar in the temple of my God, and he shall go no more out: and I will write upon him the name of my God, and the name of the city of my God, which is new Jerusalem, which cometh down out of heaven from my God: and I will write upon him my new name.",
-          "decoded": "To the one who overcomes, I will make them a permanent pillar in my temple. They will never leave it. I will write on them the name of my God, the name of the city of my God—the new Jerusalem coming down from heaven—and I will also write my new name on them.",
+          "decoded": "To the one who overcomes, I will make them a permanent pillar in my temple. They will never leave it. I will write on them the name of my God, the name of the city of my God\u2014the new Jerusalem coming down from heaven\u2014and I will also write my new name on them.",
           "context": ""
         },
         {
@@ -398,7 +398,7 @@
         {
           "verse": 14,
           "kjv": "And unto the angel of the church of the Laodiceans write; These things saith the Amen, the faithful and true witness, the beginning of the creation of God;",
-          "decoded": "Write to the leader of the church in Laodicea: This is the message from the Amen—the faithful and true witness, the origin of God's creation.",
+          "decoded": "Write to the leader of the church in Laodicea: This is the message from the Amen\u2014the faithful and true witness, the origin of God's creation.",
           "context": ""
         },
         {
@@ -416,13 +416,13 @@
         {
           "verse": 17,
           "kjv": "Because thou sayest, I am rich, and increased with goods, and have need of nothing; and knowest not that thou art wretched, and miserable, and poor, and blind, and naked:",
-          "decoded": "You say, ‘I am wealthy and have everything I need,’ but you don’t realize that you are spiritually miserable, poor, blind, and exposed.",
+          "decoded": "You say, \u2018I am wealthy and have everything I need,\u2019 but you don\u2019t realize that you are spiritually miserable, poor, blind, and exposed.",
           "context": ""
         },
         {
           "verse": 18,
           "kjv": "I counsel thee to buy of me gold tried in the fire, that thou mayest be rich; and white raiment, that thou mayest be clothed, and that the shame of thy nakedness do not appear; and anoint thine eyes with eyesalve, that thou mayest see.",
-          "decoded": "I advise you to seek from me true riches purified by trials, to wear pure clothes so you won’t be ashamed, and to apply healing ointment to your eyes so you can see clearly.",
+          "decoded": "I advise you to seek from me true riches purified by trials, to wear pure clothes so you won\u2019t be ashamed, and to apply healing ointment to your eyes so you can see clearly.",
           "context": ""
         },
         {
@@ -554,7 +554,7 @@
         {
           "verse": 5,
           "kjv": "And one of the elders saith unto me, Weep not: behold, the Lion of the tribe of Juda, the Root of David, hath prevailed to open the book, and to loose the seven seals thereof.",
-          "decoded": "One of the elders told me, 'Don’t cry. Look, the Lion from the tribe of Judah, the Root of David, has won the right to open the scroll and break its seven seals.'",
+          "decoded": "One of the elders told me, 'Don\u2019t cry. Look, the Lion from the tribe of Judah, the Root of David, has won the right to open the scroll and break its seven seals.'",
           "context": ""
         },
         {
@@ -572,7 +572,7 @@
         {
           "verse": 8,
           "kjv": "And when he had taken the book, the four beasts and four and twenty elders fell down before the Lamb, having every one of them harps, and golden vials full of odours, which are the prayers of saints.",
-          "decoded": "When the Lamb took the scroll, the four living creatures and the twenty-four elders bowed down before Him. Each had a harp and golden bowls filled with incense, which represent the prayers of God’s people.",
+          "decoded": "When the Lamb took the scroll, the four living creatures and the twenty-four elders bowed down before Him. Each had a harp and golden bowls filled with incense, which represent the prayers of God\u2019s people.",
           "context": ""
         },
         {
@@ -590,7 +590,7 @@
         {
           "verse": 11,
           "kjv": "And I beheld, and I heard the voice of many angels round about the throne and the beasts and the elders: and the number of them was ten thousand times ten thousand, and thousands of thousands;",
-          "decoded": "I looked and heard the voices of many angels surrounding the throne, the living creatures, and the elders. Their number was countless—thousands upon thousands and ten thousands upon ten thousands.",
+          "decoded": "I looked and heard the voices of many angels surrounding the throne, the living creatures, and the elders. Their number was countless\u2014thousands upon thousands and ten thousands upon ten thousands.",
           "context": ""
         },
         {
@@ -650,7 +650,7 @@
         {
           "verse": 6,
           "kjv": "And I heard a voice in the midst of the four beasts say, A measure of wheat for a penny, and three measures of barley for a penny; and see thou hurt not the oil and the wine.",
-          "decoded": "I heard a voice among the four living creatures say, 'A measure of wheat costs a penny, and three measures of barley cost a penny. But don’t harm the oil and the wine.'",
+          "decoded": "I heard a voice among the four living creatures say, 'A measure of wheat costs a penny, and three measures of barley cost a penny. But don\u2019t harm the oil and the wine.'",
           "context": ""
         },
         {
@@ -668,7 +668,7 @@
         {
           "verse": 9,
           "kjv": "And when he had opened the fifth seal, I saw under the altar the souls of them that were slain for the word of God, and for the testimony which they held:",
-          "decoded": "When the fifth seal was opened, I saw under the altar the souls of those who had been killed because of God’s word and their testimony.",
+          "decoded": "When the fifth seal was opened, I saw under the altar the souls of those who had been killed because of God\u2019s word and their testimony.",
           "context": ""
         },
         {
@@ -704,7 +704,7 @@
         {
           "verse": 15,
           "kjv": "And the kings of the earth, and the great men, and the rich men, and the chief captains, and the mighty men, and every bondman, and every free man, hid themselves in the dens and in the rocks of the mountains;",
-          "decoded": "All people—kings, nobles, rich men, commanders, powerful men, slaves, and free—hid themselves in caves and among the rocks of the mountains.",
+          "decoded": "All people\u2014kings, nobles, rich men, commanders, powerful men, slaves, and free\u2014hid themselves in caves and among the rocks of the mountains.",
           "context": ""
         },
         {
@@ -848,13 +848,13 @@
         {
           "verse": 3,
           "kjv": "And another angel came and stood at the altar, having a golden censer; and there was given unto him much incense, that he should offer it with the prayers of all saints upon the golden altar which was before the throne.",
-          "decoded": "Another angel came and stood at the altar with a golden censer. He was given a lot of incense to offer with the prayers of all God’s people on the golden altar before the throne.",
+          "decoded": "Another angel came and stood at the altar with a golden censer. He was given a lot of incense to offer with the prayers of all God\u2019s people on the golden altar before the throne.",
           "context": ""
         },
         {
           "verse": 4,
-          "kjv": "And the smoke of the incense, which came with the prayers of the saints, ascended up before God out of the angel’s hand.",
-          "decoded": "The smoke from the incense, along with the prayers of the saints, rose before God from the angel’s hand.",
+          "kjv": "And the smoke of the incense, which came with the prayers of the saints, ascended up before God out of the angel\u2019s hand.",
+          "decoded": "The smoke from the incense, along with the prayers of the saints, rose before God from the angel\u2019s hand.",
           "context": ""
         },
         {
@@ -950,7 +950,7 @@
         {
           "verse": 6,
           "kjv": "And in those days shall men seek death, and shall not find it; and shall desire to die, and death shall flee from them.",
-          "decoded": "During that time, people will want to die but won’t be able to. They will long for death, but it will avoid them.",
+          "decoded": "During that time, people will want to die but won\u2019t be able to. They will long for death, but it will avoid them.",
           "context": ""
         },
         {
@@ -962,7 +962,7 @@
         {
           "verse": 8,
           "kjv": "And they had hair as the hair of women, and their teeth were as the teeth of lions.",
-          "decoded": "They had hair like women’s hair, and their teeth were like lions’ teeth.",
+          "decoded": "They had hair like women\u2019s hair, and their teeth were like lions\u2019 teeth.",
           "context": ""
         },
         {
@@ -980,7 +980,7 @@
         {
           "verse": 11,
           "kjv": "And they had a king over them, which is the angel of the bottomless pit, whose name in the Hebrew tongue is Abaddon, but in the Greek tongue hath his name Apollyon.",
-          "decoded": "They had a king over them—the angel of the bottomless pit. In Hebrew, his name is Abaddon, and in Greek, he is called Apollyon, which means 'Destroyer.'",
+          "decoded": "They had a king over them\u2014the angel of the bottomless pit. In Hebrew, his name is Abaddon, and in Greek, he is called Apollyon, which means 'Destroyer.'",
           "context": ""
         },
         {
@@ -1004,7 +1004,7 @@
         {
           "verse": 15,
           "kjv": "And the four angels were loosed, which were prepared for an hour, and a day, and a month, and a year, for to slay the third part of men.",
-          "decoded": "The four angels were released. They had been kept ready for a specific time—an hour, a day, a month, and a year—to kill a third of mankind.",
+          "decoded": "The four angels were released. They had been kept ready for a specific time\u2014an hour, a day, a month, and a year\u2014to kill a third of mankind.",
           "context": ""
         },
         {
@@ -1034,7 +1034,7 @@
         {
           "verse": 20,
           "kjv": "And the rest of the men which were not killed by these plagues yet repented not of the works of their hands, that they should not worship devils, and idols of gold, and silver, and brass, and stone, and of wood: which neither can see, nor hear, nor walk:",
-          "decoded": "But the people who survived these plagues still did not repent of what they had done. They continued to worship demons and idols made of gold, silver, bronze, stone, and wood—idols that cannot see, hear, or move.",
+          "decoded": "But the people who survived these plagues still did not repent of what they had done. They continued to worship demons and idols made of gold, silver, bronze, stone, and wood\u2014idols that cannot see, hear, or move.",
           "context": ""
         },
         {
@@ -1082,7 +1082,7 @@
         {
           "verse": 6,
           "kjv": "And sware by him that liveth for ever and ever, who created heaven, and the things that therein are, and the earth, and the things that therein are, and the sea, and the things which are therein, that there should be time no longer:",
-          "decoded": "and solemnly promised by the eternal God—the Creator of heaven, earth, and sea and everything in them—that there will be no more delay.",
+          "decoded": "and solemnly promised by the eternal God\u2014the Creator of heaven, earth, and sea and everything in them\u2014that there will be no more delay.",
           "context": ""
         },
         {
@@ -1105,7 +1105,7 @@
         },
         {
           "verse": 10,
-          "kjv": "And I took the little book out of the angel’s hand, and ate it up; and it was in my mouth sweet as honey: and as soon as I had eaten it, my belly was bitter.",
+          "kjv": "And I took the little book out of the angel\u2019s hand, and ate it up; and it was in my mouth sweet as honey: and as soon as I had eaten it, my belly was bitter.",
           "decoded": "I took the scroll from the angel and ate it. It tasted sweet like honey, but once I swallowed it, it made my stomach bitter.",
           "context": ""
         },
@@ -1130,7 +1130,7 @@
         {
           "verse": 2,
           "kjv": "But the court which is without the temple leave out, and measure it not; for it is given unto the Gentiles: and the holy city shall they tread under foot forty and two months.",
-          "decoded": "But don’t measure the outer courtyard because it has been given to the Gentiles, and they will trample the holy city for 42 months.",
+          "decoded": "But don\u2019t measure the outer courtyard because it has been given to the Gentiles, and they will trample the holy city for 42 months.",
           "context": ""
         },
         {
@@ -1166,7 +1166,7 @@
         {
           "verse": 8,
           "kjv": "And their dead bodies shall lie in the street of the great city, which spiritually is called Sodom and Egypt, where also our Lord was crucified.",
-          "decoded": "Their dead bodies will lie in the streets of the great city, which is spiritually called Sodom and Egypt—the place where Jesus was crucified.",
+          "decoded": "Their dead bodies will lie in the streets of the great city, which is spiritually called Sodom and Egypt\u2014the place where Jesus was crucified.",
           "context": ""
         },
         {
@@ -1184,7 +1184,7 @@
         {
           "verse": 11,
           "kjv": "And after three days and an half the Spirit of life from God entered into them, and they stood upon their feet; and great fear fell upon them which saw them.",
-          "decoded": "After three and a half days, God’s life-giving Spirit entered them, and they stood up. Those who saw this were filled with great fear.",
+          "decoded": "After three and a half days, God\u2019s life-giving Spirit entered them, and they stood up. Those who saw this were filled with great fear.",
           "context": ""
         },
         {
@@ -1226,13 +1226,13 @@
         {
           "verse": 18,
           "kjv": "And the nations were angry, and thy wrath is come, and the time of the dead, that they should be judged, and that thou shouldest give reward unto thy servants the prophets, and to the saints, and them that fear thy name, small and great; and shouldest destroy them which destroy the earth.",
-          "decoded": "The nations became angry, your anger has arrived, and it is time to judge the dead, reward your servants—the prophets, the holy people, and all who respect your name, whether they are important or not—and to punish those who harm the earth.",
+          "decoded": "The nations became angry, your anger has arrived, and it is time to judge the dead, reward your servants\u2014the prophets, the holy people, and all who respect your name, whether they are important or not\u2014and to punish those who harm the earth.",
           "context": ""
         },
         {
           "verse": 19,
           "kjv": "And the temple of God was opened in heaven, and there was seen in his temple the ark of his testament: and there were lightnings, and voices, and thunderings, and an earthquake, and great hail.",
-          "decoded": "God’s temple in heaven was opened, revealing the ark of His covenant inside. There were flashes of lightning, loud voices, thunder, an earthquake, and heavy hail.",
+          "decoded": "God\u2019s temple in heaven was opened, revealing the ark of His covenant inside. There were flashes of lightning, loud voices, thunder, an earthquake, and heavy hail.",
           "context": ""
         }
       ]
@@ -1262,7 +1262,7 @@
         {
           "verse": 4,
           "kjv": "And his tail drew the third part of the stars of heaven, and did cast them to the earth: and the dragon stood before the woman which was ready to be delivered, for to devour her child as soon as it was born.",
-          "decoded": "The dragon’s tail swept a third of the stars from the sky and threw them to the earth. The dragon stood in front of the woman, ready to attack her child as soon as it was born.",
+          "decoded": "The dragon\u2019s tail swept a third of the stars from the sky and threw them to the earth. The dragon stood in front of the woman, ready to attack her child as soon as it was born.",
           "context": ""
         },
         {
@@ -1292,13 +1292,13 @@
         {
           "verse": 9,
           "kjv": "And the great dragon was cast out, that old serpent, called the Devil, and Satan, which deceiveth the whole world: he was cast out into the earth, and his angels were cast out with him.",
-          "decoded": "The great dragon, also called the Devil and Satan—the one who deceives the whole world—was thrown down to the earth along with his angels.",
+          "decoded": "The great dragon, also called the Devil and Satan\u2014the one who deceives the whole world\u2014was thrown down to the earth along with his angels.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "And I heard a loud voice saying in heaven, Now is come salvation, and strength, and the kingdom of our God, and the power of his Christ: for the accuser of our brethren is cast down, which accused them before our God day and night.",
-          "decoded": "I heard a loud voice in heaven saying, 'Salvation, power, and the kingdom of our God and the authority of His Christ have arrived, because the accuser of our brothers and sisters—who accused them before God day and night—has been thrown down.'",
+          "decoded": "I heard a loud voice in heaven saying, 'Salvation, power, and the kingdom of our God and the authority of His Christ have arrived, because the accuser of our brothers and sisters\u2014who accused them before God day and night\u2014has been thrown down.'",
           "context": ""
         },
         {
@@ -1322,7 +1322,7 @@
         {
           "verse": 14,
           "kjv": "And to the woman were given two wings of a great eagle, that she might fly into the wilderness, into her place, where she is nourished for a time, and times, and half a time, from the face of the serpent.",
-          "decoded": "The woman was given two large eagle’s wings so she could fly to the wilderness to a safe place where she would be cared for a period of time, times, and half a time, away from the serpent’s threat.",
+          "decoded": "The woman was given two large eagle\u2019s wings so she could fly to the wilderness to a safe place where she would be cared for a period of time, times, and half a time, away from the serpent\u2019s threat.",
           "context": ""
         },
         {
@@ -1340,13 +1340,7 @@
         {
           "verse": 17,
           "kjv": "And the dragon was wroth with the woman, and went to make war with the remnant of her seed, which keep the commandments of God, and have the testimony of Jesus Christ.",
-          "decoded": "The dragon became angry with the woman and went to fight against the rest of her children—those who obey God's commandments and hold to the testimony of Jesus.",
-          "context": ""
-        },
-        {
-          "verse": 17,
-          "kjv": "And the dragon was wroth with the woman, and went to make war with the remnant of her seed, which keep the commandments of God, and have the testimony of Jesus Christ.",
-          "decoded": "I stood on the shore by the sea.",
+          "decoded": "The dragon became angry with the woman and went to fight against the rest of her children\u2014those who obey God's commandments and hold to the testimony of Jesus.",
           "context": ""
         }
       ]
@@ -1370,7 +1364,7 @@
         {
           "verse": 3,
           "kjv": "And I saw one of his heads as it were wounded to death; and his deadly wound was healed: and all the world wondered after the beast.",
-          "decoded": "One of the beast’s heads appeared to be fatally wounded, but the wound was healed. The whole world was amazed and followed the beast.",
+          "decoded": "One of the beast\u2019s heads appeared to be fatally wounded, but the wound was healed. The whole world was amazed and followed the beast.",
           "context": ""
         },
         {
@@ -1394,13 +1388,13 @@
         {
           "verse": 7,
           "kjv": "And it was given unto him to make war with the saints, and to overcome them: and power was given him over all kindreds, and tongues, and nations.",
-          "decoded": "The beast was allowed to fight against God’s people and defeat them. It was given authority over every tribe, language, and nation.",
+          "decoded": "The beast was allowed to fight against God\u2019s people and defeat them. It was given authority over every tribe, language, and nation.",
           "context": ""
         },
         {
           "verse": 8,
           "kjv": "And all that dwell upon the earth shall worship him, whose names are not written in the book of life of the Lamb slain from the foundation of the world.",
-          "decoded": "Everyone who lives on earth will worship the beast, except those whose names are written in the Lamb’s book of life, from the beginning of the world.",
+          "decoded": "Everyone who lives on earth will worship the beast, except those whose names are written in the Lamb\u2019s book of life, from the beginning of the world.",
           "context": ""
         },
         {
@@ -1412,7 +1406,7 @@
         {
           "verse": 10,
           "kjv": "He that leadeth into captivity shall go into captivity: he that killeth with the sword must be killed with the sword. Here is the patience and the faith of the saints.",
-          "decoded": "Those who capture others will themselves be captured; those who kill with the sword will be killed by the sword. This requires the endurance and faith of God’s people.",
+          "decoded": "Those who capture others will themselves be captured; those who kill with the sword will be killed by the sword. This requires the endurance and faith of God\u2019s people.",
           "context": ""
         },
         {
@@ -1442,13 +1436,13 @@
         {
           "verse": 15,
           "kjv": "And he had power to give life unto the image of the beast, that the image of the beast should both speak, and cause that as many as would not worship the image of the beast should be killed.",
-          "decoded": "He has the power to give life to the beast’s image, so that the image can speak and force anyone who refuses to worship it to be killed.",
+          "decoded": "He has the power to give life to the beast\u2019s image, so that the image can speak and force anyone who refuses to worship it to be killed.",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "And he causeth all, both small and great, rich and poor, free and bond, to receive a mark in their right hand, or in their foreheads:",
-          "decoded": "He forces everyone, no matter their status—whether important or ordinary, wealthy or poor, free or enslaved—to have a mark placed on their right hand or on their forehead.",
+          "decoded": "He forces everyone, no matter their status\u2014whether important or ordinary, wealthy or poor, free or enslaved\u2014to have a mark placed on their right hand or on their forehead.",
           "context": ""
         },
         {
@@ -1460,7 +1454,7 @@
         {
           "verse": 18,
           "kjv": "Here is wisdom. Let him that hath understanding count the number of the beast: for it is the number of a man; and his number is Six hundred threescore and six.",
-          "decoded": "This requires wisdom. Anyone with insight should figure out the meaning of the beast’s number, because it represents a man’s number—and that number is 666.",
+          "decoded": "This requires wisdom. Anyone with insight should figure out the meaning of the beast\u2019s number, because it represents a man\u2019s number\u2014and that number is 666.",
           "context": ""
         }
       ]
@@ -1471,7 +1465,7 @@
       "verses": [
         {
           "verse": 1,
-          "kjv": "And I looked, and, lo, a Lamb stood on the mount Sion, and with him an hundred forty and four thousand, having his Father’s name written in their foreheads.",
+          "kjv": "And I looked, and, lo, a Lamb stood on the mount Sion, and with him an hundred forty and four thousand, having his Father\u2019s name written in their foreheads.",
           "decoded": "I looked and saw the Lamb standing on Mount Zion, and with him were 144,000 people who had the name of his Father written on their foreheads.",
           "context": ""
         },
@@ -1502,7 +1496,7 @@
         {
           "verse": 6,
           "kjv": "And I saw another angel fly in the midst of heaven, having the everlasting gospel to preach unto them that dwell on the earth, and to every nation, and kindred, and tongue, and people,",
-          "decoded": "I saw another angel flying in the sky, carrying the eternal gospel to share with everyone living on earth—every nation, tribe, language, and people.",
+          "decoded": "I saw another angel flying in the sky, carrying the eternal gospel to share with everyone living on earth\u2014every nation, tribe, language, and people.",
           "context": ""
         },
         {
@@ -1532,13 +1526,13 @@
         {
           "verse": 11,
           "kjv": "And the smoke of their torment ascendeth up for ever and ever: and they have no rest day nor night, who worship the beast and his image, and whosoever receiveth the mark of his name.",
-          "decoded": "The smoke from their suffering rises forever, and they have no rest day or night—those who worship the beast, its image, or receive its mark.",
+          "decoded": "The smoke from their suffering rises forever, and they have no rest day or night\u2014those who worship the beast, its image, or receive its mark.",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "Here is the patience of the saints: here are they that keep the commandments of God, and the faith of Jesus.",
-          "decoded": "This is where the faithful show endurance—those who obey God's commandments and maintain their faith in Jesus.",
+          "decoded": "This is where the faithful show endurance\u2014those who obey God's commandments and maintain their faith in Jesus.",
           "context": ""
         },
         {
@@ -1556,7 +1550,7 @@
         {
           "verse": 15,
           "kjv": "And another angel came out of the temple, crying with a loud voice to him that sat on the cloud, Thrust in thy sickle, and reap: for the time is come for thee to reap; for the harvest of the earth is ripe.",
-          "decoded": "Another angel came out of the temple and shouted to the one on the cloud, 'Put your sickle in and harvest, because the time to gather the earth’s harvest has come; it is fully ready.'",
+          "decoded": "Another angel came out of the temple and shouted to the one on the cloud, 'Put your sickle in and harvest, because the time to gather the earth\u2019s harvest has come; it is fully ready.'",
           "context": ""
         },
         {
@@ -1574,7 +1568,7 @@
         {
           "verse": 18,
           "kjv": "And another angel came out from the altar, which had power over fire; and cried with a loud cry to him that had the sharp sickle, saying, Thrust in thy sharp sickle, and gather the clusters of the vine of the earth; for her grapes are fully ripe.",
-          "decoded": "Another angel came from the altar, with authority over fire, and shouted to the angel with the sickle, 'Use your sickle to harvest the earth’s grapes because they are fully ripe.'",
+          "decoded": "Another angel came from the altar, with authority over fire, and shouted to the angel with the sickle, 'Use your sickle to harvest the earth\u2019s grapes because they are fully ripe.'",
           "context": ""
         },
         {
@@ -1586,7 +1580,7 @@
         {
           "verse": 20,
           "kjv": "And the winepress was trodden without the city, and blood came out of the winepress, even unto the horse bridles, by the space of a thousand and six hundred furlongs.",
-          "decoded": "The winepress was stomped outside the city, and blood flowed out so deeply it reached the horses’ bridles for a distance of 1,600 furlongs (about 200 miles).",
+          "decoded": "The winepress was stomped outside the city, and blood flowed out so deeply it reached the horses\u2019 bridles for a distance of 1,600 furlongs (about 200 miles).",
           "context": ""
         }
       ]
@@ -1682,7 +1676,7 @@
         {
           "verse": 6,
           "kjv": "For they have shed the blood of saints and prophets, and thou hast given them blood to drink; for they are worthy.",
-          "decoded": "Because these people killed God's holy ones and prophets, God has given them blood to drink as their punishment—they deserve it.",
+          "decoded": "Because these people killed God's holy ones and prophets, God has given them blood to drink as their punishment\u2014they deserve it.",
           "context": ""
         },
         {
@@ -1706,7 +1700,7 @@
         {
           "verse": 10,
           "kjv": "And the fifth angel poured out his vial upon the seat of the beast; and his kingdom was full of darkness; and they gnawed their tongues for pain,",
-          "decoded": "The fifth angel poured his bowl on the beast’s throne, and his kingdom was plunged into darkness. People in pain bit their tongues in agony.",
+          "decoded": "The fifth angel poured his bowl on the beast\u2019s throne, and his kingdom was plunged into darkness. People in pain bit their tongues in agony.",
           "context": ""
         },
         {
@@ -1736,7 +1730,7 @@
         {
           "verse": 15,
           "kjv": "Behold, I come as a thief. Blessed is he that watcheth, and keepeth his garments, lest he walk naked, and they see his shame.",
-          "decoded": "Look, I am coming like a thief. Blessed is the one who stays alert and keeps their faith strong, so they won’t be exposed and ashamed.",
+          "decoded": "Look, I am coming like a thief. Blessed is the one who stays alert and keeps their faith strong, so they won\u2019t be exposed and ashamed.",
           "context": ""
         },
         {
@@ -1754,7 +1748,7 @@
         {
           "verse": 18,
           "kjv": "And there were voices, and thunders, and lightnings; and there was a great earthquake, such as was not since men were upon the earth, so mighty an earthquake, and so great.",
-          "decoded": "There were voices, thunder, and lightning, and a massive earthquake like no other since humans have lived on earth—so powerful and so huge.",
+          "decoded": "There were voices, thunder, and lightning, and a massive earthquake like no other since humans have lived on earth\u2014so powerful and so huge.",
           "context": ""
         },
         {
@@ -1772,7 +1766,7 @@
         {
           "verse": 21,
           "kjv": "And there fell upon men a great hail out of heaven, every stone about the weight of a talent: and men blasphemed God because of the plague of the hail; for the plague thereof was exceeding great.",
-          "decoded": "Huge hailstones, each weighing about 100 pounds, fell from heaven on people, and they cursed God because of the terrible hailstorm—it was an extremely severe disaster.",
+          "decoded": "Huge hailstones, each weighing about 100 pounds, fell from heaven on people, and they cursed God because of the terrible hailstorm\u2014it was an extremely severe disaster.",
           "context": ""
         }
       ]
@@ -1808,13 +1802,13 @@
         {
           "verse": 5,
           "kjv": "And upon her forehead was a name written, MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS AND ABOMINATIONS OF THE EARTH.",
-          "decoded": "On her forehead was written a name: 'MYSTERY, BABYLON THE GREAT, THE MOTHER OF PROSTITUTES AND OF THE EARTH’S ABOMINATIONS.'",
+          "decoded": "On her forehead was written a name: 'MYSTERY, BABYLON THE GREAT, THE MOTHER OF PROSTITUTES AND OF THE EARTH\u2019S ABOMINATIONS.'",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "And I saw the woman drunken with the blood of the saints, and with the blood of the martyrs of Jesus: and when I saw her, I wondered with great admiration.",
-          "decoded": "I saw the woman drunk on the blood of God’s holy people and the blood of Jesus’ martyrs. When I saw her, I was amazed with great wonder.",
+          "decoded": "I saw the woman drunk on the blood of God\u2019s holy people and the blood of Jesus\u2019 martyrs. When I saw her, I was amazed with great wonder.",
           "context": ""
         },
         {
@@ -1916,7 +1910,7 @@
         {
           "verse": 4,
           "kjv": "And I heard another voice from heaven, saying, Come out of her, my people, that ye be not partakers of her sins, and that ye receive not of her plagues.",
-          "decoded": "Then I heard another voice from heaven saying, 'My people, leave her so you don’t share in her sins or suffer her punishments.'",
+          "decoded": "Then I heard another voice from heaven saying, 'My people, leave her so you don\u2019t share in her sins or suffer her punishments.'",
           "context": ""
         },
         {
@@ -1928,7 +1922,7 @@
         {
           "verse": 6,
           "kjv": "Reward her even as she rewarded you, and double unto her double according to her works: in the cup which she hath filled fill to her double.",
-          "decoded": "Give her back exactly what she gave others, and double it—pay her back twice as much for what she has done. Fill her cup to overflowing.",
+          "decoded": "Give her back exactly what she gave others, and double it\u2014pay her back twice as much for what she has done. Fill her cup to overflowing.",
           "context": ""
         },
         {
@@ -1940,7 +1934,7 @@
         {
           "verse": 8,
           "kjv": "Therefore shall her plagues come in one day, death, and mourning, and famine; and she shall be utterly burned with fire: for strong is the Lord God who judgeth her.",
-          "decoded": "So her punishments will come suddenly—death, mourning, and famine—and she will be completely destroyed by fire. The Lord God who judges her is powerful.",
+          "decoded": "So her punishments will come suddenly\u2014death, mourning, and famine\u2014and she will be completely destroyed by fire. The Lord God who judges her is powerful.",
           "context": ""
         },
         {
@@ -2096,13 +2090,13 @@
         {
           "verse": 9,
           "kjv": "And he saith unto me, Write, Blessed are they which are called unto the marriage supper of the Lamb. And he saith unto me, These are the true sayings of God.",
-          "decoded": "He told me, 'Write this: Blessed are those invited to the Lamb’s wedding feast.' He also said, 'These words are trustworthy and true from God.'",
+          "decoded": "He told me, 'Write this: Blessed are those invited to the Lamb\u2019s wedding feast.' He also said, 'These words are trustworthy and true from God.'",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "And I fell at his feet to worship him. And he said unto me, See thou do it not: I am thy fellowservant, and of thy brethren that have the testimony of Jesus: worship God: for the testimony of Jesus is the spirit of prophecy.",
-          "decoded": "I fell down to worship him, but he said, 'Don’t do that! I am a fellow servant with you and with your brothers who hold to the testimony of Jesus. Worship God instead, because the testimony of Jesus is the essence of prophecy.'",
+          "decoded": "I fell down to worship him, but he said, 'Don\u2019t do that! I am a fellow servant with you and with your brothers who hold to the testimony of Jesus. Worship God instead, because the testimony of Jesus is the essence of prophecy.'",
           "context": ""
         },
         {
@@ -2132,7 +2126,7 @@
         {
           "verse": 15,
           "kjv": "And out of his mouth goeth a sharp sword, that with it he should smite the nations: and he shall rule them with a rod of iron: and he treadeth the winepress of the fierceness and wrath of Almighty God.",
-          "decoded": "A sharp sword comes out of his mouth to strike down the nations. He will rule them with an iron rod and trample the winepress of God’s fierce anger.",
+          "decoded": "A sharp sword comes out of his mouth to strike down the nations. He will rule them with an iron rod and trample the winepress of God\u2019s fierce anger.",
           "context": ""
         },
         {
@@ -2150,7 +2144,7 @@
         {
           "verse": 18,
           "kjv": "That ye may eat the flesh of kings, and the flesh of captains, and the flesh of mighty men, and the flesh of horses, and of them that sit on them, and the flesh of all men, both free and bond, both small and great.",
-          "decoded": "So you can eat the flesh of kings, commanders, powerful warriors, horses and their riders, and all people—whether free or slaves, young or old.",
+          "decoded": "So you can eat the flesh of kings, commanders, powerful warriors, horses and their riders, and all people\u2014whether free or slaves, young or old.",
           "context": ""
         },
         {
@@ -2162,7 +2156,7 @@
         {
           "verse": 20,
           "kjv": "And the beast was taken, and with him the false prophet that wrought miracles before him, with which he deceived them that had received the mark of the beast, and them that worshipped his image. These both were cast alive into a lake of fire burning with brimstone.",
-          "decoded": "The beast was captured, along with the false prophet who performed miracles to deceive those who accepted the beast’s mark and worshiped its image. Both were thrown alive into a fiery lake burning with sulfur.",
+          "decoded": "The beast was captured, along with the false prophet who performed miracles to deceive those who accepted the beast\u2019s mark and worshiped its image. Both were thrown alive into a fiery lake burning with sulfur.",
           "context": ""
         },
         {
@@ -2198,7 +2192,7 @@
         {
           "verse": 4,
           "kjv": "And I saw thrones, and they sat upon them, and judgment was given unto them: and I saw the souls of them that were beheaded for the witness of Jesus, and for the word of God, and which had not worshipped the beast, neither his image, neither had received his mark upon their foreheads, or in their hands; and they lived and reigned with Christ a thousand years.",
-          "decoded": "I saw thrones and people sitting on them, given authority to judge. I also saw the souls of those who had been beheaded for their testimony about Jesus and God’s word, who had not worshiped the beast or its image, nor accepted its mark on their foreheads or hands; they came to life and ruled with Christ for a thousand years.",
+          "decoded": "I saw thrones and people sitting on them, given authority to judge. I also saw the souls of those who had been beheaded for their testimony about Jesus and God\u2019s word, who had not worshiped the beast or its image, nor accepted its mark on their foreheads or hands; they came to life and ruled with Christ for a thousand years.",
           "context": ""
         },
         {
@@ -2222,13 +2216,13 @@
         {
           "verse": 8,
           "kjv": "And shall go out to deceive the nations which are in the four quarters of the earth, Gog and Magog, to gather them together to battle: the number of whom is as the sand of the sea.",
-          "decoded": "He will go out to deceive the nations from all over the earth—called Gog and Magog—to gather them for battle. Their number is like the sand on the seashore.",
+          "decoded": "He will go out to deceive the nations from all over the earth\u2014called Gog and Magog\u2014to gather them for battle. Their number is like the sand on the seashore.",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "And they went up on the breadth of the earth, and compassed the camp of the saints about, and the beloved city: and fire came down from God out of heaven, and devoured them.",
-          "decoded": "They spread out across the earth and surrounded God’s people and the beloved city, but fire came down from God in heaven and destroyed them.",
+          "decoded": "They spread out across the earth and surrounded God\u2019s people and the beloved city, but fire came down from God in heaven and destroyed them.",
           "context": ""
         },
         {
@@ -2323,8 +2317,8 @@
         },
         {
           "verse": 9,
-          "kjv": "And there came unto me one of the seven angels which had the seven vials full of the seven last plagues, and talked with me, saying, Come hither, I will shew thee the bride, the Lamb’s wife.",
-          "decoded": "One of the seven angels with the seven last plagues came to me and said, 'Come here, I will show you the bride, the Lamb’s wife.'",
+          "kjv": "And there came unto me one of the seven angels which had the seven vials full of the seven last plagues, and talked with me, saying, Come hither, I will shew thee the bride, the Lamb\u2019s wife.",
+          "decoded": "One of the seven angels with the seven last plagues came to me and said, 'Come here, I will show you the bride, the Lamb\u2019s wife.'",
           "context": ""
         },
         {
@@ -2336,7 +2330,7 @@
         {
           "verse": 11,
           "kjv": "Having the glory of God: and her light was like unto a stone most precious, even like a jasper stone, clear as crystal;",
-          "decoded": "The city shone with God’s glory, and its light was like a very precious jasper stone, clear like crystal.",
+          "decoded": "The city shone with God\u2019s glory, and its light was like a very precious jasper stone, clear like crystal.",
           "context": ""
         },
         {
@@ -2354,7 +2348,7 @@
         {
           "verse": 14,
           "kjv": "And the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb.",
-          "decoded": "The city’s wall had twelve foundations, and on them were the names of the twelve apostles of the Lamb.",
+          "decoded": "The city\u2019s wall had twelve foundations, and on them were the names of the twelve apostles of the Lamb.",
           "context": ""
         },
         {
@@ -2372,19 +2366,19 @@
         {
           "verse": 17,
           "kjv": "And he measured the wall thereof, an hundred and forty and four cubits, according to the measure of a man, that is, of the angel.",
-          "decoded": "He measured the city’s wall and found it to be 144 cubits thick, using the standard length of a man, which is the angel’s measurement.",
+          "decoded": "He measured the city\u2019s wall and found it to be 144 cubits thick, using the standard length of a man, which is the angel\u2019s measurement.",
           "context": ""
         },
         {
           "verse": 18,
           "kjv": "And the building of the wall of it was of jasper: and the city was pure gold, like unto clear glass.",
-          "decoded": "The city’s wall was made of jasper, and the city itself was pure gold, shining like clear glass.",
+          "decoded": "The city\u2019s wall was made of jasper, and the city itself was pure gold, shining like clear glass.",
           "context": ""
         },
         {
           "verse": 19,
           "kjv": "And the foundations of the wall of the city were garnished with all manner of precious stones. The first foundation was jasper; the second, sapphire; the third, a chalcedony; the fourth, an emerald;",
-          "decoded": "The city’s wall foundations were decorated with every kind of precious stone. The first foundation was jasper; the second was sapphire; the third was chalcedony; the fourth was emerald.",
+          "decoded": "The city\u2019s wall foundations were decorated with every kind of precious stone. The first foundation was jasper; the second was sapphire; the third was chalcedony; the fourth was emerald.",
           "context": ""
         },
         {
@@ -2408,19 +2402,19 @@
         {
           "verse": 23,
           "kjv": "And the city had no need of the sun, neither of the moon, to shine in it: for the glory of God did lighten it, and the Lamb is the light thereof.",
-          "decoded": "The city doesn’t need the sun or moon to shine because God’s glory lights it, and the Lamb is its light.",
+          "decoded": "The city doesn\u2019t need the sun or moon to shine because God\u2019s glory lights it, and the Lamb is its light.",
           "context": ""
         },
         {
           "verse": 24,
           "kjv": "And the nations of them which are saved shall walk in the light of it: and the kings of the earth do bring their glory and honour into it.",
-          "decoded": "The saved nations will walk in the city’s light, and the kings of the earth will bring their glory and honor into it.",
+          "decoded": "The saved nations will walk in the city\u2019s light, and the kings of the earth will bring their glory and honor into it.",
           "context": ""
         },
         {
           "verse": 25,
           "kjv": "And the gates of it shall not be shut at all by day: for there shall be no night there.",
-          "decoded": "The city’s gates will never be closed during the day because there will be no night there.",
+          "decoded": "The city\u2019s gates will never be closed during the day because there will be no night there.",
           "context": ""
         },
         {
@@ -2431,8 +2425,8 @@
         },
         {
           "verse": 27,
-          "kjv": "And there shall in no wise enter into it any thing that defileth, neither whatsoever worketh abomination, or maketh a lie: but they which are written in the Lamb’s book of life.",
-          "decoded": "Nothing impure, sinful, or deceitful will enter the city—only those whose names are written in the Lamb’s book of life.",
+          "kjv": "And there shall in no wise enter into it any thing that defileth, neither whatsoever worketh abomination, or maketh a lie: but they which are written in the Lamb\u2019s book of life.",
+          "decoded": "Nothing impure, sinful, or deceitful will enter the city\u2014only those whose names are written in the Lamb\u2019s book of life.",
           "context": ""
         }
       ]
@@ -2450,7 +2444,7 @@
         {
           "verse": 2,
           "kjv": "In the midst of the street of it, and on either side of the river, was there the tree of life, which bare twelve manner of fruits, and yielded her fruit every month: and the leaves of the tree were for the healing of the nations.",
-          "decoded": "In the center of the city’s main street and along both sides of the river stood the tree of life, producing twelve kinds of fruit, one kind each month. Its leaves were used to heal the nations.",
+          "decoded": "In the center of the city\u2019s main street and along both sides of the river stood the tree of life, producing twelve kinds of fruit, one kind each month. Its leaves were used to heal the nations.",
           "context": ""
         },
         {
@@ -2462,19 +2456,19 @@
         {
           "verse": 4,
           "kjv": "And they shall see his face; and his name shall be in their foreheads.",
-          "decoded": "They will see God’s face, and His name will be written on their foreheads.",
+          "decoded": "They will see God\u2019s face, and His name will be written on their foreheads.",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "And there shall be no night there; and they need no candle, neither light of the sun; for the Lord God giveth them light: and they shall reign for ever and ever.",
-          "decoded": "There will be no night there; they won’t need lamps or sunlight because the Lord God will be their light. They will reign forever.",
+          "decoded": "There will be no night there; they won\u2019t need lamps or sunlight because the Lord God will be their light. They will reign forever.",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "And he said unto me, These sayings are faithful and true: and the Lord God of the holy prophets sent his angel to shew unto his servants the things which must shortly be done.",
-          "decoded": "He told me, ‘These words are trustworthy and true. The Lord God, who inspired the holy prophets, sent His angel to show His servants what will soon happen.’",
+          "decoded": "He told me, \u2018These words are trustworthy and true. The Lord God, who inspired the holy prophets, sent His angel to show His servants what will soon happen.\u2019",
           "context": ""
         },
         {
@@ -2492,13 +2486,13 @@
         {
           "verse": 9,
           "kjv": "Then saith he unto me, See thou do it not: for I am thy fellowservant, and of thy brethren the prophets, and of them which keep the sayings of this book: worship God.",
-          "decoded": "But the angel said to me, ‘Don’t do that! I am a fellow servant with you and with the prophets and all who obey this book’s words. Worship God alone.’",
+          "decoded": "But the angel said to me, \u2018Don\u2019t do that! I am a fellow servant with you and with the prophets and all who obey this book\u2019s words. Worship God alone.\u2019",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "And he saith unto me, Seal not the sayings of the prophecy of this book: for the time is at hand.",
-          "decoded": "He told me, ‘Don’t seal up the words of this prophecy, because the time is near.’",
+          "decoded": "He told me, \u2018Don\u2019t seal up the words of this prophecy, because the time is near.\u2019",
           "context": ""
         },
         {
@@ -2516,7 +2510,7 @@
         {
           "verse": 13,
           "kjv": "I am Alpha and Omega, the beginning and the end, the first and the last.",
-          "decoded": "I am the Alpha and the Omega—the beginning and the end, the first and the last.",
+          "decoded": "I am the Alpha and the Omega\u2014the beginning and the end, the first and the last.",
           "context": ""
         },
         {
@@ -2528,7 +2522,7 @@
         {
           "verse": 15,
           "kjv": "For without are dogs, and sorcerers, and whoremongers, and murderers, and idolaters, and whosoever loveth and maketh a lie.",
-          "decoded": "Outside are those who are morally corrupt—like evil people, sorcerers, sexual sinners, murderers, idol worshipers, and anyone who loves and tells lies.",
+          "decoded": "Outside are those who are morally corrupt\u2014like evil people, sorcerers, sexual sinners, murderers, idol worshipers, and anyone who loves and tells lies.",
           "context": ""
         },
         {

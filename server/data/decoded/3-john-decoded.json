@@ -3,8 +3,8 @@
   "bookName": "3 John",
   "slug": "3-john",
   "author": "Brittany Johnson",
-  "description": "The Book of 3 John — every verse decoded into plain, modern English (DMLV).",
-  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "description": "The Book of 3 John \u2014 every verse decoded into plain, modern English (DMLV).",
+  "copyright": "\u00a9 2026 Brittany Johnson. All rights reserved.",
   "totalChapters": 1,
   "chapters": [
     {
@@ -49,7 +49,7 @@
         },
         {
           "verse": 7,
-          "kjv": "Because that for his name’s sake they went forth, taking nothing of the Gentiles.",
+          "kjv": "Because that for his name\u2019s sake they went forth, taking nothing of the Gentiles.",
           "decoded": "They left for the sake of Jesus and accepted no financial help from non-believers.",
           "context": ""
         },
@@ -68,13 +68,13 @@
         {
           "verse": 10,
           "kjv": "Wherefore, if I come, I will remember his deeds which he doeth, prating against us with malicious words: and not content therewith, neither doth he himself receive the brethren, and forbiddeth them that would, and casteth them out of the church.",
-          "decoded": "If I visit, I will confront him about his actions—he speaks badly about us, refuses to welcome other believers, forbids those who want to, and even expels them from the church.",
+          "decoded": "If I visit, I will confront him about his actions\u2014he speaks badly about us, refuses to welcome other believers, forbids those who want to, and even expels them from the church.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "Beloved, follow not that which is evil, but that which is good. He that doeth good is of God: but he that doeth evil hath not seen God.",
-          "decoded": "Dear friend, don’t imitate what is wrong; instead, do what is right. Anyone who does good comes from God, but anyone who does evil does not truly know God.",
+          "decoded": "Dear friend, don\u2019t imitate what is wrong; instead, do what is right. Anyone who does good comes from God, but anyone who does evil does not truly know God.",
           "context": ""
         },
         {
@@ -86,19 +86,13 @@
         {
           "verse": 13,
           "kjv": "I had many things to write, but I will not with ink and pen write unto thee:",
-          "decoded": "I have many things to tell you, but I won’t write them down with pen and ink.",
+          "decoded": "I have many things to tell you, but I won\u2019t write them down with pen and ink.",
           "context": ""
         },
         {
           "verse": 14,
           "kjv": "But I trust I shall shortly see thee, and we shall speak face to face. Peace be to thee. Our friends salute thee. Greet the friends by name.",
           "decoded": "But I hope to see you soon so we can talk in person.",
-          "context": ""
-        },
-        {
-          "verse": 14,
-          "kjv": "But I trust I shall shortly see thee, and we shall speak face to face. Peace be to thee. Our friends salute thee. Greet the friends by name.",
-          "decoded": "Peace be with you. Our friends send their greetings. Please greet our friends personally by name.",
           "context": ""
         }
       ]

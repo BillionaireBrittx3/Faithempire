@@ -3,8 +3,8 @@
   "bookName": "Micah",
   "slug": "micah",
   "author": "Brittany Johnson",
-  "description": "The Book of Micah — every verse decoded into plain, modern English (DMLV).",
-  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "description": "The Book of Micah \u2014 every verse decoded into plain, modern English (DMLV).",
+  "copyright": "\u00a9 2026 Brittany Johnson. All rights reserved.",
   "totalChapters": 7,
   "chapters": [
     {
@@ -38,13 +38,13 @@
         {
           "verse": 5,
           "kjv": "For the transgression of Jacob is all this, and for the sins of the house of Israel. What is the transgression of Jacob? is it not Samaria? and what are the high places of Judah? are they not Jerusalem?",
-          "decoded": "All this is because of Jacob’s rebellion and the sins of Israel’s people. What is Jacob’s rebellion? Isn’t it Samaria? And what are Judah’s high places? Aren’t they Jerusalem?",
+          "decoded": "All this is because of Jacob\u2019s rebellion and the sins of Israel\u2019s people. What is Jacob\u2019s rebellion? Isn\u2019t it Samaria? And what are Judah\u2019s high places? Aren\u2019t they Jerusalem?",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "Therefore I will make Samaria as an heap of the field, and as plantings of a vineyard: and I will pour down the stones thereof into the valley, and I will discover the foundations thereof.",
-          "decoded": "So I will destroy Samaria, leaving it like a pile of rubble or a vineyard that’s been torn up. I will throw its stones into the valley and expose its foundations.",
+          "decoded": "So I will destroy Samaria, leaving it like a pile of rubble or a vineyard that\u2019s been torn up. I will throw its stones into the valley and expose its foundations.",
           "context": ""
         },
         {
@@ -56,7 +56,7 @@
         {
           "verse": 8,
           "kjv": "Therefore I will wail and howl, I will go stripped and naked: I will make a wailing like the dragons, and mourning as the owls.",
-          "decoded": "That’s why I will cry out and mourn; I will go stripped and naked, wailing like dragons and mourning like owls.",
+          "decoded": "That\u2019s why I will cry out and mourn; I will go stripped and naked, wailing like dragons and mourning like owls.",
           "context": ""
         },
         {
@@ -68,7 +68,7 @@
         {
           "verse": 10,
           "kjv": "Declare ye it not at Gath, weep ye not at all: in the house of Aphrah roll thyself in the dust.",
-          "decoded": "Don’t announce this in Gath; don’t cry there at all. In the house of Aphrah, roll yourself in the dust in mourning.",
+          "decoded": "Don\u2019t announce this in Gath; don\u2019t cry there at all. In the house of Aphrah, roll yourself in the dust in mourning.",
           "context": ""
         },
         {
@@ -80,13 +80,13 @@
         {
           "verse": 12,
           "kjv": "For the inhabitant of Maroth waited carefully for good: but evil came down from the LORD unto the gate of Jerusalem.",
-          "decoded": "The people of Maroth hoped for good news, but evil came from the LORD to Jerusalem’s gates.",
+          "decoded": "The people of Maroth hoped for good news, but evil came from the LORD to Jerusalem\u2019s gates.",
           "context": ""
         },
         {
           "verse": 13,
           "kjv": "O thou inhabitant of Lachish, bind the chariot to the swift beast: she is the beginning of the sin to the daughter of Zion: for the transgressions of Israel were found in thee.",
-          "decoded": "People of Lachish, prepare your chariots quickly. You were the first to sin against Zion because Israel’s sins were found in you.",
+          "decoded": "People of Lachish, prepare your chariots quickly. You were the first to sin against Zion because Israel\u2019s sins were found in you.",
           "context": ""
         },
         {
@@ -104,7 +104,7 @@
         {
           "verse": 16,
           "kjv": "Make thee bald, and poll thee for thy delicate children; enlarge thy baldness as the eagle; for they are gone into captivity from thee.",
-          "decoded": "Shave your head and scalp yourself for your precious children; make your baldness as wide as an eagle’s wings because they have been taken captive from you.",
+          "decoded": "Shave your head and scalp yourself for your precious children; make your baldness as wide as an eagle\u2019s wings because they have been taken captive from you.",
           "context": ""
         }
       ]
@@ -128,31 +128,31 @@
         {
           "verse": 3,
           "kjv": "Therefore thus saith the LORD; Behold, against this family do I devise an evil, from which ye shall not remove your necks; neither shall ye go haughtily: for this time is evil.",
-          "decoded": "So the LORD says: I am planning disaster against this family, and you won’t be able to escape or be proud because this is a time of trouble.",
+          "decoded": "So the LORD says: I am planning disaster against this family, and you won\u2019t be able to escape or be proud because this is a time of trouble.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "In that day shall one take up a parable against you, and lament with a doleful lamentation, and say, We be utterly spoiled: he hath changed the portion of my people: how hath he removed it from me! turning away he hath divided our fields.",
-          "decoded": "On that day, people will speak against you in a sad song, crying bitterly, “We are completely ruined! Our land has been taken from us; he has taken it away and divided our fields.”",
+          "decoded": "On that day, people will speak against you in a sad song, crying bitterly, \u201cWe are completely ruined! Our land has been taken from us; he has taken it away and divided our fields.\u201d",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "Therefore thou shalt have none that shall cast a cord by lot in the congregation of the LORD.",
-          "decoded": "Because of this, no one will be able to claim land by casting lots in the LORD’s assembly.",
+          "decoded": "Because of this, no one will be able to claim land by casting lots in the LORD\u2019s assembly.",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "Prophesy ye not, say they to them that prophesy: they shall not prophesy to them, that they shall not take shame.",
-          "decoded": "“Don’t prophesy,” they say to the prophets. “Don’t speak to those who shame us.”",
+          "decoded": "\u201cDon\u2019t prophesy,\u201d they say to the prophets. \u201cDon\u2019t speak to those who shame us.\u201d",
           "context": ""
         },
         {
           "verse": 7,
           "kjv": "O thou that art named the house of Jacob, is the spirit of the LORD straitened? are these his doings? do not my words do good to him that walketh uprightly?",
-          "decoded": "People of Jacob, is the LORD’s Spirit limited? Are these his actions? Don’t my words bring good to those who live honestly?",
+          "decoded": "People of Jacob, is the LORD\u2019s Spirit limited? Are these his actions? Don\u2019t my words bring good to those who live honestly?",
           "context": ""
         },
         {
@@ -176,7 +176,7 @@
         {
           "verse": 11,
           "kjv": "If a man walking in the spirit and falsehood do lie, saying, I will prophesy unto thee of wine and of strong drink; he shall even be the prophet of this people.",
-          "decoded": "If someone, filled with lies and deceit, says, “I will tell you about wine and strong drink,” that person will be accepted as a prophet for this people.",
+          "decoded": "If someone, filled with lies and deceit, says, \u201cI will tell you about wine and strong drink,\u201d that person will be accepted as a prophet for this people.",
           "context": ""
         },
         {
@@ -200,7 +200,7 @@
         {
           "verse": 1,
           "kjv": "And I said, Hear, I pray you, O heads of Jacob, and ye princes of the house of Israel; Is it not for you to know judgment?",
-          "decoded": "I said, “Listen, leaders of Jacob and rulers of Israel, isn’t it your job to understand justice?",
+          "decoded": "I said, \u201cListen, leaders of Jacob and rulers of Israel, isn\u2019t it your job to understand justice?",
           "context": ""
         },
         {
@@ -218,19 +218,19 @@
         {
           "verse": 4,
           "kjv": "Then shall they cry unto the LORD, but he will not hear them: he will even hide his face from them at that time, as they have behaved themselves ill in their doings.",
-          "decoded": "Then they will cry out to the LORD, but he won’t listen; he will turn his face away because of their evil actions.",
+          "decoded": "Then they will cry out to the LORD, but he won\u2019t listen; he will turn his face away because of their evil actions.",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "Thus saith the LORD concerning the prophets that make my people err, that bite with their teeth, and cry, Peace; and he that putteth not into their mouths, they even prepare war against him.",
-          "decoded": "The LORD says this about the prophets who mislead my people: they snap like dogs and say, “Peace,” but if someone doesn’t give them what they want, they prepare to attack him.",
+          "decoded": "The LORD says this about the prophets who mislead my people: they snap like dogs and say, \u201cPeace,\u201d but if someone doesn\u2019t give them what they want, they prepare to attack him.",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "Therefore night shall be unto you, that ye shall not have a vision; and it shall be dark unto you, that ye shall not divine; and the sun shall go down over the prophets, and the day shall be dark over them.",
-          "decoded": "Because of this, you will have darkness instead of visions; you won’t be able to predict anything. The sun will set on the prophets, and their day will be dark.",
+          "decoded": "Because of this, you will have darkness instead of visions; you won\u2019t be able to predict anything. The sun will set on the prophets, and their day will be dark.",
           "context": ""
         },
         {
@@ -260,7 +260,7 @@
         {
           "verse": 11,
           "kjv": "The heads thereof judge for reward, and the priests thereof teach for hire, and the prophets thereof divine for money: yet will they lean upon the LORD, and say, Is not the LORD among us? none evil can come upon us.",
-          "decoded": "Its leaders judge for bribes, its priests teach for money, and its prophets predict for pay. Yet they trust in the LORD and say, “Isn’t the LORD with us? Nothing bad can happen to us.”",
+          "decoded": "Its leaders judge for bribes, its priests teach for money, and its prophets predict for pay. Yet they trust in the LORD and say, \u201cIsn\u2019t the LORD with us? Nothing bad can happen to us.\u201d",
           "context": ""
         },
         {
@@ -278,13 +278,13 @@
         {
           "verse": 1,
           "kjv": "But in the last days it shall come to pass, that the mountain of the house of the LORD shall be established in the top of the mountains, and it shall be exalted above the hills; and people shall flow unto it.",
-          "decoded": "In the future, the LORD’s temple mountain will be established above all other mountains and hills, and many people will come to it.",
+          "decoded": "In the future, the LORD\u2019s temple mountain will be established above all other mountains and hills, and many people will come to it.",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "And many nations shall come, and say, Come, and let us go up to the mountain of the LORD, and to the house of the God of Jacob; and he will teach us of his ways, and we will walk in his paths: for the law shall go forth of Zion, and the word of the LORD from Jerusalem.",
-          "decoded": "Many nations will say, “Let’s go to the LORD’s mountain and the house of Jacob’s God. He will teach us his ways, and we will follow his paths because the law will come from Zion and the LORD’s word from Jerusalem.”",
+          "decoded": "Many nations will say, \u201cLet\u2019s go to the LORD\u2019s mountain and the house of Jacob\u2019s God. He will teach us his ways, and we will follow his paths because the law will come from Zion and the LORD\u2019s word from Jerusalem.\u201d",
           "context": ""
         },
         {
@@ -320,13 +320,13 @@
         {
           "verse": 8,
           "kjv": "And thou, O tower of the flock, the strong hold of the daughter of Zion, unto thee shall it come, even the first dominion; the kingdom shall come to the daughter of Jerusalem.",
-          "decoded": "You, tower of the flock and strong fortress of Zion’s daughter, will receive the first authority; the kingdom will come to Jerusalem’s daughter.",
+          "decoded": "You, tower of the flock and strong fortress of Zion\u2019s daughter, will receive the first authority; the kingdom will come to Jerusalem\u2019s daughter.",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "Now why dost thou cry out aloud? is there no king in thee? is thy counsellor perished? for pangs have taken thee as a woman in travail.",
-          "decoded": "Why are you crying out loudly? Don’t you have a king? Has your advisor died? Are you suffering like a woman giving birth?",
+          "decoded": "Why are you crying out loudly? Don\u2019t you have a king? Has your advisor died? Are you suffering like a woman giving birth?",
           "context": ""
         },
         {
@@ -338,13 +338,13 @@
         {
           "verse": 11,
           "kjv": "Now also many nations are gathered against thee, that say, Let her be defiled, and let our eye look upon Zion.",
-          "decoded": "Many nations have gathered against you, saying, “Let her be defiled so we can watch Zion’s destruction.”",
+          "decoded": "Many nations have gathered against you, saying, \u201cLet her be defiled so we can watch Zion\u2019s destruction.\u201d",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "But they know not the thoughts of the LORD, neither understand they his counsel: for he shall gather them as the sheaves into the floor.",
-          "decoded": "But they don’t understand the LORD’s plans or his purpose. He will gather them like bundles of grain on a threshing floor.",
+          "decoded": "But they don\u2019t understand the LORD\u2019s plans or his purpose. He will gather them like bundles of grain on a threshing floor.",
           "context": ""
         },
         {
@@ -362,25 +362,25 @@
         {
           "verse": 1,
           "kjv": "Now gather thyself in troops, O daughter of troops: he hath laid siege against us: they shall smite the judge of Israel with a rod upon the cheek.",
-          "decoded": "Gather your forces, daughter of armies! They have surrounded us and will strike Israel’s ruler on the cheek with a rod.",
+          "decoded": "Gather your forces, daughter of armies! They have surrounded us and will strike Israel\u2019s ruler on the cheek with a rod.",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting.",
-          "decoded": "But you, Bethlehem Ephratah, though small among Judah’s thousands, a ruler for Israel will come from you—one whose origins are from ancient times, from eternity.",
+          "decoded": "But you, Bethlehem Ephratah, though small among Judah\u2019s thousands, a ruler for Israel will come from you\u2014one whose origins are from ancient times, from eternity.",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "Therefore will he give them up, until the time that she which travaileth hath brought forth: then the remnant of his brethren shall return unto the children of Israel.",
-          "decoded": "He will abandon his people until the one giving birth has delivered; then the remaining brothers will return to Israel’s children.",
+          "decoded": "He will abandon his people until the one giving birth has delivered; then the remaining brothers will return to Israel\u2019s children.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "And he shall stand and feed in the strength of the LORD, in the majesty of the name of the LORD his God; and they shall abide: for now shall he be great unto the ends of the earth.",
-          "decoded": "He will stand and lead with the LORD’s strength and the majesty of the LORD his God’s name. His people will live safely because he will be great to the ends of the earth.",
+          "decoded": "He will stand and lead with the LORD\u2019s strength and the majesty of the LORD his God\u2019s name. His people will live safely because he will be great to the ends of the earth.",
           "context": ""
         },
         {
@@ -392,7 +392,7 @@
         {
           "verse": 6,
           "kjv": "And they shall waste the land of Assyria with the sword, and the land of Nimrod in the entrances thereof: thus shall he deliver us from the Assyrian, when he cometh into our land, and when he treadeth within our borders.",
-          "decoded": "They will destroy Assyria’s land with the sword, including Nimrod’s territory. This is how he will save us from the Assyrians when they invade our land and cross our borders.",
+          "decoded": "They will destroy Assyria\u2019s land with the sword, including Nimrod\u2019s territory. This is how he will save us from the Assyrians when they invade our land and cross our borders.",
           "context": ""
         },
         {
@@ -463,8 +463,8 @@
         },
         {
           "verse": 2,
-          "kjv": "Hear ye, O mountains, the LORD’s controversy, and ye strong foundations of the earth: for the LORD hath a controversy with his people, and he will plead with Israel.",
-          "decoded": "Listen, mountains, to the LORD’s dispute, and you strong earth foundations: the LORD has a disagreement with his people and will argue with Israel.",
+          "kjv": "Hear ye, O mountains, the LORD\u2019s controversy, and ye strong foundations of the earth: for the LORD hath a controversy with his people, and he will plead with Israel.",
+          "decoded": "Listen, mountains, to the LORD\u2019s dispute, and you strong earth foundations: the LORD has a disagreement with his people and will argue with Israel.",
           "context": ""
         },
         {
@@ -482,7 +482,7 @@
         {
           "verse": 5,
           "kjv": "O my people, remember now what Balak king of Moab consulted, and what Balaam the son of Beor answered him from Shittim unto Gilgal; that ye may know the righteousness of the LORD.",
-          "decoded": "My people, remember what King Balak of Moab planned and what Balaam son of Beor said, from Shittim to Gilgal, so you can understand the LORD’s justice.",
+          "decoded": "My people, remember what King Balak of Moab planned and what Balaam son of Beor said, from Shittim to Gilgal, so you can understand the LORD\u2019s justice.",
           "context": ""
         },
         {
@@ -505,8 +505,8 @@
         },
         {
           "verse": 9,
-          "kjv": "The LORD’s voice crieth unto the city, and the man of wisdom shall see thy name: hear ye the rod, and who hath appointed it.",
-          "decoded": "The LORD’s voice calls to the city, and wise people will recognize your name. Listen to the punishment and who has sent it.",
+          "kjv": "The LORD\u2019s voice crieth unto the city, and the man of wisdom shall see thy name: hear ye the rod, and who hath appointed it.",
+          "decoded": "The LORD\u2019s voice calls to the city, and wise people will recognize your name. Listen to the punishment and who has sent it.",
           "context": ""
         },
         {
@@ -530,7 +530,7 @@
         {
           "verse": 13,
           "kjv": "Therefore also will I make thee sick in smiting thee, in making thee desolate because of thy sins.",
-          "decoded": "That’s why I will punish you severely and leave you desolate because of your sins.",
+          "decoded": "That\u2019s why I will punish you severely and leave you desolate because of your sins.",
           "context": ""
         },
         {
@@ -548,13 +548,7 @@
         {
           "verse": 16,
           "kjv": "For the statutes of Omri are kept, and all the works of the house of Ahab, and ye walk in their counsels; that I should make thee a desolation, and the inhabitants thereof an hissing: therefore ye shall bear the reproach of my people.",
-          "decoded": "You will have olive trees all along your land, but you won’t use the oil; you will have sweet wine but won’t drink it.",
-          "context": ""
-        },
-        {
-          "verse": 16,
-          "kjv": "For the statutes of Omri are kept, and all the works of the house of Ahab, and ye walk in their counsels; that I should make thee a desolation, and the inhabitants thereof an hissing: therefore ye shall bear the reproach of my people.",
-          "decoded": "You follow the laws of Omri and the actions of Ahab’s family, following their advice. Because of this, I will make you a ruin, and your people will be mocked. You will carry the shame of my people.",
+          "decoded": "You will have olive trees all along your land, but you won\u2019t use the oil; you will have sweet wine but won\u2019t drink it.",
           "context": ""
         }
       ]
@@ -578,7 +572,7 @@
         {
           "verse": 3,
           "kjv": "That they may do evil with both hands earnestly, the prince asketh, and the judge asketh for a reward; and the great man, he uttereth his mischievous desire: so they wrap it up.",
-          "decoded": "Because of this, disaster will come to you unexpectedly; trouble will strike, and you won’t be able to avoid it. Destruction will come suddenly, and you won’t understand why.",
+          "decoded": "Because of this, disaster will come to you unexpectedly; trouble will strike, and you won\u2019t be able to avoid it. Destruction will come suddenly, and you won\u2019t understand why.",
           "context": ""
         },
         {
@@ -595,7 +589,7 @@
         },
         {
           "verse": 6,
-          "kjv": "For the son dishonoureth the father, the daughter riseth up against her mother, the daughter in law against her mother in law; a man’s enemies are the men of his own house.",
+          "kjv": "For the son dishonoureth the father, the daughter riseth up against her mother, the daughter in law against her mother in law; a man\u2019s enemies are the men of his own house.",
           "decoded": "On that day, your watchmen will call you, their souls in pain like a woman in labor; they will speak openly and overpower you.",
           "context": ""
         },
@@ -608,31 +602,31 @@
         {
           "verse": 8,
           "kjv": "Rejoice not against me, O mine enemy: when I fall, I shall arise; when I sit in darkness, the LORD shall be a light unto me.",
-          "decoded": "Don’t celebrate when I fall, my enemy. When I fall, I will get up again. When I am in darkness, the LORD will be my light.",
+          "decoded": "Don\u2019t celebrate when I fall, my enemy. When I fall, I will get up again. When I am in darkness, the LORD will be my light.",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "I will bear the indignation of the LORD, because I have sinned against him, until he plead my cause, and execute judgment for me: he will bring me forth to the light, and I shall behold his righteousness.",
-          "decoded": "I will accept the LORD’s anger because I have sinned against him, until he defends me and judges fairly. He will bring me into the light, and I will see his justice.",
+          "decoded": "I will accept the LORD\u2019s anger because I have sinned against him, until he defends me and judges fairly. He will bring me into the light, and I will see his justice.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "Then she that is mine enemy shall see it, and shame shall cover her which said unto me, Where is the LORD thy God? mine eyes shall behold her: now shall she be trodden down as the mire of the streets.",
-          "decoded": "Then my enemy will see it and be covered with shame—the one who asked, “Where is the LORD your God?” I will watch her as she is trampled like mud in the streets.",
+          "decoded": "Then my enemy will see it and be covered with shame\u2014the one who asked, \u201cWhere is the LORD your God?\u201d I will watch her as she is trampled like mud in the streets.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "In the day that thy walls are to be built, in that day shall the decree be far removed.",
-          "decoded": "On the day your walls are rebuilt, the enemy’s plans will be far away.",
+          "decoded": "On the day your walls are rebuilt, the enemy\u2019s plans will be far away.",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "In that day also he shall come even to thee from Assyria, and from the fortified cities, and from the fortress even to the river, and from sea to sea, and from mountain to mountain.",
-          "decoded": "On that day, people will come to you from Assyria, Egypt’s cities will help you, and the cities by the sea will support you.",
+          "decoded": "On that day, people will come to you from Assyria, Egypt\u2019s cities will help you, and the cities by the sea will support you.",
           "context": ""
         },
         {
