@@ -3,8 +3,8 @@
   "bookName": "Galatians",
   "slug": "galatians",
   "author": "Brittany Johnson",
-  "description": "The Book of Galatians — every verse decoded into plain, modern English (DMLV).",
-  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "description": "The Book of Galatians \u2014 every verse decoded into plain, modern English (DMLV).",
+  "copyright": "\u00a9 2026 Brittany Johnson. All rights reserved.",
   "totalChapters": 6,
   "chapters": [
     {
@@ -14,25 +14,25 @@
         {
           "verse": 1,
           "kjv": "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)",
-          "decoded": "I am Paul, an apostle—not appointed by any human authority, nor through a human, but by Jesus Christ and God the Father, who raised Jesus from the dead.",
+          "decoded": "Paul, an apostle\u2014not appointed by any human, but by Jesus Christ and God the Father, who raised Jesus from the dead \u2014",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "And all the brethren which are with me, unto the churches of Galatia:",
-          "decoded": "Along with all the brothers and sisters who are with me, I am writing to the churches in Galatia.",
+          "decoded": "and all the brothers with me, to the churches in Galatia:",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "Grace be to you and peace from God the Father, and from our Lord Jesus Christ,",
-          "decoded": "May grace and peace be given to you from God the Father and from our Lord Jesus Christ.",
+          "decoded": "May you receive grace and peace from God the Father and our Lord Jesus Christ.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "Who gave himself for our sins, that he might deliver us from this present evil world, according to the will of God and our Father:",
-          "decoded": "Jesus gave himself for our sins to rescue us from this evil world, following the will of God our Father.",
+          "decoded": "He gave himself for our sins to rescue us from this evil world, following the will of God our Father.",
           "context": ""
         },
         {
@@ -44,73 +44,73 @@
         {
           "verse": 6,
           "kjv": "I marvel that ye are so soon removed from him that called you into the grace of Christ unto another gospel:",
-          "decoded": "I am amazed that you are so quickly turning away from the one who called you by the grace of Christ to follow a different gospel.",
+          "decoded": "I am amazed that you are so quickly turning away from the one who called you by the grace of Christ to follow a different message.",
           "context": ""
         },
         {
           "verse": 7,
           "kjv": "Which is not another; but there be some that trouble you, and would pervert the gospel of Christ.",
-          "decoded": "But there is no other gospel; some people are confusing you and trying to distort the gospel of Christ.",
+          "decoded": "But it is not really a different message; some people are confusing you and trying to change the gospel of Christ.",
           "context": ""
         },
         {
           "verse": 8,
           "kjv": "But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed.",
-          "decoded": "Even if we or an angel from heaven preach a gospel different from the one we preached to you, let that person be condemned.",
+          "decoded": "But even if we or an angel from heaven preach a gospel different from the one we preached to you, let that person be cursed.",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "As we said before, so say I now again, If any man preach any other gospel unto you than that ye have received, let him be accursed.",
-          "decoded": "As I said before, I say again: If anyone preaches a gospel different from what you received, let them be condemned.",
+          "decoded": "As we said before, I say again now: If anyone preaches a gospel different from what you accepted, let that person be cursed.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "For do I now persuade men, or God? or do I seek to please men? for if I yet pleased men, I should not be the servant of Christ.",
-          "decoded": "Am I trying to please people or God? If I were still trying to please people, I would not be a servant of Christ.",
+          "decoded": "Am I trying to please people or God? Am I trying to please people? If I were still trying to please people, I would not be a servant of Christ.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "But I certify you, brethren, that the gospel which was preached of me is not after man.",
-          "decoded": "Brothers and sisters, I want you to know that the gospel I preach did not come from any human source.",
+          "decoded": "I want you to know, brothers and sisters, that the gospel I preach is not based on human ideas.",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "For I neither received it of man, neither was I taught it, but by the revelation of Jesus Christ.",
-          "decoded": "I did not receive it from any person, nor was I taught it; instead, I received it through a revelation from Jesus Christ.",
+          "decoded": "I did not receive it from any person, nor was I taught it; I received it by a revelation from Jesus Christ.",
           "context": ""
         },
         {
           "verse": 13,
-          "kjv": "For ye have heard of my conversation in time past in the Jews’ religion, how that beyond measure I persecuted the church of God, and wasted it:",
-          "decoded": "You have heard about my past life in Judaism, how I persecuted the church of God violently and tried to destroy it.",
+          "kjv": "For ye have heard of my conversation in time past in the Jews' religion, how that beyond measure I persecuted the church of God, and wasted it:",
+          "decoded": "You have heard about my past life in Judaism, how I violently persecuted the church of God and tried to destroy it.",
           "context": ""
         },
         {
           "verse": 14,
-          "kjv": "And profited in the Jews’ religion above many my equals in mine own nation, being more exceedingly zealous of the traditions of my fathers.",
-          "decoded": "I was more successful in Judaism than most people my age in my own nation, and I was extremely zealous for the traditions of my ancestors.",
+          "kjv": "And profited in the Jews' religion above many my equals in mine own nation, being more exceedingly zealous of the traditions of my fathers.",
+          "decoded": "I was very successful in Judaism, more than most of my peers in my own nation, because I was extremely zealous for the traditions of my ancestors.",
           "context": ""
         },
         {
           "verse": 15,
-          "kjv": "But when it pleased God, who separated me from my mother’s womb, and called me by his grace,",
-          "decoded": "But when God, who set me apart from birth, was pleased to call me by his grace,",
+          "kjv": "But when it pleased God, who separated me from my mother's womb, and called me by his grace,",
+          "decoded": "But when God, who chose me before I was born and called me by his grace,",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "To reveal his Son in me, that I might preach him among the heathen; immediately I conferred not with flesh and blood:",
-          "decoded": "God revealed His Son to me so that I could preach Him to the Gentiles. Right away, I did not consult with any human beings.",
+          "decoded": "decided to reveal his Son to me so that I could preach about him to the Gentiles, I did not immediately consult with any human.",
           "context": ""
         },
         {
           "verse": 17,
           "kjv": "Neither went I up to Jerusalem to them which were apostles before me; but I went into Arabia, and returned again unto Damascus.",
-          "decoded": "I did not go to Jerusalem to meet the apostles who were there before me. Instead, I went into Arabia and then returned to Damascus.",
+          "decoded": "I did not go up to Jerusalem to meet with those who were apostles before me; instead, I went to Arabia, then returned to Damascus.",
           "context": ""
         },
         {
@@ -121,32 +121,32 @@
         },
         {
           "verse": 19,
-          "kjv": "But other of the apostles saw I none, save James the Lord’s brother.",
-          "decoded": "I did not see any other apostles except James, who is the Lord’s brother.",
+          "kjv": "But other of the apostles saw I none, save James the Lord's brother.",
+          "decoded": "I did not see any other apostles except James, the Lord\u2019s brother.",
           "context": ""
         },
         {
           "verse": 20,
           "kjv": "Now the things which I write unto you, behold, before God, I lie not.",
-          "decoded": "What I am writing to you is true, and I am not lying before God.",
+          "decoded": "I want you to know that what I am writing is true before God\u2014I am not lying.",
           "context": ""
         },
         {
           "verse": 21,
           "kjv": "Afterwards I came into the regions of Syria and Cilicia;",
-          "decoded": "Later, I traveled through the regions of Syria and Cilicia.",
+          "decoded": "After that, I traveled to the regions of Syria and Cilicia.",
           "context": ""
         },
         {
           "verse": 22,
           "kjv": "And was unknown by face unto the churches of Judaea which were in Christ:",
-          "decoded": "The churches in Judea that belong to Christ did not personally know me.",
+          "decoded": "The churches in Judea that belong to Christ did not know me personally.",
           "context": ""
         },
         {
           "verse": 23,
           "kjv": "But they had heard only, That he which persecuted us in times past now preacheth the faith which once he destroyed.",
-          "decoded": "But they had only heard that the one who once persecuted us is now preaching the very faith he tried to destroy.",
+          "decoded": "They only heard that the one who once persecuted us now preaches the faith he tried to destroy.",
           "context": ""
         },
         {
@@ -164,127 +164,127 @@
         {
           "verse": 1,
           "kjv": "Then fourteen years after I went up again to Jerusalem with Barnabas, and took Titus with me also.",
-          "decoded": "Fourteen years later, I went back to Jerusalem with Barnabas, and I also took Titus with me.",
+          "decoded": "Fourteen years later, I went back to Jerusalem with Barnabas, and I took Titus with me.",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "And I went up by revelation, and communicated unto them that gospel which I preach among the Gentiles, but privately to them which were of reputation, lest by any means I should run, or had run, in vain.",
-          "decoded": "I went up because God revealed it to me, and I explained to those respected leaders the gospel I preach to the Gentiles, but I spoke to them privately so that I wouldn't be running or have run in vain.",
+          "decoded": "I went there because God showed me to, and I explained to them the gospel I preach to the Gentiles. But I spoke privately to those who were respected leaders, so that I would not be running or have run in vain.",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "But neither Titus, who was with me, being a Greek, was compelled to be circumcised:",
-          "decoded": "But Titus, who was with me and was a Greek, was not forced to be circumcised.",
+          "decoded": "Even Titus, who was with me and was a Greek, was not forced to be circumcised.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "And that because of false brethren unawares brought in, who came in privily to spy out our liberty which we have in Christ Jesus, that they might bring us into bondage:",
-          "decoded": "This was because some false brothers secretly came in to spy on the freedom we have in Christ Jesus, hoping to make us slaves again.",
+          "decoded": "This was because some false believers had secretly come in to spy on the freedom we have in Christ Jesus, so they could bring us back under control.",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "To whom we gave place by subjection, no, not for an hour; that the truth of the gospel might continue with you.",
-          "decoded": "We did not give in to them even for a moment, so that the truth of the gospel would remain with you.",
+          "decoded": "But we did not give in to them for even a moment, so that the truth of the gospel would continue with you.",
           "context": ""
         },
         {
           "verse": 6,
-          "kjv": "But of these who seemed to be somewhat, (whatsoever they were, it maketh no matter to me: God accepteth no man’s person:) for they who seemed to be somewhat in conference added nothing to me:",
-          "decoded": "As for those who seemed important—whatever they were doesn't matter to me, because God doesn't show favoritism—they added nothing to what I preach.",
+          "kjv": "But of these who seemed to be somewhat, (whatsoever they were, it maketh no matter to me: God accepteth no man's person:) for they who seemed to be somewhat in conference added nothing to me:",
+          "decoded": "As for those who seemed important\u2014whatever they were, I don\u2019t care; God doesn\u2019t show favoritism\u2014they added nothing to me in our meeting.",
           "context": ""
         },
         {
           "verse": 7,
           "kjv": "But contrariwise, when they saw that the gospel of the uncircumcision was committed unto me, as the gospel of the circumcision was unto Peter;",
-          "decoded": "Instead, when they saw that I was entrusted with the gospel for the Gentiles, just as Peter was entrusted with the gospel for the Jews,",
+          "decoded": "Instead, when they saw that I had been entrusted with the gospel to the uncircumcised, just as Peter was entrusted with the gospel to the circumcised,",
           "context": ""
         },
         {
           "verse": 8,
           "kjv": "(For he that wrought effectually in Peter to the apostleship of the circumcision, the same was mighty in me toward the Gentiles:)",
-          "decoded": "God, who empowered Peter to be an apostle to the Jews, also empowered me to be an apostle to the Gentiles.",
+          "decoded": "(God, who worked powerfully in Peter to help him be an apostle to the circumcised, also worked powerfully in me to help me with the Gentiles.)",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "And when James, Cephas, and John, who seemed to be pillars, perceived the grace that was given unto me, they gave to me and Barnabas the right hands of fellowship; that we should go unto the heathen, and they unto the circumcision.",
-          "decoded": "When James, Peter, and John—who were considered leaders—recognized the grace given to me, they welcomed Barnabas and me as partners, agreeing that we would go to the Gentiles and they to the Jews.",
+          "decoded": "When James, Peter, and John, who were seen as leaders, recognized the grace God had given me, they gave Barnabas and me the right hand of fellowship, agreeing that we would go to the Gentiles and they to the circumcised.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "Only they would that we should remember the poor; the same which I also was forward to do.",
-          "decoded": "They only asked that we remember the poor, which I was eager to do as well.",
+          "decoded": "They only asked us to remember the poor, which I was eager to do.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "But when Peter was come to Antioch, I withstood him to the face, because he was to be blamed.",
-          "decoded": "But when Peter came to Antioch, I openly confronted him because he was clearly wrong.",
+          "decoded": "But when Peter came to Antioch, I opposed him face to face because he was clearly wrong.",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "For before that certain came from James, he did eat with the Gentiles: but when they were come, he withdrew and separated himself, fearing them which were of the circumcision.",
-          "decoded": "Before some people came from James, Peter ate with Gentiles; but when they arrived, he pulled back and separated himself, afraid of those who insisted on circumcision.",
+          "decoded": "Before some people came from James, Peter ate with the Gentiles. But when they arrived, he withdrew and separated himself, afraid of those who insisted on circumcision.",
           "context": ""
         },
         {
           "verse": 13,
           "kjv": "And the other Jews dissembled likewise with him; insomuch that Barnabas also was carried away with their dissimulation.",
-          "decoded": "The other Jewish believers acted the same way, so much so that even Barnabas was led astray by their hypocrisy.",
+          "decoded": "The other Jewish believers joined him in this hypocrisy, so much so that even Barnabas was led astray by their hypocrisy.",
           "context": ""
         },
         {
           "verse": 14,
           "kjv": "But when I saw that they walked not uprightly according to the truth of the gospel, I said unto Peter before them all, If thou, being a Jew, livest after the manner of Gentiles, and not as do the Jews, why compellest thou the Gentiles to live as do the Jews?",
-          "decoded": "When I saw they were not living honestly according to the gospel, I said to Peter in front of everyone, 'If you, a Jew, live like a Gentile and not like a Jew, why do you force Gentiles to live like Jews?'",
+          "decoded": "But when I saw that they were not living honestly according to the truth of the gospel, I said to Peter in front of everyone, 'If you, a Jew, live like a Gentile and not like a Jew, why do you force Gentiles to live like Jews?'",
           "context": ""
         },
         {
           "verse": 15,
           "kjv": "We who are Jews by nature, and not sinners of the Gentiles,",
-          "decoded": "We who are Jews by birth and not Gentile sinners,",
+          "decoded": "We are Jews by birth, not sinners from the Gentiles.",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified.",
-          "decoded": "We understand that no one is made right with God by following the law, but only through faith in Jesus Christ. We have believed in Jesus Christ so that we might be made right through faith in Him, not by obeying the law, because no one will be made right by following the law.",
+          "decoded": "We know that no one is made right with God by following the law. Instead, we are made right by faith in Jesus Christ. We have believed in Christ Jesus so that we would be made right by faith in Christ, not by following the law. No one will be made right by following the law.",
           "context": ""
         },
         {
           "verse": 17,
           "kjv": "But if, while we seek to be justified by Christ, we ourselves also are found sinners, is therefore Christ the minister of sin? God forbid.",
-          "decoded": "If we try to be made right with God through Christ but are still sinners, does that mean Christ encourages sin? Absolutely not!",
+          "decoded": "But if we try to be made right by Christ while we ourselves are still sinners, does that mean Christ encourages sin? Absolutely not!",
           "context": ""
         },
         {
           "verse": 18,
           "kjv": "For if I build again the things which I destroyed, I make myself a transgressor.",
-          "decoded": "If I start following the old law again after having rejected it, I would be breaking God's law myself.",
+          "decoded": "If I rebuild what I destroyed, then I am breaking God\u2019s law.",
           "context": ""
         },
         {
           "verse": 19,
           "kjv": "For I through the law am dead to the law, that I might live unto God.",
-          "decoded": "Because of the law, I have died to the law itself so that I can live for God.",
+          "decoded": "I died to the law through the law, so that I might live for God.",
           "context": ""
         },
         {
           "verse": 20,
           "kjv": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
-          "decoded": "I have been united with Christ in His death, but I still live. However, it’s not really me living; Christ lives in me. The life I now live in my body, I live by trusting in the Son of God, who loved me and gave Himself for me.",
+          "decoded": "I have been crucified with Christ, and I no longer live, but Christ lives in me. The life I now live in my body, I live by faith in the Son of God, who loved me and gave himself for me.",
           "context": ""
         },
         {
           "verse": 21,
           "kjv": "I do not frustrate the grace of God: for if righteousness come by the law, then Christ is dead in vain.",
-          "decoded": "I do not reject God's grace, because if being right with God could come through the law, then Christ died for nothing.",
+          "decoded": "I do not reject God\u2019s grace, because if right standing with God could come through the law, then Christ died for nothing.",
           "context": ""
         }
       ]
@@ -296,37 +296,37 @@
         {
           "verse": 1,
           "kjv": "O foolish Galatians, who hath bewitched you, that ye should not obey the truth, before whose eyes Jesus Christ hath been evidently set forth, crucified among you?",
-          "decoded": "You foolish Galatians! Who has tricked you so that you no longer obey the truth? You saw Jesus Christ clearly shown to you, crucified among you.",
+          "decoded": "You foolish Galatians, who has tricked you so that you do not obey the truth, when you clearly saw Jesus Christ crucified among you?",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "This only would I learn of you, Received ye the Spirit by the works of the law, or by the hearing of faith?",
-          "decoded": "I want to know one thing from you: Did you receive the Holy Spirit by following the law, or by believing what you heard?",
+          "decoded": "I want to know one thing from you: Did you receive the Spirit by following the law, or by believing what you heard?",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?",
-          "decoded": "Are you really so foolish? You started by the Spirit, so are you now trying to become perfect by human effort?",
+          "decoded": "Are you so foolish? You started by the Spirit, so are you now going to be made perfect by your own efforts?",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "Have ye suffered so many things in vain? if it be yet in vain.",
-          "decoded": "Have you endured so much for nothing? If it really was for nothing.",
+          "decoded": "Have you suffered so much for nothing? If it is for nothing, then why?",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "He therefore that ministereth to you the Spirit, and worketh miracles among you, doeth he it by the works of the law, or by the hearing of faith?",
-          "decoded": "The one who gives you the Spirit and performs miracles among you—does he do it by following the law, or by your believing what you heard?",
+          "decoded": "The one who gives you the Spirit and works miracles among you\u2014does he do it by following the law, or by believing what you heard?",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "Even as Abraham believed God, and it was accounted to him for righteousness.",
-          "decoded": "Just as Abraham believed God, and it was credited to him as righteousness.",
+          "decoded": "Just as Abraham believed God, and God accepted his faith as righteousness.",
           "context": ""
         },
         {
@@ -338,133 +338,127 @@
         {
           "verse": 8,
           "kjv": "And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham, saying, In thee shall all nations be blessed.",
-          "decoded": "The Scripture anticipated that God would make the Gentiles right with Him through faith, and it announced this good news to Abraham in advance: 'All nations will be blessed through you.'",
+          "decoded": "The scripture, predicting that God would make the Gentiles right with him through faith, announced the good news to Abraham in advance, saying, 'All nations will be blessed through you.'",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "So then they which be of faith are blessed with faithful Abraham.",
-          "decoded": "So those who have faith are blessed along with Abraham, who had faith.",
+          "decoded": "So those who have faith are blessed along with Abraham, the man of faith.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "For as many as are of the works of the law are under the curse: for it is written, Cursed is every one that continueth not in all things which are written in the book of the law to do them.",
-          "decoded": "All who rely on following the law are under a curse, because it is written: 'Cursed is everyone who does not obey everything written in the law.'",
+          "decoded": "But those who depend on following the law are under a curse, because it is written, 'Cursed is everyone who does not continue to do everything written in the book of the law.'",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "But that no man is justified by the law in the sight of God, it is evident: for, The just shall live by faith.",
-          "decoded": "It is clear that no one is made right with God by the law, because the righteous will live by faith.",
+          "decoded": "Clearly, no one is made right with God by following the law, because 'the person who is right with God through faith will live.'",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "And the law is not of faith: but, The man that doeth them shall live in them.",
-          "decoded": "The law is not based on faith; instead, it says, 'The person who obeys the law will live by it.'",
+          "decoded": "The law is not based on faith. Instead, 'the person who obeys the law will live by it.'",
           "context": ""
         },
         {
           "verse": 13,
           "kjv": "Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:",
-          "decoded": "Christ has freed us from the law’s curse by becoming a curse for us—because it is written, 'Cursed is everyone who is hung on a tree.'",
+          "decoded": "Christ has freed us from the curse caused by the law by becoming a curse for us. It is written, 'Cursed is everyone who is hung on a tree.'",
           "context": ""
         },
         {
           "verse": 14,
           "kjv": "That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith.",
-          "decoded": "This was so that the blessing given to Abraham would come to the Gentiles through Christ Jesus, and we would receive the promised Holy Spirit by faith.",
-          "context": ""
-        },
-        {
-          "verse": 15,
-          "kjv": "Brethren, I speak after the manner of men; Though it be but a man’s covenant, yet if it be confirmed, no man disannulleth, or addeth thereto.",
-          "decoded": "Brothers and sisters, I am speaking in human terms: Even though a covenant is just a human agreement, once it is confirmed, no one can cancel it or add to it.",
+          "decoded": "This was so that the blessing given to Abraham might come to the Gentiles through Christ Jesus, and that we might receive the promised Spirit through faith.",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ.",
-          "decoded": "The promises were made to Abraham and his one descendant. It does not say 'descendants' as many, but 'descendant,' meaning Christ.",
+          "decoded": "The promises were made to Abraham and his descendant. It does not say 'descendants' as if there were many, but 'descendant,' meaning one person, who is Christ.",
           "context": ""
         },
         {
           "verse": 17,
           "kjv": "And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect.",
-          "decoded": "I mean this: The covenant God made with Abraham, which was confirmed in Christ, was established long before the law came 430 years later. The law cannot cancel that covenant and make God's promise useless.",
+          "decoded": "What I mean is this: The law, which came 430 years later, does not cancel the covenant previously confirmed by God and meant to make the promise useless.",
           "context": ""
         },
         {
           "verse": 18,
           "kjv": "For if the inheritance be of the law, it is no more of promise: but God gave it to Abraham by promise.",
-          "decoded": "If the inheritance depended on the law, it would no longer be based on a promise. But God gave it to Abraham by a promise.",
+          "decoded": "If the inheritance depends on the law, then it no longer depends on a promise. But God gave it to Abraham by promise.",
           "context": ""
         },
         {
           "verse": 19,
           "kjv": "Wherefore then serveth the law? It was added because of transgressions, till the seed should come to whom the promise was made; and it was ordained by angels in the hand of a mediator.",
-          "decoded": "So what is the purpose of the law? It was added because of wrongdoing, until the promised descendant came. The law was given through angels, with a mediator.",
+          "decoded": "Why then was the law given? It was added because of transgressions until the descendant to whom the promise was made would come. The law was given through angels and under the authority of a mediator.",
           "context": ""
         },
         {
           "verse": 20,
           "kjv": "Now a mediator is not a mediator of one, but God is one.",
-          "decoded": "A mediator works between two parties, but God is one.",
+          "decoded": "A mediator, however, is not for one party only; God is one.",
           "context": ""
         },
         {
           "verse": 21,
           "kjv": "Is the law then against the promises of God? God forbid: for if there had been a law given which could have given life, verily righteousness should have been by the law.",
-          "decoded": "Does this mean the law opposes God's promises? Absolutely not! If the law could give life, then people would be made right with God by following the law.",
+          "decoded": "Is the law against the promises of God? Absolutely not! If a law had been given that could make us live, then righteousness would certainly come by the law.",
           "context": ""
         },
         {
           "verse": 22,
           "kjv": "But the scripture hath concluded all under sin, that the promise by faith of Jesus Christ might be given to them that believe.",
-          "decoded": "But Scripture has shown that everyone is under sin, so that the promise given through faith in Jesus Christ can be received by those who believe.",
+          "decoded": "But scripture has locked up everything under sin so that the promise by faith in Jesus Christ would be given to those who believe.",
           "context": ""
         },
         {
           "verse": 23,
           "kjv": "But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed.",
-          "decoded": "Before faith in Christ came, we were held under the law, locked up until the faith that was to come would be revealed.",
+          "decoded": "Before faith came, we were held in custody under the law, locked up until faith would be revealed.",
           "context": ""
         },
         {
           "verse": 24,
           "kjv": "Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith.",
-          "decoded": "So the law was like a teacher that led us to Christ, so that we could be made right with God through faith.",
+          "decoded": "So the law was our guardian until Christ came, to make us right with God through faith.",
           "context": ""
         },
         {
           "verse": 25,
           "kjv": "But after that faith is come, we are no longer under a schoolmaster.",
-          "decoded": "But now that faith has come, we are no longer under the law as our teacher.",
+          "decoded": "Now that faith has come, we are no longer under a guardian.",
           "context": ""
         },
         {
           "verse": 26,
           "kjv": "For ye are all the children of God by faith in Christ Jesus.",
-          "decoded": "For all of you who have faith in Christ Jesus are children of God.",
+          "decoded": "You are all children of God because of your faith in Christ Jesus.",
           "context": ""
         },
         {
           "verse": 27,
           "kjv": "For as many of you as have been baptized into Christ have put on Christ.",
-          "decoded": "For all of you who were baptized into Christ have clothed yourselves with Christ.",
+          "decoded": "All of you who were baptized into Christ have clothed yourselves with Christ.",
           "context": ""
         },
         {
           "verse": 28,
           "kjv": "There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus.",
-          "decoded": "There is no difference between Jew or Greek, slave or free, male or female, because you are all one in Christ Jesus.",
+          "decoded": "There is no longer Jew or Greek, slave or free, male or female, because you are all one in Christ Jesus.",
           "context": ""
         },
         {
           "verse": 29,
-          "kjv": "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise.",
-          "decoded": "If you belong to Christ, then you are Abraham's descendants and heirs according to God's promise.",
+          "kjv": "And if ye be Christ's, then are ye Abraham's seed, and heirs according to the promise.",
+          "decoded": "If you belong to Christ, then you are Abraham\u2019s descendants and heirs according to the promise.",
           "context": ""
         }
       ]
@@ -476,145 +470,145 @@
         {
           "verse": 1,
           "kjv": "Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all;",
-          "decoded": "I mean that as long as an heir is still a child, he is no different from a servant, even though he owns everything.",
+          "decoded": "I say that as long as the heir is a child, he is no different from a servant, even though he owns everything;",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "But is under tutors and governors until the time appointed of the father.",
-          "decoded": "He is under guardians and managers until the father decides the right time.",
+          "decoded": "he is under guardians and managers until the time his father decides.",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "Even so we, when we were children, were in bondage under the elements of the world:",
-          "decoded": "In the same way, when we were spiritually immature, we were enslaved by the basic principles of the world.",
+          "decoded": "In the same way, when we were children, we were controlled by the basic rules of the world.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,",
-          "decoded": "But when the right time came, God sent his Son, born of a woman and subject to the law,",
+          "decoded": "But when the right time came, God sent his Son, born from a woman, born under the law,",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "To redeem them that were under the law, that we might receive the adoption of sons.",
-          "decoded": "To free those who were under the law so that we could be accepted as God’s children.",
+          "decoded": "to free those under the law so that we could be accepted as God's children.",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father.",
-          "decoded": "Because you are God’s children, he has sent the Spirit of his Son into your hearts, and we now call God ‘Father.’",
+          "decoded": "Because you are his children, God sent the Spirit of his Son into your hearts, and the Spirit calls out, 'Father.'",
           "context": ""
         },
         {
           "verse": 7,
           "kjv": "Wherefore thou art no more a servant, but a son; and if a son, then an heir of God through Christ.",
-          "decoded": "So you are no longer a servant but a child; and as a child, you are also an heir of God through Christ.",
+          "decoded": "So you are no longer a servant, but a child; and as a child, you are also an heir of God through Christ.",
           "context": ""
         },
         {
           "verse": 8,
           "kjv": "Howbeit then, when ye knew not God, ye did service unto them which by nature are no gods.",
-          "decoded": "But back then, when you didn’t know God, you served things that are not really gods by nature.",
+          "decoded": "But before, when you did not know God, you were slaves to those who are not gods by nature.",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "But now, after that ye have known God, or rather are known of God, how turn ye again to the weak and beggarly elements, whereunto ye desire again to be in bondage?",
-          "decoded": "But now that you know God—or rather, God knows you—why are you turning back to those weak and worthless basic rules you want to be enslaved by again?",
+          "decoded": "Now that you know God, or rather, are known by God, why do you want to go back to those weak and poor rules that you want to be slaves to again?",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "Ye observe days, and months, and times, and years.",
-          "decoded": "You are carefully observing special days, months, seasons, and years.",
+          "decoded": "You are observing special days, months, seasons, and years.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "I am afraid of you, lest I have bestowed upon you labour in vain.",
-          "decoded": "I’m worried about you because I fear my work among you may have been wasted.",
+          "decoded": "I am afraid for you, that I have worked for you for nothing.",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "Brethren, I beseech you, be as I am; for I am as ye are: ye have not injured me at all.",
-          "decoded": "Brothers and sisters, I urge you to be like me, because I am like you. You haven’t harmed me at all.",
+          "decoded": "Brothers and sisters, I beg you to be like me, because I am like you. You have not harmed me at all.",
           "context": ""
         },
         {
           "verse": 13,
           "kjv": "Ye know how through infirmity of the flesh I preached the gospel unto you at the first.",
-          "decoded": "You know that when I first preached the gospel to you, I was physically weak.",
+          "decoded": "You know that when I first preached the gospel to you, it was because of a physical weakness.",
           "context": ""
         },
         {
           "verse": 14,
           "kjv": "And my temptation which was in my flesh ye despised not, nor rejected; but received me as an angel of God, even as Christ Jesus.",
-          "decoded": "You didn’t reject me because of my physical weakness; instead, you welcomed me like an angel from God, even like Christ Jesus himself.",
+          "decoded": "You did not reject or despise me because of my suffering, but accepted me as if I were an angel of God, even as Christ Jesus.",
           "context": ""
         },
         {
           "verse": 15,
           "kjv": "Where is then the blessedness ye spake of? for I bear you record, that, if it had been possible, ye would have plucked out your own eyes, and have given them to me.",
-          "decoded": "So where is the happiness you once talked about? I’m sure that if it had been possible, you would have even given me your own eyes.",
+          "decoded": "Where is the happiness you talked about? I can testify that if it had been possible, you would have given me your own eyes.",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "Am I therefore become your enemy, because I tell you the truth?",
-          "decoded": "Have I become your enemy just because I am honest with you?",
+          "decoded": "Have I become your enemy because I tell you the truth?",
           "context": ""
         },
         {
           "verse": 17,
           "kjv": "They zealously affect you, but not well; yea, they would exclude you, that ye might affect them.",
-          "decoded": "Some people are eager to influence you, but not for your good. In fact, they want to push you away so that you will focus on them instead.",
+          "decoded": "Some people are eager to win you over, but not for good reasons. They want to exclude you so you will be eager for them.",
           "context": ""
         },
         {
           "verse": 18,
           "kjv": "But it is good to be zealously affected always in a good thing, and not only when I am present with you.",
-          "decoded": "It’s good to be passionate about doing what is right, not just when I am with you, but all the time.",
+          "decoded": "But it is good to be eager for good things always, not just when I am with you.",
           "context": ""
         },
         {
           "verse": 19,
           "kjv": "My little children, of whom I travail in birth again until Christ be formed in you,",
-          "decoded": "My dear children, I am going through the pain of childbirth again until Christ is fully developed in you.",
+          "decoded": "My dear children, I am again in pain until Christ is fully formed in you.",
           "context": ""
         },
         {
           "verse": 20,
           "kjv": "I desire to be present with you now, and to change my voice; for I stand in doubt of you.",
-          "decoded": "I want to be with you now and speak more clearly, because I am worried and confused about your behavior.",
+          "decoded": "I wish I were with you now and could change the way I speak, because I am worried about you.",
           "context": ""
         },
         {
           "verse": 21,
           "kjv": "Tell me, ye that desire to be under the law, do ye not hear the law?",
-          "decoded": "Tell me, those of you who want to follow the law, don’t you understand what the law says?",
+          "decoded": "Tell me, those who want to be under the law, do you not understand what the law says?",
           "context": ""
         },
         {
           "verse": 22,
           "kjv": "For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman.",
-          "decoded": "The scripture says Abraham had two sons—one born to a slave woman and the other to a free woman.",
+          "decoded": "It says that Abraham had two sons: one by a slave woman and one by a free woman.",
           "context": ""
         },
         {
           "verse": 23,
           "kjv": "But he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise.",
-          "decoded": "The son born to the slave woman was born naturally, but the son born to the free woman was born because of God’s promise.",
+          "decoded": "The son born by the slave woman was born naturally, but the son born by the free woman was born because of God's promise.",
           "context": ""
         },
         {
           "verse": 24,
           "kjv": "Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar.",
-          "decoded": "This story is an allegory: the two women represent two covenants. One comes from Mount Sinai and leads to slavery—that is Hagar.",
+          "decoded": "These things are an example: the two women represent two covenants. One covenant comes from Mount Sinai and leads to slavery; that woman is Hagar.",
           "context": ""
         },
         {
@@ -626,37 +620,37 @@
         {
           "verse": 26,
           "kjv": "But Jerusalem which is above is free, which is the mother of us all.",
-          "decoded": "But the Jerusalem above is free, and she is the mother of all of us.",
+          "decoded": "But the Jerusalem above is free, and she is the mother of us all.",
           "context": ""
         },
         {
           "verse": 27,
           "kjv": "For it is written, Rejoice, thou barren that bearest not; break forth and cry, thou that travailest not: for the desolate hath many more children than she which hath an husband.",
-          "decoded": "As it says, rejoice, you barren woman who has no children; shout for joy, you who have never given birth, because the woman who is left alone has more children than the one with a husband.",
+          "decoded": "It is written, 'Rejoice, you barren woman who does not have children; shout for joy, you who have no labor pains, because more children come from the woman who is alone than from the woman who has a husband.'",
           "context": ""
         },
         {
           "verse": 28,
           "kjv": "Now we, brethren, as Isaac was, are the children of promise.",
-          "decoded": "So, brothers and sisters, like Isaac, we are children born because of God’s promise.",
+          "decoded": "Now, brothers and sisters, we are like Isaac, children of promise.",
           "context": ""
         },
         {
           "verse": 29,
           "kjv": "But as then he that was born after the flesh persecuted him that was born after the Spirit, even so it is now.",
-          "decoded": "But just as the son born naturally persecuted the son born by the Spirit, it is the same now.",
+          "decoded": "But just as the son born naturally persecuted the son born by the Spirit, so it is now.",
           "context": ""
         },
         {
           "verse": 30,
           "kjv": "Nevertheless what saith the scripture? Cast out the bondwoman and her son: for the son of the bondwoman shall not be heir with the son of the freewoman.",
-          "decoded": "But what does the scripture say? Throw out the slave woman and her son, because the son of the slave woman will never share the inheritance with the son of the free woman.",
+          "decoded": "But what does the scripture say? 'Get rid of the slave woman and her son, because the son of the slave woman will never share the inheritance with the son of the free woman.'",
           "context": ""
         },
         {
           "verse": 31,
           "kjv": "So then, brethren, we are not children of the bondwoman, but of the free.",
-          "decoded": "So, brothers and sisters, we are not like children born to a slave woman, but like children born to a free woman.",
+          "decoded": "So then, brothers and sisters, we are not children of the slave woman, but of the free woman.",
           "context": ""
         }
       ]
@@ -668,43 +662,43 @@
         {
           "verse": 1,
           "kjv": "Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage.",
-          "decoded": "So, continue firmly in the freedom Christ has given us, and don’t get trapped again under the burden of slavery.",
+          "decoded": "So stand firm in the freedom Christ has given us, and don\u2019t let yourselves be burdened again by a yoke of slavery.",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "Behold, I Paul say unto you, that if ye be circumcised, Christ shall profit you nothing.",
-          "decoded": "Listen, I Paul tell you, if you choose to be circumcised, Christ won’t help you at all.",
+          "decoded": "Listen, I Paul tell you this: if you choose to be circumcised, Christ will not help you at all.",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "For I testify again to every man that is circumcised, that he is a debtor to do the whole law.",
-          "decoded": "I repeat to everyone who is circumcised: you are obligated to obey the entire law.",
+          "decoded": "I repeat to every man who is circumcised: you are obligated to obey the entire law.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "Christ is become of no effect unto you, whosoever of you are justified by the law; ye are fallen from grace.",
-          "decoded": "If you try to be made right with God by the law, Christ’s sacrifice means nothing to you, and you have turned away from God’s grace.",
+          "decoded": "If you try to be made right with God by the law, then Christ is useless to you, and you have lost God\u2019s grace.",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "For we through the Spirit wait for the hope of righteousness by faith.",
-          "decoded": "But through the Spirit, we eagerly await the hope of being made right with God through faith.",
+          "decoded": "But we wait for the hope of being made right with God by faith, through the Spirit.",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "For in Jesus Christ neither circumcision availeth any thing, nor uncircumcision; but faith which worketh by love.",
-          "decoded": "In Jesus Christ, it doesn’t matter whether you are circumcised or not; what counts is faith expressing itself through love.",
+          "decoded": "In Jesus Christ, it doesn\u2019t matter if you are circumcised or not; what matters is faith that shows itself through love.",
           "context": ""
         },
         {
           "verse": 7,
           "kjv": "Ye did run well; who did hinder you that ye should not obey the truth?",
-          "decoded": "You were doing so well; who has stopped you from following the truth?",
+          "decoded": "You were doing so well! Who stopped you from obeying the truth?",
           "context": ""
         },
         {
@@ -716,109 +710,109 @@
         {
           "verse": 9,
           "kjv": "A little leaven leaveneth the whole lump.",
-          "decoded": "A small amount of yeast affects the whole batch of dough.",
+          "decoded": "A little yeast spreads through the whole batch of dough.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "I have confidence in you through the Lord, that ye will be none otherwise minded: but he that troubleth you shall bear his judgment, whosoever he be.",
-          "decoded": "I am confident in the Lord that you will not think differently, but whoever is causing trouble will face judgment, no matter who they are.",
+          "decoded": "I am confident in the Lord that you will not think differently. But the person who is causing trouble will face judgment, whoever they are.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "And I, brethren, if I yet preach circumcision, why do I yet suffer persecution? then is the offence of the cross ceased.",
-          "decoded": "Brothers, if I were still preaching circumcision, why would I still be persecuted? The offense of the cross would be gone.",
+          "decoded": "Brothers and sisters, if I were still preaching that people should be circumcised, why would I still be suffering persecution? Then the offense of the cross would be gone.",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "I would they were even cut off which trouble you.",
-          "decoded": "I wish those who are causing you trouble would be completely removed.",
+          "decoded": "I wish those who are causing you trouble would even go all the way and be cut off.",
           "context": ""
         },
         {
           "verse": 13,
           "kjv": "For, brethren, ye have been called unto liberty; only use not liberty for an occasion to the flesh, but by love serve one another.",
-          "decoded": "Brothers and sisters, you were called to be free, but don’t use your freedom as an excuse to satisfy selfish desires; instead, serve each other with love.",
+          "decoded": "You were called to be free, brothers and sisters. But don\u2019t use your freedom as an excuse to satisfy your sinful nature. Instead, serve each other with love.",
           "context": ""
         },
         {
           "verse": 14,
           "kjv": "For all the law is fulfilled in one word, even in this; Thou shalt love thy neighbour as thyself.",
-          "decoded": "The entire law is fulfilled by this one command: Love your neighbor as yourself.",
+          "decoded": "The whole law is fulfilled in this one command: 'Love your neighbor as yourself.'",
           "context": ""
         },
         {
           "verse": 15,
           "kjv": "But if ye bite and devour one another, take heed that ye be not consumed one of another.",
-          "decoded": "But if you keep attacking and hurting each other, be careful or you will destroy each other.",
+          "decoded": "But if you keep attacking and destroying each other, watch out or you will destroy yourselves completely.",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "This I say then, Walk in the Spirit, and ye shall not fulfil the lust of the flesh.",
-          "decoded": "So I say, live by the Spirit, and you will not follow your sinful desires.",
+          "decoded": "So I say, live by the Spirit, and you will not follow your sinful nature\u2019s desires.",
           "context": ""
         },
         {
           "verse": 17,
           "kjv": "For the flesh lusteth against the Spirit, and the Spirit against the flesh: and these are contrary the one to the other: so that ye cannot do the things that ye would.",
-          "decoded": "Our sinful nature desires what the Spirit opposes, and the Spirit opposes what the flesh desires. They are in conflict, so you can’t always do what you want.",
+          "decoded": "The sinful nature wants what the Spirit wants, and the Spirit wants what the sinful nature wants. They are enemies, fighting against each other, so you don\u2019t do what you want.",
           "context": ""
         },
         {
           "verse": 18,
           "kjv": "But if ye be led of the Spirit, ye are not under the law.",
-          "decoded": "But if the Spirit leads you, you are not controlled by the law.",
+          "decoded": "But if you are led by the Spirit, you are not under the law.",
           "context": ""
         },
         {
           "verse": 19,
           "kjv": "Now the works of the flesh are manifest, which are these; Adultery, fornication, uncleanness, lasciviousness,",
-          "decoded": "The sinful actions are clear: sexual immorality, impurity, and indecency,",
+          "decoded": "The sinful nature shows itself in obvious ways: sexual immorality, impurity, lustful desires, and evil desires.",
           "context": ""
         },
         {
           "verse": 20,
           "kjv": "Idolatry, witchcraft, hatred, variance, emulations, wrath, strife, seditions, heresies,",
-          "decoded": "idolatry, witchcraft, hatred, fighting, jealousy, anger, selfish ambition, divisions, and false teachings,",
+          "decoded": "Idolatry, witchcraft, hatred, fighting, jealousy, anger, selfish ambition, divisions, heresies,",
           "context": ""
         },
         {
           "verse": 21,
           "kjv": "Envyings, murders, drunkenness, revellings, and such like: of the which I tell you before, as I have also told you in time past, that they which do such things shall not inherit the kingdom of God.",
-          "decoded": "envy, murder, drunkenness, wild parties, and things like these. I warn you again, as I did before, that those who live like this will not inherit God’s kingdom.",
+          "decoded": "envy, murder, drunkenness, wild parties, and other sins like these. I warn you now, as I have before, that those who live like this will not inherit God\u2019s kingdom.",
           "context": ""
         },
         {
           "verse": 22,
           "kjv": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,",
-          "decoded": "But the Spirit produces love, joy, peace, patience, kindness, goodness, and faithfulness.",
+          "decoded": "But the Spirit produces love, joy, peace, patience, kindness, goodness, faithfulness,",
           "context": ""
         },
         {
           "verse": 23,
           "kjv": "Meekness, temperance: against such there is no law.",
-          "decoded": "Gentleness and self-control. There is no law against these qualities.",
+          "decoded": "gentleness, and self-control. There is no law against these things.",
           "context": ""
         },
         {
           "verse": 24,
-          "kjv": "And they that are Christ’s have crucified the flesh with the affections and lusts.",
-          "decoded": "Those who belong to Christ have put to death their sinful nature with its desires and passions.",
+          "kjv": "And they that are Christ's have crucified the flesh with the affections and lusts.",
+          "decoded": "Those who belong to Christ Jesus have nailed their sinful nature with its passions and desires to the cross.",
           "context": ""
         },
         {
           "verse": 25,
           "kjv": "If we live in the Spirit, let us also walk in the Spirit.",
-          "decoded": "If we are guided by the Spirit, we should also live our lives following the Spirit.",
+          "decoded": "Since we live by the Spirit, let us follow the Spirit\u2019s leading in everything we do.",
           "context": ""
         },
         {
           "verse": 26,
           "kjv": "Let us not be desirous of vain glory, provoking one another, envying one another.",
-          "decoded": "Let’s not be proud or try to make others angry or jealous.",
+          "decoded": "Let\u2019s not become proud, or make each other angry, or be jealous of each other.",
           "context": ""
         }
       ]
@@ -830,109 +824,109 @@
         {
           "verse": 1,
           "kjv": "Brethren, if a man be overtaken in a fault, ye which are spiritual, restore such an one in the spirit of meekness; considering thyself, lest thou also be tempted.",
-          "decoded": "Brothers and sisters, if someone is caught doing wrong, those of you who are spiritually mature should gently help them get back on the right path, being careful not to fall into temptation yourselves.",
+          "decoded": "Brothers, if someone is caught doing wrong, those who are spiritual should gently help that person, being careful not to be tempted yourself.",
           "context": ""
         },
         {
           "verse": 2,
-          "kjv": "Bear ye one another’s burdens, and so fulfil the law of Christ.",
-          "decoded": "Help carry each other's troubles, and in doing so, you will be living out Christ’s command to love one another.",
+          "kjv": "Bear ye one another's burdens, and so fulfil the law of Christ.",
+          "decoded": "Carry each other's burdens, and in this way you will follow Christ's law.",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "For if a man think himself to be something, when he is nothing, he deceiveth himself.",
-          "decoded": "If anyone thinks they are important when they really are not, they are fooling themselves.",
+          "decoded": "If anyone thinks they are something when they are really nothing, they are fooling themselves.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "But let every man prove his own work, and then shall he have rejoicing in himself alone, and not in another.",
-          "decoded": "Each person should examine their own actions, so they can be proud of what they have done, not comparing themselves to others.",
+          "decoded": "Each person should test their own actions, and then they can be proud of themselves alone, without comparing to others.",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "For every man shall bear his own burden.",
-          "decoded": "Everyone will be responsible for their own duties and challenges.",
+          "decoded": "Each person must carry their own load.",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "Let him that is taught in the word communicate unto him that teacheth in all good things.",
-          "decoded": "Those who receive teaching from God’s word should share their blessings with the teachers.",
+          "decoded": "Those who are taught the word should share all good things with their teachers.",
           "context": ""
         },
         {
           "verse": 7,
           "kjv": "Be not deceived; God is not mocked: for whatsoever a man soweth, that shall he also reap.",
-          "decoded": "Don’t be fooled; God cannot be tricked. Whatever a person plants, they will also harvest.",
+          "decoded": "Don\u2019t be fooled; God cannot be mocked. A person will reap what they sow.",
           "context": ""
         },
         {
           "verse": 8,
           "kjv": "For he that soweth to his flesh shall of the flesh reap corruption; but he that soweth to the Spirit shall of the Spirit reap life everlasting.",
-          "decoded": "If you live only to satisfy your sinful nature, you will face destruction; but if you live by following the Spirit, you will receive eternal life.",
+          "decoded": "Those who live only to satisfy their sinful nature will harvest decay, but those who live by the Spirit will harvest eternal life.",
           "context": ""
         },
         {
           "verse": 9,
           "kjv": "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
-          "decoded": "Let’s not get tired of doing good, because if we keep going, we will receive a reward at the right time.",
+          "decoded": "Let us not get tired of doing good, because at the right time we will reap a harvest if we don\u2019t give up.",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith.",
-          "decoded": "Whenever we have the chance, let’s do good to everyone, but especially to fellow believers.",
+          "decoded": "So, whenever we have the chance, let us do good to everyone, especially to those who belong to the family of believers.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "Ye see how large a letter I have written unto you with mine own hand.",
-          "decoded": "You can see how long this letter is, which I have personally written to you.",
+          "decoded": "You can see how large the letters are that I wrote to you with my own hand.",
           "context": ""
         },
         {
           "verse": 12,
           "kjv": "As many as desire to make a fair shew in the flesh, they constrain you to be circumcised; only lest they should suffer persecution for the cross of Christ.",
-          "decoded": "Those who want to look good outwardly are forcing you to be circumcised, but really it’s to avoid being persecuted for following Christ.",
+          "decoded": "Those who want to make a good impression by outward appearance force you to be circumcised, but only to avoid being persecuted for the cross of Christ.",
           "context": ""
         },
         {
           "verse": 13,
           "kjv": "For neither they themselves who are circumcised keep the law; but desire to have you circumcised, that they may glory in your flesh.",
-          "decoded": "Even those who insist on circumcision don’t fully obey the law themselves; they just want you circumcised so they can boast about you.",
+          "decoded": "Even those who are circumcised don\u2019t keep the law themselves, but they want you to be circumcised so they can boast about your bodies.",
           "context": ""
         },
         {
           "verse": 14,
           "kjv": "But God forbid that I should glory, save in the cross of our Lord Jesus Christ, by whom the world is crucified unto me, and I unto the world.",
-          "decoded": "I refuse to boast about anything except the cross of Jesus Christ, through which the world’s values have lost their hold on me, and I have lost my hold on the world.",
+          "decoded": "But I refuse to boast about anything except the cross of our Lord Jesus Christ. Through him, the world is dead to me, and I am dead to the world.",
           "context": ""
         },
         {
           "verse": 15,
           "kjv": "For in Christ Jesus neither circumcision availeth any thing, nor uncircumcision, but a new creature.",
-          "decoded": "In Christ, it doesn’t matter whether you are circumcised or not; what matters is becoming a new person.",
+          "decoded": "In Christ Jesus, it doesn\u2019t matter if you are circumcised or not; what matters is becoming a new person.",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "And as many as walk according to this rule, peace be on them, and mercy, and upon the Israel of God.",
-          "decoded": "Peace and mercy be upon all who live by this principle, and also upon the people of God.",
+          "decoded": "Peace and mercy be on all who follow this rule, and on God\u2019s Israel.",
           "context": ""
         },
         {
           "verse": 17,
           "kjv": "From henceforth let no man trouble me: for I bear in my body the marks of the Lord Jesus.",
-          "decoded": "From now on, let no one cause me trouble, because I carry the scars of Jesus on my body.",
+          "decoded": "From now on, no one should bother me, because I carry the scars of Jesus on my body.",
           "context": ""
         },
         {
           "verse": 18,
-          "kjv": "Brethren, the grace of our Lord Jesus Christ be with your spirit. Amen.",
-          "decoded": "Brothers and sisters, may the grace of our Lord Jesus Christ be with your spirit. Amen. (Written to the Galatians from Rome.)",
+          "kjv": "Brethren, the grace of our Lord Jesus Christ be with your spirit. Amen. Unto the Galatians written from Rome.",
+          "decoded": "Brothers, may the grace of our Lord Jesus Christ be with your spirit. Amen.",
           "context": ""
         }
       ]

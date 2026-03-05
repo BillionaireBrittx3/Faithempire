@@ -3,8 +3,8 @@
   "bookName": "Philemon",
   "slug": "philemon",
   "author": "Brittany Johnson",
-  "description": "The Book of Philemon — every verse decoded into plain, modern English (DMLV).",
-  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "description": "The Book of Philemon \u2014 every verse decoded into plain, modern English (DMLV).",
+  "copyright": "\u00a9 2026 Brittany Johnson. All rights reserved.",
   "totalChapters": 1,
   "chapters": [
     {
@@ -14,67 +14,67 @@
         {
           "verse": 1,
           "kjv": "Paul, a prisoner of Jesus Christ, and Timothy our brother, unto Philemon our dearly beloved, and fellowlabourer,",
-          "decoded": "Paul, a prisoner because of Jesus Christ, and Timothy our brother, write to Philemon, our dear friend and partner in work.",
+          "decoded": "Paul, a prisoner for Jesus Christ, and Timothy our brother, to Philemon our dear friend and coworker,",
           "context": ""
         },
         {
           "verse": 2,
           "kjv": "And to our beloved Apphia, and Archippus our fellowsoldier, and to the church in thy house:",
-          "decoded": "Also to our dear Apphia, to Archippus, our fellow soldier, and to the church that meets in your home.",
+          "decoded": "and to our loved Apphia, and Archippus our fellow soldier, and to the church that meets in your home:",
           "context": ""
         },
         {
           "verse": 3,
           "kjv": "Grace to you, and peace, from God our Father and the Lord Jesus Christ.",
-          "decoded": "May God our Father and the Lord Jesus Christ give you grace and peace.",
+          "decoded": "May you receive grace and peace from God our Father and the Lord Jesus Christ.",
           "context": ""
         },
         {
           "verse": 4,
           "kjv": "I thank my God, making mention of thee always in my prayers,",
-          "decoded": "I always thank God and mention you in my prayers.",
+          "decoded": "I always thank my God when I remember you in my prayers,",
           "context": ""
         },
         {
           "verse": 5,
           "kjv": "Hearing of thy love and faith, which thou hast toward the Lord Jesus, and toward all saints;",
-          "decoded": "Because I hear about your love and faith toward the Lord Jesus and all God’s people.",
+          "decoded": "because I hear about your love and faith toward the Lord Jesus and all the holy people.",
           "context": ""
         },
         {
           "verse": 6,
           "kjv": "That the communication of thy faith may become effectual by the acknowledging of every good thing which is in you in Christ Jesus.",
-          "decoded": "I pray that your sharing of faith will be effective as you recognize all the good things we have in Christ Jesus.",
+          "decoded": "I pray that your faith will be active and effective by knowing all the good things we share in Christ Jesus.",
           "context": ""
         },
         {
           "verse": 7,
           "kjv": "For we have great joy and consolation in thy love, because the bowels of the saints are refreshed by thee, brother.",
-          "decoded": "We have great joy and comfort because your love refreshes the hearts of God’s people, my brother.",
+          "decoded": "We have great joy and comfort because of your love, which refreshes the hearts of God\u2019s people, my brother.",
           "context": ""
         },
         {
           "verse": 8,
           "kjv": "Wherefore, though I might be much bold in Christ to enjoin thee that which is convenient,",
-          "decoded": "So even though I could confidently command you to do what is right in Christ,",
+          "decoded": "So even though I could be bold and command you to do what is right in Christ,",
           "context": ""
         },
         {
           "verse": 9,
-          "kjv": "Yet for love’s sake I rather beseech thee, being such an one as Paul the aged, and now also a prisoner of Jesus Christ.",
-          "decoded": "I prefer to appeal to you out of love, as Paul, an old man and now a prisoner for Jesus Christ.",
+          "kjv": "Yet for love's sake I rather beseech thee, being such an one as Paul the aged, and now also a prisoner of Jesus Christ.",
+          "decoded": "I prefer to ask you kindly, because of love. I, Paul, an old man now and a prisoner for Jesus Christ,",
           "context": ""
         },
         {
           "verse": 10,
           "kjv": "I beseech thee for my son Onesimus, whom I have begotten in my bonds:",
-          "decoded": "I am asking you on behalf of my son Onesimus, whom I have become a father to while in prison.",
+          "decoded": "ask you to help my son Onesimus, whom I have fathered while in prison.",
           "context": ""
         },
         {
           "verse": 11,
           "kjv": "Which in time past was to thee unprofitable, but now profitable to thee and to me:",
-          "decoded": "He used to be useless to you, but now he is useful both to you and to me.",
+          "decoded": "He was useless to you before, but now he is useful to both you and me.",
           "context": ""
         },
         {
@@ -86,25 +86,25 @@
         {
           "verse": 13,
           "kjv": "Whom I would have retained with me, that in thy stead he might have ministered unto me in the bonds of the gospel:",
-          "decoded": "I wanted to keep him here to help me while I am imprisoned for the gospel, in your place.",
+          "decoded": "I wanted to keep him with me so he could help me while I am in prison for the gospel,",
           "context": ""
         },
         {
           "verse": 14,
           "kjv": "But without thy mind would I do nothing; that thy benefit should not be as it were of necessity, but willingly.",
-          "decoded": "But I did not want to do anything without your consent, so that your kindness would be voluntary, not forced.",
+          "decoded": "but I did not want to do anything without your permission. I want you to help him willingly, not because you have to.",
           "context": ""
         },
         {
           "verse": 15,
           "kjv": "For perhaps he therefore departed for a season, that thou shouldest receive him for ever;",
-          "decoded": "Maybe he left you for a while so that you could have him back forever.",
+          "decoded": "Maybe he left you for a while so you could have him back forever.",
           "context": ""
         },
         {
           "verse": 16,
           "kjv": "Not now as a servant, but above a servant, a brother beloved, specially to me, but how much more unto thee, both in the flesh, and in the Lord?",
-          "decoded": "No longer as a servant, but more than a servant—a beloved brother, especially to me, and how much more to you, both in human terms and in the Lord?",
+          "decoded": "He is no longer just a servant, but more than a servant\u2014 a dear brother, especially to me, and how much more to you, both as a person and as a believer? If you consider me your partner, welcome him as you would welcome me.",
           "context": ""
         },
         {
@@ -122,43 +122,43 @@
         {
           "verse": 19,
           "kjv": "I Paul have written it with mine own hand, I will repay it: albeit I do not say to thee how thou owest unto me even thine own self besides.",
-          "decoded": "I, Paul, am writing this with my own hand and will repay it. Of course, I’m not even mentioning that you owe me your very self.",
+          "decoded": "I, Paul, have written this with my own hand; I will pay it back. But I am not even mentioning to you that you owe me your very self besides.",
           "context": ""
         },
         {
           "verse": 20,
           "kjv": "Yea, brother, let me have joy of thee in the Lord: refresh my bowels in the Lord.",
-          "decoded": "Yes, brother, let me have joy from you in the Lord; refresh my heart in Christ.",
+          "decoded": "Yes, brother, let me have joy from you in the Lord; refresh my heart in the Lord.",
           "context": ""
         },
         {
           "verse": 21,
           "kjv": "Having confidence in thy obedience I wrote unto thee, knowing that thou wilt also do more than I say.",
-          "decoded": "I am confident in your obedience, so I wrote to you, knowing you will do even more than I ask.",
+          "decoded": "Because I trust that you will obey, I wrote to you, knowing that you will do even more than I ask.",
           "context": ""
         },
         {
           "verse": 22,
           "kjv": "But withal prepare me also a lodging: for I trust that through your prayers I shall be given unto you.",
-          "decoded": "Also, prepare a place for me, because I hope that, thanks to your prayers, I will be able to visit you.",
+          "decoded": "But also prepare a place for me to stay, because I hope that through your prayers I will be returned to you.",
           "context": ""
         },
         {
           "verse": 23,
           "kjv": "There salute thee Epaphras, my fellowprisoner in Christ Jesus;",
-          "decoded": "Epaphras, my fellow prisoner in Christ Jesus, sends you greetings.",
+          "decoded": "Epaphras, my fellow prisoner for Christ Jesus, sends you greetings;",
           "context": ""
         },
         {
           "verse": 24,
           "kjv": "Marcus, Aristarchus, Demas, Lucas, my fellowlabourers.",
-          "decoded": "Also Marcus, Aristarchus, Demas, and Luke, my fellow workers, send their greetings.",
+          "decoded": "Marcus, Aristarchus, Demas, and Luke, my coworkers.",
           "context": ""
         },
         {
           "verse": 25,
-          "kjv": "The grace of our Lord Jesus Christ be with your spirit. Amen.",
-          "decoded": "May the grace of our Lord Jesus Christ be with your spirit. Amen. (Written from Rome to Philemon, by Onesimus, a servant.)",
+          "kjv": "The grace of our Lord Jesus Christ be with your spirit. Amen. Written from Rome to Philemon, by Onesimus, a servant.",
+          "decoded": "May the grace of our Lord Jesus Christ be with your spirit. Amen. Written from Rome to Philemon, by Onesimus, a servant.",
           "context": ""
         }
       ]
