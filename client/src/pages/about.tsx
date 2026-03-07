@@ -192,7 +192,7 @@ export default function AboutPage() {
             ) : (
               <>
                 <p className="text-sm leading-relaxed text-muted-foreground mb-3">
-                  Get full access to all decoded books, exclusive devotionals, and members-only content for $12.22/month.
+                  Get full access to all decoded books, the complete podcast library, and all app content for $8.88/month.
                 </p>
                 <Button
                   onClick={() => navigate("/premium")}

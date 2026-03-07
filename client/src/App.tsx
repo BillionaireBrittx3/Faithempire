@@ -1,11 +1,11 @@
 import { Component, type ErrorInfo, type ReactNode } from "react";
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
-import { SubscriptionProvider } from "@/lib/subscription";
+import { SubscriptionProvider, useSubscription } from "@/lib/subscription";
 import { Header } from "@/components/header";
 import { TabBar } from "@/components/tab-bar";
 import NotFound from "@/pages/not-found";
@@ -68,24 +68,55 @@ class ErrorBoundary extends Component<
   }
 }
 
+const PUBLIC_PATHS = ["/premium", "/privacy", "/terms"];
+
+function SubscriptionGate({ children }: { children: ReactNode }) {
+  const { isPremium, isLoading } = useSubscription();
+  const [location] = useLocation();
+
+  const isPublicPath = PUBLIC_PATHS.some(
+    (p) => location === p || location.startsWith(p + "/")
+  );
+
+  if (isPublicPath) {
+    return <>{children}</>;
+  }
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-black">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-[#DFAC2A]/30 border-t-[#DFAC2A]" />
+      </div>
+    );
+  }
+
+  if (!isPremium) {
+    return <PaywallPage />;
+  }
+
+  return <>{children}</>;
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/bible" component={BiblePage} />
-      <Route path="/archive" component={ArchivePage} />
-      <Route path="/podcast" component={PodcastPage} />
-      <Route path="/favorites" component={FavoritesPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/privacy" component={PrivacyPage} />
-      <Route path="/terms" component={TermsPage} />
-      <Route path="/decoded/:bookSlug">
-        {(params) => <DecodedBookPage bookSlug={params.bookSlug} />}
-      </Route>
-      <Route path="/decoded" component={DecodedPage} />
-      <Route path="/premium" component={PaywallPage} />
-      <Route component={NotFound} />
-    </Switch>
+    <SubscriptionGate>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/bible" component={BiblePage} />
+        <Route path="/archive" component={ArchivePage} />
+        <Route path="/podcast" component={PodcastPage} />
+        <Route path="/favorites" component={FavoritesPage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/privacy" component={PrivacyPage} />
+        <Route path="/terms" component={TermsPage} />
+        <Route path="/decoded/:bookSlug">
+          {(params) => <DecodedBookPage bookSlug={params.bookSlug} />}
+        </Route>
+        <Route path="/decoded" component={DecodedPage} />
+        <Route path="/premium" component={PaywallPage} />
+        <Route component={NotFound} />
+      </Switch>
+    </SubscriptionGate>
   );
 }
 

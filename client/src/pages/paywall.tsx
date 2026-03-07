@@ -6,11 +6,12 @@ import { motion } from "framer-motion";
 import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_1770693543975.png";
 
 const premiumFeatures = [
-  { icon: BookOpen, label: "Full KJV Breakdown", description: "Complete decoded translations" },
-  { icon: BookOpen, label: "All Decoded Books", description: "Every book, every chapter" },
-  { icon: Sparkles, label: "Exclusive Devotionals", description: "Premium daily content" },
-  { icon: Headphones, label: "Members-Only Audio", description: "Full podcast access" },
-  { icon: Crown, label: "Early Access", description: "New releases before anyone" },
+  { icon: BookOpen, label: "Daily Verse & Decoded Message", description: "Fresh inspiration every day" },
+  { icon: BookOpen, label: "Full KJV Bible Reader", description: "All 66 books with navigation" },
+  { icon: BookOpen, label: "All 66 Decoded Books", description: "Every verse decoded in modern language" },
+  { icon: Headphones, label: "Full Podcast Library", description: "All episodes, unlimited access" },
+  { icon: Sparkles, label: "Verse Archive & Favorites", description: "Save and revisit your highlights" },
+  { icon: Crown, label: "Early Access", description: "New content before anyone else" },
 ];
 
 export default function PaywallPage() {
@@ -56,12 +57,12 @@ export default function PaywallPage() {
             className="font-serif text-3xl font-bold text-white"
             data-testid="text-paywall-title"
           >
-            {isPremium ? "Premium Active" : "Unlock Premium"}
+            {isPremium ? "Welcome Back" : "Welcome to Decoded Faith Empire"}
           </h1>
           <p className="text-sm text-white/60 mt-2 max-w-xs mx-auto leading-relaxed">
             {isPremium
-              ? "You have full access to all premium content"
-              : "Get full access to all decoded books, exclusive devotionals, and members-only content"}
+              ? "You have full access to all content"
+              : "Subscribe to unlock daily decoded verses, the full KJV Bible, all 66 decoded books, and the complete podcast library"}
           </p>
         </motion.div>
 
@@ -75,7 +76,7 @@ export default function PaywallPage() {
             <div className="flex items-center gap-2 mb-4">
               <Crown className="h-5 w-5 text-[#DFAC2A]" />
               <span className="text-sm font-semibold text-[#DFAC2A]">
-                {isPremium ? "Your Premium Benefits" : "Premium Membership"}
+                {isPremium ? "Your Membership" : "What's Included"}
               </span>
             </div>
 
@@ -144,7 +145,7 @@ export default function PaywallPage() {
             <>
               <div className="text-center mb-1">
                 <p className="text-3xl font-bold text-white" data-testid="text-paywall-price">
-                  $12.22<span className="text-base font-normal text-white/50">/month</span>
+                  $8.88<span className="text-base font-normal text-white/50">/month</span>
                 </p>
                 <p className="text-xs text-white/40 mt-1">Cancel anytime</p>
               </div>
@@ -186,40 +187,16 @@ export default function PaywallPage() {
           className="mt-8 w-full max-w-sm"
         >
           <div className="border-t border-white/10 pt-4">
-            <p className="font-serif text-base font-semibold text-white/80 text-center mb-3">
-              Free Features
-            </p>
-            <div className="flex flex-col gap-2 mb-6">
-              <div className="flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
-                <span className="text-xs text-white/60">Daily Bible verse &amp; decoded message</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
-                <span className="text-xs text-white/60">Full KJV Bible reader</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
-                <span className="text-xs text-white/60">3 decoded chapters</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
-                <span className="text-xs text-white/60">2 podcast episode previews</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-4">
             <div className="flex items-center justify-center gap-2 text-white/30 text-[10px] mb-3">
               <Lock className="h-3 w-3" />
               <span>Secure payment via Apple</span>
             </div>
             <div className="text-[10px] text-white/30 leading-relaxed space-y-2" data-testid="text-subscription-legal">
               <p>
-                A Premium subscription costs $12.22 per month. Payment will be charged to your Apple ID account at confirmation of purchase.
+                A subscription costs $8.88 per month. Payment will be charged to your Apple ID account at confirmation of purchase.
               </p>
               <p>
-                Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the rate of $12.22/month.
+                Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the rate of $8.88/month.
               </p>
               <p>
                 You can manage and cancel your subscription in your Apple ID Account Settings (Settings &gt; Apple ID &gt; Subscriptions). Any unused portion of a free trial period, if offered, will be forfeited when you purchase a subscription.

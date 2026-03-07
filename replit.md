@@ -4,6 +4,7 @@
 Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.org that delivers a fresh Bible verse and plain-language motivational message every day. Built with React + Express + PostgreSQL.
 
 ## Recent Changes
+- 2026-03-07: Changed to subscription-only model ($8.88/month). All content now requires active subscription. Global SubscriptionGate in App.tsx redirects non-subscribers to paywall. FREE_DECODED_CHAPTERS=0, FREE_PODCAST_EPISODES=0. Updated paywall, terms, about page with new pricing and copy. Removed "Free Features" section from paywall.
 - 2026-03-05: Updated all 27 New Testament decoded books from corrected PDF sources (Matthew standalone + Series IV). Mark now has all 16 chapters (was 6), John now has all 21 chapters (was 3), Matthew at 100% coverage (1071 verses). Cleaned 311 instances of chapter header contamination from verse text. All decoded translations now match corrected DMLV content.
 - 2026-02-27: Switched from Vite dev server to pre-built production mode for stability. Vite's esbuild child process was crashing persistently in the Replit environment. Server now always serves pre-built static files from `dist/public/`. Run `npm run build` before `npm run start` (or `npm run dev`). The `.replit` workflow uses `npm run start` directly.
 - 2026-02-26: Fixed server crash stability issues: (1) SIGHUP signal handler added. Server now stays stable.
@@ -48,9 +49,9 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 
 ## Subscription System
 - **Product ID**: com.decodedfaithempire.app.premium.monthly
-- **Price**: $12.22/month (Apple IAP auto-renewable subscription)
-- **Free content**: Daily verse, KJV Bible reader, 3 decoded chapters per book, 2 podcast episodes
-- **Premium content**: All decoded chapters/books, all podcasts, exclusive devotionals, members-only audio, early access
+- **Price**: $8.88/month (Apple IAP auto-renewable subscription)
+- **Model**: Subscription-only (all content gated behind paywall)
+- **Gating**: All content requires active subscription (SubscriptionGate in App.tsx), only /premium, /privacy, /terms are public
 - **Tech**: WebView-to-native bridge via postMessage, custom StoreKit module (modules/storekit-module/), localStorage for state persistence
 - **Files**: client/src/lib/subscription.tsx (context), client/src/pages/paywall.tsx (UI), client/src/components/premium-lock.tsx (gating), faith-empire-app/App.js (native bridge)
 

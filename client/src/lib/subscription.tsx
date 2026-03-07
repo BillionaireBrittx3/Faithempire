@@ -101,5 +101,5 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export const FREE_DECODED_CHAPTERS = 3;
-export const FREE_PODCAST_EPISODES = 2;
+export const FREE_DECODED_CHAPTERS = 0;
+export const FREE_PODCAST_EPISODES = 0;
