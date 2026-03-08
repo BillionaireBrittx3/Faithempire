@@ -86,6 +86,13 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
       (window as any).ReactNativeWebView.postMessage(
         JSON.stringify({ type: "CHECK_SUBSCRIPTION" })
       );
+      const timeout = setTimeout(() => {
+        setIsLoading(false);
+      }, 3000);
+      return () => {
+        clearTimeout(timeout);
+        window.removeEventListener("message", handleMessage);
+      };
     } else {
       setIsLoading(false);
     }
