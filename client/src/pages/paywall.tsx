@@ -19,18 +19,60 @@ export default function PaywallPage() {
   const { subscribe, restorePurchases, isLoading, isPremium } = useSubscription();
   const [, navigate] = useLocation();
   const [tapCount, setTapCount] = useState(0);
+  const [showPin, setShowPin] = useState(false);
+  const [pinValue, setPinValue] = useState("");
 
   const handleLogoTap = useCallback(() => {
     const newCount = tapCount + 1;
     setTapCount(newCount);
     if (newCount >= 7) {
-      localStorage.setItem("faith_empire_owner_access", "true");
-      window.location.reload();
+      setShowPin(true);
+      setTapCount(0);
     }
   }, [tapCount]);
 
+  const handlePinSubmit = useCallback(() => {
+    if (pinValue === "8888") {
+      localStorage.setItem("faith_empire_owner_access", "true");
+      window.location.reload();
+    } else {
+      setPinValue("");
+      setShowPin(false);
+    }
+  }, [pinValue]);
+
   return (
     <div className="min-h-screen bg-black pb-20">
+      {showPin && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+          <div className="flex flex-col items-center gap-4 p-6">
+            <input
+              type="password"
+              inputMode="numeric"
+              maxLength={4}
+              value={pinValue}
+              onChange={(e) => setPinValue(e.target.value.replace(/\D/g, ""))}
+              placeholder="Enter PIN"
+              autoFocus
+              className="w-40 rounded-xl border border-white/20 bg-black px-4 py-3 text-center text-xl text-white tracking-widest focus:border-[#DFAC2A] focus:outline-none"
+            />
+            <div className="flex gap-3">
+              <button
+                onClick={() => { setShowPin(false); setPinValue(""); }}
+                className="rounded-lg px-5 py-2 text-sm text-white/50"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handlePinSubmit}
+                className="rounded-lg bg-[#DFAC2A] px-5 py-2 text-sm font-semibold text-black"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="px-4 pt-4">
         <Button
           size="icon"
