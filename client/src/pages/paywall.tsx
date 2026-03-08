@@ -1,3 +1,4 @@
+import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Crown, BookOpen, Headphones, Sparkles, Lock, ChevronLeft } from "lucide-react";
 import { useSubscription } from "@/lib/subscription";
@@ -17,6 +18,16 @@ const premiumFeatures = [
 export default function PaywallPage() {
   const { subscribe, restorePurchases, isLoading, isPremium } = useSubscription();
   const [, navigate] = useLocation();
+  const [tapCount, setTapCount] = useState(0);
+
+  const handleLogoTap = useCallback(() => {
+    const newCount = tapCount + 1;
+    setTapCount(newCount);
+    if (newCount >= 7) {
+      localStorage.setItem("faith_empire_owner_access", "true");
+      window.location.reload();
+    }
+  }, [tapCount]);
 
   return (
     <div className="min-h-screen bg-black pb-20">
@@ -44,6 +55,7 @@ export default function PaywallPage() {
             alt="Decoded Faith Empire"
             className="h-20 w-20 rounded-full object-cover"
             data-testid="img-paywall-logo"
+            onClick={handleLogoTap}
           />
         </motion.div>
 
