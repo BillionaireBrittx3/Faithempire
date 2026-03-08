@@ -120,6 +120,25 @@ function Router() {
   );
 }
 
+function AppLayout() {
+  const { isPremium, isLoading } = useSubscription();
+  const [location] = useLocation();
+  const isPublicPath = PUBLIC_PATHS.some(
+    (p) => location === p || location.startsWith(p + "/")
+  );
+  const showChrome = isPremium || isPublicPath;
+
+  return (
+    <div className="flex min-h-screen flex-col bg-background">
+      {showChrome && <Header />}
+      <main className={`flex-1 mx-auto w-full max-w-lg ${showChrome ? 'pb-16' : ''}`}>
+        <Router />
+      </main>
+      {showChrome && <TabBar />}
+    </div>
+  );
+}
+
 function App() {
   return (
     <ErrorBoundary>
@@ -127,13 +146,7 @@ function App() {
         <ThemeProvider>
           <SubscriptionProvider>
             <TooltipProvider>
-              <div className="flex min-h-screen flex-col bg-background">
-                <Header />
-                <main className="flex-1 mx-auto w-full max-w-lg pb-16">
-                  <Router />
-                </main>
-                <TabBar />
-              </div>
+              <AppLayout />
               <Toaster />
             </TooltipProvider>
           </SubscriptionProvider>
