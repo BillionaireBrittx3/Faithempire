@@ -19,16 +19,33 @@ export function useSubscription() {
 }
 
 const STORAGE_KEY = "faith_empire_premium";
+const OWNER_KEY = "faith_empire_owner_access";
 const PRODUCT_ID = "com.decodedfaithempire.app.premium.monthly";
 
 function isInWebView(): boolean {
   return typeof (window as any).ReactNativeWebView !== "undefined";
 }
 
+function checkOwnerBypass(): boolean {
+  try {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("dfe_owner") === "brittany8888") {
+        localStorage.setItem(OWNER_KEY, "true");
+        window.history.replaceState({}, "", window.location.pathname);
+        return true;
+      }
+    }
+    return localStorage.getItem(OWNER_KEY) === "true";
+  } catch {
+    return false;
+  }
+}
+
 export function SubscriptionProvider({ children }: { children: ReactNode }) {
   const [isPremium, setIsPremium] = useState(() => {
     try {
-      return localStorage.getItem(STORAGE_KEY) === "true";
+      return checkOwnerBypass() || localStorage.getItem(STORAGE_KEY) === "true";
     } catch {
       return false;
     }
@@ -62,7 +79,10 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
 
     window.addEventListener("message", handleMessage);
 
-    if (isInWebView()) {
+    if (checkOwnerBypass()) {
+      setIsPremium(true);
+      setIsLoading(false);
+    } else if (isInWebView()) {
       (window as any).ReactNativeWebView.postMessage(
         JSON.stringify({ type: "CHECK_SUBSCRIPTION" })
       );
