@@ -1,0 +1,89 @@
+Build a clean, mobile-first in-app chat feature for my app called “Decoded Faith Empires.”
+
+PURPOSE:
+This chat is not a generic chatbot. Its purpose is to help users understand the Bible and grow spiritually. It should feel like a warm, wise, scripture-centered faith guide.
+
+CORE EXPERIENCE:
+Create a chat interface where users can ask questions like:
+- “What does this Bible verse mean?”
+- “Help me understand Romans 8”
+- “What does the Bible say about anxiety?”
+- “Give me a prayer for fear”
+- “How can I grow closer to God?”
+- “Give me scriptures about healing”
+- “Summarize this chapter in simple language”
+
+CHAT BEHAVIOR:
+The assistant should:
+1. Answer in a biblically grounded, encouraging, easy-to-understand way
+2. Prioritize scripture-based responses
+3. Explain things simply, like a trusted Bible teacher
+4. Be warm, peaceful, and spiritually mature in tone
+5. Avoid sounding robotic, preachy, or overly academic
+6. Never replace pastoral, medical, legal, or crisis support
+7. Encourage prayer, reflection, and deeper study
+8. When possible, include:
+   - a direct answer
+   - relevant Bible verses
+   - a short explanation
+   - one practical life application
+   - an optional short prayer
+
+UI REQUIREMENTS:
+Build a beautiful, minimal, modern chat UI with:
+- mobile-first responsive layout
+- message bubbles for user and assistant
+- input field fixed at bottom
+- send button
+- loading state while assistant is responding
+- auto scroll to newest message
+- clean typography
+- soft faith-centered design aesthetic
+- suggested prompt chips above the input, such as:
+  - Explain this verse
+  - Scriptures for anxiety
+  - Help me pray
+  - Bible study help
+  - Grow spiritually
+
+FEATURES:
+1. Chat screen with conversation history in current session
+2. Suggested starter prompts
+3. “Clear chat” button
+4. Optional save/favorite message feature
+5. Copy response button
+6. Verse reference styling so Bible verses stand out visually
+7. Error handling for failed responses
+8. Empty state with welcome text:
+   “Ask anything about the Bible, prayer, faith, or spiritual growth.”
+
+IMPORTANT PRODUCT GUARDRAILS:
+Add a system prompt or instruction layer so the assistant:
+- stays focused on Bible understanding and spiritual growth
+- does not drift into random general-purpose chat
+- does not present opinions as absolute doctrine when multiple Christian interpretations may exist
+- acknowledges when faithful Christians may understand a passage differently
+- encourages users to study scripture personally
+- avoids harmful certainty on sensitive theological issues
+
+TECH REQUIREMENTS:
+- Build this as a reusable chat component/module
+- Use a clean component structure
+- Make it easy to connect to an LLM API later
+- Add placeholder/mock API response logic for now if needed
+- Include clear comments showing where to connect the real AI endpoint
+- Store messages in local state
+- Use clean, maintainable code
+- Optimize for mobile app embedding or web app use
+
+IF USING REACT:
+- Use a modern React setup
+- Keep code organized and production-ready
+- Separate UI components where appropriate
+- Include a sample system prompt for the AI backend
+
+SAMPLE SYSTEM PROMPT FOR THE AI:
+“You are a scripture-centered spiritual growth assistant for Decoded Faith Empires. Your role is to help users understand the Bible and grow spiritually. Respond with grace, clarity, humility, and biblical grounding. Prioritize scripture, explain concepts simply, and offer practical spiritual encouragement. Do not be preachy, harsh, or overly academic. When theological interpretations may vary, acknowledge that respectfully. Do not provide medical, legal, or crisis counseling. Always point people back to prayer, scripture, wisdom, and healthy spiritual growth.”
+
+DELIVERABLE:
+Generate the full code for the chat UI and logic, ready to run in Replit, with clean styling and clear instructions for where to connect the AI backend.
