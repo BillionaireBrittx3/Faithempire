@@ -26,6 +26,39 @@ function isInWebView(): boolean {
   return typeof (window as any).ReactNativeWebView !== "undefined";
 }
 
+const PREVIEW_KEY = "faith_empire_preview";
+const VALID_PREVIEW_TOKENS: Record<string, number> = {
+  "mutimanwa-preview-2026": new Date("2026-03-18").getTime(),
+};
+
+function checkPreviewAccess(): boolean {
+  try {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get("preview");
+      if (token && VALID_PREVIEW_TOKENS[token]) {
+        const expiry = VALID_PREVIEW_TOKENS[token];
+        if (Date.now() < expiry) {
+          localStorage.setItem(PREVIEW_KEY, JSON.stringify({ token, expiry }));
+          window.history.replaceState({}, "", window.location.pathname);
+          return true;
+        }
+      }
+      const stored = localStorage.getItem(PREVIEW_KEY);
+      if (stored) {
+        const { token: t, expiry } = JSON.parse(stored);
+        if (VALID_PREVIEW_TOKENS[t] && Date.now() < expiry) {
+          return true;
+        }
+        localStorage.removeItem(PREVIEW_KEY);
+      }
+    }
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 function checkOwnerBypass(): boolean {
   try {
     if (typeof window !== "undefined") {
@@ -45,7 +78,7 @@ function checkOwnerBypass(): boolean {
 export function SubscriptionProvider({ children }: { children: ReactNode }) {
   const [isPremium, setIsPremium] = useState(() => {
     try {
-      return checkOwnerBypass() || localStorage.getItem(STORAGE_KEY) === "true";
+      return checkOwnerBypass() || checkPreviewAccess() || localStorage.getItem(STORAGE_KEY) === "true";
     } catch {
       return false;
     }
@@ -79,7 +112,7 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
 
     window.addEventListener("message", handleMessage);
 
-    if (checkOwnerBypass()) {
+    if (checkOwnerBypass() || checkPreviewAccess()) {
       setIsPremium(true);
       setIsLoading(false);
     } else if (isInWebView()) {
