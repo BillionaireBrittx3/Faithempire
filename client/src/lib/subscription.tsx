@@ -28,7 +28,7 @@ function isInWebView(): boolean {
 
 const PREVIEW_KEY = "faith_empire_preview";
 const VALID_PREVIEW_TOKENS: Record<string, number> = {
-  "mutimanwa-preview-2026": new Date("2026-03-18").getTime(),
+  "mutimanwa-preview-2026": new Date("2036-03-08").getTime(),
 };
 
 function checkPreviewAccess(): boolean {
