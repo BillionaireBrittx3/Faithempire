@@ -4,10 +4,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronLeft, ChevronRight, BookOpen, Highlighter } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Lock, Crown } from "lucide-react";
 import { BIBLE_BOOKS, type BibleBook } from "@/lib/bible-data";
 import { isHighlighted, toggleHighlight, getHighlights } from "@/lib/highlights";
 import { useToast } from "@/hooks/use-toast";
+import { useSubscription } from "@/lib/subscription";
 import { motion, AnimatePresence } from "framer-motion";
 
 type ViewMode = "books" | "chapters" | "reading";
@@ -38,6 +39,8 @@ function ChapterSkeleton() {
   );
 }
 
+const FREE_BIBLE_BOOK = "Genesis";
+
 export default function BiblePage() {
   const [view, setView] = useState<ViewMode>("books");
   const [testament, setTestament] = useState<"old" | "new">("old");
@@ -47,13 +50,22 @@ export default function BiblePage() {
     () => new Set(getHighlights().map((h) => h.id))
   );
   const { toast } = useToast();
+  const { isPremium, subscribe } = useSubscription();
 
   const { data: chapterData, isLoading, error: chapterError } = useQuery<ChapterData>({
     queryKey: ["/api/bible", selectedBook?.name, selectedChapter],
     enabled: view === "reading" && !!selectedBook,
   });
 
+  const isBookFree = useCallback((book: BibleBook) => {
+    return book.name === FREE_BIBLE_BOOK || isPremium;
+  }, [isPremium]);
+
   const handleBookSelect = useCallback((book: BibleBook) => {
+    if (!isPremium && book.name !== FREE_BIBLE_BOOK) {
+      subscribe();
+      return;
+    }
     setSelectedBook(book);
     setSelectedChapter(1);
     if (book.chapters === 1) {
@@ -61,7 +73,7 @@ export default function BiblePage() {
     } else {
       setView("chapters");
     }
-  }, []);
+  }, [isPremium, subscribe]);
 
   const handleChapterSelect = useCallback((chapter: number) => {
     setSelectedChapter(chapter);
@@ -191,21 +203,30 @@ export default function BiblePage() {
             </div>
 
             <div className="grid grid-cols-2 gap-2 px-4 py-2">
-              {filteredBooks.map((book) => (
-                <Card
-                  key={book.name}
-                  className="cursor-pointer overflow-visible p-3 hover-elevate"
-                  onClick={() => handleBookSelect(book)}
-                  data-testid={`card-book-${book.name.toLowerCase().replace(/ /g, "-")}`}
-                >
-                  <p className="text-sm font-semibold text-foreground truncate">
-                    {book.name}
-                  </p>
-                  <p className="text-[10px] text-muted-foreground">
-                    {book.chapters} {book.chapters === 1 ? "chapter" : "chapters"}
-                  </p>
-                </Card>
-              ))}
+              {filteredBooks.map((book) => {
+                const free = isBookFree(book);
+                return (
+                  <Card
+                    key={book.name}
+                    className={`cursor-pointer overflow-visible p-3 hover-elevate ${!free ? "opacity-70" : ""}`}
+                    onClick={() => handleBookSelect(book)}
+                    data-testid={`card-book-${book.name.toLowerCase().replace(/ /g, "-")}`}
+                  >
+                    <div className="flex items-center justify-between gap-1">
+                      <p className="text-sm font-semibold text-foreground truncate">
+                        {book.name}
+                      </p>
+                      {!free && <Lock className="h-3 w-3 text-muted-foreground shrink-0" />}
+                      {book.name === FREE_BIBLE_BOOK && !isPremium && (
+                        <span className="text-[8px] font-bold text-[#DFAC2A] uppercase">Free</span>
+                      )}
+                    </div>
+                    <p className="text-[10px] text-muted-foreground">
+                      {book.chapters} {book.chapters === 1 ? "chapter" : "chapters"}
+                    </p>
+                  </Card>
+                );
+              })}
             </div>
           </motion.div>
         )}

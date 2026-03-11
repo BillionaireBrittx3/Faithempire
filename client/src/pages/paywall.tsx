@@ -163,9 +163,14 @@ export default function PaywallPage() {
             <p className="text-xs text-white/50 mb-3">Every verse decoded in modern language — side by side with the original KJV</p>
             <div className="grid grid-cols-2 gap-2">
               {sampleDecodedBooks.map((book) => (
-                <div key={book.name} className="rounded-xl bg-white/[0.04] border border-white/5 p-3">
+                <div key={book.name} className={`rounded-xl border p-3 ${book.name === "Genesis" ? "bg-[#DFAC2A]/10 border-[#DFAC2A]/30" : "bg-white/[0.04] border-white/5"}`}>
                   <p className="text-sm font-medium text-white">{book.name}</p>
                   <p className="text-[10px] text-white/40">{book.chapters} chapters · {book.verses} verses</p>
+                  {book.name === "Genesis" && (
+                    <Link href="/decoded/genesis">
+                      <span className="inline-block mt-1.5 text-[10px] font-semibold text-[#DFAC2A] underline underline-offset-2" data-testid="link-free-genesis-decoded">Read Free →</span>
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
@@ -182,7 +187,13 @@ export default function PaywallPage() {
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 relative overflow-hidden">
             <div className="flex flex-wrap gap-1.5">
               {sampleBibleBooks.map((book) => (
-                <span key={book} className="rounded-lg bg-white/[0.06] border border-white/5 px-2.5 py-1.5 text-xs text-white/70">{book}</span>
+                book === "Genesis" ? (
+                  <Link key={book} href="/bible?book=Genesis&chapter=1">
+                    <span className="rounded-lg bg-[#DFAC2A]/10 border border-[#DFAC2A]/30 px-2.5 py-1.5 text-xs font-semibold text-[#DFAC2A] cursor-pointer" data-testid="link-free-genesis-bible">Genesis ✦ Free</span>
+                  </Link>
+                ) : (
+                  <span key={book} className="rounded-lg bg-white/[0.06] border border-white/5 px-2.5 py-1.5 text-xs text-white/70">{book}</span>
+                )
               ))}
               <span className="rounded-lg bg-white/[0.03] border border-white/5 px-2.5 py-1.5 text-xs text-white/30">+ 54 more</span>
             </div>
@@ -242,13 +253,6 @@ export default function PaywallPage() {
         transition={{ duration: 0.4, delay: 0.55 }}
         className="sticky bottom-0 bg-gradient-to-t from-black via-black to-black/0 px-5 pt-6 pb-8"
       >
-        <div className="text-center mb-3">
-          <p className="text-2xl font-bold text-white" data-testid="text-paywall-price">
-            $8.88<span className="text-sm font-normal text-white/50">/month</span>
-          </p>
-          <p className="text-[10px] text-white/40 mt-0.5">Cancel anytime</p>
-        </div>
-
         <Button
           onClick={subscribe}
           disabled={isLoading}
@@ -263,10 +267,11 @@ export default function PaywallPage() {
           ) : (
             <span className="flex items-center gap-2">
               <Crown className="h-5 w-5" />
-              Subscribe Now
+              $8.88/month — Subscribe Now
             </span>
           )}
         </Button>
+        <p className="text-[10px] text-white/40 text-center mt-2">Cancel anytime</p>
 
         <div className="flex items-center justify-center gap-4 mt-3">
           <button onClick={restorePurchases} className="text-[11px] text-white/40 underline underline-offset-4" data-testid="button-restore-purchases">

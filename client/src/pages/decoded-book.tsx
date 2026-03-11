@@ -68,7 +68,8 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   const { toast } = useToast();
   const { isPremium } = useSubscription();
 
-  const isChapterLocked = (chapterNum: number) => !isPremium && chapterNum > FREE_DECODED_CHAPTERS;
+  const isGenesisBook = bookSlug === "genesis";
+  const isChapterLocked = (chapterNum: number) => !isPremium && !isGenesisBook && chapterNum > FREE_DECODED_CHAPTERS;
 
   const { data: bookSummary, isLoading: summaryLoading, error: summaryError } = useQuery<BookSummary>({
     queryKey: ["/api/decoded", bookSlug],

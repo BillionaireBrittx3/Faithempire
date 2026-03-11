@@ -68,7 +68,7 @@ class ErrorBoundary extends Component<
   }
 }
 
-const PUBLIC_PATHS = ["/premium", "/privacy", "/terms"];
+const PUBLIC_PATHS = ["/premium", "/privacy", "/terms", "/decoded/genesis", "/bible"];
 
 function SubscriptionGate({ children }: { children: ReactNode }) {
   const { isPremium, isLoading } = useSubscription();
