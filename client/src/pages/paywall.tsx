@@ -1,18 +1,27 @@
 import { useState, useCallback } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
-import { Crown, BookOpen, Headphones, Sparkles, Lock, ChevronLeft } from "lucide-react";
+import { Crown, BookOpen, Headphones, Sparkles, Lock, ChevronLeft, Book, Play } from "lucide-react";
 import { useSubscription } from "@/lib/subscription";
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_1770693543975.png";
+import type { Verse } from "@shared/schema";
+import { format } from "date-fns";
 
-const premiumFeatures = [
-  { icon: BookOpen, label: "Daily Verse & Decoded Message", description: "Fresh inspiration every day" },
-  { icon: BookOpen, label: "Full KJV Bible Reader", description: "All 66 books with navigation" },
-  { icon: BookOpen, label: "All 66 Decoded Books", description: "Every verse decoded in modern language" },
-  { icon: Headphones, label: "Full Podcast Library", description: "All episodes, unlimited access" },
-  { icon: Sparkles, label: "Verse Archive & Favorites", description: "Save and revisit your highlights" },
-  { icon: Crown, label: "Early Access", description: "New content before anyone else" },
+const sampleDecodedBooks = [
+  { name: "Genesis", chapters: 50, verses: 1533 },
+  { name: "Psalms", chapters: 150, verses: 2461 },
+  { name: "Proverbs", chapters: 31, verses: 915 },
+  { name: "Matthew", chapters: 28, verses: 1071 },
+  { name: "John", chapters: 21, verses: 879 },
+  { name: "Romans", chapters: 16, verses: 433 },
+];
+
+const sampleBibleBooks = [
+  "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy",
+  "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel",
+  "1 Kings", "2 Kings",
 ];
 
 export default function PaywallPage() {
@@ -21,6 +30,10 @@ export default function PaywallPage() {
   const [tapCount, setTapCount] = useState(0);
   const [showPin, setShowPin] = useState(false);
   const [pinValue, setPinValue] = useState("");
+
+  const { data: verse } = useQuery<Verse>({
+    queryKey: ["/api/verses/today"],
+  });
 
   const handleLogoTap = useCallback(() => {
     const newCount = tapCount + 1;
@@ -41,8 +54,45 @@ export default function PaywallPage() {
     }
   }, [pinValue]);
 
+  const todayFormatted = format(new Date(), "MMMM d, yyyy");
+
+  if (isPremium) {
+    return (
+      <div className="min-h-screen bg-black pb-20">
+        <div className="flex flex-col items-center px-6 pt-12 pb-8">
+          <img src={logoPath} alt="Decoded Faith Empire" className="h-20 w-20 rounded-full object-cover mb-6" />
+          <h1 className="font-serif text-3xl font-bold text-white mb-2" data-testid="text-paywall-title">Welcome Back</h1>
+          <p className="text-sm text-white/60 text-center">You have full access to all content.</p>
+          <div className="flex items-center gap-2 text-[#DFAC2A] mt-6 mb-4">
+            <Crown className="h-5 w-5" />
+            <span className="text-base font-semibold">You're a Premium Member</span>
+          </div>
+          <div className="w-full max-w-sm flex flex-col gap-3">
+            <Button
+              variant="outline"
+              onClick={() => {
+                if (typeof (window as any).ReactNativeWebView !== "undefined") {
+                  (window as any).ReactNativeWebView.postMessage(JSON.stringify({ type: "OPEN_SUBSCRIPTION_SETTINGS" }));
+                } else {
+                  window.open("https://apps.apple.com/account/subscriptions", "_blank");
+                }
+              }}
+              className="w-full border-white/20 text-white/70 hover:text-white"
+              data-testid="button-manage-subscription"
+            >
+              Manage Subscription
+            </Button>
+            <button onClick={restorePurchases} className="text-xs text-white/40 underline underline-offset-4" data-testid="button-restore-purchases">
+              Restore Purchases
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-black pb-20">
+    <div className="min-h-screen bg-black">
       {showPin && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
           <div className="flex flex-col items-center gap-4 p-6">
@@ -57,217 +107,192 @@ export default function PaywallPage() {
               className="w-40 rounded-xl border border-white/20 bg-black px-4 py-3 text-center text-xl text-white tracking-widest focus:border-[#DFAC2A] focus:outline-none"
             />
             <div className="flex gap-3">
-              <button
-                onClick={() => { setShowPin(false); setPinValue(""); }}
-                className="rounded-lg px-5 py-2 text-sm text-white/50"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handlePinSubmit}
-                className="rounded-lg bg-[#DFAC2A] px-5 py-2 text-sm font-semibold text-black"
-              >
-                OK
-              </button>
+              <button onClick={() => { setShowPin(false); setPinValue(""); }} className="rounded-lg px-5 py-2 text-sm text-white/50">Cancel</button>
+              <button onClick={handlePinSubmit} className="rounded-lg bg-[#DFAC2A] px-5 py-2 text-sm font-semibold text-black">OK</button>
             </div>
           </div>
         </div>
       )}
-      <div className="px-4 pt-4">
-        <Button
-          size="icon"
-          variant="ghost"
-          onClick={() => navigate("/")}
-          className="text-white/70"
-          data-testid="button-paywall-back"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </Button>
+
+      <div className="flex flex-col items-center px-5 pt-8 pb-4">
+        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4 }} className="mb-4">
+          <img src={logoPath} alt="Decoded Faith Empire" className="h-16 w-16 rounded-full object-cover" data-testid="img-paywall-logo" onClick={handleLogoTap} />
+        </motion.div>
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }} className="text-center mb-6">
+          <h1 className="font-serif text-2xl font-bold text-white" data-testid="text-paywall-title">Decoded Faith Empire</h1>
+          <p className="text-xs text-white/50 mt-1">The Bible decoded into today's language</p>
+        </motion.div>
       </div>
 
-      <div className="flex flex-col items-center px-6 pt-4 pb-8">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-          className="mb-6"
-        >
-          <img
-            src={logoPath}
-            alt="Decoded Faith Empire"
-            className="h-20 w-20 rounded-full object-cover"
-            data-testid="img-paywall-logo"
-            onClick={handleLogoTap}
-          />
-        </motion.div>
+      <div className="px-5 space-y-5 pb-6">
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-          className="text-center mb-2"
-        >
-          <h1
-            className="font-serif text-3xl font-bold text-white"
-            data-testid="text-paywall-title"
-          >
-            {isPremium ? "Welcome Back" : "Welcome to Decoded Faith Empire"}
-          </h1>
-          <p className="text-sm text-white/60 mt-2 max-w-xs mx-auto leading-relaxed">
-            {isPremium
-              ? "You have full access to all content"
-              : "Subscribe to unlock daily decoded verses, the full KJV Bible, all 66 decoded books, and the complete podcast library"}
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="w-full max-w-sm mt-6 mb-8"
-        >
-          <div className="rounded-2xl border border-[#DFAC2A]/30 bg-[#DFAC2A]/5 p-5">
-            <div className="flex items-center gap-2 mb-4">
-              <Crown className="h-5 w-5 text-[#DFAC2A]" />
-              <span className="text-sm font-semibold text-[#DFAC2A]">
-                {isPremium ? "Your Membership" : "What's Included"}
-              </span>
+        {verse && (
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.15 }}>
+            <div className="flex items-center gap-2 mb-2">
+              <BookOpen className="h-4 w-4 text-[#DFAC2A]" />
+              <span className="text-xs font-semibold text-[#DFAC2A] uppercase tracking-wider">Today's Verse Preview</span>
             </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 relative overflow-hidden">
+              <p className="text-[10px] text-white/40 uppercase tracking-widest mb-3">{todayFormatted}</p>
+              <p className="font-serif text-base text-white/90 italic leading-relaxed">
+                {verse.verseText.length > 120 ? verse.verseText.substring(0, 120) + "..." : verse.verseText}
+              </p>
+              <p className="text-xs text-[#DFAC2A]/70 mt-2 tracking-wide">— {verse.reference} —</p>
+              <div className="mt-3 border-t border-white/10 pt-3">
+                <p className="text-[10px] text-[#DFAC2A]/50 uppercase tracking-widest mb-1">Decoded</p>
+                <p className="text-sm text-white/50 leading-relaxed line-clamp-2">
+                  {verse.decodedMessage}
+                </p>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent" />
+              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+                <span className="flex items-center gap-1 text-[10px] text-white/40 bg-black/80 px-3 py-1 rounded-full">
+                  <Lock className="h-3 w-3" /> Subscribe to read full verse
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        )}
 
-            <div className="flex flex-col gap-3">
-              {premiumFeatures.map((feature, idx) => (
-                <motion.div
-                  key={feature.label}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.3 + idx * 0.05 }}
-                  className="flex items-start gap-3"
-                >
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#DFAC2A]/10">
-                    <feature.icon className="h-4 w-4 text-[#DFAC2A]" />
-                  </div>
-                  <div className="flex-1 min-w-0 pt-0.5">
-                    <p className="text-sm font-medium text-white">{feature.label}</p>
-                    <p className="text-xs text-white/50">{feature.description}</p>
-                  </div>
-                </motion.div>
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.25 }}>
+          <div className="flex items-center gap-2 mb-2">
+            <Book className="h-4 w-4 text-[#DFAC2A]" />
+            <span className="text-xs font-semibold text-[#DFAC2A] uppercase tracking-wider">66 Books Decoded</span>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 relative overflow-hidden">
+            <p className="text-xs text-white/50 mb-3">Every verse decoded in modern language — side by side with the original KJV</p>
+            <div className="grid grid-cols-2 gap-2">
+              {sampleDecodedBooks.map((book) => (
+                <div key={book.name} className="rounded-xl bg-white/[0.04] border border-white/5 p-3">
+                  <p className="text-sm font-medium text-white">{book.name}</p>
+                  <p className="text-[10px] text-white/40">{book.chapters} chapters · {book.verses} verses</p>
+                </div>
               ))}
             </div>
+            <p className="text-center text-xs text-white/30 mt-3">+ 60 more books</p>
+            <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black to-transparent" />
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.5 }}
-          className="w-full max-w-sm flex flex-col items-center gap-3"
-        >
-          {isPremium ? (
-            <div className="flex flex-col items-center gap-3 w-full">
-              <div className="flex items-center gap-2 text-[#DFAC2A]">
-                <Crown className="h-5 w-5" />
-                <span className="text-base font-semibold">You're a Premium Member</span>
-              </div>
-              <p className="text-xs text-white/40 text-center">
-                Your subscription is active. You have full access to all content.
-              </p>
-              <Button
-                variant="outline"
-                onClick={() => {
-                  if (typeof (window as any).ReactNativeWebView !== "undefined") {
-                    (window as any).ReactNativeWebView.postMessage(
-                      JSON.stringify({ type: "OPEN_SUBSCRIPTION_SETTINGS" })
-                    );
-                  } else {
-                    window.open("https://apps.apple.com/account/subscriptions", "_blank");
-                  }
-                }}
-                className="w-full border-white/20 text-white/70 hover:text-white"
-                data-testid="button-manage-subscription"
-              >
-                Manage Subscription
-              </Button>
-              <button
-                onClick={restorePurchases}
-                className="text-xs text-white/40 underline underline-offset-4"
-                data-testid="button-restore-purchases"
-              >
-                Restore Purchases
-              </button>
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.35 }}>
+          <div className="flex items-center gap-2 mb-2">
+            <BookOpen className="h-4 w-4 text-[#DFAC2A]" />
+            <span className="text-xs font-semibold text-[#DFAC2A] uppercase tracking-wider">Full KJV Bible</span>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 relative overflow-hidden">
+            <div className="flex flex-wrap gap-1.5">
+              {sampleBibleBooks.map((book) => (
+                <span key={book} className="rounded-lg bg-white/[0.06] border border-white/5 px-2.5 py-1.5 text-xs text-white/70">{book}</span>
+              ))}
+              <span className="rounded-lg bg-white/[0.03] border border-white/5 px-2.5 py-1.5 text-xs text-white/30">+ 54 more</span>
             </div>
-          ) : (
-            <>
-              <div className="text-center mb-1">
-                <p className="text-3xl font-bold text-white" data-testid="text-paywall-price">
-                  $8.88<span className="text-base font-normal text-white/50">/month</span>
-                </p>
-                <p className="text-xs text-white/40 mt-1">Cancel anytime</p>
-              </div>
-
-              <Button
-                onClick={subscribe}
-                disabled={isLoading}
-                className="w-full h-14 rounded-xl text-base font-semibold bg-[#DFAC2A] hover:bg-[#DFAC2A]/90 text-black"
-                data-testid="button-subscribe"
-              >
-                {isLoading ? (
-                  <span className="flex items-center gap-2">
-                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-black/30 border-t-black" />
-                    Processing...
-                  </span>
-                ) : (
-                  <span className="flex items-center gap-2">
-                    <Crown className="h-5 w-5" />
-                    Subscribe Now
-                  </span>
-                )}
-              </Button>
-
-              <button
-                onClick={restorePurchases}
-                className="text-xs text-white/40 underline underline-offset-4"
-                data-testid="button-restore-purchases"
-              >
-                Restore Purchases
-              </button>
-            </>
-          )}
+          </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.7 }}
-          className="mt-8 w-full max-w-sm"
-        >
-          <div className="border-t border-white/10 pt-4">
-            <div className="flex items-center justify-center gap-2 text-white/30 text-[10px] mb-3">
-              <Lock className="h-3 w-3" />
-              <span>Secure payment via Apple</span>
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.45 }}>
+          <div className="flex items-center gap-2 mb-2">
+            <Headphones className="h-4 w-4 text-[#DFAC2A]" />
+            <span className="text-xs font-semibold text-[#DFAC2A] uppercase tracking-wider">Podcast</span>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#DFAC2A]/10">
+                <Play className="h-4 w-4 text-[#DFAC2A]" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium text-white">Faith-based episodes</p>
+                <p className="text-xs text-white/40">Audio teachings & decoded discussions</p>
+              </div>
+              <Lock className="h-4 w-4 text-white/20 shrink-0" />
             </div>
-            <div className="text-[10px] text-white/30 leading-relaxed space-y-2" data-testid="text-subscription-legal">
-              <p>
-                A subscription costs $8.88 per month. Payment will be charged to your Apple ID account at confirmation of purchase.
-              </p>
-              <p>
-                Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the rate of $8.88/month.
-              </p>
-              <p>
-                You can manage and cancel your subscription in your Apple ID Account Settings (Settings &gt; Apple ID &gt; Subscriptions). Any unused portion of a free trial period, if offered, will be forfeited when you purchase a subscription.
-              </p>
-            </div>
-            <div className="flex items-center justify-center gap-4 mt-4 text-[10px]">
-              <Link href="/terms">
-                <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-terms">Terms of Use</span>
-              </Link>
-              <span className="text-white/20">|</span>
-              <Link href="/privacy">
-                <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-privacy">Privacy Policy</span>
-              </Link>
+          </div>
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.5 }}>
+          <div className="flex items-center gap-2 mb-2">
+            <Sparkles className="h-4 w-4 text-[#DFAC2A]" />
+            <span className="text-xs font-semibold text-[#DFAC2A] uppercase tracking-wider">Also Included</span>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
+                <p className="text-xs text-white/60">Verse archive with category filters</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
+                <p className="text-xs text-white/60">Save & highlight your favorite verses</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
+                <p className="text-xs text-white/60">Share verses with friends & family</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#DFAC2A]" />
+                <p className="text-xs text-white/60">Early access to new content</p>
+              </div>
             </div>
           </div>
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.55 }}
+        className="sticky bottom-0 bg-gradient-to-t from-black via-black to-black/0 px-5 pt-6 pb-8"
+      >
+        <div className="text-center mb-3">
+          <p className="text-2xl font-bold text-white" data-testid="text-paywall-price">
+            $8.88<span className="text-sm font-normal text-white/50">/month</span>
+          </p>
+          <p className="text-[10px] text-white/40 mt-0.5">Cancel anytime</p>
+        </div>
+
+        <Button
+          onClick={subscribe}
+          disabled={isLoading}
+          className="w-full h-14 rounded-xl text-base font-semibold bg-[#DFAC2A] hover:bg-[#DFAC2A]/90 text-black"
+          data-testid="button-subscribe"
+        >
+          {isLoading ? (
+            <span className="flex items-center gap-2">
+              <div className="h-4 w-4 animate-spin rounded-full border-2 border-black/30 border-t-black" />
+              Processing...
+            </span>
+          ) : (
+            <span className="flex items-center gap-2">
+              <Crown className="h-5 w-5" />
+              Subscribe Now
+            </span>
+          )}
+        </Button>
+
+        <div className="flex items-center justify-center gap-4 mt-3">
+          <button onClick={restorePurchases} className="text-[11px] text-white/40 underline underline-offset-4" data-testid="button-restore-purchases">
+            Restore Purchases
+          </button>
+        </div>
+
+        <div className="mt-4">
+          <div className="flex items-center justify-center gap-2 text-white/25 text-[9px] mb-2">
+            <Lock className="h-2.5 w-2.5" />
+            <span>Secure payment via Apple</span>
+          </div>
+          <p className="text-[9px] text-white/25 leading-relaxed text-center">
+            $8.88/month. Auto-renews. Cancel in Settings &gt; Apple ID &gt; Subscriptions at least 24 hours before renewal.
+          </p>
+          <div className="flex items-center justify-center gap-4 mt-3 text-[10px]">
+            <Link href="/terms">
+              <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-terms">Terms of Use</span>
+            </Link>
+            <span className="text-white/20">|</span>
+            <Link href="/privacy">
+              <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-privacy">Privacy Policy</span>
+            </Link>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
