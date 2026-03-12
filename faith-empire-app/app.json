@@ -2,7 +2,7 @@
   "expo": {
     "name": "Decoded Faith Empire",
     "slug": "faith-empire-app",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.decodedfaithempire",
-      "buildNumber": "1",
+      "buildNumber": "6",
       "config": {
         "usesNonExemptEncryption": false
       },
