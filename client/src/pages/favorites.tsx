@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Heart, Trash2, Highlighter, Book } from "lucide-react";
+import { Heart, Trash2, Highlighter, Book, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +8,7 @@ import { getFavorites, removeFavorite } from "@/lib/favorites";
 import { getHighlights, removeHighlight, type BibleHighlight } from "@/lib/highlights";
 import type { Verse } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
+import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 
 type TabType = "favorites" | "highlights";
@@ -18,6 +19,7 @@ export default function FavoritesPage() {
   const [highlights, setHighlights] = useState<BibleHighlight[]>([]);
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const { toast } = useToast();
+  const [, navigate] = useLocation();
 
   const loadFavorites = useCallback(() => {
     setFavorites(getFavorites());
@@ -43,6 +45,16 @@ export default function FavoritesPage() {
     setHighlights((prev) => prev.filter((x) => x.id !== h.id));
     toast({ title: "Highlight Removed", description: `${h.book} ${h.chapter}:${h.verse}` });
   }, [toast]);
+
+  const navigateToHighlight = useCallback((h: BibleHighlight) => {
+    if (h.book.includes("Decoded")) {
+      const slug = h.book.replace(" Decoded", "").toLowerCase().replace(/ /g, "-");
+      navigate(`/decoded/${slug}`);
+    } else {
+      const bookName = encodeURIComponent(h.book);
+      navigate(`/bible?book=${bookName}&chapter=${h.chapter}`);
+    }
+  }, [navigate]);
 
   return (
     <div className="pb-20">
@@ -217,14 +229,18 @@ export default function FavoritesPage() {
                     layout
                   >
                     <Card
-                      className="overflow-visible p-4 border-primary/20"
+                      className="overflow-visible p-4 border-primary/20 cursor-pointer"
+                      onClick={() => navigateToHighlight(h)}
                       data-testid={`card-highlight-${h.id}`}
                     >
                       <div className="flex items-start justify-between gap-2 flex-wrap">
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs font-medium text-primary">
-                            {h.book} {h.chapter}:{h.verse}
-                          </p>
+                          <div className="flex items-center gap-2">
+                            <p className="text-xs font-medium text-primary">
+                              {h.book} {h.chapter}:{h.verse}
+                            </p>
+                            <ExternalLink className="h-3 w-3 text-primary/50" />
+                          </div>
                           <p
                             className="mt-2 text-sm leading-relaxed text-foreground/90"
                             style={{ fontFamily: "'Lora', serif" }}
@@ -235,7 +251,7 @@ export default function FavoritesPage() {
                         <Button
                           size="icon"
                           variant="ghost"
-                          onClick={() => handleRemoveHighlight(h)}
+                          onClick={(e) => { e.stopPropagation(); handleRemoveHighlight(h); }}
                           className="text-muted-foreground"
                           data-testid={`button-remove-highlight-${h.id}`}
                         >

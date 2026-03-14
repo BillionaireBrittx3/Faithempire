@@ -6,8 +6,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SubscriptionProvider, useSubscription } from "@/lib/subscription";
+import { AudioProvider } from "@/lib/audio-context";
 import { Header } from "@/components/header";
 import { TabBar } from "@/components/tab-bar";
+import { GlobalPlayer } from "@/components/global-player";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import ArchivePage from "@/pages/archive";
@@ -15,6 +17,7 @@ import FavoritesPage from "@/pages/favorites";
 import AboutPage from "@/pages/about";
 import PodcastPage from "@/pages/podcast";
 import BiblePage from "@/pages/bible";
+import PrayersPage from "@/pages/prayers";
 import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
 import DecodedPage from "@/pages/decoded";
@@ -68,7 +71,7 @@ class ErrorBoundary extends Component<
   }
 }
 
-const PUBLIC_PATHS = ["/premium", "/privacy", "/terms", "/decoded/genesis", "/bible"];
+const PUBLIC_PATHS = ["/premium", "/privacy", "/terms", "/decoded/genesis", "/bible", "/prayers"];
 
 function SubscriptionGate({ children }: { children: ReactNode }) {
   const { isPremium, isLoading } = useSubscription();
@@ -106,6 +109,7 @@ function Router() {
         <Route path="/archive" component={ArchivePage} />
         <Route path="/podcast" component={PodcastPage} />
         <Route path="/favorites" component={FavoritesPage} />
+        <Route path="/prayers" component={PrayersPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/privacy" component={PrivacyPage} />
         <Route path="/terms" component={TermsPage} />
@@ -134,6 +138,7 @@ function AppLayout() {
       <main className={`flex-1 mx-auto w-full max-w-lg ${showChrome ? 'pb-16' : ''}`}>
         <Router />
       </main>
+      {showChrome && <GlobalPlayer />}
       {showChrome && <TabBar />}
     </div>
   );
@@ -145,10 +150,12 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <ThemeProvider>
           <SubscriptionProvider>
-            <TooltipProvider>
-              <AppLayout />
-              <Toaster />
-            </TooltipProvider>
+            <AudioProvider>
+              <TooltipProvider>
+                <AppLayout />
+                <Toaster />
+              </TooltipProvider>
+            </AudioProvider>
           </SubscriptionProvider>
         </ThemeProvider>
       </QueryClientProvider>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLocation, Link } from "wouter";
 import { BookOpen, Book, Headphones, Menu } from "lucide-react";
 
@@ -18,6 +19,38 @@ function CrossIcon({ className }: { className?: string }) {
   );
 }
 
+const LAST_SEEN_KEY = "faith-empire-last-verse-seen";
+
+function getETMidnight(): number {
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const parts = formatter.formatToParts(new Date());
+  const year = parseInt(parts.find((p) => p.type === "year")!.value);
+  const month = parseInt(parts.find((p) => p.type === "month")!.value) - 1;
+  const day = parseInt(parts.find((p) => p.type === "day")!.value);
+  const etMidnight = new Date(Date.UTC(year, month, day, 5, 0, 0));
+  return etMidnight.getTime();
+}
+
+function hasNewVerse(): boolean {
+  try {
+    const lastSeen = localStorage.getItem(LAST_SEEN_KEY);
+    const midnight = getETMidnight();
+    if (!lastSeen) return true;
+    return parseInt(lastSeen) < midnight;
+  } catch {
+    return false;
+  }
+}
+
+export function markVerseSeen(): void {
+  localStorage.setItem(LAST_SEEN_KEY, Date.now().toString());
+}
+
 const tabs = [
   { path: "/", label: "Today", icon: BookOpen },
   { path: "/bible", label: "Bible", icon: Book },
@@ -28,6 +61,18 @@ const tabs = [
 
 export function TabBar() {
   const [location] = useLocation();
+  const [showBadge, setShowBadge] = useState(false);
+
+  useEffect(() => {
+    setShowBadge(hasNewVerse());
+  }, []);
+
+  useEffect(() => {
+    if (location === "/") {
+      markVerseSeen();
+      setShowBadge(false);
+    }
+  }, [location]);
 
   return (
     <nav
@@ -36,7 +81,7 @@ export function TabBar() {
     >
       <div className="mx-auto flex max-w-lg items-center justify-around gap-1 px-2 py-1 pb-[max(0.25rem,env(safe-area-inset-bottom))]">
         {tabs.map((tab) => {
-          const moreSubPages = ["/about", "/favorites", "/archive", "/privacy", "/terms", "/premium"];
+          const moreSubPages = ["/about", "/favorites", "/archive", "/privacy", "/terms", "/premium", "/prayers"];
           const isActive =
             tab.path === "/"
               ? location === "/"
@@ -44,21 +89,27 @@ export function TabBar() {
                 ? moreSubPages.some((p) => location === p || location.startsWith(p + "/"))
                 : location.startsWith(tab.path);
           const Icon = tab.icon;
+          const showDot = tab.path === "/" && showBadge && !isActive;
           return (
             <Link key={tab.path} href={tab.path}>
               <button
-                className={`flex flex-col items-center gap-0.5 rounded-md px-4 py-2 transition-colors ${
+                className={`relative flex flex-col items-center gap-0.5 rounded-md px-4 py-2 transition-colors ${
                   isActive
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
                 data-testid={`tab-${tab.label.toLowerCase()}`}
               >
-                <Icon
-                  className={`h-5 w-5 transition-all ${
-                    isActive ? "stroke-[2.5]" : "stroke-[1.5]"
-                  }`}
-                />
+                <div className="relative">
+                  <Icon
+                    className={`h-5 w-5 transition-all ${
+                      isActive ? "stroke-[2.5]" : "stroke-[1.5]"
+                    }`}
+                  />
+                  {showDot && (
+                    <span className="absolute -top-0.5 -right-0.5 h-2 w-2 rounded-full bg-primary" />
+                  )}
+                </div>
                 <span className={`text-[10px] font-medium tracking-wide ${isActive ? "font-semibold" : ""}`}>
                   {tab.label}
                 </span>

@@ -1,14 +1,17 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Lock, Crown } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Lock, Crown, Search, X, Type } from "lucide-react";
 import { BIBLE_BOOKS, type BibleBook } from "@/lib/bible-data";
 import { isHighlighted, toggleHighlight, getHighlights } from "@/lib/highlights";
+import { getCachedChapter, cacheChapter } from "@/lib/bible-cache";
+import { getFontSize, setFontSize, getFontClasses, FONT_SIZE_OPTIONS, type FontSize } from "@/lib/font-size";
 import { useToast } from "@/hooks/use-toast";
 import { useSubscription } from "@/lib/subscription";
+import { useSearch } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 
 type ViewMode = "books" | "chapters" | "reading";
@@ -39,6 +42,30 @@ function ChapterSkeleton() {
   );
 }
 
+function parseVerseReference(input: string): { book: BibleBook; chapter: number } | null {
+  const trimmed = input.trim();
+  if (!trimmed) return null;
+
+  const match = trimmed.match(/^(.+?)\s+(\d+)(?::(\d+))?$/i);
+  if (!match) {
+    const bookOnly = BIBLE_BOOKS.find(
+      (b) => b.name.toLowerCase() === trimmed.toLowerCase()
+    );
+    if (bookOnly) return { book: bookOnly, chapter: 1 };
+    return null;
+  }
+
+  const bookName = match[1].trim();
+  const chapter = parseInt(match[2]);
+
+  const book = BIBLE_BOOKS.find(
+    (b) => b.name.toLowerCase() === bookName.toLowerCase()
+  );
+  if (!book) return null;
+  if (chapter < 1 || chapter > book.chapters) return null;
+  return { book, chapter };
+}
+
 const FREE_BIBLE_BOOK = "Genesis";
 
 export default function BiblePage() {
@@ -49,13 +76,51 @@ export default function BiblePage() {
   const [highlightedVerses, setHighlightedVerses] = useState<Set<string>>(
     () => new Set(getHighlights().map((h) => h.id))
   );
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showSearch, setShowSearch] = useState(false);
+  const [fontSize, setFontSizeState] = useState<FontSize>(getFontSize);
+  const [showFontSettings, setShowFontSettings] = useState(false);
   const { toast } = useToast();
   const { isPremium, subscribe } = useSubscription();
+  const searchString = useSearch();
 
-  const { data: chapterData, isLoading, error: chapterError } = useQuery<ChapterData>({
+  useEffect(() => {
+    if (!searchString) return;
+    const params = new URLSearchParams(searchString);
+    const bookParam = params.get("book");
+    const chapterParam = params.get("chapter");
+    if (bookParam) {
+      const decodedName = decodeURIComponent(bookParam);
+      const book = BIBLE_BOOKS.find((b) => b.name === decodedName);
+      if (book && (isPremium || book.name === FREE_BIBLE_BOOK)) {
+        setSelectedBook(book);
+        setSelectedChapter(chapterParam ? parseInt(chapterParam) || 1 : 1);
+        setView("reading");
+      }
+    }
+  }, [searchString, isPremium]);
+
+  const fontClasses = getFontClasses(fontSize);
+
+  const cachedData = useMemo(() => {
+    if (view === "reading" && selectedBook) {
+      return getCachedChapter(selectedBook.name, selectedChapter);
+    }
+    return null;
+  }, [view, selectedBook, selectedChapter]);
+
+  const { data: fetchedData, isLoading, error: chapterError } = useQuery<ChapterData>({
     queryKey: ["/api/bible", selectedBook?.name, selectedChapter],
-    enabled: view === "reading" && !!selectedBook,
+    enabled: view === "reading" && !!selectedBook && !cachedData,
   });
+
+  const chapterData = cachedData || fetchedData;
+
+  useEffect(() => {
+    if (fetchedData && selectedBook) {
+      cacheChapter(selectedBook.name, selectedChapter, fetchedData);
+    }
+  }, [fetchedData, selectedBook, selectedChapter]);
 
   const isBookFree = useCallback((book: BibleBook) => {
     return book.name === FREE_BIBLE_BOOK || isPremium;
@@ -131,6 +196,28 @@ export default function BiblePage() {
     }
   }, [selectedBook, selectedChapter]);
 
+  const handleSearch = useCallback(() => {
+    const result = parseVerseReference(searchQuery);
+    if (!result) {
+      toast({ title: "Not Found", description: "Try something like \"John 3\" or \"Psalms 23\"", variant: "destructive" });
+      return;
+    }
+    if (!isPremium && result.book.name !== FREE_BIBLE_BOOK) {
+      subscribe();
+      return;
+    }
+    setSelectedBook(result.book);
+    setSelectedChapter(result.chapter);
+    setView("reading");
+    setShowSearch(false);
+    setSearchQuery("");
+  }, [searchQuery, isPremium, subscribe, toast]);
+
+  const handleFontSizeChange = useCallback((size: FontSize) => {
+    setFontSizeState(size);
+    setFontSize(size);
+  }, []);
+
   const filteredBooks = BIBLE_BOOKS.filter((b) => b.testament === testament);
 
   return (
@@ -163,7 +250,91 @@ export default function BiblePage() {
               </p>
             )}
           </div>
+          <div className="flex items-center gap-1">
+            {view === "reading" && (
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => setShowFontSettings(!showFontSettings)}
+                data-testid="button-font-size"
+              >
+                <Type className="h-4 w-4" />
+              </Button>
+            )}
+            {view === "books" && (
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => setShowSearch(!showSearch)}
+                data-testid="button-toggle-search"
+              >
+                {showSearch ? <X className="h-4 w-4" /> : <Search className="h-4 w-4" />}
+              </Button>
+            )}
+          </div>
         </div>
+
+        <AnimatePresence>
+          {showSearch && view === "books" && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-3 flex gap-2">
+                <div className="relative flex-1">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <input
+                    type="text"
+                    placeholder='e.g. "John 3" or "Psalms 23:1"'
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                    className="w-full rounded-lg border border-border bg-background pl-9 pr-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                    data-testid="input-bible-search"
+                    autoFocus
+                  />
+                </div>
+                <Button onClick={handleSearch} size="sm" data-testid="button-bible-search">
+                  Go
+                </Button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {showFontSettings && view === "reading" && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-3 flex items-center gap-2">
+                <span className="text-xs text-muted-foreground">Text size:</span>
+                {FONT_SIZE_OPTIONS.map((size) => (
+                  <Badge
+                    key={size}
+                    variant={fontSize === size ? "default" : "outline"}
+                    className={`cursor-pointer capitalize ${
+                      fontSize === size
+                        ? "bg-primary text-primary-foreground"
+                        : "border-border text-muted-foreground"
+                    }`}
+                    onClick={() => handleFontSizeChange(size)}
+                    data-testid={`badge-font-${size}`}
+                  >
+                    {size}
+                  </Badge>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <AnimatePresence mode="wait">
@@ -272,9 +443,9 @@ export default function BiblePage() {
               </div>
             </div>
 
-            {isLoading && <ChapterSkeleton />}
+            {isLoading && !cachedData && <ChapterSkeleton />}
 
-            {chapterError && !isLoading && (
+            {chapterError && !isLoading && !cachedData && (
               <div className="flex flex-col items-center gap-4 px-4 py-16 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                   <BookOpen className="h-7 w-7 text-primary" />
@@ -305,7 +476,7 @@ export default function BiblePage() {
                         {verse.verse}
                       </span>
                       <p
-                        className={`text-sm leading-relaxed ${
+                        className={`${fontClasses.verse} leading-relaxed ${
                           highlighted
                             ? "text-foreground font-medium"
                             : "text-foreground/90"

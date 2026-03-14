@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Archive, Heart, Check } from "lucide-react";
+import { ExternalLink, Mail, Globe, Shield, FileText, ChevronRight, UserMinus, Crown, Archive, Heart, Check, BookOpen, Type } from "lucide-react";
 import { SiTiktok, SiInstagram, SiSpotify } from "react-icons/si";
 import { Link, useLocation } from "wouter";
 import { useTheme } from "@/components/theme-provider";
@@ -14,6 +14,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
 import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_1770693543975.png";
 import { useSubscription } from "@/lib/subscription";
+import { getFontSize, setFontSize, FONT_SIZE_OPTIONS, type FontSize } from "@/lib/font-size";
 
 export default function AboutPage() {
   const { theme, toggleTheme } = useTheme();
@@ -24,6 +25,7 @@ export default function AboutPage() {
   const [subscribing, setSubscribing] = useState(false);
   const [unsubEmail, setUnsubEmail] = useState("");
   const [unsubscribing, setUnsubscribing] = useState(false);
+  const [currentFontSize, setCurrentFontSize] = useState<FontSize>(getFontSize);
 
   const handleUnsubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -137,6 +139,16 @@ export default function AboutPage() {
                 >
                   <Heart className="h-4 w-4 text-primary" />
                   <span>Saved Verses & Highlights</span>
+                  <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                </button>
+              </Link>
+              <Link href="/prayers">
+                <button
+                  className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
+                  data-testid="link-prayers"
+                >
+                  <BookOpen className="h-4 w-4 text-primary" />
+                  <span>Prayer Book</span>
                   <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
                 </button>
               </Link>
@@ -360,6 +372,30 @@ export default function AboutPage() {
                 onCheckedChange={toggleTheme}
                 data-testid="switch-dark-mode"
               />
+            </div>
+            <div className="mt-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Type className="h-4 w-4 text-primary" />
+                <Label className="text-sm text-foreground">Reader Font Size</Label>
+              </div>
+              <div className="flex gap-2">
+                {FONT_SIZE_OPTIONS.map((size) => (
+                  <Button
+                    key={size}
+                    variant={currentFontSize === size ? "default" : "outline"}
+                    size="sm"
+                    className="capitalize flex-1"
+                    onClick={() => {
+                      setCurrentFontSize(size);
+                      setFontSize(size);
+                      toast({ title: "Font Size Updated", description: `Set to ${size}` });
+                    }}
+                    data-testid={`button-font-size-${size}`}
+                  >
+                    {size}
+                  </Button>
+                ))}
+              </div>
             </div>
           </Card>
         </motion.div>

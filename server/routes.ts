@@ -97,6 +97,23 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/prayers", async (_req, res) => {
+    try {
+      const allVerses = await storage.getAllVerses();
+      const prayers = allVerses
+        .filter((v) => v.prayerTitle && v.prayerText && v.prayerSection)
+        .map((v) => ({
+          id: v.id,
+          prayerTitle: v.prayerTitle,
+          prayerText: v.prayerText,
+          prayerSection: v.prayerSection,
+        }));
+      res.json(prayers);
+    } catch (err) {
+      res.status(500).json({ message: "Failed to get prayers" });
+    }
+  });
+
   app.get("/api/verses/archive", async (_req, res) => {
     try {
       const allVerses = await storage.getAllVerses();

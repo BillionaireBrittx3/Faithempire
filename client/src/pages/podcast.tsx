@@ -1,13 +1,13 @@
-import { useState, useRef, useEffect } from "react";
+import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import { Play, Pause, SkipBack, SkipForward, Volume2, Loader2 } from "lucide-react";
-import { Slider } from "@/components/ui/slider";
+import { Play, Pause, Volume2, Loader2 } from "lucide-react";
 import { useSubscription, FREE_PODCAST_EPISODES } from "@/lib/subscription";
 import { PremiumBadge } from "@/components/premium-lock";
 import { useLocation } from "wouter";
+import { useAudio } from "@/lib/audio-context";
 
 interface Episode {
   title: string;
@@ -49,111 +49,21 @@ function formatDate(dateStr: string): string {
   }
 }
 
-function formatTime(seconds: number): string {
-  if (isNaN(seconds)) return "0:00";
-  const m = Math.floor(seconds / 60);
-  const s = Math.floor(seconds % 60);
-  return `${m}:${s.toString().padStart(2, "0")}`;
-}
-
 export default function PodcastPage() {
   const { data: episodes, isLoading, error } = useQuery<Episode[]>({
     queryKey: ["/api/podcast/episodes"],
   });
   const { isPremium } = useSubscription();
   const [, navigate] = useLocation();
+  const { playEpisode, isPlaying, audioLoading, isEpisodeCurrent, setEpisodeList } = useAudio();
 
   const isEpisodeLocked = (idx: number) => !isPremium && idx >= FREE_PODCAST_EPISODES;
 
-  const [currentEpisode, setCurrentEpisode] = useState<Episode | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [totalDuration, setTotalDuration] = useState(0);
-  const [audioLoading, setAudioLoading] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
   useEffect(() => {
-    const audio = new Audio();
-    audio.preload = "metadata";
-    audioRef.current = audio;
-
-    audio.addEventListener("timeupdate", () => setCurrentTime(audio.currentTime));
-    audio.addEventListener("loadedmetadata", () => {
-      setTotalDuration(audio.duration);
-      setAudioLoading(false);
-    });
-    audio.addEventListener("ended", () => setIsPlaying(false));
-    audio.addEventListener("waiting", () => setAudioLoading(true));
-    audio.addEventListener("canplay", () => setAudioLoading(false));
-
-    return () => {
-      audio.pause();
-      audio.src = "";
-    };
-  }, []);
-
-  const playEpisode = (ep: Episode) => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    if (currentEpisode?.audioUrl === ep.audioUrl) {
-      if (isPlaying) {
-        audio.pause();
-        setIsPlaying(false);
-      } else {
-        audio.play();
-        setIsPlaying(true);
-      }
-      return;
+    if (episodes) {
+      setEpisodeList(episodes);
     }
-
-    setAudioLoading(true);
-    setCurrentEpisode(ep);
-    setCurrentTime(0);
-    audio.src = ep.audioUrl;
-    audio.play().then(() => setIsPlaying(true)).catch(() => setAudioLoading(false));
-  };
-
-  const togglePlay = () => {
-    const audio = audioRef.current;
-    if (!audio || !currentEpisode) return;
-    if (isPlaying) {
-      audio.pause();
-      setIsPlaying(false);
-    } else {
-      audio.play();
-      setIsPlaying(true);
-    }
-  };
-
-  const seekTo = (value: number[]) => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.currentTime = value[0];
-    setCurrentTime(value[0]);
-  };
-
-  const skip = (seconds: number) => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.currentTime = Math.max(0, Math.min(audio.currentTime + seconds, totalDuration));
-  };
-
-  const playNext = () => {
-    if (!episodes || !currentEpisode) return;
-    const idx = episodes.findIndex(e => e.audioUrl === currentEpisode.audioUrl);
-    if (idx >= 0 && idx < episodes.length - 1 && !isEpisodeLocked(idx + 1)) {
-      playEpisode(episodes[idx + 1]);
-    }
-  };
-
-  const playPrev = () => {
-    if (!episodes || !currentEpisode) return;
-    const idx = episodes.findIndex(e => e.audioUrl === currentEpisode.audioUrl);
-    if (idx > 0 && !isEpisodeLocked(idx - 1)) {
-      playEpisode(episodes[idx - 1]);
-    }
-  };
+  }, [episodes, setEpisodeList]);
 
   return (
     <div className="pb-20">
@@ -180,7 +90,7 @@ export default function PodcastPage() {
       ) : (
         <div className="flex flex-col gap-3 px-4 py-2">
           {episodes?.map((ep, idx) => {
-            const isCurrent = currentEpisode?.audioUrl === ep.audioUrl;
+            const isCurrent = isEpisodeCurrent(ep.audioUrl);
             const locked = isEpisodeLocked(idx);
             return (
               <motion.div
@@ -247,51 +157,6 @@ export default function PodcastPage() {
               <p className="text-sm text-muted-foreground">No episodes available yet</p>
             </div>
           )}
-        </div>
-      )}
-
-      {currentEpisode && (
-        <div className="fixed bottom-[calc(3.5rem+env(safe-area-inset-bottom))] left-0 right-0 z-40 border-t border-border bg-background/98 backdrop-blur-lg px-4 py-3" data-testid="player-bar">
-          <div className="mx-auto max-w-lg">
-            <p className="text-xs font-semibold text-foreground truncate mb-2" data-testid="text-now-playing">
-              {currentEpisode.title}
-            </p>
-            <Slider
-              value={[currentTime]}
-              max={totalDuration || 100}
-              step={1}
-              onValueChange={seekTo}
-              className="mb-2"
-              data-testid="slider-seek"
-            />
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-[10px] text-muted-foreground w-10">{formatTime(currentTime)}</span>
-              <div className="flex items-center gap-1">
-                <Button size="icon" variant="ghost" onClick={playPrev} data-testid="button-prev">
-                  <SkipBack className="h-4 w-4" />
-                </Button>
-                <Button size="icon" variant="ghost" onClick={() => skip(-15)} data-testid="button-rewind">
-                  <span className="text-[10px] font-semibold">-15</span>
-                </Button>
-                <Button size="icon" onClick={togglePlay} data-testid="button-play-pause">
-                  {audioLoading ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  ) : isPlaying ? (
-                    <Pause className="h-4 w-4" />
-                  ) : (
-                    <Play className="h-4 w-4" />
-                  )}
-                </Button>
-                <Button size="icon" variant="ghost" onClick={() => skip(30)} data-testid="button-forward">
-                  <span className="text-[10px] font-semibold">+30</span>
-                </Button>
-                <Button size="icon" variant="ghost" onClick={playNext} data-testid="button-next">
-                  <SkipForward className="h-4 w-4" />
-                </Button>
-              </div>
-              <span className="text-[10px] text-muted-foreground w-10 text-right">{formatTime(totalDuration)}</span>
-            </div>
-          </div>
         </div>
       )}
     </div>

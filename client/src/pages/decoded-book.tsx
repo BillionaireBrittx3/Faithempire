@@ -1,14 +1,17 @@
-import { useState, useCallback, type MouseEvent } from "react";
+import { useState, useCallback, useEffect, type MouseEvent } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info, Check, Type } from "lucide-react";
 import { toggleHighlight, getHighlights } from "@/lib/highlights";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSubscription, FREE_DECODED_CHAPTERS } from "@/lib/subscription";
 import { PremiumLock, PremiumBadge } from "@/components/premium-lock";
+import { markChapterRead, isChapterRead, getBookProgress } from "@/lib/reading-progress";
+import { getFontSize, setFontSize, getFontClasses, FONT_SIZE_OPTIONS, type FontSize } from "@/lib/font-size";
 
 type ViewMode = "chapters" | "reading";
 
@@ -65,9 +68,13 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   const [highlightedVerses, setHighlightedVerses] = useState<Set<string>>(
     () => new Set(getHighlights().filter(h => h.book.includes("Decoded")).map(h => h.id))
   );
+  const [readChapters, setReadChapters] = useState<Set<number>>(new Set());
+  const [fontSize, setFontSizeState] = useState<FontSize>(getFontSize);
+  const [showFontSettings, setShowFontSettings] = useState(false);
   const { toast } = useToast();
   const { isPremium } = useSubscription();
 
+  const fontClasses = getFontClasses(fontSize);
   const isGenesisBook = bookSlug === "genesis";
   const isChapterLocked = (chapterNum: number) => !isPremium && !isGenesisBook && chapterNum > FREE_DECODED_CHAPTERS;
 
@@ -82,6 +89,28 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
     queryKey: ["/api/decoded", bookSlug, selectedChapter],
     enabled: view === "reading" && !isChapterLocked(selectedChapter),
   });
+
+  useEffect(() => {
+    const chapters = bookSummary?.chapters || [];
+    const readSet = new Set<number>();
+    chapters.forEach((ch) => {
+      if (isChapterRead(bookSlug, ch.number)) readSet.add(ch.number);
+    });
+    setReadChapters(readSet);
+  }, [bookSlug, bookSummary]);
+
+  useEffect(() => {
+    if (view === "reading" && chapterData && !isChapterLocked(selectedChapter)) {
+      markChapterRead(bookSlug, selectedChapter);
+      setReadChapters((prev) => {
+        const next = new Set(prev);
+        next.add(selectedChapter);
+        return next;
+      });
+    }
+  }, [view, chapterData, selectedChapter, bookSlug]);
+
+  const progress = bookSummary ? getBookProgress(bookSlug, bookSummary.totalChapters) : 0;
 
   const handleChapterSelect = useCallback((chapter: number) => {
     setSelectedChapter(chapter);
@@ -147,6 +176,11 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
     }
   }, [bookSummary, selectedChapter]);
 
+  const handleFontSizeChange = useCallback((size: FontSize) => {
+    setFontSizeState(size);
+    setFontSize(size);
+  }, []);
+
   const currentChapterInfo = bookSummary?.chapters.find(
     (ch) => ch.number === selectedChapter
   );
@@ -184,7 +218,48 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
               </p>
             )}
           </div>
+          {view === "reading" && (
+            <Button
+              size="icon"
+              variant="ghost"
+              onClick={() => setShowFontSettings(!showFontSettings)}
+              data-testid="button-decoded-font-size"
+            >
+              <Type className="h-4 w-4" />
+            </Button>
+          )}
         </div>
+
+        <AnimatePresence>
+          {showFontSettings && view === "reading" && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-3 flex items-center gap-2">
+                <span className="text-xs text-muted-foreground">Text size:</span>
+                {FONT_SIZE_OPTIONS.map((size) => (
+                  <Badge
+                    key={size}
+                    variant={fontSize === size ? "default" : "outline"}
+                    className={`cursor-pointer capitalize ${
+                      fontSize === size
+                        ? "bg-primary text-primary-foreground"
+                        : "border-border text-muted-foreground"
+                    }`}
+                    onClick={() => handleFontSizeChange(size)}
+                    data-testid={`badge-decoded-font-${size}`}
+                  >
+                    {size}
+                  </Badge>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <AnimatePresence mode="wait">
@@ -204,6 +279,22 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                 <p className="mt-2 text-[10px] text-muted-foreground/70">
                   By {bookSummary?.author || "Brittany Johnson"} &middot; {bookSummary?.copyright || "© 2026"}
                 </p>
+                {progress > 0 && (
+                  <div className="mt-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[10px] text-primary font-medium">{progress}% complete</span>
+                      <span className="text-[10px] text-muted-foreground">
+                        {readChapters.size}/{bookSummary?.totalChapters || 0} chapters
+                      </span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-primary/10 overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-primary transition-all duration-500"
+                        style={{ width: `${progress}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
               </Card>
             </div>
 
@@ -230,6 +321,7 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
             <div className="flex flex-col gap-1.5 px-4 py-2">
               {bookSummary.chapters.map((ch) => {
                 const locked = isChapterLocked(ch.number);
+                const read = readChapters.has(ch.number);
                 return (
                 <Card
                   key={ch.number}
@@ -238,9 +330,14 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                   data-testid={`card-decoded-chapter-${ch.number}`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className={`text-lg font-bold w-8 text-center shrink-0 ${locked ? "text-muted-foreground" : "text-primary"}`}>
-                      {ch.number}
-                    </span>
+                    <div className="relative">
+                      <span className={`text-lg font-bold w-8 text-center shrink-0 block ${locked ? "text-muted-foreground" : read ? "text-primary" : "text-primary"}`}>
+                        {ch.number}
+                      </span>
+                      {read && (
+                        <Check className="absolute -top-1 -right-1 h-3 w-3 text-green-500" />
+                      )}
+                    </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
                         <p className="text-sm font-semibold text-foreground truncate">
@@ -327,13 +424,13 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                         </span>
                         <div className="flex-1 flex flex-col gap-2">
                           <p
-                            className="text-xs leading-relaxed text-muted-foreground italic"
+                            className={`${fontClasses.verse} leading-relaxed text-muted-foreground italic`}
                             style={{ fontFamily: "'Lora', serif" }}
                           >
                             {verse.kjv}
                           </p>
                           <p
-                            className={`text-sm leading-relaxed ${
+                            className={`${fontClasses.body} leading-relaxed ${
                               highlighted
                                 ? "text-foreground font-medium"
                                 : "text-foreground/90"

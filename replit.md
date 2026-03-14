@@ -4,6 +4,7 @@
 Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.org that delivers a fresh Bible verse and plain-language motivational message every day. Built with React + Express + PostgreSQL.
 
 ## Recent Changes
+- 2026-03-14: Added 8 web-side improvements: (1) Bible verse search — search bar to jump to any reference; (2) Font size control — small/medium/large persisted in localStorage, available in Bible reader, decoded books, and Settings; (3) Prayer book page at /prayers — all 100 prayers organized by 10 sections with expand/collapse; (4) Highlight navigation — tapping a highlight in Favorites navigates to that chapter in Bible or decoded book; (5) Bible chapter caching — chapters cached in localStorage for 7 days; (6) Persistent podcast player — audio context moved to global provider, player bar persists across navigation; (7) Reading progress for decoded books — chapters marked read in localStorage, progress bar and checkmarks shown; (8) New verse notification badge — gold dot on Today tab when a new verse is available after midnight ET.
 - 2026-03-11: Redesigned paywall with real content previews. Non-subscribers now see: today's verse preview (truncated with gradient fade), 66 decoded books grid, KJV Bible book list, podcast preview, and features list. Sticky subscribe button at bottom. Uses actual API data for today's verse.
 - 2026-03-07: Changed to subscription-only model ($8.88/month). All content now requires active subscription. Global SubscriptionGate in App.tsx redirects non-subscribers to paywall. FREE_DECODED_CHAPTERS=0, FREE_PODCAST_EPISODES=0. Updated paywall, terms, about page with new pricing and copy. Removed "Free Features" section from paywall.
 - 2026-03-05: Updated all 27 New Testament decoded books from corrected PDF sources (Matthew standalone + Series IV). Mark now has all 16 chapters (was 6), John now has all 21 chapters (was 3), Matthew at 100% coverage (1071 verses). Cleaned 311 instances of chapter header contamination from verse text. All decoded translations now match corrected DMLV content.
@@ -31,13 +32,14 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 
 ## Key Pages
 - `/` - Today's verse (home) - always free
-- `/bible` - KJV Bible reader (66 books, chapter navigation, tap-to-highlight) - always free
+- `/bible` - KJV Bible reader (66 books, chapter navigation, tap-to-highlight, verse search, font size, chapter caching) - always free
+- `/prayers` - Prayer book with 100 prayers in 10 sections - always free
 - `/archive` - Browse all decoded verses with category filtering (accessible from More page)
-- `/favorites` - Saved verses + Bible highlights (two tabs, localStorage)
-- `/podcast` - Podcast episodes with in-app audio player (first 2 free, rest premium)
+- `/favorites` - Saved verses + Bible highlights (two tabs, localStorage, highlight navigation)
+- `/podcast` - Podcast episodes with persistent global audio player (first 2 free, rest premium)
 - `/decoded` - Decoded Books landing page (all 66 books organized by OT/NT sections)
-- `/decoded/:bookSlug` - Individual decoded book reader (e.g. /decoded/genesis, /decoded/exodus)
-- `/about` - Brand info, subscribe, social links, settings, privacy, quick links
+- `/decoded/:bookSlug` - Individual decoded book reader with reading progress tracking
+- `/about` - Brand info, subscribe, social links, settings (dark mode + font size), prayer book link, quick links
 - `/premium` - Paywall/subscription page ($12.22/month Apple IAP)
 
 ## Decoded Books System
@@ -68,6 +70,7 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `GET /api/decoded/books` - Returns index of all 66 decoded books with stats
 - `GET /api/decoded/:bookSlug` - Returns decoded book summary (chapters list with titles, verse counts)
 - `GET /api/decoded/:bookSlug/:chapter` - Returns chapter data with verses (kjv, decoded, context)
+- `GET /api/prayers` - Returns all 100 prayers with title, text, section
 - `POST /api/subscribe` - Email subscription
 
 ## Database Tables
@@ -82,5 +85,17 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 
 ## User Preferences
 - Dark mode by default (matches brand), toggleable in About page
+- Font size (small/medium/large) stored in localStorage, applies to Bible reader and decoded books
 - Favorites stored in localStorage (no account required)
+- Reading progress for decoded books stored in localStorage
+- Bible chapter cache (7-day expiry) in localStorage
+- New verse notification badge state in localStorage
 - Mobile-first design with bottom tab navigation
+
+## New Feature Files
+- `client/src/lib/font-size.ts` - Font size preference management
+- `client/src/lib/reading-progress.ts` - Decoded book reading progress tracking
+- `client/src/lib/bible-cache.ts` - Bible chapter localStorage caching
+- `client/src/lib/audio-context.tsx` - Global audio player context provider
+- `client/src/components/global-player.tsx` - Persistent podcast player bar
+- `client/src/pages/prayers.tsx` - Prayer book page with 10 sections
