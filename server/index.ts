@@ -62,6 +62,7 @@ app.use((req, res, next) => {
 });
 
 import { seedVerses } from "./seed";
+import { seedPrayers } from "./seed-prayers";
 
 (async () => {
   const { pool } = await import("./db");
@@ -72,6 +73,7 @@ import { seedVerses } from "./seed";
 
   try {
     await seedVerses();
+    await seedPrayers();
   } catch (err) {
     console.error("Seed error:", err);
   }

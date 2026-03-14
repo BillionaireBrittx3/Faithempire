@@ -11,6 +11,9 @@ export const verses = pgTable("verses", {
   decodedMessage: text("decoded_message").notNull(),
   category: text("category").notNull(),
   book: text("book").notNull(),
+  prayerTitle: text("prayer_title"),
+  prayerText: text("prayer_text"),
+  prayerSection: text("prayer_section"),
 });
 
 export const insertVerseSchema = createInsertSchema(verses).omit({ id: true });

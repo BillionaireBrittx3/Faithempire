@@ -71,8 +71,14 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `POST /api/subscribe` - Email subscription
 
 ## Database Tables
-- `verses` - id, verse_number, reference, verse_text, decoded_message, category, book
+- `verses` - id, verse_number, reference, verse_text, decoded_message, category, book, prayer_title, prayer_text, prayer_section
 - `subscribers` - id, email, first_name, subscribed_at, active, source
+
+## Prayer Book Integration
+- 100 prayers from "No Weapon Formed When You Pray, Heaven Moves" paired 1:1 with the 100 daily verses
+- Prayer data extracted and stored in `server/prayers-data.ts`, seeded to DB via `server/seed-prayers.ts`
+- Sections: Prayers of Protection (1-10), Prayers Against Mental Warfare (11-20), Prayers for Purpose and Destiny (21-30), Prayers for Family and Relationships (31-40), Prayers for Finances and Provision (41-50), Prayers for Health and Healing (51-60), Prayers for Faith and Trust (61-70), Prayers for Forgiveness and Deliverance (71-80), Prayers for Business and Ministry (81-90), Prayers of Victory and Praise (91-100)
+- Displayed in VerseCard component as expandable "Today's Prayer" section below the decoded message
 
 ## User Preferences
 - Dark mode by default (matches brand), toggleable in About page

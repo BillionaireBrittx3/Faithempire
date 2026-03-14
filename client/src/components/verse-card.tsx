@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Heart, Share2, Download, Copy, X } from "lucide-react";
+import { Heart, Share2, Download, Copy, X, ChevronDown, ChevronUp, BookOpen } from "lucide-react";
 import { SiFacebook, SiX, SiWhatsapp, SiTelegram, SiPinterest, SiLinkedin, SiReddit, SiThreads, SiInstagram, SiTiktok, SiSnapchat } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -7,6 +7,62 @@ import { isFavorite, toggleFavorite } from "@/lib/favorites";
 import { generateShareImage } from "@/lib/share-image";
 import type { Verse } from "@shared/schema";
 import { motion, AnimatePresence } from "framer-motion";
+
+function PrayerSection({ title, text, section }: { title: string; text: string; section: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const previewLength = 200;
+  const needsTruncation = text.length > previewLength;
+
+  return (
+    <div className="mx-auto mt-8 w-full max-w-md" data-testid="prayer-section">
+      <div className="flex w-full items-center gap-3 mb-4">
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/30" />
+        <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-primary flex items-center gap-1.5">
+          <BookOpen className="h-3 w-3" />
+          Today's Prayer
+        </span>
+        <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/30" />
+      </div>
+
+      <div className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-4">
+        <h3
+          className="mb-1 text-center font-serif text-base font-semibold text-primary"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+          data-testid="text-prayer-title"
+        >
+          {title}
+        </h3>
+        {section && (
+          <p className="mb-3 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground" data-testid="text-prayer-section">
+            {section}
+          </p>
+        )}
+
+        <p
+          className="text-sm leading-relaxed text-muted-foreground"
+          style={{ fontFamily: "'DM Sans', sans-serif" }}
+          data-testid="text-prayer-body"
+        >
+          {expanded || !needsTruncation ? text : text.slice(0, previewLength) + "..."}
+        </p>
+
+        {needsTruncation && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-2 flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+            data-testid="button-prayer-expand"
+          >
+            {expanded ? (
+              <>Read less <ChevronUp className="h-3 w-3" /></>
+            ) : (
+              <>Read full prayer <ChevronDown className="h-3 w-3" /></>
+            )}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
 
 interface VerseCardProps {
   verse: Verse;
@@ -193,6 +249,10 @@ export function VerseCard({ verse, displayDate, showFullCard = true, onFavoriteC
             >
               {verse.decodedMessage}
             </p>
+
+            {verse.prayerTitle && verse.prayerText && (
+              <PrayerSection title={verse.prayerTitle} text={verse.prayerText} section={verse.prayerSection || ""} />
+            )}
 
             <div className="mt-8 flex items-center justify-center gap-3">
               <Button
