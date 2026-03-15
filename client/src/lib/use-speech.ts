@@ -34,6 +34,8 @@ export function useSpeech(onChapterComplete?: () => void) {
   const continuousPlayRef = useRef(continuousPlay);
   const watchdogRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const pausedRef = useRef(false);
+  const hasSpokeRef = useRef(false);
+  const speakStartTimeRef = useRef(0);
 
   const supported = typeof window !== "undefined" && "speechSynthesis" in window;
 
@@ -73,7 +75,14 @@ export function useSpeech(onChapterComplete?: () => void) {
       if (!window.speechSynthesis) return;
       if (stoppedRef.current || pausedRef.current) return;
 
-      if (!window.speechSynthesis.speaking && !window.speechSynthesis.pending) {
+      if (window.speechSynthesis.speaking) {
+        hasSpokeRef.current = true;
+      }
+
+      const elapsed = Date.now() - speakStartTimeRef.current;
+      if (elapsed < 2000) return;
+
+      if (!window.speechSynthesis.speaking && !window.speechSynthesis.pending && hasSpokeRef.current) {
         clearWatchdog();
         const verses = versesRef.current;
         const nextIdx = currentIndexRef.current + 1;
@@ -150,6 +159,8 @@ export function useSpeech(onChapterComplete?: () => void) {
 
     setIsSpeaking(true);
     setIsPaused(false);
+    hasSpokeRef.current = false;
+    speakStartTimeRef.current = Date.now();
 
     const v = options.verses[startIndex];
     currentIndexRef.current = startIndex;

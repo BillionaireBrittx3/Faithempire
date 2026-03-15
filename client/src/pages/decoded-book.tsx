@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info, Check, Type, Volume2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info, Check, Type, Volume2, Play, Pause, Square } from "lucide-react";
 import { toggleHighlight, getHighlights } from "@/lib/highlights";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
@@ -79,6 +79,7 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   const { toast } = useToast();
   const { isPremium } = useSubscription();
   const autoAdvanceRef = useRef(false);
+  const masterPlayRef = useRef(false);
   const listenModeRef = useRef<ListenMode>("decoded");
 
   const fontClasses = getFontClasses(fontSize);
@@ -125,8 +126,10 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   }, [bookSlug, bookSummary]);
 
   useEffect(() => {
-    if (autoAdvanceRef.current && chapterData && speech.continuousPlay) {
+    const shouldAutoStart = autoAdvanceRef.current || masterPlayRef.current;
+    if (shouldAutoStart && chapterData && view === "reading") {
       autoAdvanceRef.current = false;
+      masterPlayRef.current = false;
       const verses = chapterData.verses.map((v) => ({
         verse: v.verse,
         text: listenModeRef.current === "decoded" ? v.decoded : v.kjv,
@@ -136,10 +139,10 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
         bookName: decodedBookName,
         chapter: selectedChapter,
       });
-    } else if (autoAdvanceRef.current) {
+    } else if (autoAdvanceRef.current && !chapterData) {
       autoAdvanceRef.current = false;
     }
-  }, [chapterData, selectedChapter, decodedBookName, speech]);
+  }, [chapterData, selectedChapter, decodedBookName, speech, view]);
 
   useEffect(() => {
     if (view === "reading" && chapterData && !isChapterLocked(selectedChapter)) {
@@ -153,6 +156,22 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   }, [view, chapterData, selectedChapter, bookSlug]);
 
   const progress = bookSummary ? getBookProgress(bookSlug, bookSummary.totalChapters) : 0;
+
+  const handleMasterPlay = useCallback(() => {
+    if (speech.isSpeaking) {
+      speech.stopSpeaking();
+      setShowSpeechControls(false);
+      return;
+    }
+    if (!speech.continuousPlay) {
+      speech.toggleContinuousPlay();
+    }
+    masterPlayRef.current = true;
+    setExpandedContext(new Set());
+    setShowSpeechControls(true);
+    setSelectedChapter(1);
+    setView("reading");
+  }, [speech]);
 
   const handleChapterSelect = useCallback((chapter: number) => {
     setSelectedChapter(chapter);
@@ -356,6 +375,31 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                 )}
               </Card>
             </div>
+
+            {bookSummary && (
+              <div className="px-4 pb-3">
+                <Button
+                  className="w-full gap-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-5 text-sm"
+                  onClick={handleMasterPlay}
+                  data-testid="button-master-play"
+                >
+                  {speech.isSpeaking ? (
+                    <>
+                      <Square className="h-4 w-4 fill-current" />
+                      Stop Listening
+                    </>
+                  ) : (
+                    <>
+                      <Play className="h-4 w-4 fill-current" />
+                      Listen to Entire Book
+                    </>
+                  )}
+                </Button>
+                <p className="mt-1.5 text-[10px] text-center text-muted-foreground/60">
+                  Plays all chapters from start to finish
+                </p>
+              </div>
+            )}
 
             {summaryLoading && (
               <div className="flex flex-col gap-2 px-4 py-2">
