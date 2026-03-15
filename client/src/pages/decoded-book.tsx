@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, type MouseEvent } from "react";
+import { useState, useCallback, useEffect, useRef, type MouseEvent } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -78,7 +78,8 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   const [listenMode, setListenMode] = useState<ListenMode>("decoded");
   const { toast } = useToast();
   const { isPremium } = useSubscription();
-  const speech = useSpeech();
+  const autoAdvanceRef = useRef(false);
+  const listenModeRef = useRef<ListenMode>("decoded");
 
   const fontClasses = getFontClasses(fontSize);
   const isGenesisBook = bookSlug === "genesis";
@@ -91,10 +92,28 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   const bookName = bookSummary?.bookName || bookSlug;
   const decodedBookName = `${bookName} Decoded`;
 
+  const handleChapterComplete = useCallback(() => {
+    const totalChapters = bookSummary?.totalChapters || 0;
+    if (selectedChapter < totalChapters) {
+      const nextChapter = selectedChapter + 1;
+      if (!isChapterLocked(nextChapter)) {
+        autoAdvanceRef.current = true;
+        setSelectedChapter(nextChapter);
+        setExpandedContext(new Set());
+      }
+    }
+  }, [bookSummary, selectedChapter]);
+
+  const speech = useSpeech(handleChapterComplete);
+
   const { data: chapterData, isLoading, error: chapterError } = useQuery<ChapterData>({
     queryKey: ["/api/decoded", bookSlug, selectedChapter],
     enabled: view === "reading" && !isChapterLocked(selectedChapter),
   });
+
+  useEffect(() => {
+    listenModeRef.current = listenMode;
+  }, [listenMode]);
 
   useEffect(() => {
     const chapters = bookSummary?.chapters || [];
@@ -104,6 +123,23 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
     });
     setReadChapters(readSet);
   }, [bookSlug, bookSummary]);
+
+  useEffect(() => {
+    if (autoAdvanceRef.current && chapterData && speech.continuousPlay) {
+      autoAdvanceRef.current = false;
+      const verses = chapterData.verses.map((v) => ({
+        verse: v.verse,
+        text: listenModeRef.current === "decoded" ? v.decoded : v.kjv,
+      }));
+      speech.startSpeaking({
+        verses,
+        bookName: decodedBookName,
+        chapter: selectedChapter,
+      });
+    } else if (autoAdvanceRef.current) {
+      autoAdvanceRef.current = false;
+    }
+  }, [chapterData, selectedChapter, decodedBookName, speech]);
 
   useEffect(() => {
     if (view === "reading" && chapterData && !isChapterLocked(selectedChapter)) {
@@ -416,6 +452,9 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                 isSpeaking={speech.isSpeaking}
                 isPaused={speech.isPaused}
                 speed={speech.speed}
+                voices={speech.voices}
+                selectedVoiceURI={speech.selectedVoiceURI}
+                continuousPlay={speech.continuousPlay}
                 onPlay={() => {
                   const verses = chapterData.verses.map((v) => ({
                     verse: v.verse,
@@ -430,6 +469,8 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                 onPause={speech.togglePause}
                 onStop={speech.stopSpeaking}
                 onSpeedChange={speech.changeSpeed}
+                onVoiceChange={speech.changeVoice}
+                onContinuousToggle={speech.toggleContinuousPlay}
                 showModeToggle
                 mode={listenMode}
                 onModeChange={(mode) => {
@@ -438,6 +479,8 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                     speech.stopSpeaking();
                   }
                 }}
+                totalChapters={bookSummary?.totalChapters}
+                currentChapter={selectedChapter}
               />
             )}
 

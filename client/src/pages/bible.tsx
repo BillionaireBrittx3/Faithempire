@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useMemo } from "react";
+import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -86,7 +86,16 @@ export default function BiblePage() {
   const { toast } = useToast();
   const { isPremium, subscribe } = useSubscription();
   const searchString = useSearch();
-  const speech = useSpeech();
+  const autoAdvanceRef = useRef(false);
+
+  const handleChapterComplete = useCallback(() => {
+    if (selectedBook && selectedChapter < selectedBook.chapters) {
+      autoAdvanceRef.current = true;
+      setSelectedChapter((c) => c + 1);
+    }
+  }, [selectedBook, selectedChapter]);
+
+  const speech = useSpeech(handleChapterComplete);
 
   useEffect(() => {
     if (!searchString) return;
@@ -125,6 +134,19 @@ export default function BiblePage() {
       cacheChapter(selectedBook.name, selectedChapter, fetchedData);
     }
   }, [fetchedData, selectedBook, selectedChapter]);
+
+  useEffect(() => {
+    if (autoAdvanceRef.current && chapterData && selectedBook && speech.continuousPlay) {
+      autoAdvanceRef.current = false;
+      speech.startSpeaking({
+        verses: chapterData.verses,
+        bookName: selectedBook.name,
+        chapter: selectedChapter,
+      });
+    } else if (autoAdvanceRef.current) {
+      autoAdvanceRef.current = false;
+    }
+  }, [chapterData, selectedChapter, selectedBook, speech]);
 
   const isBookFree = useCallback((book: BibleBook) => {
     return book.name === FREE_BIBLE_BOOK || isPremium;
@@ -469,6 +491,9 @@ export default function BiblePage() {
                 isSpeaking={speech.isSpeaking}
                 isPaused={speech.isPaused}
                 speed={speech.speed}
+                voices={speech.voices}
+                selectedVoiceURI={speech.selectedVoiceURI}
+                continuousPlay={speech.continuousPlay}
                 onPlay={() =>
                   speech.startSpeaking({
                     verses: chapterData.verses,
@@ -479,6 +504,10 @@ export default function BiblePage() {
                 onPause={speech.togglePause}
                 onStop={speech.stopSpeaking}
                 onSpeedChange={speech.changeSpeed}
+                onVoiceChange={speech.changeVoice}
+                onContinuousToggle={speech.toggleContinuousPlay}
+                totalChapters={selectedBook.chapters}
+                currentChapter={selectedChapter}
               />
             )}
 
