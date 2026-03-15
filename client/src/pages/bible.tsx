@@ -89,11 +89,22 @@ export default function BiblePage() {
   const autoAdvanceRef = useRef(false);
 
   const handleChapterComplete = useCallback(() => {
-    if (selectedBook && selectedChapter < selectedBook.chapters) {
+    if (!selectedBook) return;
+    if (selectedChapter < selectedBook.chapters) {
       autoAdvanceRef.current = true;
       setSelectedChapter((c) => c + 1);
+    } else {
+      const currentIndex = BIBLE_BOOKS.indexOf(selectedBook);
+      if (currentIndex >= 0 && currentIndex < BIBLE_BOOKS.length - 1) {
+        const nextBook = BIBLE_BOOKS[currentIndex + 1];
+        if (isPremium || nextBook.name === FREE_BIBLE_BOOK) {
+          autoAdvanceRef.current = true;
+          setSelectedBook(nextBook);
+          setSelectedChapter(1);
+        }
+      }
     }
-  }, [selectedBook, selectedChapter]);
+  }, [selectedBook, selectedChapter, isPremium]);
 
   const speech = useSpeech(handleChapterComplete);
 
@@ -505,6 +516,7 @@ export default function BiblePage() {
                 onContinuousToggle={speech.toggleContinuousPlay}
                 totalChapters={selectedBook.chapters}
                 currentChapter={selectedChapter}
+                bookName={selectedBook.name}
               />
             )}
 

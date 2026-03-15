@@ -28,6 +28,7 @@ interface SpeechControlsProps {
   showModeToggle?: boolean;
   totalChapters?: number;
   currentChapter?: number;
+  bookName?: string;
 }
 
 export function SpeechControls({
@@ -45,6 +46,7 @@ export function SpeechControls({
   showModeToggle = false,
   totalChapters,
   currentChapter,
+  bookName,
 }: SpeechControlsProps) {
   const [showVoiceTip, setShowVoiceTip] = useState(false);
   const [tipDismissed, setTipDismissed] = useState(() => {
@@ -190,7 +192,7 @@ export function SpeechControls({
         {isSpeaking && (
           <p className="mt-2 text-[10px] text-muted-foreground/70">
             {isPaused ? "Paused" : continuousPlay
-              ? `Reading aloud — will continue to next chapter automatically${totalChapters && currentChapter ? ` (${currentChapter}/${totalChapters})` : ""}`
+              ? `Reading aloud${bookName ? ` — ${bookName}` : ""}${totalChapters && currentChapter ? ` ${currentChapter}/${totalChapters}` : ""} — auto-advancing`
               : "Reading aloud — current verse is highlighted"
             }
           </p>
@@ -198,7 +200,7 @@ export function SpeechControls({
 
         {!isSpeaking && continuousPlay && (
           <p className="mt-2 text-[10px] text-primary/70">
-            Continuous play on — will read through all chapters
+            Continuous play on — will read through entire Bible
           </p>
         )}
 

@@ -478,6 +478,7 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                 }}
                 totalChapters={bookSummary?.totalChapters}
                 currentChapter={selectedChapter}
+                bookName={bookName}
               />
             )}
 
