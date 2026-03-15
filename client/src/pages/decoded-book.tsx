@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info, Check, Type } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info, Check, Type, Volume2 } from "lucide-react";
 import { toggleHighlight, getHighlights } from "@/lib/highlights";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,7 +12,10 @@ import { useSubscription, FREE_DECODED_CHAPTERS } from "@/lib/subscription";
 import { PremiumLock, PremiumBadge } from "@/components/premium-lock";
 import { markChapterRead, isChapterRead, getBookProgress } from "@/lib/reading-progress";
 import { getFontSize, setFontSize, getFontClasses, FONT_SIZE_OPTIONS, type FontSize } from "@/lib/font-size";
+import { useSpeech } from "@/lib/use-speech";
+import { SpeechControls } from "@/components/speech-controls";
 
+type ListenMode = "decoded" | "kjv";
 type ViewMode = "chapters" | "reading";
 
 interface DecodedVerse {
@@ -71,8 +74,11 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   const [readChapters, setReadChapters] = useState<Set<number>>(new Set());
   const [fontSize, setFontSizeState] = useState<FontSize>(getFontSize);
   const [showFontSettings, setShowFontSettings] = useState(false);
+  const [showSpeechControls, setShowSpeechControls] = useState(false);
+  const [listenMode, setListenMode] = useState<ListenMode>("decoded");
   const { toast } = useToast();
   const { isPremium } = useSubscription();
+  const speech = useSpeech();
 
   const fontClasses = getFontClasses(fontSize);
   const isGenesisBook = bookSlug === "genesis";
@@ -119,9 +125,11 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   }, []);
 
   const handleBack = useCallback(() => {
+    speech.stopSpeaking();
+    setShowSpeechControls(false);
     setView("chapters");
     setExpandedContext(new Set());
-  }, []);
+  }, [speech]);
 
   const handleVerseHighlight = useCallback(
     (verse: DecodedVerse) => {
@@ -163,18 +171,20 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
   }, []);
 
   const handlePrevChapter = useCallback(() => {
+    speech.stopSpeaking();
     if (selectedChapter > 1) {
       setSelectedChapter((c) => c - 1);
       setExpandedContext(new Set());
     }
-  }, [selectedChapter]);
+  }, [selectedChapter, speech]);
 
   const handleNextChapter = useCallback(() => {
+    speech.stopSpeaking();
     if (bookSummary && selectedChapter < bookSummary.totalChapters) {
       setSelectedChapter((c) => c + 1);
       setExpandedContext(new Set());
     }
-  }, [bookSummary, selectedChapter]);
+  }, [bookSummary, selectedChapter, speech]);
 
   const handleFontSizeChange = useCallback((size: FontSize) => {
     setFontSizeState(size);
@@ -219,14 +229,27 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
             )}
           </div>
           {view === "reading" && (
-            <Button
-              size="icon"
-              variant="ghost"
-              onClick={() => setShowFontSettings(!showFontSettings)}
-              data-testid="button-decoded-font-size"
-            >
-              <Type className="h-4 w-4" />
-            </Button>
+            <>
+              <Button
+                size="icon"
+                variant={showSpeechControls ? "default" : "ghost"}
+                onClick={() => {
+                  setShowSpeechControls(!showSpeechControls);
+                  if (showSpeechControls) speech.stopSpeaking();
+                }}
+                data-testid="button-decoded-listen"
+              >
+                <Volume2 className="h-4 w-4" />
+              </Button>
+              <Button
+                size="icon"
+                variant="ghost"
+                onClick={() => setShowFontSettings(!showFontSettings)}
+                data-testid="button-decoded-font-size"
+              >
+                <Type className="h-4 w-4" />
+              </Button>
+            </>
           )}
         </div>
 
@@ -388,6 +411,36 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
               </div>
             </div>
 
+            {showSpeechControls && chapterData && (
+              <SpeechControls
+                isSpeaking={speech.isSpeaking}
+                isPaused={speech.isPaused}
+                speed={speech.speed}
+                onPlay={() => {
+                  const verses = chapterData.verses.map((v) => ({
+                    verse: v.verse,
+                    text: listenMode === "decoded" ? v.decoded : v.kjv,
+                  }));
+                  speech.startSpeaking({
+                    verses,
+                    bookName: decodedBookName,
+                    chapter: selectedChapter,
+                  });
+                }}
+                onPause={speech.togglePause}
+                onStop={speech.stopSpeaking}
+                onSpeedChange={speech.changeSpeed}
+                showModeToggle
+                mode={listenMode}
+                onModeChange={(mode) => {
+                  setListenMode(mode);
+                  if (speech.isSpeaking) {
+                    speech.stopSpeaking();
+                  }
+                }}
+              />
+            )}
+
             {isLoading && <ChapterSkeleton />}
 
             {chapterError && !isLoading && (
@@ -407,11 +460,14 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                   const id = `${decodedBookName}-${selectedChapter}-${verse.verse}`;
                   const highlighted = highlightedVerses.has(id);
                   const showContext = expandedContext.has(verse.verse);
+                  const isActiveVerse = speech.isSpeaking && speech.activeVerse === verse.verse;
                   return (
                     <div
                       key={verse.verse}
                       className={`rounded-md p-3 cursor-pointer transition-colors ${
-                        highlighted
+                        isActiveVerse
+                          ? "bg-primary/25 border border-primary/40 ring-1 ring-primary/30"
+                          : highlighted
                           ? "bg-primary/15 border border-primary/20"
                           : "hover-elevate"
                       }`}

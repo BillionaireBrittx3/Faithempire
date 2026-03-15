@@ -4,6 +4,7 @@
 Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.org that delivers a fresh Bible verse and plain-language motivational message every day. Built with React + Express + PostgreSQL.
 
 ## Recent Changes
+- 2026-03-15: Added Listen Along (text-to-speech) feature using browser SpeechSynthesis API. Bible reader has play/pause/stop controls with speed adjustment (0.75x/1x/1.35x). Decoded books have additional mode toggle to listen to either the decoded version or original KJV. Active verse highlights as it's read aloud. Files: `client/src/lib/use-speech.ts` (hook), `client/src/components/speech-controls.tsx` (UI controls).
 - 2026-03-14: Added 8 web-side improvements: (1) Bible verse search — search bar to jump to any reference; (2) Font size control — small/medium/large persisted in localStorage, available in Bible reader, decoded books, and Settings; (3) Prayer book page at /prayers — all 100 prayers organized by 10 sections with expand/collapse; (4) Highlight navigation — tapping a highlight in Favorites navigates to that chapter in Bible or decoded book; (5) Bible chapter caching — chapters cached in localStorage for 7 days; (6) Persistent podcast player — audio context moved to global provider, player bar persists across navigation; (7) Reading progress for decoded books — chapters marked read in localStorage, progress bar and checkmarks shown; (8) New verse notification badge — gold dot on Today tab when a new verse is available after midnight ET.
 - 2026-03-11: Redesigned paywall with real content previews. Non-subscribers now see: today's verse preview (truncated with gradient fade), 66 decoded books grid, KJV Bible book list, podcast preview, and features list. Sticky subscribe button at bottom. Uses actual API data for today's verse.
 - 2026-03-07: Changed to subscription-only model ($8.88/month). All content now requires active subscription. Global SubscriptionGate in App.tsx redirects non-subscribers to paywall. FREE_DECODED_CHAPTERS=0, FREE_PODCAST_EPISODES=0. Updated paywall, terms, about page with new pricing and copy. Removed "Free Features" section from paywall.
@@ -97,5 +98,7 @@ Faith Empire is a mobile-first Progressive Web App (PWA) for decodedfaithempire.
 - `client/src/lib/reading-progress.ts` - Decoded book reading progress tracking
 - `client/src/lib/bible-cache.ts` - Bible chapter localStorage caching
 - `client/src/lib/audio-context.tsx` - Global audio player context provider
+- `client/src/lib/use-speech.ts` - Text-to-speech hook (SpeechSynthesis API)
 - `client/src/components/global-player.tsx` - Persistent podcast player bar
+- `client/src/components/speech-controls.tsx` - Listen Along UI controls
 - `client/src/pages/prayers.tsx` - Prayer book page with 10 sections

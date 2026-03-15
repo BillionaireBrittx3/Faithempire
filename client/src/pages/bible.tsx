@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Lock, Crown, Search, X, Type } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Lock, Crown, Search, X, Type, Volume2 } from "lucide-react";
 import { BIBLE_BOOKS, type BibleBook } from "@/lib/bible-data";
 import { isHighlighted, toggleHighlight, getHighlights } from "@/lib/highlights";
 import { getCachedChapter, cacheChapter } from "@/lib/bible-cache";
@@ -13,6 +13,8 @@ import { useToast } from "@/hooks/use-toast";
 import { useSubscription } from "@/lib/subscription";
 import { useSearch } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSpeech } from "@/lib/use-speech";
+import { SpeechControls } from "@/components/speech-controls";
 
 type ViewMode = "books" | "chapters" | "reading";
 
@@ -80,9 +82,11 @@ export default function BiblePage() {
   const [showSearch, setShowSearch] = useState(false);
   const [fontSize, setFontSizeState] = useState<FontSize>(getFontSize);
   const [showFontSettings, setShowFontSettings] = useState(false);
+  const [showSpeechControls, setShowSpeechControls] = useState(false);
   const { toast } = useToast();
   const { isPremium, subscribe } = useSubscription();
   const searchString = useSearch();
+  const speech = useSpeech();
 
   useEffect(() => {
     if (!searchString) return;
@@ -146,6 +150,8 @@ export default function BiblePage() {
   }, []);
 
   const handleBack = useCallback(() => {
+    speech.stopSpeaking();
+    setShowSpeechControls(false);
     if (view === "reading") {
       if (selectedBook && selectedBook.chapters === 1) {
         setView("books");
@@ -155,7 +161,7 @@ export default function BiblePage() {
     } else if (view === "chapters") {
       setView("books");
     }
-  }, [view, selectedBook]);
+  }, [view, selectedBook, speech]);
 
   const handleVerseHighlight = useCallback(
     (verse: BibleVerse) => {
@@ -185,16 +191,18 @@ export default function BiblePage() {
   );
 
   const handlePrevChapter = useCallback(() => {
+    speech.stopSpeaking();
     if (selectedChapter > 1) {
       setSelectedChapter((c) => c - 1);
     }
-  }, [selectedChapter]);
+  }, [selectedChapter, speech]);
 
   const handleNextChapter = useCallback(() => {
+    speech.stopSpeaking();
     if (selectedBook && selectedChapter < selectedBook.chapters) {
       setSelectedChapter((c) => c + 1);
     }
-  }, [selectedBook, selectedChapter]);
+  }, [selectedBook, selectedChapter, speech]);
 
   const handleSearch = useCallback(() => {
     const result = parseVerseReference(searchQuery);
@@ -252,14 +260,27 @@ export default function BiblePage() {
           </div>
           <div className="flex items-center gap-1">
             {view === "reading" && (
-              <Button
-                size="icon"
-                variant="ghost"
-                onClick={() => setShowFontSettings(!showFontSettings)}
-                data-testid="button-font-size"
-              >
-                <Type className="h-4 w-4" />
-              </Button>
+              <>
+                <Button
+                  size="icon"
+                  variant={showSpeechControls ? "default" : "ghost"}
+                  onClick={() => {
+                    setShowSpeechControls(!showSpeechControls);
+                    if (showSpeechControls) speech.stopSpeaking();
+                  }}
+                  data-testid="button-listen"
+                >
+                  <Volume2 className="h-4 w-4" />
+                </Button>
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  onClick={() => setShowFontSettings(!showFontSettings)}
+                  data-testid="button-font-size"
+                >
+                  <Type className="h-4 w-4" />
+                </Button>
+              </>
             )}
             {view === "books" && (
               <Button
@@ -443,6 +464,24 @@ export default function BiblePage() {
               </div>
             </div>
 
+            {showSpeechControls && chapterData && (
+              <SpeechControls
+                isSpeaking={speech.isSpeaking}
+                isPaused={speech.isPaused}
+                speed={speech.speed}
+                onPlay={() =>
+                  speech.startSpeaking({
+                    verses: chapterData.verses,
+                    bookName: selectedBook.name,
+                    chapter: selectedChapter,
+                  })
+                }
+                onPause={speech.togglePause}
+                onStop={speech.stopSpeaking}
+                onSpeedChange={speech.changeSpeed}
+              />
+            )}
+
             {isLoading && !cachedData && <ChapterSkeleton />}
 
             {chapterError && !isLoading && !cachedData && (
@@ -461,23 +500,28 @@ export default function BiblePage() {
                 {chapterData.verses.map((verse) => {
                   const id = `${selectedBook.name}-${selectedChapter}-${verse.verse}`;
                   const highlighted = highlightedVerses.has(id);
+                  const isActiveVerse = speech.isSpeaking && speech.activeVerse === verse.verse;
                   return (
                     <div
                       key={verse.verse}
                       className={`flex gap-2 rounded-md p-2 cursor-pointer transition-colors ${
-                        highlighted
+                        isActiveVerse
+                          ? "bg-primary/25 border border-primary/40 ring-1 ring-primary/30"
+                          : highlighted
                           ? "bg-primary/15 border border-primary/20"
                           : "hover-elevate"
                       }`}
                       onClick={() => handleVerseHighlight(verse)}
                       data-testid={`verse-${selectedBook.name.toLowerCase().replace(/ /g, "-")}-${selectedChapter}-${verse.verse}`}
                     >
-                      <span className="text-xs font-bold text-primary shrink-0 pt-0.5 w-6 text-right">
+                      <span className={`text-xs font-bold shrink-0 pt-0.5 w-6 text-right ${isActiveVerse ? "text-primary" : "text-primary"}`}>
                         {verse.verse}
                       </span>
                       <p
                         className={`${fontClasses.verse} leading-relaxed ${
-                          highlighted
+                          isActiveVerse
+                            ? "text-foreground font-medium"
+                            : highlighted
                             ? "text-foreground font-medium"
                             : "text-foreground/90"
                         }`}
