@@ -154,8 +154,6 @@ export default function BiblePage() {
         bookName: selectedBook.name,
         chapter: selectedChapter,
       });
-    } else if (autoAdvanceRef.current) {
-      autoAdvanceRef.current = false;
     }
   }, [chapterData, selectedChapter, selectedBook, speech]);
 

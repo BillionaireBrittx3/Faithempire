@@ -139,8 +139,6 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
         bookName: decodedBookName,
         chapter: selectedChapter,
       });
-    } else if (autoAdvanceRef.current && !chapterData) {
-      autoAdvanceRef.current = false;
     }
   }, [chapterData, selectedChapter, decodedBookName, speech, view]);
 
