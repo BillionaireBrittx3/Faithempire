@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Play, Pause, Square, Volume2, Repeat, ChevronDown } from "lucide-react";
+import { Play, Pause, Square, Volume2, Repeat } from "lucide-react";
 import { type SpeechSpeed } from "@/lib/use-speech";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const SPEED_OPTIONS: { value: SpeechSpeed; label: string }[] = [
   { value: "slow", label: "0.75x" },
@@ -15,14 +14,11 @@ interface SpeechControlsProps {
   isSpeaking: boolean;
   isPaused: boolean;
   speed: SpeechSpeed;
-  voices: SpeechSynthesisVoice[];
-  selectedVoiceURI: string;
   continuousPlay: boolean;
   onPlay: () => void;
   onPause: () => void;
   onStop: () => void;
   onSpeedChange: (speed: SpeechSpeed) => void;
-  onVoiceChange: (voiceURI: string) => void;
   onContinuousToggle: () => void;
   mode?: "kjv" | "decoded";
   onModeChange?: (mode: "kjv" | "decoded") => void;
@@ -35,14 +31,11 @@ export function SpeechControls({
   isSpeaking,
   isPaused,
   speed,
-  voices,
-  selectedVoiceURI,
   continuousPlay,
   onPlay,
   onPause,
   onStop,
   onSpeedChange,
-  onVoiceChange,
   onContinuousToggle,
   mode,
   onModeChange,
@@ -50,9 +43,6 @@ export function SpeechControls({
   totalChapters,
   currentChapter,
 }: SpeechControlsProps) {
-  const [showVoices, setShowVoices] = useState(false);
-
-  const selectedVoiceName = voices.find((v) => v.voiceURI === selectedVoiceURI)?.name || "Default";
 
   return (
     <motion.div
@@ -176,50 +166,6 @@ export function SpeechControls({
             ))}
           </div>
         </div>
-
-        {voices.length > 0 && (
-          <div className="mt-2">
-            <button
-              className="flex items-center gap-1 text-[10px] text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setShowVoices(!showVoices)}
-              data-testid="button-voice-toggle"
-            >
-              <span>Voice: {selectedVoiceURI ? selectedVoiceName : "Default"}</span>
-              <ChevronDown className={`h-3 w-3 transition-transform ${showVoices ? "rotate-180" : ""}`} />
-            </button>
-            {showVoices && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                className="overflow-hidden mt-1"
-              >
-                <div className="max-h-32 overflow-y-auto rounded-md border border-border bg-background p-1">
-                  <button
-                    className={`w-full text-left text-[10px] px-2 py-1.5 rounded hover:bg-primary/10 transition-colors ${
-                      !selectedVoiceURI ? "text-primary font-medium" : "text-muted-foreground"
-                    }`}
-                    onClick={() => { onVoiceChange(""); setShowVoices(false); }}
-                    data-testid="button-voice-default"
-                  >
-                    Default
-                  </button>
-                  {voices.map((voice) => (
-                    <button
-                      key={voice.voiceURI}
-                      className={`w-full text-left text-[10px] px-2 py-1.5 rounded hover:bg-primary/10 transition-colors ${
-                        selectedVoiceURI === voice.voiceURI ? "text-primary font-medium" : "text-muted-foreground"
-                      }`}
-                      onClick={() => { onVoiceChange(voice.voiceURI); setShowVoices(false); }}
-                      data-testid={`button-voice-${voice.voiceURI.replace(/\s/g, "-").toLowerCase()}`}
-                    >
-                      {voice.name}
-                    </button>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </div>
-        )}
 
         {isSpeaking && (
           <p className="mt-2 text-[10px] text-muted-foreground/70">

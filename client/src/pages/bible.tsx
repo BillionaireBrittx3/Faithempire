@@ -491,8 +491,6 @@ export default function BiblePage() {
                 isSpeaking={speech.isSpeaking}
                 isPaused={speech.isPaused}
                 speed={speech.speed}
-                voices={speech.voices}
-                selectedVoiceURI={speech.selectedVoiceURI}
                 continuousPlay={speech.continuousPlay}
                 onPlay={() =>
                   speech.startSpeaking({
@@ -504,7 +502,6 @@ export default function BiblePage() {
                 onPause={speech.togglePause}
                 onStop={speech.stopSpeaking}
                 onSpeedChange={speech.changeSpeed}
-                onVoiceChange={speech.changeVoice}
                 onContinuousToggle={speech.toggleContinuousPlay}
                 totalChapters={selectedBook.chapters}
                 currentChapter={selectedChapter}

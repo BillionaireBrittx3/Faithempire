@@ -452,8 +452,6 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                 isSpeaking={speech.isSpeaking}
                 isPaused={speech.isPaused}
                 speed={speech.speed}
-                voices={speech.voices}
-                selectedVoiceURI={speech.selectedVoiceURI}
                 continuousPlay={speech.continuousPlay}
                 onPlay={() => {
                   const verses = chapterData.verses.map((v) => ({
@@ -469,7 +467,6 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
                 onPause={speech.togglePause}
                 onStop={speech.stopSpeaking}
                 onSpeedChange={speech.changeSpeed}
-                onVoiceChange={speech.changeVoice}
                 onContinuousToggle={speech.toggleContinuousPlay}
                 showModeToggle
                 mode={listenMode}

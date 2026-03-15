@@ -8,7 +8,6 @@ const SPEED_MAP: Record<SpeechSpeed, number> = {
   fast: 1.35,
 };
 
-const VOICE_STORAGE_KEY = "faith_empire_speech_voice";
 const CONTINUOUS_STORAGE_KEY = "faith_empire_continuous_play";
 
 interface SpeechOptions {
@@ -22,10 +21,6 @@ export function useSpeech(onChapterComplete?: () => void) {
   const [isPaused, setIsPaused] = useState(false);
   const [activeVerse, setActiveVerse] = useState<number | null>(null);
   const [speed, setSpeed] = useState<SpeechSpeed>("normal");
-  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>(() => {
-    try { return localStorage.getItem(VOICE_STORAGE_KEY) || ""; } catch { return ""; }
-  });
   const [continuousPlay, setContinuousPlay] = useState<boolean>(() => {
     try { return localStorage.getItem(CONTINUOUS_STORAGE_KEY) === "true"; } catch { return false; }
   });
@@ -35,7 +30,6 @@ export function useSpeech(onChapterComplete?: () => void) {
   const stoppedRef = useRef(false);
   const speedRef = useRef<SpeechSpeed>("normal");
   const speedTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const selectedVoiceURIRef = useRef(selectedVoiceURI);
   const onChapterCompleteRef = useRef(onChapterComplete);
   const continuousPlayRef = useRef(continuousPlay);
 
@@ -54,26 +48,6 @@ export function useSpeech(onChapterComplete?: () => void) {
   }, [speed]);
 
   useEffect(() => {
-    selectedVoiceURIRef.current = selectedVoiceURI;
-  }, [selectedVoiceURI]);
-
-  useEffect(() => {
-    if (!window.speechSynthesis) return;
-
-    const loadVoices = () => {
-      const available = window.speechSynthesis.getVoices();
-      const english = available.filter((v) => v.lang.startsWith("en"));
-      setVoices(english.length > 0 ? english : available);
-    };
-
-    loadVoices();
-    window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
-    return () => {
-      window.speechSynthesis.removeEventListener("voiceschanged", loadVoices);
-    };
-  }, []);
-
-  useEffect(() => {
     return () => {
       window.speechSynthesis?.cancel();
       if (speedTimeoutRef.current) {
@@ -81,12 +55,6 @@ export function useSpeech(onChapterComplete?: () => void) {
         speedTimeoutRef.current = null;
       }
     };
-  }, []);
-
-  const getSelectedVoice = useCallback((): SpeechSynthesisVoice | null => {
-    if (!selectedVoiceURIRef.current) return null;
-    const available = window.speechSynthesis?.getVoices() || [];
-    return available.find((v) => v.voiceURI === selectedVoiceURIRef.current) || null;
   }, []);
 
   const speakVerse = useCallback((index: number) => {
@@ -112,11 +80,6 @@ export function useSpeech(onChapterComplete?: () => void) {
     utterance.pitch = 1.0;
     utterance.lang = "en-US";
 
-    const voice = getSelectedVoice();
-    if (voice) {
-      utterance.voice = voice;
-    }
-
     utterance.onend = () => {
       if (!stoppedRef.current) {
         speakVerse(index + 1);
@@ -130,7 +93,7 @@ export function useSpeech(onChapterComplete?: () => void) {
     };
 
     window.speechSynthesis.speak(utterance);
-  }, [getSelectedVoice]);
+  }, []);
 
   const startSpeaking = useCallback((options: SpeechOptions, startFromVerse?: number) => {
     if (options.verses.length === 0) return;
@@ -200,25 +163,6 @@ export function useSpeech(onChapterComplete?: () => void) {
     }
   }, [isSpeaking, isPaused, speakVerse]);
 
-  const changeVoice = useCallback((voiceURI: string) => {
-    setSelectedVoiceURI(voiceURI);
-    try { localStorage.setItem(VOICE_STORAGE_KEY, voiceURI); } catch {}
-    if (isSpeaking && !isPaused && window.speechSynthesis) {
-      const currentIdx = currentIndexRef.current;
-      window.speechSynthesis.cancel();
-      stoppedRef.current = false;
-      if (speedTimeoutRef.current) {
-        clearTimeout(speedTimeoutRef.current);
-      }
-      speedTimeoutRef.current = setTimeout(() => {
-        speedTimeoutRef.current = null;
-        if (!stoppedRef.current) {
-          speakVerse(currentIdx);
-        }
-      }, 50);
-    }
-  }, [isSpeaking, isPaused, speakVerse]);
-
   const toggleContinuousPlay = useCallback(() => {
     setContinuousPlay((prev) => {
       const next = !prev;
@@ -232,14 +176,11 @@ export function useSpeech(onChapterComplete?: () => void) {
     isPaused,
     activeVerse,
     speed,
-    voices,
-    selectedVoiceURI,
     continuousPlay,
     startSpeaking,
     stopSpeaking,
     togglePause,
     changeSpeed,
-    changeVoice,
     toggleContinuousPlay,
     supported,
   };
