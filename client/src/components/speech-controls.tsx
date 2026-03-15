@@ -1,14 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Play, Pause, Square, Volume2, Repeat } from "lucide-react";
+import { Play, Pause, Square, Volume2, Repeat, Info, X } from "lucide-react";
 import { type SpeechSpeed } from "@/lib/use-speech";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const SPEED_OPTIONS: { value: SpeechSpeed; label: string }[] = [
   { value: "slow", label: "0.75x" },
   { value: "normal", label: "1x" },
   { value: "fast", label: "1.35x" },
 ];
+
+const VOICE_TIP_DISMISSED_KEY = "faith_empire_voice_tip_dismissed";
 
 interface SpeechControlsProps {
   isSpeaking: boolean;
@@ -43,6 +46,23 @@ export function SpeechControls({
   totalChapters,
   currentChapter,
 }: SpeechControlsProps) {
+  const [showVoiceTip, setShowVoiceTip] = useState(false);
+  const [tipDismissed, setTipDismissed] = useState(() => {
+    try { return localStorage.getItem(VOICE_TIP_DISMISSED_KEY) === "true"; } catch { return false; }
+  });
+
+  useEffect(() => {
+    if (!tipDismissed) {
+      const timer = setTimeout(() => setShowVoiceTip(true), 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [tipDismissed]);
+
+  const dismissTip = () => {
+    setShowVoiceTip(false);
+    setTipDismissed(true);
+    try { localStorage.setItem(VOICE_TIP_DISMISSED_KEY, "true"); } catch {}
+  };
 
   return (
     <motion.div
@@ -181,6 +201,51 @@ export function SpeechControls({
             Continuous play on — will read through all chapters
           </p>
         )}
+
+        <AnimatePresence>
+          {showVoiceTip && !tipDismissed && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-2 rounded-lg bg-background/80 border border-primary/10 p-2.5" data-testid="voice-tip">
+                <div className="flex items-start gap-2">
+                  <Info className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[11px] font-medium text-foreground mb-1">
+                      Want a better sounding voice?
+                    </p>
+                    <p className="text-[10px] text-muted-foreground leading-relaxed">
+                      You can upgrade your voice for free on your iPhone! Just follow these steps one time:
+                    </p>
+                    <ol className="mt-1.5 text-[10px] text-muted-foreground leading-relaxed list-decimal pl-3.5 space-y-0.5">
+                      <li>Open your iPhone <span className="text-foreground font-medium">Settings</span></li>
+                      <li>Tap <span className="text-foreground font-medium">Accessibility</span></li>
+                      <li>Tap <span className="text-foreground font-medium">Spoken Content</span></li>
+                      <li>Tap <span className="text-foreground font-medium">Voices</span></li>
+                      <li>Tap <span className="text-foreground font-medium">English</span></li>
+                      <li>Choose a voice and tap <span className="text-foreground font-medium">Download</span></li>
+                    </ol>
+                    <p className="mt-1.5 text-[10px] text-primary/80">
+                      The enhanced Siri voices sound the most natural.
+                    </p>
+                  </div>
+                  <button
+                    onClick={dismissTip}
+                    className="shrink-0 p-0.5 rounded hover:bg-primary/10 transition-colors"
+                    aria-label="Dismiss tip"
+                    data-testid="button-dismiss-voice-tip"
+                  >
+                    <X className="h-3.5 w-3.5 text-muted-foreground" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );
