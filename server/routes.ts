@@ -5,6 +5,7 @@ import { storage } from "./storage";
 import { insertSubscriberSchema } from "@shared/schema";
 import { z } from "zod";
 import fs from "fs";
+import { wgmPrayersData } from "./wgm-prayers-data";
 
 const decodedBooksCache: Map<string, any> = new Map();
 
@@ -100,7 +101,7 @@ export async function registerRoutes(
   app.get("/api/prayers", async (_req, res) => {
     try {
       const allVerses = await storage.getAllVerses();
-      const prayers = allVerses
+      const dbPrayers = allVerses
         .filter((v) => v.prayerTitle && v.prayerText && v.prayerSection)
         .map((v) => ({
           id: v.id,
@@ -108,7 +109,15 @@ export async function registerRoutes(
           prayerText: v.prayerText,
           prayerSection: v.prayerSection,
         }));
-      res.json(prayers);
+
+      const wgmPrayers = wgmPrayersData.map((p) => ({
+        id: 1000 + p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      res.json([...dbPrayers, ...wgmPrayers]);
     } catch (err) {
       res.status(500).json({ message: "Failed to get prayers" });
     }

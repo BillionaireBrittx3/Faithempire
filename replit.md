@@ -23,7 +23,7 @@ The application is structured as a PWA with a React (Vite) frontend, an Express.
     - Features include:
         - Daily verse display.
         - KJV Bible reader with chapter navigation, tap-to-highlight verses, search, and font size control.
-        - A prayer book with 100 prayers organized into 10 sections.
+        - A prayer book with 200 prayers organized into 16 sections (from "No Weapon Formed" and "When God Multiplies" books).
         - Podcast player with persistent global audio context.
         - Decoded Books section presenting all 66 books of the Bible with KJV and Decoded Modern Language Version (DMLV) texts, reading progress tracking, and continuous play for audio.
         - Listen Along (text-to-speech) feature using the browser SpeechSynthesis API, with playback controls and voice selection.
@@ -38,7 +38,7 @@ The application is structured as a PWA with a React (Vite) frontend, an Express.
 - **Core Features**:
     - **Subscription System**: Content is gated behind an $8.88/month Apple IAP subscription. A custom StoreKit module handles in-app purchases and restoration.
     - **Decoded Books System**: Provides parsed KJV and DMLV texts for all 66 books, stored as JSON, with features like context annotations and series organization.
-    - **Prayer Book**: Integrates 100 prayers paired with daily verses.
+    - **Prayer Book**: Integrates 200 prayers from two books — 100 from "No Weapon Formed" (stored in DB via `server/prayers-data.ts`) and 100 from "When God Multiplies" (served from `server/wgm-prayers-data.ts`). WGM prayers use IDs 1001-1100 to avoid collisions.
     - **Build Process**: Employs `npm run build` before `npm run start` to ensure the server always serves pre-built static files. A `SIGHUP` handler is implemented for server stability.
     - **iOS App**: Submitted to App Store Connect (v1.5.0, build 29). Custom StoreKit module for purchases/restore.
 

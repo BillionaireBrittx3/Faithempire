@@ -28,6 +28,12 @@ const SECTION_ORDER = [
   "Prayers for Forgiveness and Deliverance",
   "Prayers for Business and Ministry",
   "Prayers of Victory and Praise",
+  "Prayers of Surrender and Alignment",
+  "Prayers for Financial Breakthrough",
+  "Prayers for Favor",
+  "Prayers for Blessings",
+  "Prayers for Multiplication",
+  "Prayers for Purpose, Legacy, and Stewardship",
 ];
 
 export default function PrayersPage() {
@@ -58,7 +64,7 @@ export default function PrayersPage() {
           Prayer Book
         </h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          No Weapon Formed When You Pray, Heaven Moves
+          No Weapon Formed & When God Multiplies
         </p>
         {prayers && (
           <p className="mt-1 text-xs text-muted-foreground/70">
