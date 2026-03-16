@@ -36,6 +36,7 @@ export function useSpeech(onChapterComplete?: () => void) {
   const pausedRef = useRef(false);
   const hasSpokeRef = useRef(false);
   const speakStartTimeRef = useRef(0);
+  const wakeLockRef = useRef<any>(null);
 
   const supported = typeof window !== "undefined" && "speechSynthesis" in window;
 
@@ -55,11 +56,30 @@ export function useSpeech(onChapterComplete?: () => void) {
     return () => {
       window.speechSynthesis?.cancel();
       clearWatchdog();
+      releaseWakeLock();
       if (speedTimeoutRef.current) {
         clearTimeout(speedTimeoutRef.current);
         speedTimeoutRef.current = null;
       }
     };
+  }, []);
+
+  const acquireWakeLock = useCallback(async () => {
+    try {
+      if ("wakeLock" in navigator && !wakeLockRef.current) {
+        wakeLockRef.current = await (navigator as any).wakeLock.request("screen");
+        wakeLockRef.current.addEventListener("release", () => {
+          wakeLockRef.current = null;
+        });
+      }
+    } catch {}
+  }, []);
+
+  const releaseWakeLock = useCallback(() => {
+    if (wakeLockRef.current) {
+      wakeLockRef.current.release().catch(() => {});
+      wakeLockRef.current = null;
+    }
   }, []);
 
   const clearWatchdog = useCallback(() => {
@@ -87,6 +107,7 @@ export function useSpeech(onChapterComplete?: () => void) {
         const verses = versesRef.current;
         const nextIdx = currentIndexRef.current + 1;
         if (nextIdx >= verses.length) {
+          releaseWakeLock();
           if (continuousPlayRef.current && onChapterCompleteRef.current) {
             onChapterCompleteRef.current();
           } else {
@@ -110,6 +131,7 @@ export function useSpeech(onChapterComplete?: () => void) {
     const verses = versesRef.current;
     if (index >= verses.length) {
       clearWatchdog();
+      releaseWakeLock();
       if (continuousPlayRef.current && onChapterCompleteRef.current) {
         onChapterCompleteRef.current();
       } else {
@@ -161,6 +183,7 @@ export function useSpeech(onChapterComplete?: () => void) {
     setIsPaused(false);
     hasSpokeRef.current = false;
     speakStartTimeRef.current = Date.now();
+    acquireWakeLock();
 
     const v = options.verses[startIndex];
     currentIndexRef.current = startIndex;
@@ -171,13 +194,14 @@ export function useSpeech(onChapterComplete?: () => void) {
       speakVerse(startIndex);
       startWatchdog();
     }
-  }, [speakVerse, startWatchdog]);
+  }, [speakVerse, startWatchdog, acquireWakeLock]);
 
   const stopSpeaking = useCallback(() => {
     stoppedRef.current = true;
     pausedRef.current = false;
     window.speechSynthesis?.cancel();
     clearWatchdog();
+    releaseWakeLock();
     if (speedTimeoutRef.current) {
       clearTimeout(speedTimeoutRef.current);
       speedTimeoutRef.current = null;
@@ -186,7 +210,7 @@ export function useSpeech(onChapterComplete?: () => void) {
     setIsPaused(false);
     setActiveVerse(null);
     currentIndexRef.current = 0;
-  }, [clearWatchdog]);
+  }, [clearWatchdog, releaseWakeLock]);
 
   const togglePause = useCallback(() => {
     if (!isSpeaking) return;
