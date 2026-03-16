@@ -53,7 +53,14 @@ export function useSpeech(onChapterComplete?: () => void) {
   }, [speed]);
 
   useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible" && !stoppedRef.current && !pausedRef.current && !wakeLockRef.current) {
+        acquireWakeLock();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
     return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.speechSynthesis?.cancel();
       clearWatchdog();
       releaseWakeLock();
@@ -220,13 +227,15 @@ export function useSpeech(onChapterComplete?: () => void) {
       window.speechSynthesis.resume();
       setIsPaused(false);
       startWatchdog();
+      acquireWakeLock();
     } else {
       pausedRef.current = true;
       window.speechSynthesis.pause();
       setIsPaused(true);
       clearWatchdog();
+      releaseWakeLock();
     }
-  }, [isPaused, isSpeaking, startWatchdog, clearWatchdog]);
+  }, [isPaused, isSpeaking, startWatchdog, clearWatchdog, acquireWakeLock, releaseWakeLock]);
 
   const changeSpeed = useCallback((newSpeed: SpeechSpeed) => {
     setSpeed(newSpeed);
