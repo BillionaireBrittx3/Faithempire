@@ -17,6 +17,9 @@
       "ios": {
         "image": "latest"
       },
+      "android": {
+        "image": "latest"
+      },
       "env": {
         "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
       }
