@@ -11,6 +11,7 @@ class StoreKitHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionO
 
     private var products: [SKProduct] = []
     private var pendingProductId: String?
+    private var restoredProductIds: [String] = []
 
     override init() {
         super.init()
@@ -30,6 +31,7 @@ class StoreKitHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionO
     }
 
     func restorePurchases() {
+        restoredProductIds = []
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
 
@@ -65,8 +67,8 @@ class StoreKitHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionO
                     onPurchaseFailed?("error")
                 }
             case .restored:
+                restoredProductIds.append(transaction.payment.productIdentifier)
                 SKPaymentQueue.default().finishTransaction(transaction)
-                onPurchaseComplete?(transaction.payment.productIdentifier)
             case .deferred, .purchasing:
                 break
             @unknown default:
@@ -76,13 +78,12 @@ class StoreKitHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionO
     }
 
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
-        let restoredIds = queue.transactions
-            .filter { $0.transactionState == .restored }
-            .map { $0.payment.productIdentifier }
-        onRestoreComplete?(restoredIds)
+        onRestoreComplete?(restoredProductIds)
+        restoredProductIds = []
     }
 
     func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
         onRestoreComplete?([])
+        restoredProductIds = []
     }
 }

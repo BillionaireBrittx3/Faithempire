@@ -132,6 +132,13 @@ export default function TermsPage() {
             </section>
 
             <section>
+              <h2 className="font-semibold text-foreground mb-1">Apple Licensed Application End User License Agreement</h2>
+              <p>
+                This App is licensed to you under Apple's standard Licensed Application End User License Agreement ("Standard EULA"), available at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" className="text-foreground underline underline-offset-4" target="_blank" rel="noopener noreferrer">apple.com/legal/internet-services/itunes/dev/stdeula</a>. In the event of any conflict between these Terms of Use and the Standard EULA, the Standard EULA shall prevail.
+              </p>
+            </section>
+
+            <section>
               <h2 className="font-semibold text-foreground mb-1">Governing Law</h2>
               <p>
                 These Terms of Use shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.
