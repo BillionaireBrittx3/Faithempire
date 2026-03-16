@@ -40,7 +40,7 @@ The application is structured as a PWA with a React (Vite) frontend, an Express.
     - **Decoded Books System**: Provides parsed KJV and DMLV texts for all 66 books, stored as JSON, with features like context annotations and series organization.
     - **Prayer Book**: Integrates 100 prayers paired with daily verses.
     - **Build Process**: Employs `npm run build` before `npm run start` to ensure the server always serves pre-built static files. A `SIGHUP` handler is implemented for server stability.
-    - **iOS Widget (Planned)**: A Daily Prayer Widget is developed (Swift-based) but currently disabled in builds due to Expo SDK limitations. It will fetch and display today's prayer.
+    - **iOS App**: Submitted to App Store Connect (v1.5.0, build 29). Custom StoreKit module for purchases/restore.
 
 ## External Dependencies
 - **Apple In-App Purchases (IAP)**: For managing premium subscriptions.
