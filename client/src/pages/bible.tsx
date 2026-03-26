@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Lock, Crown, Search, X, Type, Volume2 } from "lucide-react";
 import { BIBLE_BOOKS, type BibleBook } from "@/lib/bible-data";
+import { BOOK_SUMMARIES } from "@/lib/bible-summaries";
 import { isHighlighted, toggleHighlight, getHighlights } from "@/lib/highlights";
 import { getCachedChapter, cacheChapter } from "@/lib/bible-cache";
 import { getFontSize, setFontSize, getFontClasses, FONT_SIZE_OPTIONS, type FontSize } from "@/lib/font-size";
@@ -462,6 +463,22 @@ export default function BiblePage() {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.2 }}
           >
+            {BOOK_SUMMARIES[selectedBook.name] && (
+              <div className="mx-4 mb-4 rounded-xl border border-primary/15 bg-primary/5 p-4" data-testid="text-book-summary">
+                <div className="flex items-center gap-2 mb-2">
+                  <BookOpen className="h-4 w-4 text-primary" />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+                    What This Book Is About
+                  </span>
+                </div>
+                <p
+                  className="text-sm leading-relaxed text-foreground/85"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  {BOOK_SUMMARIES[selectedBook.name]}
+                </p>
+              </div>
+            )}
             <div className="grid grid-cols-5 gap-2 px-4 py-2">
               {Array.from({ length: selectedBook.chapters }, (_, i) => i + 1).map(
                 (chapter) => (
@@ -488,6 +505,23 @@ export default function BiblePage() {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.2 }}
           >
+            {selectedChapter === 1 && BOOK_SUMMARIES[selectedBook.name] && (
+              <div className="mx-4 mb-3 rounded-xl border border-primary/15 bg-primary/5 p-4" data-testid="text-book-summary-reading">
+                <div className="flex items-center gap-2 mb-2">
+                  <BookOpen className="h-4 w-4 text-primary" />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+                    What This Book Is About
+                  </span>
+                </div>
+                <p
+                  className="text-sm leading-relaxed text-foreground/85"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  {BOOK_SUMMARIES[selectedBook.name]}
+                </p>
+              </div>
+            )}
+
             <div className="px-4 pb-2">
               <div className="flex items-center gap-1 text-xs text-muted-foreground">
                 <Highlighter className="h-3 w-3 text-primary" />
