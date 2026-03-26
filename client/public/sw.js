@@ -2,6 +2,35 @@ const CACHE_NAME = "faith-empire-v1";
 const API_CACHE = "faith-empire-api-v1";
 const OFFLINE_URL = "/offline.html";
 
+self.addEventListener("message", (event) => {
+  if (event.data?.type === "PRAYER_REMINDER") {
+    self.registration.showNotification(event.data.title || "Time to Pray", {
+      body: event.data.body || "Your daily prayer is waiting. Take a moment to connect with God.",
+      icon: "/icons/icon-192x192.png",
+      badge: "/icons/icon-192x192.png",
+      tag: "prayer-reminder",
+      renotify: true,
+      data: { url: "/prayers" },
+    });
+  }
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const url = event.notification.data?.url || "/";
+  event.waitUntil(
+    clients.matchAll({ type: "window", includeUncontrolled: true }).then((windowClients) => {
+      for (const client of windowClients) {
+        if (client.url.includes(self.location.origin)) {
+          client.navigate(url);
+          return client.focus();
+        }
+      }
+      return clients.openWindow(url);
+    })
+  );
+});
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(["/", "/offline.html"]))
