@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronLeft, ChevronRight, BookOpen, Highlighter, Info, Check, Type, Volume2, Play, Pause, Square } from "lucide-react";
 import { toggleHighlight, getHighlights } from "@/lib/highlights";
+import { BOOK_SUMMARIES } from "@/lib/bible-summaries";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSubscription, FREE_DECODED_CHAPTERS } from "@/lib/subscription";
@@ -374,6 +375,20 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
               </Card>
             </div>
 
+            {bookSummary && BOOK_SUMMARIES[bookName] && (
+              <div className="px-4 pb-3">
+                <Card className="p-4 border-primary/30 bg-primary/5" data-testid="text-decoded-book-summary">
+                  <div className="flex items-center gap-2 mb-2">
+                    <BookOpen className="h-4 w-4 text-primary" />
+                    <span className="text-xs font-bold text-primary uppercase tracking-wide">What This Book Is About</span>
+                  </div>
+                  <p className="text-sm text-foreground/90 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                    {BOOK_SUMMARIES[bookName]}
+                  </p>
+                </Card>
+              </div>
+            )}
+
             {bookSummary && (
               <div className="px-4 pb-3">
                 <Button
@@ -482,6 +497,20 @@ export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.2 }}
           >
+            {selectedChapter === 1 && BOOK_SUMMARIES[bookName] && (
+              <div className="px-4 pb-3">
+                <Card className="p-4 border-primary/30 bg-primary/5" data-testid="text-decoded-book-summary-reading">
+                  <div className="flex items-center gap-2 mb-2">
+                    <BookOpen className="h-4 w-4 text-primary" />
+                    <span className="text-xs font-bold text-primary uppercase tracking-wide">What This Book Is About</span>
+                  </div>
+                  <p className="text-sm text-foreground/90 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                    {BOOK_SUMMARIES[bookName]}
+                  </p>
+                </Card>
+              </div>
+            )}
+
             <div className="px-4 pb-2">
               <div className="flex items-center gap-1 text-xs text-muted-foreground">
                 <Highlighter className="h-3 w-3 text-primary" />
