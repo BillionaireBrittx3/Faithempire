@@ -277,6 +277,43 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/bible/search", async (req, res) => {
+    try {
+      const query = req.query.q as string;
+      if (!query || query.trim().length < 3) {
+        return res.status(400).json({ message: "Search query too short" });
+      }
+
+      const searchQuery = encodeURIComponent(query.trim());
+      const response = await fetch(
+        `https://bible-api.com/${searchQuery}?translation=kjv`
+      );
+
+      if (!response.ok) {
+        return res.status(404).json({ message: "No results found. Try a reference like 'John 3:16' or 'Psalm 23'." });
+      }
+
+      const data = await response.json();
+      if (data.error) {
+        return res.status(404).json({ message: data.error });
+      }
+
+      const verses = (data.verses || []).map((v: any) => ({
+        book_name: v.book_name || '',
+        chapter: v.chapter || 0,
+        verse: v.verse || 0,
+        text: v.text?.trim() || "",
+      }));
+
+      res.json({
+        reference: data.reference || query,
+        verses,
+      });
+    } catch (err) {
+      res.status(500).json({ message: "Search failed. Try a reference like 'John 3:16' or 'Romans 8:28'." });
+    }
+  });
+
   app.get("/api/decoded/books", async (_req, res) => {
     try {
       const index = loadBooksIndex();
