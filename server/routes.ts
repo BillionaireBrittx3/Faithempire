@@ -6,6 +6,10 @@ import { insertSubscriberSchema } from "@shared/schema";
 import { z } from "zod";
 import fs from "fs";
 import { wgmPrayersData } from "./wgm-prayers-data";
+import { wgmawPrayersData } from "./wgmaw-prayers-data";
+import { wgstePrayersData } from "./wgste-prayers-data";
+import { wgbecPrayersData } from "./wgbec-prayers-data";
+import { wgsaaPrayersData } from "./wgsaa-prayers-data";
 
 const decodedBooksCache: Map<string, any> = new Map();
 
@@ -117,7 +121,35 @@ export async function registerRoutes(
         prayerSection: p.section,
       }));
 
-      res.json([...dbPrayers, ...wgmPrayers]);
+      const wgmawPrayers = wgmawPrayersData.map((p) => ({
+        id: p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      const wgstePrayers = wgstePrayersData.map((p) => ({
+        id: p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      const wgbecPrayers = wgbecPrayersData.map((p) => ({
+        id: p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      const wgsaaPrayers = wgsaaPrayersData.map((p) => ({
+        id: p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      res.json([...dbPrayers, ...wgmPrayers, ...wgmawPrayers, ...wgstePrayers, ...wgbecPrayers, ...wgsaaPrayers]);
     } catch (err) {
       res.status(500).json({ message: "Failed to get prayers" });
     }
