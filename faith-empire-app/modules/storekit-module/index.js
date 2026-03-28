@@ -1,24 +1,49 @@
-import { requireNativeModule, EventEmitter } from 'expo-modules-core';
+import { Platform } from 'react-native';
 
-const StoreKitModule = requireNativeModule('StoreKitModule');
-const emitter = new EventEmitter(StoreKitModule);
+let StoreKitModule = null;
+let emitter = null;
+
+if (Platform.OS === 'ios') {
+  try {
+    const { requireNativeModule, EventEmitter } = require('expo-modules-core');
+    StoreKitModule = requireNativeModule('StoreKitModule');
+    emitter = new EventEmitter(StoreKitModule);
+  } catch (e) {
+    console.log('StoreKit module not available:', e.message);
+  }
+}
 
 export function purchase(productId) {
-  return StoreKitModule.purchase(productId);
+  if (StoreKitModule) {
+    return StoreKitModule.purchase(productId);
+  }
+  console.log('StoreKit not available on this platform');
 }
 
 export function restorePurchases() {
-  return StoreKitModule.restorePurchases();
+  if (StoreKitModule) {
+    return StoreKitModule.restorePurchases();
+  }
+  console.log('StoreKit not available on this platform');
 }
 
 export function addPurchaseCompleteListener(listener) {
-  return emitter.addListener('onPurchaseComplete', listener);
+  if (emitter) {
+    return emitter.addListener('onPurchaseComplete', listener);
+  }
+  return { remove: () => {} };
 }
 
 export function addPurchaseFailedListener(listener) {
-  return emitter.addListener('onPurchaseFailed', listener);
+  if (emitter) {
+    return emitter.addListener('onPurchaseFailed', listener);
+  }
+  return { remove: () => {} };
 }
 
 export function addRestoreCompleteListener(listener) {
-  return emitter.addListener('onRestoreComplete', listener);
+  if (emitter) {
+    return emitter.addListener('onRestoreComplete', listener);
+  }
+  return { remove: () => {} };
 }

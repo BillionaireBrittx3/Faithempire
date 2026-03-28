@@ -12,6 +12,7 @@ import {
 
 const APP_URL = 'https://faithempire.replit.app';
 const PRODUCT_ID = 'com.decodedfaithempire.app.premium.monthly';
+const IS_IOS = Platform.OS === 'ios';
 
 export default function App() {
   const webViewRef = useRef(null);
@@ -25,6 +26,8 @@ export default function App() {
   }
 
   useEffect(() => {
+    if (!IS_IOS) return;
+
     const purchaseSub = addPurchaseCompleteListener(({ productId }) => {
       setIsPremium(true);
       sendToWebView({ type: 'PURCHASE_COMPLETE', isPremium: true });
@@ -55,6 +58,10 @@ export default function App() {
   }, []);
 
   function handlePurchase() {
+    if (!IS_IOS) {
+      sendToWebView({ type: 'PURCHASE_FAILED', reason: 'not_supported' });
+      return;
+    }
     try {
       purchase(PRODUCT_ID);
     } catch (err) {
@@ -64,6 +71,10 @@ export default function App() {
   }
 
   function handleRestore() {
+    if (!IS_IOS) {
+      sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: false });
+      return;
+    }
     try {
       restorePurchases();
     } catch (err) {
@@ -91,7 +102,11 @@ export default function App() {
           handleCheckSubscription();
           break;
         case 'OPEN_SUBSCRIPTION_SETTINGS':
-          Linking.openURL('https://apps.apple.com/account/subscriptions');
+          if (IS_IOS) {
+            Linking.openURL('https://apps.apple.com/account/subscriptions');
+          } else {
+            Linking.openURL('https://play.google.com/store/account/subscriptions');
+          }
           break;
         default:
           break;
@@ -101,17 +116,21 @@ export default function App() {
     }
   }, [isPremium]);
 
+  const platformUrl = IS_IOS
+    ? APP_URL
+    : `${APP_URL}?platform=android`;
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" backgroundColor="#000000" />
       <WebView
         ref={webViewRef}
-        source={{ uri: APP_URL }}
+        source={{ uri: platformUrl }}
         style={styles.webview}
         javaScriptEnabled={true}
         domStorageEnabled={true}
         startInLoadingState={true}
-        allowsBackForwardNavigationGestures={true}
+        allowsBackForwardNavigationGestures={IS_IOS}
         allowsInlineMediaPlayback={true}
         mediaPlaybackRequiresUserAction={false}
         sharedCookiesEnabled={true}
@@ -120,6 +139,21 @@ export default function App() {
         contentMode="mobile"
         pullToRefreshEnabled={true}
         onMessage={handleWebViewMessage}
+        onError={(syntheticEvent) => {
+          const { nativeEvent } = syntheticEvent;
+          console.log('WebView error:', nativeEvent);
+        }}
+        onHttpError={(syntheticEvent) => {
+          const { nativeEvent } = syntheticEvent;
+          console.log('WebView HTTP error:', nativeEvent.statusCode);
+        }}
+        renderError={(errorDomain, errorCode, errorDesc) => {
+          return (
+            <SafeAreaView style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
+              <StatusBar style="light" backgroundColor="#000000" />
+            </SafeAreaView>
+          );
+        }}
       />
     </SafeAreaView>
   );
