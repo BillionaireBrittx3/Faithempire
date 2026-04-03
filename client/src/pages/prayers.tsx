@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { BookOpen, ChevronDown, ChevronUp, Bell, BellRing, X, Clock } from "lucide-react";
+import { BookOpen, ChevronDown, ChevronUp, ChevronRight, Bell, BellRing, X, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -284,6 +284,32 @@ export default function PrayersPage() {
           </div>
         )}
       </div>
+
+      {!reminder?.enabled && (
+        <div className="mx-4 mb-4">
+          <Card
+            className="border-[#DFAC2A]/20 bg-gradient-to-r from-[#DFAC2A]/5 to-[#DFAC2A]/10 p-4 cursor-pointer"
+            onClick={() => setShowReminderModal(true)}
+            data-testid="card-reminder-instructions"
+          >
+            <div className="flex items-start gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#DFAC2A]/15 shrink-0 mt-0.5">
+                <Bell className="h-5 w-5 text-[#DFAC2A]" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-sm font-bold text-[#DFAC2A] mb-1">Set Your Daily Prayer Reminder</h3>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  Never miss your prayer time. Tap the <span className="text-[#DFAC2A] font-semibold">bell icon</span> in the top right corner or tap here to choose a time, and you'll get a daily notification reminding you to pray.
+                </p>
+                <div className="mt-2 flex items-center gap-1.5">
+                  <span className="text-[10px] text-[#DFAC2A]/80 font-medium">TAP TO SET UP</span>
+                  <ChevronRight className="h-3 w-3 text-[#DFAC2A]/80" />
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      )}
 
       {isLoading && (
         <div className="flex flex-col gap-3 px-4 py-2">
