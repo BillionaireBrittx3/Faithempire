@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "wouter";
-import { BookOpen, Book, Headphones, Menu } from "lucide-react";
+import { BookOpen, Book, Headphones, Menu, CalendarDays } from "lucide-react";
 
 function CrossIcon({ className }: { className?: string }) {
   return (
@@ -53,6 +53,7 @@ export function markVerseSeen(): void {
 
 const tabs = [
   { path: "/", label: "Today", icon: BookOpen },
+  { path: "/devotional", label: "365 Days", icon: CalendarDays },
   { path: "/bible", label: "Bible", icon: Book },
   { path: "/podcast", label: "Podcast", icon: Headphones },
   { path: "/decoded", label: "Decoded", icon: CrossIcon },

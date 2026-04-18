@@ -21,6 +21,7 @@ import PrayersPage from "@/pages/prayers";
 import PrivacyPage from "@/pages/privacy";
 import TermsPage from "@/pages/terms";
 import DecodedPage from "@/pages/decoded";
+import DevotionalPage from "@/pages/devotional";
 import DecodedBookPage from "@/pages/decoded-book";
 import PaywallPage from "@/pages/paywall";
 
@@ -117,6 +118,7 @@ function Router() {
           {(params) => <DecodedBookPage bookSlug={params.bookSlug} />}
         </Route>
         <Route path="/decoded" component={DecodedPage} />
+        <Route path="/devotional" component={DevotionalPage} />
         <Route path="/premium" component={PaywallPage} />
         <Route component={NotFound} />
       </Switch>
