@@ -20,13 +20,14 @@ export function usePaywall() {
   return useContext(PaywallModalContext);
 }
 
-export function useRequirePremium(reason: string) {
+export function useRequirePremium(reason: string | null) {
   const { isPremium, isLoading } = useSubscription();
   const { open } = usePaywall();
   const [, navigate] = useLocation();
 
   useEffect(() => {
     if (isLoading) return;
+    if (reason === null) return;
     if (!isPremium) {
       open(reason);
       navigate("/");

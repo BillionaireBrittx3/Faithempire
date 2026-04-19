@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { BookOpen, ChevronDown, ChevronUp, ChevronRight, Bell, BellRing, X, Clock } from "lucide-react";
+import { BookOpen, ChevronDown, ChevronUp, ChevronRight, Bell, BellRing, X, Clock, Lock, Sparkles } from "lucide-react";
+import { useSubscription } from "@/lib/subscription";
+import { usePaywall } from "@/components/paywall-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -180,10 +182,9 @@ function ReminderModal({
   );
 }
 
-import { useRequirePremium } from "@/components/paywall-modal";
-
 export default function PrayersPage() {
-  useRequirePremium("Unlock daily prayers & reminders");
+  const { isPremium } = useSubscription();
+  const { open: openPaywall } = usePaywall();
   const [expandedPrayer, setExpandedPrayer] = useState<number | null>(null);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [showReminderModal, setShowReminderModal] = useState(false);
@@ -210,6 +211,24 @@ export default function PrayersPage() {
   const sections = SECTION_ORDER.filter((s) => grouped[s]?.length);
   const otherSections = Object.keys(grouped).filter((s) => !SECTION_ORDER.includes(s));
   const allSections = [...sections, ...otherSections];
+
+  const freePrayerId = useMemo(() => {
+    if (!prayers || prayers.length === 0) return null;
+    const sorted = [...prayers].sort((a, b) => a.id - b.id);
+    const start = new Date(new Date().getFullYear(), 0, 0);
+    const dayOfYear = Math.floor((Date.now() - start.getTime()) / 86400000);
+    return sorted[dayOfYear % sorted.length].id;
+  }, [prayers]);
+
+  const isPrayerLocked = (id: number) => !isPremium && id !== freePrayerId;
+
+  const handlePrayerClick = (prayer: Prayer) => {
+    if (isPrayerLocked(prayer.id)) {
+      openPaywall("Unlock the full prayer book");
+      return;
+    }
+    setExpandedPrayer(expandedPrayer === prayer.id ? null : prayer.id);
+  };
 
   async function handleSaveReminder(hour: number, minute: number) {
     const granted = await requestNotificationPermission();
@@ -369,18 +388,35 @@ export default function PrayersPage() {
                       <div className="flex flex-col gap-2 px-4 pb-4">
                         {sectionPrayers.map((prayer) => {
                           const isExpanded = expandedPrayer === prayer.id;
+                          const locked = isPrayerLocked(prayer.id);
+                          const isFreePick = !isPremium && prayer.id === freePrayerId;
                           return (
                             <div
                               key={prayer.id}
-                              className="rounded-lg border border-primary/10 bg-primary/5 p-3 cursor-pointer"
-                              onClick={() => setExpandedPrayer(isExpanded ? null : prayer.id)}
+                              className={`rounded-lg border p-3 cursor-pointer ${
+                                isFreePick
+                                  ? "border-[#DFAC2A]/40 bg-[#DFAC2A]/10"
+                                  : locked
+                                  ? "border-white/5 bg-white/[0.02]"
+                                  : "border-primary/10 bg-primary/5"
+                              }`}
+                              onClick={() => handlePrayerClick(prayer)}
                               data-testid={`card-prayer-${prayer.id}`}
                             >
                               <div className="flex items-center justify-between gap-2">
-                                <p className="text-sm font-medium text-foreground">
-                                  {prayer.prayerTitle}
-                                </p>
-                                {isExpanded ? (
+                                <div className="flex items-center gap-2 min-w-0">
+                                  <p className={`text-sm font-medium ${locked ? "text-foreground/60" : "text-foreground"}`}>
+                                    {prayer.prayerTitle}
+                                  </p>
+                                  {isFreePick && (
+                                    <span className="rounded-full bg-[#DFAC2A]/20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#DFAC2A] shrink-0">
+                                      Today free
+                                    </span>
+                                  )}
+                                </div>
+                                {locked ? (
+                                  <Lock className="h-3 w-3 text-muted-foreground shrink-0" />
+                                ) : isExpanded ? (
                                   <ChevronUp className="h-3 w-3 text-primary shrink-0" />
                                 ) : (
                                   <ChevronDown className="h-3 w-3 text-primary shrink-0" />

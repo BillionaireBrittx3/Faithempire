@@ -3,9 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ChevronRight, BookOpen, Cross } from "lucide-react";
+import { ChevronRight, BookOpen, Cross, Lock } from "lucide-react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSubscription } from "@/lib/subscription";
+import { usePaywall } from "@/components/paywall-modal";
 
 interface BookEntry {
   bookName: string;
@@ -46,42 +48,68 @@ const SERIES = [
   },
 ];
 
-function BookCard({ book, index }: { book: BookEntry; index: number }) {
+function BookCard({
+  book,
+  index,
+  isLocked,
+  onLockedClick,
+}: {
+  book: BookEntry;
+  index: number;
+  isLocked: boolean;
+  onLockedClick: () => void;
+}) {
+  const inner = (
+    <Card
+      className={`cursor-pointer overflow-visible p-3 hover-elevate ${isLocked ? "opacity-70" : ""}`}
+      data-testid={`card-decoded-book-${book.slug}`}
+    >
+      <div className="flex items-center gap-3">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15">
+          <BookOpen className="h-5 w-5 text-primary" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <p className="text-sm font-semibold text-foreground">{book.bookName}</p>
+            {!isLocked && book.slug === "genesis" && (
+              <span className="rounded-full bg-[#DFAC2A]/15 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#DFAC2A]">
+                Free
+              </span>
+            )}
+          </div>
+          <p className="text-[10px] text-muted-foreground mt-0.5">
+            {book.totalChapters} chapters &middot; {book.totalVerses.toLocaleString()} verses
+          </p>
+        </div>
+        {isLocked ? (
+          <Lock className="h-4 w-4 text-muted-foreground shrink-0" />
+        ) : (
+          <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" />
+        )}
+      </div>
+    </Card>
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, delay: Math.min(index * 0.03, 0.6) }}
     >
-      <Link href={`/decoded/${book.slug}`}>
-        <Card
-          className="cursor-pointer overflow-visible p-3 hover-elevate"
-          data-testid={`card-decoded-book-${book.slug}`}
-        >
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15">
-              <BookOpen className="h-5 w-5 text-primary" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-foreground">
-                {book.bookName}
-              </p>
-              <p className="text-[10px] text-muted-foreground mt-0.5">
-                {book.totalChapters} chapters &middot; {book.totalVerses.toLocaleString()} verses
-              </p>
-            </div>
-            <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" />
-          </div>
-        </Card>
-      </Link>
+      {isLocked ? (
+        <button onClick={onLockedClick} className="w-full text-left">
+          {inner}
+        </button>
+      ) : (
+        <Link href={`/decoded/${book.slug}`}>{inner}</Link>
+      )}
     </motion.div>
   );
 }
 
-import { useRequirePremium } from "@/components/paywall-modal";
-
 export default function DecodedPage() {
-  useRequirePremium("Unlock all 66 decoded books");
+  const { isPremium } = useSubscription();
+  const { open: openPaywall } = usePaywall();
   const [activeSeriesId, setActiveSeriesId] = useState(1);
 
   const { data: books, isLoading, error } = useQuery<BookEntry[]>({
@@ -187,9 +215,18 @@ export default function DecodedPage() {
             transition={{ duration: 0.2 }}
             className="flex flex-col gap-1.5 px-4 pt-2"
           >
-            {seriesBooks.map((book, i) => (
-              <BookCard key={book.slug} book={book} index={i} />
-            ))}
+            {seriesBooks.map((book, i) => {
+              const isLocked = !isPremium && book.slug !== "genesis";
+              return (
+                <BookCard
+                  key={book.slug}
+                  book={book}
+                  index={i}
+                  isLocked={isLocked}
+                  onLockedClick={() => openPaywall(`Unlock ${book.bookName} Decoded`)}
+                />
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,7 +1,7 @@
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { Lock, ChevronRight, Sparkles, BookOpen, Headphones, HandHeart, Bookmark, Library } from "lucide-react";
+import { Lock, ChevronRight, Sparkles, BookOpen, Headphones, HandHeart, Bookmark, Library, Check, CheckCircle2 } from "lucide-react";
 import { useSubscription } from "@/lib/subscription";
 import { usePaywall } from "@/components/paywall-modal";
 import devotionalData from "@/data/devotional.json";
@@ -25,6 +25,29 @@ interface DevotionalDay {
 const DAYS = devotionalData as DevotionalDay[];
 const FREE_DAYS = 7;
 const START_DATE_KEY = "faith-empire-devotional-start";
+const COMPLETED_KEY = "faith-empire-devotional-completed";
+const JOURNAL_KEY_PREFIX = "faith-empire-devotional-journal-";
+
+function loadCompleted(): Set<number> {
+  try {
+    const raw = localStorage.getItem(COMPLETED_KEY);
+    if (!raw) return new Set();
+    const arr = JSON.parse(raw);
+    if (Array.isArray(arr)) return new Set(arr.filter((n) => typeof n === "number"));
+  } catch {}
+  return new Set();
+}
+
+function saveCompleted(set: Set<number>) {
+  try {
+    localStorage.setItem(COMPLETED_KEY, JSON.stringify(Array.from(set)));
+  } catch {}
+}
+
+function nextUncompletedDay(completed: Set<number>): number {
+  for (let i = 1; i <= 365; i++) if (!completed.has(i)) return i;
+  return 1;
+}
 
 function getStartDate(): Date {
   try {
@@ -56,16 +79,55 @@ export default function Home() {
   const [, navigate] = useLocation();
 
   const todayDay = useMemo(() => getTodayDay(), []);
-  const accessibleDay = isPremium ? todayDay : Math.min(todayDay, FREE_DAYS);
+  const [completed, setCompleted] = useState<Set<number>>(() => loadCompleted());
+  const initialDay = useMemo(() => {
+    const target = Math.max(todayDay, nextUncompletedDay(completed));
+    return isPremium ? target : Math.min(target, FREE_DAYS);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const [accessibleDay, setAccessibleDay] = useState<number>(initialDay);
   const day = DAYS[accessibleDay - 1];
+  const isCompleted = completed.has(accessibleDay);
+
+  const [journalText, setJournalText] = useState("");
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(JOURNAL_KEY_PREFIX + accessibleDay);
+      setJournalText(saved || "");
+    } catch {
+      setJournalText("");
+    }
+  }, [accessibleDay]);
+  const saveJournal = (val: string) => {
+    setJournalText(val);
+    try {
+      localStorage.setItem(JOURNAL_KEY_PREFIX + accessibleDay, val);
+    } catch {}
+  };
+
+  const [justCompleted, setJustCompleted] = useState(false);
+  const markCompleteAndContinue = () => {
+    const next = new Set(completed);
+    next.add(accessibleDay);
+    setCompleted(next);
+    saveCompleted(next);
+    setJustCompleted(true);
+    const nextDay = accessibleDay >= 365 ? 1 : accessibleDay + 1;
+    if (!isPremium && nextDay > FREE_DAYS) {
+      openPaywall(`Day ${nextDay} is part of premium`);
+      setTimeout(() => setJustCompleted(false), 600);
+      return;
+    }
+    setTimeout(() => {
+      setAccessibleDay(nextDay);
+      setJustCompleted(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 600);
+  };
 
   const { data: verse } = useQuery<Verse>({
     queryKey: ["/api/verses/today"],
   });
-
-  const handleDevotionalContinue = () => {
-    navigate("/devotional");
-  };
 
   const handleLockedClick = (reason: string) => {
     openPaywall(reason);
@@ -103,50 +165,89 @@ export default function Home() {
           <div className="mb-2 inline-flex rounded-full bg-[#DFAC2A]/15 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.18em] text-[#DFAC2A]">
             Theme · {day.theme}
           </div>
-          <h2 className="font-serif text-xl font-bold leading-snug text-white" data-testid="text-devotional-title">
+          <h2 className="font-serif text-2xl font-bold leading-snug text-white" data-testid="text-devotional-title">
             {day.title}
           </h2>
-          <p className="mt-3 font-serif italic leading-relaxed text-white/90">
-            "{day.scriptureText}"
-          </p>
-          <p className="mt-1 text-xs font-semibold text-[#DFAC2A]">— {day.scriptureRef}</p>
 
-          <div className="mt-4 border-t border-white/10 pt-3">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#DFAC2A]">
-              Decoded
-            </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-white/85">{day.decoded}</p>
-          </div>
+          <DevSection label="Scripture (KJV)" testId="section-scripture">
+            <p className="font-serif italic leading-relaxed text-white">"{day.scriptureText}"</p>
+            <p className="mt-2 text-sm font-semibold text-[#DFAC2A]">— {day.scriptureRef}</p>
+          </DevSection>
+
+          <DevSection label="Decoded (DMLV)" testId="section-decoded">
+            <p className="leading-relaxed text-white/85">{day.decoded}</p>
+          </DevSection>
+
+          <DevSection label="Reflection" testId="section-reflection">
+            <p className="whitespace-pre-line leading-relaxed text-white/85">{day.reflection}</p>
+          </DevSection>
+
+          <DevSection label="Prayer" testId="section-prayer">
+            <p className="whitespace-pre-line leading-relaxed text-white/85">{day.prayer}</p>
+          </DevSection>
+
+          <DevSection label="Journal" testId="section-journal">
+            <p className="mb-3 leading-relaxed text-white/85">{day.journal}</p>
+            <textarea
+              value={journalText}
+              onChange={(e) => saveJournal(e.target.value)}
+              placeholder="Write your honest answer here. It saves automatically."
+              className="min-h-[120px] w-full rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-white placeholder:text-white/40 focus:border-[#DFAC2A]/60 focus:outline-none"
+              data-testid="input-journal"
+            />
+          </DevSection>
+
+          <DevSection label={`Today's Activity · ${day.activityName}`} testId="section-activity">
+            <p className="leading-relaxed text-white/85">{day.activity}</p>
+          </DevSection>
 
           <button
-            onClick={handleDevotionalContinue}
-            className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#DFAC2A] py-3 text-sm font-semibold text-black active:bg-[#c79925]"
+            onClick={markCompleteAndContinue}
+            className={`mt-5 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 text-sm font-semibold transition-colors ${
+              justCompleted
+                ? "bg-[#1f8a3a] text-white"
+                : isCompleted
+                ? "border border-[#DFAC2A]/40 bg-[#DFAC2A]/10 text-[#DFAC2A]"
+                : "bg-[#DFAC2A] text-black active:bg-[#c79925]"
+            }`}
+            data-testid="button-complete-continue"
+          >
+            {justCompleted ? (
+              <>
+                <CheckCircle2 className="h-4 w-4" /> Marked complete · loading next day…
+              </>
+            ) : isCompleted ? (
+              <>
+                <Check className="h-4 w-4" /> Completed · Continue to Day {accessibleDay >= 365 ? 1 : accessibleDay + 1}
+              </>
+            ) : (
+              <>Mark complete · Continue to Day {accessibleDay >= 365 ? 1 : accessibleDay + 1}</>
+            )}
+          </button>
+
+          <button
+            onClick={() => navigate("/devotional")}
+            className="mt-3 w-full text-center text-[11px] text-white/55 underline"
             data-testid="button-open-devotional"
           >
-            Read today's full devotional
-            <ChevronRight className="h-4 w-4" />
+            Browse all 365 days
           </button>
-          {!isPremium && todayDay > FREE_DAYS && (
-            <p className="mt-3 text-center text-[11px] text-white/50">
-              You've used your 7 free days. Subscribe to continue with Day {todayDay}.
-            </p>
-          )}
         </article>
 
         {!isPremium && (
           <button
-            onClick={() => openPaywall("Unlock all 365 days + every feature")}
+            onClick={() => openPaywall("Unlock everything")}
             className="mt-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-[#DFAC2A]/40 bg-[#DFAC2A]/10 px-4 py-3 text-left active:bg-[#DFAC2A]/15"
             data-testid="button-upsell-banner"
           >
             <div className="flex items-center gap-3">
-              <Sparkles className="h-5 w-5 text-[#DFAC2A]" />
+              <Sparkles className="h-5 w-5 text-[#DFAC2A] shrink-0" />
               <div>
                 <p className="text-sm font-semibold text-white">Unlock everything</p>
-                <p className="text-[11px] text-white/60">All 365 days, full Bible, podcast & more</p>
+                <p className="text-[11px] text-white/60">Full Bible, Decoded Bible, Podcast, 365 Days to get Closer to God & more</p>
               </div>
             </div>
-            <span className="text-sm font-bold text-[#DFAC2A]">$8.88/mo</span>
+            <span className="shrink-0 text-sm font-bold text-[#DFAC2A]">$8.88/mo</span>
           </button>
         )}
 
@@ -246,6 +347,8 @@ function FeatureTeaser({
     if (href) navigate(href);
   };
 
+  const showLock = !isPremium && href !== "/decoded" && href !== "/prayers";
+
   return (
     <button
       onClick={handleClick}
@@ -259,7 +362,7 @@ function FeatureTeaser({
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2">
             <p className="text-sm font-semibold text-white">{label}</p>
-            {!isPremium ? (
+            {showLock ? (
               <Lock className="h-3.5 w-3.5 text-white/40" />
             ) : (
               <ChevronRight className="h-4 w-4 text-white/40" />
@@ -275,14 +378,25 @@ function FeatureTeaser({
           )}
         </div>
       </div>
-      {!isPremium && (
-        <div className="mt-3 flex items-center justify-between gap-2 rounded-lg bg-[#DFAC2A]/10 px-3 py-2">
-          <span className="text-[11px] font-medium text-[#DFAC2A]">
-            Subscribe to read more
-          </span>
-          <span className="text-[11px] font-bold text-[#DFAC2A]">$8.88/mo →</span>
-        </div>
-      )}
     </button>
+  );
+}
+
+function DevSection({
+  label,
+  testId,
+  children,
+}: {
+  label: string;
+  testId: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="mt-4 border-t border-white/10 pt-3" data-testid={testId}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#DFAC2A]">
+        {label}
+      </p>
+      <div className="mt-1.5 text-sm">{children}</div>
+    </section>
   );
 }

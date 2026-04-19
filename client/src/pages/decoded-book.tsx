@@ -68,7 +68,9 @@ function ChapterSkeleton() {
 import { useRequirePremium } from "@/components/paywall-modal";
 
 export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
-  useRequirePremium("Read every chapter, decoded");
+  useRequirePremium(
+    bookSlug === "genesis" ? null : `Unlock ${bookSlug} Decoded`,
+  );
   const [view, setView] = useState<ViewMode>("chapters");
   const [selectedChapter, setSelectedChapter] = useState(1);
   const [expandedContext, setExpandedContext] = useState<Set<number>>(new Set());
