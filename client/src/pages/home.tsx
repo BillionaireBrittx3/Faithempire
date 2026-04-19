@@ -269,7 +269,7 @@ export default function Home() {
           />
           <FeatureTeaser
             icon={Library}
-            label="KJV Bible"
+            label="The Original Verse of the King James Bible"
             preview="Read every chapter of the King James Bible — searchable, with highlighting."
             sub="66 books · Old & New Testament"
             isPremium={isPremium}
