@@ -1,10 +1,32 @@
-import { useState, useEffect, useMemo } from "react";
-import { ChevronLeft, ChevronRight, Calendar, Sparkles, Lock } from "lucide-react";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import { ChevronLeft, ChevronRight, Calendar, Sparkles, Lock, Check, CheckCircle2 } from "lucide-react";
 import devotionalData from "@/data/devotional.json";
 import { useSubscription } from "@/lib/subscription";
 import { usePaywall } from "@/components/paywall-modal";
 
 const FREE_DAYS = 7;
+const COMPLETED_KEY = "faith-empire-devotional-completed";
+
+function loadCompleted(): Set<number> {
+  try {
+    const raw = localStorage.getItem(COMPLETED_KEY);
+    if (!raw) return new Set();
+    const arr = JSON.parse(raw);
+    if (Array.isArray(arr)) return new Set(arr.filter((n) => typeof n === "number"));
+  } catch {}
+  return new Set();
+}
+
+function saveCompleted(set: Set<number>) {
+  try {
+    localStorage.setItem(COMPLETED_KEY, JSON.stringify(Array.from(set)));
+  } catch {}
+}
+
+function nextUncompletedDay(completed: Set<number>): number {
+  for (let i = 1; i <= 365; i++) if (!completed.has(i)) return i;
+  return 1;
+}
 
 interface DevotionalDay {
   day: number;
@@ -65,15 +87,24 @@ export default function DevotionalPage() {
   const { isPremium } = useSubscription();
   const { open: openPaywall } = usePaywall();
   const todayDay = useMemo(() => getTodayDay(), []);
-  const initialDay = isPremium ? todayDay : Math.min(todayDay, FREE_DAYS);
+  const [completed, setCompleted] = useState<Set<number>>(() => loadCompleted());
+
+  const initialDay = useMemo(() => {
+    const target = Math.max(todayDay, nextUncompletedDay(completed));
+    return isPremium ? target : Math.min(target, FREE_DAYS);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const [currentDay, setCurrentDay] = useState<number>(initialDay);
   const [showPicker, setShowPicker] = useState(false);
   const [journalText, setJournalText] = useState("");
+  const [justCompleted, setJustCompleted] = useState(false);
 
   const day = DAYS[currentDay - 1];
   const quarter = getQuarter(currentDay);
   const isToday = currentDay === todayDay;
   const isLocked = !isPremium && currentDay > FREE_DAYS;
+  const isCompleted = completed.has(currentDay);
 
   const tryGoTo = (d: number) => {
     if (!isPremium && d > FREE_DAYS) {
@@ -81,6 +112,32 @@ export default function DevotionalPage() {
       return;
     }
     setCurrentDay(d);
+    setJustCompleted(false);
+  };
+
+  const markCompleteAndContinue = useCallback(() => {
+    const next = new Set(completed);
+    next.add(currentDay);
+    setCompleted(next);
+    saveCompleted(next);
+    setJustCompleted(true);
+    const nextDay = currentDay >= 365 ? 1 : currentDay + 1;
+    if (!isPremium && nextDay > FREE_DAYS) {
+      openPaywall(`Day ${nextDay} is part of premium`);
+      return;
+    }
+    setTimeout(() => {
+      setCurrentDay(nextDay);
+      setJustCompleted(false);
+    }, 600);
+  }, [completed, currentDay, isPremium, openPaywall]);
+
+  const toggleComplete = () => {
+    const next = new Set(completed);
+    if (next.has(currentDay)) next.delete(currentDay);
+    else next.add(currentDay);
+    setCompleted(next);
+    saveCompleted(next);
   };
 
   useEffect(() => {
@@ -259,7 +316,42 @@ export default function DevotionalPage() {
           <p className="leading-relaxed text-white/85">{day.activity}</p>
         </Section>
 
-        <div className="mt-6 flex gap-3">
+        <button
+          onClick={markCompleteAndContinue}
+          className={`mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 text-sm font-semibold transition-colors ${
+            justCompleted
+              ? "bg-[#1f8a3a] text-white"
+              : isCompleted
+              ? "border border-[#DFAC2A]/40 bg-[#DFAC2A]/10 text-[#DFAC2A]"
+              : "bg-[#DFAC2A] text-black active:bg-[#c79925]"
+          }`}
+          data-testid="button-complete-continue"
+        >
+          {justCompleted ? (
+            <>
+              <CheckCircle2 className="h-4 w-4" /> Marked complete · loading next day…
+            </>
+          ) : isCompleted ? (
+            <>
+              <Check className="h-4 w-4" /> Completed · Continue to Day {currentDay >= 365 ? 1 : currentDay + 1}
+            </>
+          ) : (
+            <>
+              Mark complete · Continue to Day {currentDay >= 365 ? 1 : currentDay + 1}
+            </>
+          )}
+        </button>
+        {isCompleted && (
+          <button
+            onClick={toggleComplete}
+            className="mt-2 w-full text-center text-[11px] text-white/45 underline"
+            data-testid="button-unmark-complete"
+          >
+            Unmark as complete
+          </button>
+        )}
+
+        <div className="mt-4 flex gap-3">
           <button
             onClick={goPrev}
             className="flex-1 rounded-xl border border-white/15 py-3 text-sm font-medium text-white/80 active:bg-white/5"
@@ -283,6 +375,7 @@ export default function DevotionalPage() {
           currentDay={currentDay}
           todayDay={todayDay}
           isPremium={isPremium}
+          completed={completed}
           onSelect={(d) => {
             tryGoTo(d);
             setShowPicker(false);
@@ -317,12 +410,14 @@ function DayPicker({
   currentDay,
   todayDay,
   isPremium,
+  completed,
   onSelect,
   onClose,
 }: {
   currentDay: number;
   todayDay: number;
   isPremium: boolean;
+  completed: Set<number>;
   onSelect: (d: number) => void;
   onClose: () => void;
 }) {
@@ -377,6 +472,7 @@ function DayPicker({
                     const isCurrent = d === currentDay;
                     const isToday = d === todayDay;
                     const isLockedDay = !isPremium && d > FREE_DAYS;
+                    const isDoneDay = completed.has(d);
                     return (
                       <button
                         key={d}
@@ -384,6 +480,8 @@ function DayPicker({
                         className={`relative flex h-9 items-center justify-center rounded-md text-xs font-medium transition-colors ${
                           isCurrent
                             ? "bg-[#DFAC2A] text-black"
+                            : isDoneDay
+                            ? "bg-[#DFAC2A]/15 text-[#DFAC2A]"
                             : isToday
                             ? "border border-[#DFAC2A]/60 text-[#DFAC2A]"
                             : isLockedDay
@@ -394,6 +492,9 @@ function DayPicker({
                       >
                         {isLockedDay && (
                           <Lock className="absolute right-0.5 top-0.5 h-2 w-2 text-white/30" />
+                        )}
+                        {isDoneDay && !isCurrent && (
+                          <Check className="absolute right-0.5 top-0.5 h-2.5 w-2.5 text-[#DFAC2A]" />
                         )}
                         {d}
                       </button>
