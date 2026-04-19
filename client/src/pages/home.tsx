@@ -291,7 +291,7 @@ export default function Home() {
           />
           <FeatureTeaser
             icon={Bookmark}
-            label="66 Decoded Books"
+            label="Decoded Version of the Bible"
             preview="Genesis to Revelation — every chapter rewritten in plain modern language."
             sub="Genesis · Psalms · Matthew · Romans …"
             isPremium={isPremium}

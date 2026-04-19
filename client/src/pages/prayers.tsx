@@ -309,14 +309,6 @@ export default function PrayersPage() {
             <h1 className="font-serif text-2xl font-bold text-foreground" data-testid="text-prayers-title">
               Daily Prayers
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
-              A morning and evening prayer for every day
-            </p>
-            {prayers && (
-              <p className="mt-1 text-xs text-muted-foreground/70">
-                {prayers.length} prayers in {allSections.length} sections
-              </p>
-            )}
           </div>
           <button
             onClick={() => setShowReminderModal(true)}
