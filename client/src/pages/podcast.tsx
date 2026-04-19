@@ -49,7 +49,10 @@ function formatDate(dateStr: string): string {
   }
 }
 
+import { useRequirePremium } from "@/components/paywall-modal";
+
 export default function PodcastPage() {
+  useRequirePremium("Listen to every podcast episode");
   const { data: episodes, isLoading, error } = useQuery<Episode[]>({
     queryKey: ["/api/podcast/episodes"],
   });

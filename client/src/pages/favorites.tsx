@@ -13,7 +13,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 type TabType = "favorites" | "highlights";
 
+import { useRequirePremium } from "@/components/paywall-modal";
+
 export default function FavoritesPage() {
+  useRequirePremium("Save your favorite verses");
   const [activeTab, setActiveTab] = useState<TabType>("favorites");
   const [favorites, setFavorites] = useState<Verse[]>([]);
   const [highlights, setHighlights] = useState<BibleHighlight[]>([]);

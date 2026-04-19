@@ -1,6 +1,10 @@
 import { useState, useEffect, useMemo } from "react";
-import { ChevronLeft, ChevronRight, Calendar, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Calendar, Sparkles, Lock } from "lucide-react";
 import devotionalData from "@/data/devotional.json";
+import { useSubscription } from "@/lib/subscription";
+import { usePaywall } from "@/components/paywall-modal";
+
+const FREE_DAYS = 7;
 
 interface DevotionalDay {
   day: number;
@@ -58,14 +62,26 @@ function getQuarter(day: number) {
 }
 
 export default function DevotionalPage() {
+  const { isPremium } = useSubscription();
+  const { open: openPaywall } = usePaywall();
   const todayDay = useMemo(() => getTodayDay(), []);
-  const [currentDay, setCurrentDay] = useState<number>(todayDay);
+  const initialDay = isPremium ? todayDay : Math.min(todayDay, FREE_DAYS);
+  const [currentDay, setCurrentDay] = useState<number>(initialDay);
   const [showPicker, setShowPicker] = useState(false);
   const [journalText, setJournalText] = useState("");
 
   const day = DAYS[currentDay - 1];
   const quarter = getQuarter(currentDay);
   const isToday = currentDay === todayDay;
+  const isLocked = !isPremium && currentDay > FREE_DAYS;
+
+  const tryGoTo = (d: number) => {
+    if (!isPremium && d > FREE_DAYS) {
+      openPaywall(`Day ${d} is part of premium`);
+      return;
+    }
+    setCurrentDay(d);
+  };
 
   useEffect(() => {
     try {
@@ -88,9 +104,15 @@ export default function DevotionalPage() {
     } catch {}
   };
 
-  const goPrev = () => setCurrentDay((d) => (d <= 1 ? 365 : d - 1));
-  const goNext = () => setCurrentDay((d) => (d >= 365 ? 1 : d + 1));
-  const goToday = () => setCurrentDay(todayDay);
+  const goPrev = () => {
+    const target = currentDay <= 1 ? 365 : currentDay - 1;
+    tryGoTo(target);
+  };
+  const goNext = () => {
+    const target = currentDay >= 365 ? 1 : currentDay + 1;
+    tryGoTo(target);
+  };
+  const goToday = () => tryGoTo(todayDay);
 
   return (
     <div className="min-h-screen bg-black text-white" data-testid="page-devotional">
@@ -155,6 +177,13 @@ export default function DevotionalPage() {
           </button>
         </div>
 
+        {!isPremium && (
+          <div className="mb-3 rounded-xl border border-[#DFAC2A]/30 bg-[#DFAC2A]/10 px-3 py-2 text-center text-[11px] text-[#DFAC2A]">
+            You're on day {Math.min(currentDay, FREE_DAYS)} of your 7 free days.
+            {currentDay >= FREE_DAYS && " Subscribe to keep going past Day 7."}
+          </div>
+        )}
+
         <div className="mb-3 inline-flex rounded-full bg-[#DFAC2A]/15 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[#DFAC2A]">
           Theme · {day.theme}
         </div>
@@ -163,6 +192,33 @@ export default function DevotionalPage() {
           {day.title}
         </h2>
 
+        {isLocked && (
+          <div className="mt-5 rounded-2xl border border-[#DFAC2A]/40 bg-gradient-to-br from-[#DFAC2A]/15 via-white/[0.03] to-black p-6 text-center" data-testid="card-day-locked">
+            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#DFAC2A]/20">
+              <Lock className="h-5 w-5 text-[#DFAC2A]" />
+            </div>
+            <h3 className="font-serif text-lg font-bold text-white">Day {currentDay} is Premium</h3>
+            <p className="mt-2 text-sm text-white/70">
+              You've finished your 7 free days. Subscribe for $8.88/month to continue with all 365 days.
+            </p>
+            <button
+              onClick={() => openPaywall(`Day ${currentDay} is part of premium`)}
+              className="mt-4 w-full rounded-xl bg-[#DFAC2A] py-3 text-sm font-semibold text-black active:bg-[#c79925]"
+              data-testid="button-locked-subscribe"
+            >
+              Unlock the rest — $8.88/mo
+            </button>
+            <button
+              onClick={() => tryGoTo(FREE_DAYS)}
+              className="mt-3 w-full text-xs text-white/55 underline"
+              data-testid="button-back-to-free"
+            >
+              Go back to Day {FREE_DAYS}
+            </button>
+          </div>
+        )}
+
+        {!isLocked && <>
         <Section label="Scripture (KJV)" testId="section-scripture">
           <p className="font-serif italic leading-relaxed text-white">
             "{day.scriptureText}"
@@ -216,17 +272,19 @@ export default function DevotionalPage() {
             className="flex-1 rounded-xl bg-[#DFAC2A] py-3 text-sm font-semibold text-black active:bg-[#c79925]"
             data-testid="button-next-day-bottom"
           >
-            Day {currentDay >= 365 ? 1 : currentDay + 1} →
+            {!isPremium && currentDay >= FREE_DAYS ? "Unlock Day " + (currentDay + 1) : `Day ${currentDay >= 365 ? 1 : currentDay + 1} →`}
           </button>
         </div>
+        </>}
       </div>
 
       {showPicker && (
         <DayPicker
           currentDay={currentDay}
           todayDay={todayDay}
+          isPremium={isPremium}
           onSelect={(d) => {
-            setCurrentDay(d);
+            tryGoTo(d);
             setShowPicker(false);
           }}
           onClose={() => setShowPicker(false)}
@@ -258,11 +316,13 @@ function Section({
 function DayPicker({
   currentDay,
   todayDay,
+  isPremium,
   onSelect,
   onClose,
 }: {
   currentDay: number;
   todayDay: number;
+  isPremium: boolean;
   onSelect: (d: number) => void;
   onClose: () => void;
 }) {
@@ -316,19 +376,25 @@ function DayPicker({
                   {Array.from({ length: q.end - q.start + 1 }, (_, i) => q.start + i).map((d) => {
                     const isCurrent = d === currentDay;
                     const isToday = d === todayDay;
+                    const isLockedDay = !isPremium && d > FREE_DAYS;
                     return (
                       <button
                         key={d}
                         onClick={() => onSelect(d)}
-                        className={`flex h-9 items-center justify-center rounded-md text-xs font-medium transition-colors ${
+                        className={`relative flex h-9 items-center justify-center rounded-md text-xs font-medium transition-colors ${
                           isCurrent
                             ? "bg-[#DFAC2A] text-black"
                             : isToday
                             ? "border border-[#DFAC2A]/60 text-[#DFAC2A]"
+                            : isLockedDay
+                            ? "bg-white/[0.02] text-white/30"
                             : "bg-white/5 text-white/70 active:bg-white/10"
                         }`}
                         data-testid={`button-day-${d}`}
                       >
+                        {isLockedDay && (
+                          <Lock className="absolute right-0.5 top-0.5 h-2 w-2 text-white/30" />
+                        )}
                         {d}
                       </button>
                     );

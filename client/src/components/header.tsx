@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import logoPath from "@assets/Copy_of_EPRODUCTS_EMPIRE_PODCAST_(98)_1770693543975.png";
+import { useSubscription } from "@/lib/subscription";
+import { usePaywall } from "@/components/paywall-modal";
 
 interface SearchVerse {
   book_name: string;
@@ -19,6 +21,8 @@ interface SearchResult {
 }
 
 export function Header() {
+  const { isPremium } = useSubscription();
+  const { open: openPaywall } = usePaywall();
   const [showSearch, setShowSearch] = useState(false);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult | null>(null);
@@ -88,7 +92,13 @@ export function Header() {
           <Button
             size="icon"
             variant="ghost"
-            onClick={() => setShowSearch(!showSearch)}
+            onClick={() => {
+              if (!isPremium) {
+                openPaywall("Unlock the full Bible search");
+                return;
+              }
+              setShowSearch(!showSearch);
+            }}
             className="text-muted-foreground hover:text-primary"
             data-testid="button-search-toggle"
           >

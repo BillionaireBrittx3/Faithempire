@@ -65,7 +65,10 @@ function ChapterSkeleton() {
   );
 }
 
+import { useRequirePremium } from "@/components/paywall-modal";
+
 export default function DecodedBookPage({ bookSlug }: { bookSlug: string }) {
+  useRequirePremium("Read every chapter, decoded");
   const [view, setView] = useState<ViewMode>("chapters");
   const [selectedChapter, setSelectedChapter] = useState(1);
   const [expandedContext, setExpandedContext] = useState<Set<number>>(new Set());

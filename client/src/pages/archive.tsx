@@ -43,7 +43,10 @@ function ArchiveSkeleton() {
   );
 }
 
+import { useRequirePremium } from "@/components/paywall-modal";
+
 export default function ArchivePage() {
+  useRequirePremium("Browse the full verse archive");
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState("All");
 

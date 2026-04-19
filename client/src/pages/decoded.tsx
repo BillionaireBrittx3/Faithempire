@@ -78,7 +78,10 @@ function BookCard({ book, index }: { book: BookEntry; index: number }) {
   );
 }
 
+import { useRequirePremium } from "@/components/paywall-modal";
+
 export default function DecodedPage() {
+  useRequirePremium("Unlock all 66 decoded books");
   const [activeSeriesId, setActiveSeriesId] = useState(1);
 
   const { data: books, isLoading, error } = useQuery<BookEntry[]>({

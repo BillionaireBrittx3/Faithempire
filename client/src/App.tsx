@@ -1,11 +1,12 @@
 import { Component, type ErrorInfo, type ReactNode } from "react";
-import { Switch, Route, useLocation } from "wouter";
+import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SubscriptionProvider, useSubscription } from "@/lib/subscription";
+import { PaywallModalProvider } from "@/components/paywall-modal";
 import { AudioProvider } from "@/lib/audio-context";
 import { Header } from "@/components/header";
 import { TabBar } from "@/components/tab-bar";
@@ -72,19 +73,8 @@ class ErrorBoundary extends Component<
   }
 }
 
-const PUBLIC_PATHS = ["/premium", "/privacy", "/terms", "/decoded/genesis", "/bible", "/prayers"];
-
-function SubscriptionGate({ children }: { children: ReactNode }) {
-  const { isPremium, isLoading } = useSubscription();
-  const [location] = useLocation();
-
-  const isPublicPath = PUBLIC_PATHS.some(
-    (p) => location === p || location.startsWith(p + "/")
-  );
-
-  if (isPublicPath) {
-    return <>{children}</>;
-  }
+function Router() {
+  const { isLoading } = useSubscription();
 
   if (isLoading) {
     return (
@@ -94,16 +84,8 @@ function SubscriptionGate({ children }: { children: ReactNode }) {
     );
   }
 
-  if (!isPremium) {
-    return <PaywallPage />;
-  }
-
-  return <>{children}</>;
-}
-
-function Router() {
   return (
-    <SubscriptionGate>
+    <>
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/bible" component={BiblePage} />
@@ -122,26 +104,19 @@ function Router() {
         <Route path="/premium" component={PaywallPage} />
         <Route component={NotFound} />
       </Switch>
-    </SubscriptionGate>
+    </>
   );
 }
 
 function AppLayout() {
-  const { isPremium, isLoading } = useSubscription();
-  const [location] = useLocation();
-  const isPublicPath = PUBLIC_PATHS.some(
-    (p) => location === p || location.startsWith(p + "/")
-  );
-  const showChrome = isPremium || isPublicPath;
-
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      {showChrome && <Header />}
-      <main className={`flex-1 mx-auto w-full max-w-lg ${showChrome ? 'pb-16' : ''}`}>
+      <Header />
+      <main className="flex-1 mx-auto w-full max-w-lg pb-16">
         <Router />
       </main>
-      {showChrome && <GlobalPlayer />}
-      {showChrome && <TabBar />}
+      <GlobalPlayer />
+      <TabBar />
     </div>
   );
 }
@@ -152,12 +127,14 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <ThemeProvider>
           <SubscriptionProvider>
-            <AudioProvider>
-              <TooltipProvider>
-                <AppLayout />
-                <Toaster />
-              </TooltipProvider>
-            </AudioProvider>
+            <PaywallModalProvider>
+              <AudioProvider>
+                <TooltipProvider>
+                  <AppLayout />
+                  <Toaster />
+                </TooltipProvider>
+              </AudioProvider>
+            </PaywallModalProvider>
           </SubscriptionProvider>
         </ThemeProvider>
       </QueryClientProvider>

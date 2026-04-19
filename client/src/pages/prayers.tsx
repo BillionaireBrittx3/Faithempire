@@ -180,7 +180,10 @@ function ReminderModal({
   );
 }
 
+import { useRequirePremium } from "@/components/paywall-modal";
+
 export default function PrayersPage() {
+  useRequirePremium("Unlock daily prayers & reminders");
   const [expandedPrayer, setExpandedPrayer] = useState<number | null>(null);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [showReminderModal, setShowReminderModal] = useState(false);
