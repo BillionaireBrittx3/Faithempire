@@ -10,6 +10,11 @@ import { wgmawPrayersData } from "./wgmaw-prayers-data";
 import { wgstePrayersData } from "./wgste-prayers-data";
 import { wgbecPrayersData } from "./wgbec-prayers-data";
 import { wgsaaPrayersData } from "./wgsaa-prayers-data";
+import { depressionPrayersData } from "./depression-prayers-data";
+import { newBeginningsPrayersData } from "./new-beginnings-prayers-data";
+import { strengthPrayersData } from "./strength-prayers-data";
+import { familyPrayersData } from "./family-prayers-data";
+import { healingPrayersData } from "./healing-prayers-data";
 
 const decodedBooksCache: Map<string, any> = new Map();
 
@@ -149,7 +154,54 @@ export async function registerRoutes(
         prayerSection: p.section,
       }));
 
-      res.json([...dbPrayers, ...wgmPrayers, ...wgmawPrayers, ...wgstePrayers, ...wgbecPrayers, ...wgsaaPrayers]);
+      const depressionPrayers = depressionPrayersData.map((p) => ({
+        id: 5000 + p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      const newBeginningsPrayers = newBeginningsPrayersData.map((p) => ({
+        id: 5200 + p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      const strengthPrayers = strengthPrayersData.map((p) => ({
+        id: 5400 + p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      const familyPrayers = familyPrayersData.map((p) => ({
+        id: 5600 + p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      const healingPrayers = healingPrayersData.map((p) => ({
+        id: 5800 + p.number,
+        prayerTitle: p.title,
+        prayerText: p.text,
+        prayerSection: p.section,
+      }));
+
+      res.json([
+        ...dbPrayers,
+        ...wgmPrayers,
+        ...wgmawPrayers,
+        ...wgstePrayers,
+        ...wgbecPrayers,
+        ...wgsaaPrayers,
+        ...depressionPrayers,
+        ...newBeginningsPrayers,
+        ...strengthPrayers,
+        ...familyPrayers,
+        ...healingPrayers,
+      ]);
     } catch (err) {
       res.status(500).json({ message: "Failed to get prayers" });
     }

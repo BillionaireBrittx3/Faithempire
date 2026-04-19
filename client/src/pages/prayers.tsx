@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { BookOpen, ChevronDown, ChevronUp, ChevronRight, Bell, BellRing, X, Clock, Lock, Sparkles } from "lucide-react";
+import { BookOpen, ChevronDown, ChevronUp, ChevronRight, Bell, BellRing, X, Clock, Lock, Sparkles, Search, Sun, Moon } from "lucide-react";
 import { useSubscription } from "@/lib/subscription";
 import { usePaywall } from "@/components/paywall-modal";
 import { motion, AnimatePresence } from "framer-motion";
@@ -188,6 +188,7 @@ export default function PrayersPage() {
   const [expandedPrayer, setExpandedPrayer] = useState<number | null>(null);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [showReminderModal, setShowReminderModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [reminder, setReminder] = useState<PrayerReminder | null>(null);
   const { toast } = useToast();
 
@@ -212,15 +213,50 @@ export default function PrayersPage() {
   const otherSections = Object.keys(grouped).filter((s) => !SECTION_ORDER.includes(s));
   const allSections = [...sections, ...otherSections];
 
-  const freePrayerId = useMemo(() => {
-    if (!prayers || prayers.length === 0) return null;
+  const { morningPrayerId, eveningPrayerId } = useMemo(() => {
+    if (!prayers || prayers.length === 0) return { morningPrayerId: null as number | null, eveningPrayerId: null as number | null };
     const sorted = [...prayers].sort((a, b) => a.id - b.id);
     const start = new Date(new Date().getFullYear(), 0, 0);
     const dayOfYear = Math.floor((Date.now() - start.getTime()) / 86400000);
-    return sorted[dayOfYear % sorted.length].id;
+    const morningIdx = (dayOfYear * 2) % sorted.length;
+    const eveningIdx = (dayOfYear * 2 + 1) % sorted.length;
+    return {
+      morningPrayerId: sorted[morningIdx].id,
+      eveningPrayerId: sorted[eveningIdx].id,
+    };
   }, [prayers]);
 
-  const isPrayerLocked = (id: number) => !isPremium && id !== freePrayerId;
+  const isPrayerLocked = (id: number) =>
+    !isPremium && id !== morningPrayerId && id !== eveningPrayerId;
+
+  const freeLabel = (id: number): "morning" | "evening" | null => {
+    if (isPremium) return null;
+    if (id === morningPrayerId) return "morning";
+    if (id === eveningPrayerId) return "evening";
+    return null;
+  };
+
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+  const filteredGrouped: PrayersBySection = useMemo(() => {
+    if (!normalizedQuery) return grouped;
+    const out: PrayersBySection = {};
+    for (const section of Object.keys(grouped)) {
+      const matches = grouped[section].filter(
+        (p) =>
+          p.prayerTitle.toLowerCase().includes(normalizedQuery) ||
+          p.prayerText.toLowerCase().includes(normalizedQuery)
+      );
+      if (matches.length) out[section] = matches;
+    }
+    return out;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [normalizedQuery, prayers]);
+
+  const filteredSectionList = useMemo(() => {
+    const inOrder = SECTION_ORDER.filter((s) => filteredGrouped[s]?.length);
+    const others = Object.keys(filteredGrouped).filter((s) => !SECTION_ORDER.includes(s));
+    return [...inOrder, ...others];
+  }, [filteredGrouped]);
 
   const handlePrayerClick = (prayer: Prayer) => {
     if (isPrayerLocked(prayer.id)) {
@@ -271,10 +307,10 @@ export default function PrayersPage() {
         <div className="flex items-start justify-between">
           <div>
             <h1 className="font-serif text-2xl font-bold text-foreground" data-testid="text-prayers-title">
-              Prayer Book
+              Daily Prayers
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">
-              No Weapon Formed & When God Multiplies
+              A morning and evening prayer for every day
             </p>
             {prayers && (
               <p className="mt-1 text-xs text-muted-foreground/70">
@@ -305,6 +341,29 @@ export default function PrayersPage() {
             </span>
           </div>
         )}
+      </div>
+
+      <div className="px-4 mb-3">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search prayers by title or words..."
+            className="w-full rounded-xl border border-border bg-muted py-2.5 pl-9 pr-9 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#DFAC2A]/60 focus:outline-none focus:ring-1 focus:ring-[#DFAC2A]/40"
+            data-testid="input-prayer-search"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1"
+              data-testid="button-clear-prayer-search"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
       </div>
 
       {!reminder?.enabled && (
@@ -341,9 +400,17 @@ export default function PrayersPage() {
         </div>
       )}
 
+      {!isLoading && normalizedQuery && filteredSectionList.length === 0 && (
+        <div className="px-4 py-8 text-center">
+          <p className="text-sm text-muted-foreground" data-testid="text-no-prayer-results">
+            No prayers match "{searchQuery}".
+          </p>
+        </div>
+      )}
+
       <div className="flex flex-col gap-3 px-4 py-2">
-        {allSections.map((section) => {
-          const sectionPrayers = grouped[section];
+        {filteredSectionList.map((section) => {
+          const sectionPrayers = filteredGrouped[section];
           const isOpen = expandedSection === section;
           return (
             <motion.div
@@ -389,7 +456,8 @@ export default function PrayersPage() {
                         {sectionPrayers.map((prayer) => {
                           const isExpanded = expandedPrayer === prayer.id;
                           const locked = isPrayerLocked(prayer.id);
-                          const isFreePick = !isPremium && prayer.id === freePrayerId;
+                          const freeKind = freeLabel(prayer.id);
+                          const isFreePick = freeKind !== null;
                           return (
                             <div
                               key={prayer.id}
@@ -409,8 +477,9 @@ export default function PrayersPage() {
                                     {prayer.prayerTitle}
                                   </p>
                                   {isFreePick && (
-                                    <span className="rounded-full bg-[#DFAC2A]/20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#DFAC2A] shrink-0">
-                                      Today free
+                                    <span className="inline-flex items-center gap-1 rounded-full bg-[#DFAC2A]/20 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#DFAC2A] shrink-0">
+                                      {freeKind === "morning" ? <Sun className="h-2.5 w-2.5" /> : <Moon className="h-2.5 w-2.5" />}
+                                      {freeKind === "morning" ? "Morning free" : "Evening free"}
                                     </span>
                                   )}
                                 </div>
