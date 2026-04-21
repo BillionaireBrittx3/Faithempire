@@ -145,7 +145,7 @@ export default function Home() {
           </h1>
         </div>
 
-        <article className="rounded-2xl border border-[#DFAC2A]/30 bg-gradient-to-br from-[#DFAC2A]/10 via-white/[0.02] to-black p-5" data-testid="card-todays-verse-full">
+        <article className="rounded-2xl border border-white/10 bg-[#0a0a0a] p-6" data-testid="card-todays-verse-full">
           <DevSection label="Scripture (KJV)" testId="section-today-scripture">
             <p className="font-serif italic leading-relaxed text-white">
               {verse ? `"${verse.verseText}"` : "Loading…"}
@@ -198,10 +198,10 @@ export default function Home() {
           </div>
         )}
 
-        <article className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-          <div className="mb-2 inline-flex rounded-full bg-[#DFAC2A]/15 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.18em] text-[#DFAC2A]">
+        <article className="rounded-2xl border border-white/10 bg-[#0a0a0a] p-6">
+          <p className="mb-2 text-[10px] uppercase tracking-[0.28em] text-[#DFAC2A]">
             Theme · {day.theme}
-          </div>
+          </p>
           <h2 className="font-serif text-2xl font-bold leading-snug text-white" data-testid="text-devotional-title">
             {day.title}
           </h2>
@@ -418,11 +418,15 @@ function DevSection({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mt-4 border-t border-white/10 pt-3" data-testid={testId}>
-      <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#DFAC2A]">
-        {label}
-      </p>
-      <div className="mt-1.5 text-sm">{children}</div>
+    <section className="mt-6 first:mt-4" data-testid={testId}>
+      <div className="mb-3 flex items-center gap-3">
+        <span className="h-px w-6 bg-[#DFAC2A]/60" />
+        <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-[#DFAC2A]">
+          {label}
+        </p>
+        <span className="h-px flex-1 bg-white/10" />
+      </div>
+      <div className="text-[15px] leading-[1.7]">{children}</div>
     </section>
   );
 }
