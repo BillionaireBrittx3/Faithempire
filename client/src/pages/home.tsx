@@ -136,14 +136,51 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black pb-8" data-testid="page-home">
       <div className="px-4 pt-4">
-        <div className="mb-3 flex items-center justify-between">
+        <div className="mb-3">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#DFAC2A]">
+            Today's Decoded Verse
+          </p>
+          <h1 className="font-serif text-2xl font-bold text-white" data-testid="text-todays-verse-ref">
+            {verse?.reference || "Loading…"}
+          </h1>
+        </div>
+
+        <article className="rounded-2xl border border-[#DFAC2A]/30 bg-gradient-to-br from-[#DFAC2A]/10 via-white/[0.02] to-black p-5" data-testid="card-todays-verse-full">
+          <DevSection label="Scripture (KJV)" testId="section-today-scripture">
+            <p className="font-serif italic leading-relaxed text-white">
+              {verse ? `"${verse.verseText}"` : "Loading…"}
+            </p>
+            {verse && (
+              <p className="mt-2 text-sm font-semibold text-[#DFAC2A]">— {verse.reference}</p>
+            )}
+          </DevSection>
+
+          <DevSection label="Decoded (DMLV)" testId="section-today-decoded">
+            <p className="leading-relaxed text-white/85">
+              {verse?.decodedMessage || "Loading…"}
+            </p>
+          </DevSection>
+
+          {verse?.prayerText && (
+            <DevSection
+              label={verse.prayerTitle ? `Prayer · ${verse.prayerTitle}` : "Prayer"}
+              testId="section-today-prayer"
+            >
+              <p className="whitespace-pre-line leading-relaxed text-white/85">
+                {verse.prayerText}
+              </p>
+            </DevSection>
+          )}
+        </article>
+
+        <div className="mt-6 mb-3 flex items-center justify-between">
           <div>
             <p className="text-[10px] uppercase tracking-[0.2em] text-[#DFAC2A]">
               365 Days · Closer to God
             </p>
-            <h1 className="font-serif text-2xl font-bold text-white" data-testid="text-day-title">
+            <h2 className="font-serif text-xl font-bold text-white" data-testid="text-day-title">
               Day {accessibleDay} of 365
-            </h1>
+            </h2>
           </div>
           {!isPremium && (
             <span className="rounded-full border border-[#DFAC2A]/40 bg-[#DFAC2A]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#DFAC2A]">
@@ -161,7 +198,7 @@ export default function Home() {
           </div>
         )}
 
-        <article className="rounded-2xl border border-[#DFAC2A]/30 bg-gradient-to-br from-[#DFAC2A]/10 via-white/[0.02] to-black p-5">
+        <article className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
           <div className="mb-2 inline-flex rounded-full bg-[#DFAC2A]/15 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.18em] text-[#DFAC2A]">
             Theme · {day.theme}
           </div>
