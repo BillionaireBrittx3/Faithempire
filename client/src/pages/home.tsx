@@ -294,17 +294,6 @@ export default function Home() {
 
         <div className="space-y-3">
           <FeatureTeaser
-            icon={BookOpen}
-            label="Today's Decoded Verse"
-            preview={verse ? `"${verse.verseText.slice(0, 110)}${verse.verseText.length > 110 ? '…' : ''}"` : "Loading..."}
-            sub={verse?.reference || ""}
-            isPremium={isPremium}
-            reason="Read today's full decoded verse"
-            href={null}
-            onLocked={handleLockedClick}
-            testId="card-todays-verse"
-          />
-          <FeatureTeaser
             icon={Library}
             label="The Original Verse of the King James Bible"
             preview="Read every chapter of the King James Bible — searchable, with highlighting."
