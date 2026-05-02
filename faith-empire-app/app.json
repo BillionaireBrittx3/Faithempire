@@ -2,7 +2,7 @@
   "expo": {
     "name": "Decoded Faith Empire",
     "slug": "faith-empire-app",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -50,10 +50,23 @@
         "backgroundColor": "#000000"
       },
       "package": "com.decodedfaithempire.app",
-      "permissions": [
-        "com.android.vending.BILLING"
-      ]
+      "versionCode": 12,
+      "permissions": []
     },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0",
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true
+          }
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     },
