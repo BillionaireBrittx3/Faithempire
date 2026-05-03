@@ -398,7 +398,7 @@ function Section({
 }) {
   return (
     <section className="mt-5 rounded-2xl border border-white/10 bg-white/[0.03] p-4" data-testid={testId}>
-      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#DFAC2A]">
+      <p className="label-editorial mb-2 text-[15px] text-[#DFAC2A]">
         {label}
       </p>
       {children}

@@ -137,7 +137,7 @@ export default function Home() {
     <div className="min-h-screen bg-black pb-8" data-testid="page-home">
       <div className="px-4 pt-4">
         <div className="mb-4">
-          <p className="text-[10px] uppercase tracking-[0.28em] text-[#DFAC2A]">
+          <p className="label-editorial text-base text-[#DFAC2A]">
             Today's Decoded Verse
           </p>
           <h1 className="heading-display text-gradient-gold-strong mt-2 text-4xl" data-testid="text-todays-verse-ref">
@@ -175,7 +175,7 @@ export default function Home() {
 
         <div className="mt-8 mb-4 flex items-center justify-between">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.28em] text-[#DFAC2A]">
+            <p className="label-editorial text-base text-[#DFAC2A]">
               365 Days · Closer to God
             </p>
             <h2 className="heading-display text-gradient-gold mt-1.5 text-3xl" data-testid="text-day-title">
@@ -199,7 +199,7 @@ export default function Home() {
         )}
 
         <article className="rounded-2xl border border-white/10 bg-[#0a0a0a] p-6">
-          <p className="mb-2 text-[10px] uppercase tracking-[0.28em] text-[#DFAC2A]">
+          <p className="label-editorial mb-2 text-base text-[#DFAC2A]">
             Theme · {day.theme}
           </p>
           <h2 className="heading-display mt-2 text-3xl text-white" data-testid="text-devotional-title">
@@ -239,7 +239,7 @@ export default function Home() {
           </DevSection>
 
           {!isCompleted && !justCompleted && (
-            <p className="mt-5 text-center text-[11px] uppercase tracking-[0.2em] text-[#DFAC2A]/80" data-testid="text-complete-hint">
+            <p className="label-editorial mt-5 text-center text-base text-[#DFAC2A]/90" data-testid="text-complete-hint">
               Complete today to unlock Day {accessibleDay >= 365 ? 1 : accessibleDay + 1}
             </p>
           )}
@@ -427,7 +427,7 @@ function DevSection({
     <section className="mt-6 first:mt-4" data-testid={testId}>
       <div className="mb-3 flex items-center gap-3">
         <span className="h-px w-6 bg-[#DFAC2A]/60" />
-        <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-[#DFAC2A]">
+        <p className="label-editorial text-[15px] text-[#DFAC2A]">
           {label}
         </p>
         <span className="h-px flex-1 bg-white/10" />
