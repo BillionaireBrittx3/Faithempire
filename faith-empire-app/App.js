@@ -2,17 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Platform, Alert, Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { useRef, useEffect, useState, useCallback } from 'react';
-import {
-  purchase,
-  restorePurchases,
-  addPurchaseCompleteListener,
-  addPurchaseFailedListener,
-  addRestoreCompleteListener,
-} from './modules/storekit-module';
+import * as StoreKit from './modules/storekit-module';
+import * as PlayBilling from './modules/play-billing-module';
 
 const APP_URL = 'https://faithempire.replit.app';
 const PRODUCT_ID = 'com.decodedfaithempire.app.premium.monthly';
 const IS_IOS = Platform.OS === 'ios';
+const IS_ANDROID = Platform.OS === 'android';
+const billing = IS_IOS ? StoreKit : IS_ANDROID ? PlayBilling : null;
 
 export default function App() {
   const webViewRef = useRef(null);
@@ -26,27 +23,24 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (!IS_IOS) return;
+    if (!billing) return;
 
-    const purchaseSub = addPurchaseCompleteListener(({ productId }) => {
+    const purchaseSub = billing.addPurchaseCompleteListener(({ productId }) => {
       setIsPremium(true);
       sendToWebView({ type: 'PURCHASE_COMPLETE', isPremium: true });
     });
 
-    const failedSub = addPurchaseFailedListener(({ reason }) => {
-      if (reason === 'cancelled') {
-        sendToWebView({ type: 'PURCHASE_FAILED', reason: 'cancelled' });
-      } else {
-        sendToWebView({ type: 'PURCHASE_FAILED', reason });
-      }
+    const failedSub = billing.addPurchaseFailedListener(({ reason }) => {
+      sendToWebView({ type: 'PURCHASE_FAILED', reason: reason || 'error' });
     });
 
-    const restoreSub = addRestoreCompleteListener(({ productIds }) => {
+    const restoreSub = billing.addRestoreCompleteListener(({ productIds }) => {
       const hasActive = productIds && productIds.includes(PRODUCT_ID);
       setIsPremium(hasActive);
       sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: hasActive });
       if (!hasActive) {
-        Alert.alert('No Subscription Found', 'No active premium subscription was found for this Apple ID.');
+        const storeName = IS_IOS ? 'Apple ID' : 'Google account';
+        Alert.alert('No Subscription Found', `No active premium subscription was found for this ${storeName}.`);
       }
     });
 
@@ -58,12 +52,12 @@ export default function App() {
   }, []);
 
   function handlePurchase() {
-    if (!IS_IOS) {
+    if (!billing) {
       sendToWebView({ type: 'PURCHASE_FAILED', reason: 'not_supported' });
       return;
     }
     try {
-      purchase(PRODUCT_ID);
+      billing.purchase(PRODUCT_ID);
     } catch (err) {
       console.log('Purchase error:', err);
       sendToWebView({ type: 'PURCHASE_FAILED', reason: 'error' });
@@ -71,12 +65,12 @@ export default function App() {
   }
 
   function handleRestore() {
-    if (!IS_IOS) {
+    if (!billing) {
       sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: false });
       return;
     }
     try {
-      restorePurchases();
+      billing.restorePurchases();
     } catch (err) {
       console.log('Restore error:', err);
       sendToWebView({ type: 'RESTORE_COMPLETE', isPremium: false });
