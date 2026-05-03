@@ -136,11 +136,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black pb-8" data-testid="page-home">
       <div className="px-4 pt-4">
-        <div className="mb-3">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-[#DFAC2A]">
+        <div className="mb-4">
+          <p className="text-[10px] uppercase tracking-[0.28em] text-[#DFAC2A]">
             Today's Decoded Verse
           </p>
-          <h1 className="font-serif text-2xl font-bold text-white" data-testid="text-todays-verse-ref">
+          <h1 className="heading-display text-gradient-gold-strong mt-2 text-4xl" data-testid="text-todays-verse-ref">
             {verse?.reference || "Loading…"}
           </h1>
         </div>
@@ -173,12 +173,12 @@ export default function Home() {
           )}
         </article>
 
-        <div className="mt-6 mb-3 flex items-center justify-between">
+        <div className="mt-8 mb-4 flex items-center justify-between">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-[#DFAC2A]">
+            <p className="text-[10px] uppercase tracking-[0.28em] text-[#DFAC2A]">
               365 Days · Closer to God
             </p>
-            <h2 className="font-serif text-xl font-bold text-white" data-testid="text-day-title">
+            <h2 className="heading-display text-gradient-gold mt-1.5 text-3xl" data-testid="text-day-title">
               Day {accessibleDay} of 365
             </h2>
           </div>
@@ -202,7 +202,7 @@ export default function Home() {
           <p className="mb-2 text-[10px] uppercase tracking-[0.28em] text-[#DFAC2A]">
             Theme · {day.theme}
           </p>
-          <h2 className="font-serif text-2xl font-bold leading-snug text-white" data-testid="text-devotional-title">
+          <h2 className="heading-display mt-2 text-3xl text-white" data-testid="text-devotional-title">
             {day.title}
           </h2>
 
