@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "Ca041Zk_PxALMkIc7QxDe"
+uri = "file://builds/faith-empire-1.6.3-19.aab.tar.gz"
+type = "unspecified"
+title = "Faith Empire 1.6.3 (build 19) — Android AAB (tar.gz)"
