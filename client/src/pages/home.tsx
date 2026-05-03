@@ -81,7 +81,7 @@ export default function Home() {
   const todayDay = useMemo(() => getTodayDay(), []);
   const [completed, setCompleted] = useState<Set<number>>(() => loadCompleted());
   const initialDay = useMemo(() => {
-    const target = Math.max(todayDay, nextUncompletedDay(completed));
+    const target = nextUncompletedDay(completed);
     return isPremium ? target : Math.min(target, FREE_DAYS);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -238,9 +238,15 @@ export default function Home() {
             <p className="leading-relaxed text-white/85">{day.activity}</p>
           </DevSection>
 
+          {!isCompleted && !justCompleted && (
+            <p className="mt-5 text-center text-[11px] uppercase tracking-[0.2em] text-[#DFAC2A]/80" data-testid="text-complete-hint">
+              Complete today to unlock Day {accessibleDay >= 365 ? 1 : accessibleDay + 1}
+            </p>
+          )}
+
           <button
             onClick={markCompleteAndContinue}
-            className={`mt-5 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 text-sm font-semibold transition-colors ${
+            className={`mt-3 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 text-sm font-semibold transition-colors ${
               justCompleted
                 ? "bg-[#1f8a3a] text-white"
                 : isCompleted
