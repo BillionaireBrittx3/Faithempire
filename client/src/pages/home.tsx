@@ -425,13 +425,9 @@ function DevSection({
 }) {
   return (
     <section className="mt-6 first:mt-4" data-testid={testId}>
-      <div className="mb-3 flex items-center gap-3">
-        <span className="h-px w-6 bg-[#DFAC2A]/60" />
-        <p className="label-editorial text-[15px] text-[#DFAC2A]">
-          {label}
-        </p>
-        <span className="h-px flex-1 bg-white/10" />
-      </div>
+      <p className="label-editorial mb-3 text-[15px] text-[#DFAC2A]">
+        {label}
+      </p>
       <div className="text-[15px] leading-[1.7]">{children}</div>
     </section>
   );
