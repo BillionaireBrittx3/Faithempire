@@ -1,4 +1,4 @@
-import { Component, type ErrorInfo, type ReactNode } from "react";
+import { Component, lazy, Suspense, type ErrorInfo, type ReactNode } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -13,18 +13,19 @@ import { TabBar } from "@/components/tab-bar";
 import { GlobalPlayer } from "@/components/global-player";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
-import ArchivePage from "@/pages/archive";
-import FavoritesPage from "@/pages/favorites";
 import AboutPage from "@/pages/about";
-import PodcastPage from "@/pages/podcast";
-import BiblePage from "@/pages/bible";
-import PrayersPage from "@/pages/prayers";
-import PrivacyPage from "@/pages/privacy";
-import TermsPage from "@/pages/terms";
-import DecodedPage from "@/pages/decoded";
-import DevotionalPage from "@/pages/devotional";
-import DecodedBookPage from "@/pages/decoded-book";
 import PaywallPage from "@/pages/paywall";
+
+const ArchivePage = lazy(() => import("@/pages/archive"));
+const FavoritesPage = lazy(() => import("@/pages/favorites"));
+const PodcastPage = lazy(() => import("@/pages/podcast"));
+const BiblePage = lazy(() => import("@/pages/bible"));
+const PrayersPage = lazy(() => import("@/pages/prayers"));
+const PrivacyPage = lazy(() => import("@/pages/privacy"));
+const TermsPage = lazy(() => import("@/pages/terms"));
+const DecodedPage = lazy(() => import("@/pages/decoded"));
+const DevotionalPage = lazy(() => import("@/pages/devotional"));
+const DecodedBookPage = lazy(() => import("@/pages/decoded-book"));
 
 class ErrorBoundary extends Component<
   { children: ReactNode },
@@ -85,7 +86,13 @@ function Router() {
   }
 
   return (
-    <>
+    <Suspense
+      fallback={
+        <div className="flex min-h-[60vh] items-center justify-center">
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-[#DFAC2A]/30 border-t-[#DFAC2A]" />
+        </div>
+      }
+    >
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/bible" component={BiblePage} />
@@ -104,7 +111,7 @@ function Router() {
         <Route path="/premium" component={PaywallPage} />
         <Route component={NotFound} />
       </Switch>
-    </>
+    </Suspense>
   );
 }
 

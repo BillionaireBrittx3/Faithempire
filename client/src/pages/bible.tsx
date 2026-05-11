@@ -71,10 +71,10 @@ function parseVerseReference(input: string): { book: BibleBook; chapter: number 
 
 const FREE_BIBLE_BOOK = "Genesis";
 
-import { useRequirePremium } from "@/components/paywall-modal";
+import { useDocumentTitle } from "@/hooks/use-document-title";
 
 export default function BiblePage() {
-  useRequirePremium("Unlock the full KJV Bible");
+  useDocumentTitle("KJV Bible");
   const [view, setView] = useState<ViewMode>("books");
   const [testament, setTestament] = useState<"old" | "new">("old");
   const [selectedBook, setSelectedBook] = useState<BibleBook | null>(null);

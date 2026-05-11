@@ -94,7 +94,7 @@ export function TabBar() {
           return (
             <Link key={tab.path} href={tab.path} aria-label={tab.label}>
               <button
-                className={`relative flex flex-col items-center gap-0.5 rounded-md px-4 py-2 transition-colors ${
+                className={`relative flex min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-0.5 rounded-md px-3 py-2 transition-colors ${
                   isActive
                     ? "text-primary"
                     : "text-muted-foreground"

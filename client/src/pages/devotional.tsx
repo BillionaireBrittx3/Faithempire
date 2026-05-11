@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Calendar, Sparkles, Lock, Check, CheckCircle
 import devotionalData from "@/data/devotional.json";
 import { useSubscription } from "@/lib/subscription";
 import { usePaywall } from "@/components/paywall-modal";
+import { useDocumentTitle } from "@/hooks/use-document-title";
 
 const FREE_DAYS = 7;
 const COMPLETED_KEY = "faith-empire-devotional-completed";
@@ -84,13 +85,14 @@ function getQuarter(day: number) {
 }
 
 export default function DevotionalPage() {
+  useDocumentTitle("365 Days · Closer to God");
   const { isPremium } = useSubscription();
   const { open: openPaywall } = usePaywall();
   const todayDay = useMemo(() => getTodayDay(), []);
   const [completed, setCompleted] = useState<Set<number>>(() => loadCompleted());
 
   const initialDay = useMemo(() => {
-    const target = Math.max(todayDay, nextUncompletedDay(completed));
+    const target = nextUncompletedDay(completed);
     return isPremium ? target : Math.min(target, FREE_DAYS);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -150,11 +152,13 @@ export default function DevotionalPage() {
     window.scrollTo(0, 0);
   }, [currentDay]);
 
+  const JOURNAL_MAX = 5000;
   const saveJournal = (text: string) => {
-    setJournalText(text);
+    const trimmed = text.length > JOURNAL_MAX ? text.slice(0, JOURNAL_MAX) : text;
+    setJournalText(trimmed);
     try {
-      if (text.trim()) {
-        localStorage.setItem(JOURNAL_KEY_PREFIX + currentDay, text);
+      if (trimmed.trim()) {
+        localStorage.setItem(JOURNAL_KEY_PREFIX + currentDay, trimmed);
       } else {
         localStorage.removeItem(JOURNAL_KEY_PREFIX + currentDay);
       }
@@ -306,10 +310,14 @@ export default function DevotionalPage() {
           <textarea
             value={journalText}
             onChange={(e) => saveJournal(e.target.value)}
+            maxLength={JOURNAL_MAX}
             placeholder="Write your honest answer here. It saves automatically."
             className="min-h-[140px] w-full rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-white placeholder:text-white/40 focus:border-[#DFAC2A]/60 focus:outline-none"
             data-testid="input-journal"
           />
+          <p className="mt-1 text-right text-[10px] text-white/40">
+            {journalText.length} / {JOURNAL_MAX}
+          </p>
         </Section>
 
         <Section label={`Today's Activity · ${day.activityName}`} testId="section-activity">

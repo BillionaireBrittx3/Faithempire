@@ -5,6 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { BookOpen, ChevronDown, ChevronUp, ChevronRight, Bell, BellRing, X, Clock, Lock, Sparkles, Search, Sun, Moon } from "lucide-react";
 import { useSubscription } from "@/lib/subscription";
 import { usePaywall } from "@/components/paywall-modal";
+import { useDocumentTitle } from "@/hooks/use-document-title";
 import { motion, AnimatePresence } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -196,22 +197,24 @@ export default function PrayersPage() {
     setReminder(getSavedReminder());
   }, []);
 
+  useDocumentTitle("Daily Prayers");
   const { data: prayers, isLoading } = useQuery<Prayer[]>({
     queryKey: ["/api/prayers"],
   });
 
-  const grouped: PrayersBySection = {};
-  if (prayers) {
-    for (const p of prayers) {
-      const section = p.prayerSection || "Other";
-      if (!grouped[section]) grouped[section] = [];
-      grouped[section].push(p);
+  const { grouped, allSections } = useMemo(() => {
+    const g: PrayersBySection = {};
+    if (prayers) {
+      for (const p of prayers) {
+        const section = p.prayerSection || "Other";
+        if (!g[section]) g[section] = [];
+        g[section].push(p);
+      }
     }
-  }
-
-  const sections = SECTION_ORDER.filter((s) => grouped[s]?.length);
-  const otherSections = Object.keys(grouped).filter((s) => !SECTION_ORDER.includes(s));
-  const allSections = [...sections, ...otherSections];
+    const ordered = SECTION_ORDER.filter((s) => g[s]?.length);
+    const others = Object.keys(g).filter((s) => !SECTION_ORDER.includes(s));
+    return { grouped: g, allSections: [...ordered, ...others] };
+  }, [prayers]);
 
   const { morningPrayerId, eveningPrayerId } = useMemo(() => {
     if (!prayers || prayers.length === 0) return { morningPrayerId: null as number | null, eveningPrayerId: null as number | null };

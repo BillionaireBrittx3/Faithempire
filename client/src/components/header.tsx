@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from "react";
+import { Link } from "wouter";
 import { Search, X, BookOpen } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -82,12 +83,14 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="w-10" />
           <div className="flex items-center">
-            <img
-              src={logoPath}
-              alt="Decoded Faith Empire"
-              className="h-28 w-auto object-contain"
-              data-testid="img-logo"
-            />
+            <Link href="/" aria-label="Decoded Faith Empire — Home">
+              <img
+                src={logoPath}
+                alt="Decoded Faith Empire"
+                className="h-28 w-auto object-contain cursor-pointer"
+                data-testid="img-logo"
+              />
+            </Link>
           </div>
           <Button
             size="icon"
