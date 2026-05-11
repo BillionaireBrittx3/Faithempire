@@ -47,12 +47,12 @@
     "cmdk": "^1.1.1",
     "connect-pg-simple": "^10.0.0",
     "date-fns": "^3.6.0",
-    "drizzle-orm": "^0.39.3",
+    "drizzle-orm": "^0.45.2",
     "drizzle-zod": "^0.7.0",
     "eas-cli": "^18.0.5",
     "embla-carousel-react": "^8.6.0",
     "esbuild": "^0.25.12",
-    "express": "^5.0.1",
+    "express": "^5.2.1",
     "express-session": "^1.18.1",
     "framer-motion": "^11.13.1",
     "input-otp": "^1.4.2",
@@ -105,7 +105,15 @@
   "overrides": {
     "drizzle-kit": {
       "@esbuild-kit/esm-loader": "npm:tsx@^4.20.4"
-    }
+    },
+    "@xmldom/xmldom": "^0.9.10",
+    "ajv": "^8.20.0",
+    "diff": "^9.0.0",
+    "minimatch": "^5.1.9",
+    "node-forge": "^1.4.0",
+    "tar": "^7.5.15",
+    "uuid": "^11.0.0",
+    "yaml": "^2.8.4"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
