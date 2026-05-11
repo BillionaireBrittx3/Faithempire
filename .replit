@@ -50,3 +50,7 @@ EXPO_TOKEN = "BEu7Jrw6lHa8z9prkDCOmDhSO-UjUxojNVpbXb0C"
 
 [agent]
 integrations = ["github:1.0.0"]
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
