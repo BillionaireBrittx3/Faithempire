@@ -167,7 +167,7 @@ export default function PaywallPage() {
                   <p className="text-sm font-medium text-white">{book.name}</p>
                   <p className="text-[10px] text-white/40">{book.chapters} chapters · {book.verses} verses</p>
                   {book.name === "Genesis" && (
-                    <Link href="/decoded/genesis">
+                    <Link href="/decoded/genesis" aria-label="Read Genesis Decoded for free">
                       <span className="inline-block mt-1.5 text-[10px] font-semibold text-[#DFAC2A] underline underline-offset-2" data-testid="link-free-genesis-decoded">Read Free →</span>
                     </Link>
                   )}
@@ -188,7 +188,7 @@ export default function PaywallPage() {
             <div className="flex flex-wrap gap-1.5">
               {sampleBibleBooks.map((book) => (
                 book === "Genesis" ? (
-                  <Link key={book} href="/bible?book=Genesis&chapter=1">
+                  <Link key={book} href="/bible?book=Genesis&chapter=1" aria-label="Read Genesis in the King James Bible for free">
                     <span className="rounded-lg bg-[#DFAC2A]/10 border border-[#DFAC2A]/30 px-2.5 py-1.5 text-xs font-semibold text-[#DFAC2A] cursor-pointer" data-testid="link-free-genesis-bible">Genesis ✦ Free</span>
                   </Link>
                 ) : (
@@ -288,11 +288,11 @@ export default function PaywallPage() {
             $8.88/month. Auto-renews. Cancel in Settings &gt; Apple ID &gt; Subscriptions at least 24 hours before renewal.
           </p>
           <div className="flex items-center justify-center gap-4 mt-3 text-[10px]">
-            <Link href="/terms">
+            <Link href="/terms" aria-label="Terms of Use">
               <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-terms">Terms of Use</span>
             </Link>
             <span className="text-white/20">|</span>
-            <Link href="/privacy">
+            <Link href="/privacy" aria-label="Privacy Policy">
               <span className="text-white/40 underline underline-offset-4" data-testid="link-paywall-privacy">Privacy Policy</span>
             </Link>
           </div>

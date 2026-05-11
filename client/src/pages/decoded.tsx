@@ -101,7 +101,7 @@ function BookCard({
           {inner}
         </button>
       ) : (
-        <Link href={`/decoded/${book.slug}`}>{inner}</Link>
+        <Link href={`/decoded/${book.slug}`} aria-label={`Read ${book.name} decoded`}>{inner}</Link>
       )}
     </motion.div>
   );

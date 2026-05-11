@@ -92,7 +92,7 @@ export function TabBar() {
           const Icon = tab.icon;
           const showDot = tab.path === "/" && showBadge && !isActive;
           return (
-            <Link key={tab.path} href={tab.path}>
+            <Link key={tab.path} href={tab.path} aria-label={tab.label}>
               <button
                 className={`relative flex flex-col items-center gap-0.5 rounded-md px-4 py-2 transition-colors ${
                   isActive

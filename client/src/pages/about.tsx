@@ -132,7 +132,7 @@ export default function AboutPage() {
               Quick Links
             </h3>
             <div className="flex flex-col gap-1">
-              <Link href="/favorites">
+              <Link href="/favorites" aria-label="Saved Verses & Highlights">
                 <button
                   className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
                   data-testid="link-saved"
@@ -142,7 +142,7 @@ export default function AboutPage() {
                   <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
                 </button>
               </Link>
-              <Link href="/prayers">
+              <Link href="/prayers" aria-label="Prayer Book">
                 <button
                   className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
                   data-testid="link-prayers"
@@ -152,7 +152,7 @@ export default function AboutPage() {
                   <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
                 </button>
               </Link>
-              <Link href="/archive">
+              <Link href="/archive" aria-label="Verse Archive">
                 <button
                   className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
                   data-testid="link-archive"
@@ -410,7 +410,7 @@ export default function AboutPage() {
               Legal
             </h3>
             <div className="flex flex-col gap-1">
-              <Link href="/privacy">
+              <Link href="/privacy" aria-label="Privacy Policy">
                 <button
                   className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
                   data-testid="link-privacy-policy"
@@ -420,7 +420,7 @@ export default function AboutPage() {
                   <ChevronRight className="ml-auto h-4 w-4 text-muted-foreground" />
                 </button>
               </Link>
-              <Link href="/terms">
+              <Link href="/terms" aria-label="Terms of Use">
                 <button
                   className="flex w-full items-center gap-3 rounded-md p-2 text-sm text-foreground hover-elevate"
                   data-testid="link-terms"
