@@ -15,7 +15,7 @@
       "autoIncrement": true,
       "node": "20.18.0",
       "ios": {
-        "image": "latest"
+        "image": "macos-sonoma-14.6-xcode-16.1"
       },
       "android": {
         "image": "latest"
@@ -28,7 +28,9 @@
   "submit": {
     "production": {
       "ios": {
-        "ascAppId": "6759208291"
+        "ascAppId": "6759208291",
+        "ascApiKeyId": "2A4LP528UB",
+        "ascApiKeyIssuerId": "2d17fde3-2d0b-4cb5-8ded-de93ff26c6ab"
       }
     }
   }
