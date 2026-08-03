@@ -21,7 +21,7 @@ struct DailyVerseResponse: Codable {
 }
 
 struct PrayerProvider: TimelineProvider {
-    let apiURL = "https://faithempire.replit.app/api/verses/today"
+    let apiURL = "https://decodedfaithbiblestudy.lovable.app/api/verses/today"
 
     func placeholder(in context: Context) -> PrayerEntry {
         PrayerEntry(

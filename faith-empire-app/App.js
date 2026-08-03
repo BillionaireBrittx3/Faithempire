@@ -5,7 +5,7 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 import * as StoreKit from './modules/storekit-module';
 import * as PlayBilling from './modules/play-billing-module';
 
-const APP_URL = 'https://faithempire.replit.app';
+const APP_URL = 'https://decodedfaithbiblestudy.lovable.app';
 const PRODUCT_ID = 'com.decodedfaithempire.app.premium.monthly';
 const IS_IOS = Platform.OS === 'ios';
 const IS_ANDROID = Platform.OS === 'android';
