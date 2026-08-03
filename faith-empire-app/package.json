@@ -21,7 +21,7 @@
   },
   "private": true,
   "overrides": {
-    "@xmldom/xmldom": "^0.9.10",
+    "@xmldom/xmldom": "^0.8.10",
     "postcss": "^8.5.14",
     "tar": "^6.2.1",
     "uuid": "^11.0.0",
