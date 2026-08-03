@@ -23,7 +23,7 @@
   "overrides": {
     "@xmldom/xmldom": "^0.9.10",
     "postcss": "^8.5.14",
-    "tar": "^7.5.15",
+    "tar": "^6.2.1",
     "uuid": "^11.0.0",
     "fast-uri": "^3.1.2"
   }
