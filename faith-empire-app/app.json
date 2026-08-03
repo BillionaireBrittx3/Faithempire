@@ -16,6 +16,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.decodedfaithempire",
       "buildNumber": "7",
+      "associatedDomains": ["applinks:decodedfaithbiblestudy.lovable.app"],
       "config": {
         "usesNonExemptEncryption": false
       },
