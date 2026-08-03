@@ -1,0 +1,19 @@
+All confirmed — I verified each item directly against the live site and the GitHub repo.
+
+✅ Wrapper points at Lovable — `faith-empire-app/App.js` line 8 on `replit-main`: `const APP_URL = 'https://decodedfaithbiblestudy.lovable.app';`
+
+✅ Widget updated — `targets/widget/DailyPrayerWidget.swift` line 24 hits `https://decodedfaithbiblestudy.lovable.app/api/verses/today`. I scanned the entire `faith-empire-app` folder: zero remaining `replit.app` references.
+
+✅ Pushed to `replit-main` — both changes are on the branch (commit `b7f4563`).
+
+✅ Site + API live — `/api/verses/today` returns 200 (Psalm 27:1 today), plus `/api/verses/archive`, `/api/prayers`, `/api/podcast/episodes`, `/api/decoded/books` all 200.
+
+✅ IAP bridge is implemented and byte-identical to the original — `src/lib/subscription.tsx` diffs zero lines against the original repo. It sends `CHECK_SUBSCRIPTION`, `PURCHASE` (with `productId`), and `RESTORE_PURCHASES` via `ReactNativeWebView.postMessage`, and listens for `SUBSCRIPTION_STATUS`, `PURCHASE_COMPLETE`, `PURCHASE_FAILED`. The paywall also sends `OPEN_SUBSCRIPTION_SETTINGS`. Only difference in the whole paywall file is the router import shim. Subscribers will not be locked out — still test in TestFlight sandbox, but the contract matches.
+
+✅ User data reset is accurate — localStorage is per-origin, so favorites/highlights/journals don't carry to the new hostname. Unavoidable on a hostname change.
+
+✅ eas.json — `ascAppId: 6759208291` is set for production submit, so your build/submit commands are correct as written.
+
+One thing that's wrong on both sites (not a regression): the `apple-app-site-association` file literally contains `TEAM_ID.com.decodedfaithempire.faithempire` — an unfilled placeholder — and `app.json` declares `bundleIdentifier: com.decodedfaithempire` (no `.faithempire`), with no `associatedDomains` entry at all. Universal Links have never actually worked. It doesn't block the WebView app, but if you want, give me your Apple Team ID and I'll fix the AASA to the real value.
+
+On the custom domain: yes — connect `decodedfaithempire.org` to Lovable before you build, and put that in `App.js` instead. Then any future host change is a DNS edit with no Apple review. Say the word and I'll swap the URL.

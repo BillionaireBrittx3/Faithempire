@@ -1,0 +1,1 @@
+- [Lovable migration state](lovable-migration-state.md) — app rebuilt on Lovable; GitHub `main` is the unrelated iOS-wrapper repo, this project lives on `replit-main`; never force-push `main`.
