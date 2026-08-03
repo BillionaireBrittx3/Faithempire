@@ -1,0 +1,545 @@
+{
+  "title": "The Book of Ruth Decoded",
+  "bookName": "Ruth",
+  "slug": "ruth",
+  "author": "Brittany Johnson",
+  "description": "The Book of Ruth — every verse decoded into plain, modern English (DMLV).",
+  "copyright": "© 2026 Brittany Johnson. All rights reserved.",
+  "totalChapters": 4,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Now it came to pass in the days when the judges ruled, that there was a famine in the land. And a certain man of Bethlehemjudah went to sojourn in the country of Moab, he, and his wife, and his two sons.",
+          "decoded": "During the time when the judges were leading, there was a famine in the land. A man from Bethlehem in Judah went to live temporarily in the country of Moab, along with his wife and his two sons.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "And the name of the man was Elimelech, and the name of his wife Naomi, and the name of his two sons Mahlon and Chilion, Ephrathites of Bethlehemjudah. And they came into the country of Moab, and continued there.",
+          "decoded": "The man's name was Elimelech, his wife's name was Naomi, and his two sons were named Mahlon and Chilion. They were from Ephrath, which is Bethlehem in Judah. They went to the country of Moab and stayed there.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "And Elimelech Naomi’s husband died; and she was left, and her two sons.",
+          "decoded": "Elimelech, Naomi’s husband, died; and she was left alone with her two sons.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "And they took them wives of the women of Moab; the name of the one was Orpah, and the name of the other Ruth: and they dwelled there about ten years.",
+          "decoded": "They married women from the people of Moab; one was named Orpah, and the other was named Ruth. They lived there for about ten years.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "And Mahlon and Chilion died also both of them; and the woman was left of her two sons and her husband.",
+          "decoded": "And Mahlon and Chilion both died; and the woman was left without her two sons and her husband.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "Then she arose with her daughters in law, that she might return from the country of Moab: for she had heard in the country of Moab how that the LORD had visited his people in giving them bread.",
+          "decoded": "Then she got up with her daughters-in-law to return from the country of Moab because she had heard in Moab that the LORD had taken care of his people by providing them with food.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Wherefore she went forth out of the place where she was, and her two daughters in law with her; and they went on the way to return unto the land of Judah.",
+          "decoded": "So she left the place where she was living, and her two daughters-in-law went with her; and they started on the road to return to the land of Judah.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "And Naomi said unto her two daughters in law, Go, return each to her mother’s house: the LORD deal kindly with you, as ye have dealt with the dead, and with me.",
+          "decoded": "And Naomi said to her two daughters-in-law, Go, return each of you to your mother’s house: may the LORD be kind to you, just as you have been kind to the dead and to me.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "The LORD grant you that ye may find rest, each of you in the house of her husband. Then she kissed them; and they lifted up their voice, and wept.",
+          "decoded": "May the LORD give you the blessing of finding peace, each of you in your husband's home. Then she kissed them, and they raised their voices and cried.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "And they said unto her, Surely we will return with thee unto thy people.",
+          "decoded": "And they said to her, Surely we will return with you to your people.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And Naomi said, Turn again, my daughters: why will ye go with me? are there yet any more sons in my womb, that they may be your husbands?",
+          "decoded": "And Naomi said, Go back, my daughters: why do you want to go with me? Do I still have any sons in my womb who could become your husbands?",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "Turn again, my daughters, go your way; for I am too old to have an husband. If I should say, I have hope, if I should have an husband also to night, and should also bear sons;",
+          "decoded": "Return, my daughters, go your own way; because I am too old to have a husband. Even if I said, I still have hope, and even if I got a husband tonight and had sons,",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Would ye tarry for them till they were grown? would ye stay for them from having husbands? nay, my daughters; for it grieveth me much for your sakes that the hand of the LORD is gone out against me.",
+          "decoded": "Would you wait for them until they are grown? Would you wait for them to have husbands? No, my daughters; because it makes me very sad for your sake that the LORD's hand has come against me.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "And they lifted up their voice, and wept again: and Orpah kissed her mother in law; but Ruth clave unto her.",
+          "decoded": "They raised their voices and cried again; Orpah kissed her mother-in-law, but Ruth held tightly to her.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "And she said, Behold, thy sister in law is gone back unto her people, and unto her gods: return thou after thy sister in law.",
+          "decoded": "And she said, Look, your sister-in-law has returned to her people and to her gods; you should go back after your sister-in-law.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "And Ruth said, Intreat me not to leave thee, or to return from following after thee: for whither thou goest, I will go; and where thou lodgest, I will lodge: thy people shall be my people, and thy God my God:",
+          "decoded": "And Ruth said, Do not ask me to leave you or to stop following you. Wherever you go, I will go; wherever you live, I will live. Your people will be my people, and your God will be my God.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "Where thou diest, will I die, and there will I be buried: the LORD do so to me, and more also, if ought but death part thee and me.",
+          "decoded": "Where you die, I will die, and there I will be buried. May the LORD do the same to me, and even more, if anything but death separates you and me.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "When she saw that she was stedfastly minded to go with her, then she left speaking unto her.",
+          "decoded": "When she saw that she was determined to go with her, then she stopped talking to her.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "So they two went until they came to Bethlehem. And it came to pass, when they were come to Bethlehem, that all the city was moved about them, and they said, Is this Naomi?",
+          "decoded": "So the two of them went until they arrived in Bethlehem. When they got to Bethlehem, the whole city was stirred up around them, and people asked, \"Is this Naomi?\"",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "And she said unto them, Call me not Naomi, call me Mara: for the Almighty hath dealt very bitterly with me.",
+          "decoded": "And she said to them, Do not call me Naomi, call me Mara, because the Almighty has treated me very bitterly.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "I went out full, and the LORD hath brought me home again empty: why then call ye me Naomi, seeing the LORD hath testified against me, and the Almighty hath afflicted me?",
+          "decoded": "I left full, and the LORD has brought me back empty: so why do you call me Naomi, since the LORD has testified against me, and the Almighty has caused me suffering?",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "So Naomi returned, and Ruth the Moabitess, her daughter in law, with her, which returned out of the country of Moab: and they came to Bethlehem in the beginning of barley harvest.",
+          "decoded": "So Naomi returned, and Ruth the Moabitess, her daughter-in-law, returned with her from the country of Moab; and they came to Bethlehem at the beginning of the barley harvest.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "And Naomi had a kinsman of her husband’s, a mighty man of wealth, of the family of Elimelech; and his name was Boaz.",
+          "decoded": "Naomi had a relative from her husband’s family, a powerful and wealthy man from the family of Elimelech; his name was Boaz.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "And Ruth the Moabitess said unto Naomi, Let me now go to the field, and glean ears of corn after him in whose sight I shall find grace. And she said unto her, Go, my daughter.",
+          "decoded": "And Ruth the Moabitess said to Naomi, Let me go to the field now and gather leftover grain after the man I find favor with. And Naomi said to her, Go, my daughter.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "And she went, and came, and gleaned in the field after the reapers: and her hap was to light on a part of the field belonging unto Boaz, who was of the kindred of Elimelech.",
+          "decoded": "She went and came and gathered leftover grain in the field after the workers had finished harvesting. By chance, she found herself in a part of the field that belonged to Boaz, who was a relative of Elimelech.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "And, behold, Boaz came from Bethlehem, and said unto the reapers, The LORD be with you. And they answered him, The LORD bless thee.",
+          "decoded": "And look, Boaz came from Bethlehem and said to the harvesters, 'The LORD be with you.' And they answered him, 'The LORD bless you.'",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Then said Boaz unto his servant that was set over the reapers, Whose damsel is this?",
+          "decoded": "Then Boaz said to his servant who was in charge of the reapers, Whose young woman is this?",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "And the servant that was set over the reapers answered and said, It is the Moabitish damsel that came back with Naomi out of the country of Moab:",
+          "decoded": "The servant in charge of the reapers answered and said, \"She is the Moabite young woman who returned with Naomi from the country of Moab.\"",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "And she said, I pray you, let me glean and gather after the reapers among the sheaves: so she came, and hath continued even from the morning until now, that she tarried a little in the house.",
+          "decoded": "And she said, Please let me glean and gather grain left behind by the reapers among the sheaves. So she came and has continued from the morning until now, only stopping briefly at the house.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Then said Boaz unto Ruth, Hearest thou not, my daughter? Go not to glean in another field, neither go from hence, but abide here fast by my maidens:",
+          "decoded": "Then Boaz said to Ruth, Do you not hear, my daughter? Do not go to gather grain in another field, and do not leave this place, but stay close here near my female workers.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "Let thine eyes be on the field that they do reap, and go thou after them: have I not charged the young men that they shall not touch thee? and when thou art athirst, go unto the vessels, and drink of that which the young men have drawn.",
+          "decoded": "Keep your eyes on the field where they are harvesting, and follow them. Have I not instructed the young men not to bother you? And when you are thirsty, go to the containers and drink the water that the young men have drawn.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Then she fell on her face, and bowed herself to the ground, and said unto him, Why have I found grace in thine eyes, that thou shouldest take knowledge of me, seeing I am a stranger?",
+          "decoded": "Then she fell face down and bowed herself to the ground, and said to him, Why have I found favor in your eyes, that you should notice me, since I am a stranger?",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And Boaz answered and said unto her, It hath fully been shewed me, all that thou hast done unto thy mother in law since the death of thine husband: and how thou hast left thy father and thy mother, and the land of thy nativity, and art come unto a people which thou knewest not heretofore.",
+          "decoded": "And Boaz answered and said to her, It has been fully shown to me all that you have done for your mother-in-law since the death of your husband: and how you left your father and your mother, and the land where you were born, and came to a people you did not know before.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust.",
+          "decoded": "The LORD will repay your work, and a full reward will be given to you by the LORD God of Israel, under whose protection you have come to trust.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Then she said, Let me find favour in thy sight, my lord; for that thou hast comforted me, and for that thou hast spoken friendly unto thine handmaid, though I be not like unto one of thine handmaidens.",
+          "decoded": "Then she said, Let me find favor in your sight, my lord; because you have comforted me, and because you have spoken kindly to your servant, even though I am not like one of your female servants.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "And Boaz said unto her, At mealtime come thou hither, and eat of the bread, and dip thy morsel in the vinegar. And she sat beside the reapers: and he reached her parched corn, and she did eat, and was sufficed, and left.",
+          "decoded": "And Boaz said to her, \"Come here at mealtime and eat some bread, and dip your piece in the vinegar.\" So she sat beside the reapers, and he gave her roasted grain, and she ate and was satisfied, and had some left over.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "And when she was risen up to glean, Boaz commanded his young men, saying, Let her glean even among the sheaves, and reproach her not:",
+          "decoded": "When she got up to gather grain, Boaz told his young men, \"Let her gather grain even among the bundles, and do not insult her.\"",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "And let fall also some of the handfuls of purpose for her, and leave them, that she may glean them, and rebuke her not.",
+          "decoded": "And let some of the handfuls fall intentionally for her, and leave them so she can gather them, and do not reprimand her.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "So she gleaned in the field until even, and beat out that she had gleaned: and it was about an ephah of barley.",
+          "decoded": "So she gathered grain in the field until evening, and threshed the grain she had gathered; it was about an ephah of barley.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "And she took it up, and went into the city: and her mother in law saw what she had gleaned: and she brought forth, and gave to her that she had reserved after she was sufficed.",
+          "decoded": "She picked it up and went into the city. Her mother-in-law saw what she had gathered, and she took out what she had saved after she was satisfied and gave it to her.",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "And her mother in law said unto her, Where hast thou gleaned to day? and where wroughtest thou? blessed be he that did take knowledge of thee. And she shewed her mother in law with whom she had wrought, and said, The man’s name with whom I wrought to day is Boaz.",
+          "decoded": "And her mother-in-law said to her, Where did you gather grain today? And where did you work? Blessed is the one who noticed you. Then she told her mother-in-law with whom she had worked and said, The man’s name with whom I worked today is Boaz.",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "And Naomi said unto her daughter in law, Blessed be he of the LORD, who hath not left off his kindness to the living and to the dead. And Naomi said unto her, The man is near of kin unto us, one of our next kinsmen.",
+          "decoded": "And Naomi said to her daughter-in-law, Blessed be the LORD, who has not stopped showing kindness to the living and to the dead. And Naomi said to her, The man is closely related to us, one of our nearest relatives.",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "And Ruth the Moabitess said, He said unto me also, Thou shalt keep fast by my young men, until they have ended all my harvest.",
+          "decoded": "And Ruth the Moabitess said, He also told me, You must stay close to my young men until they have finished all my harvest.",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "And Naomi said unto Ruth her daughter in law, It is good, my daughter, that thou go out with his maidens, that they meet thee not in any other field.",
+          "decoded": "And Naomi said to Ruth her daughter-in-law, It is good, my daughter, that you go out with his female servants, so that they do not meet you in any other field.",
+          "context": ""
+        },
+        {
+          "verse": 23,
+          "kjv": "So she kept fast by the maidens of Boaz to glean unto the end of barley harvest and of wheat harvest; and dwelt with her mother in law.",
+          "decoded": "So she stayed close to the young women working for Boaz to gather leftover grain until the end of the barley and wheat harvests; and she lived with her mother-in-law.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Then Naomi her mother in law said unto her, My daughter, shall I not seek rest for thee, that it may be well with thee?",
+          "decoded": "Then Naomi, her mother-in-law, said to her, My daughter, should I not try to find security for you, so that things will go well for you?",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "And now is not Boaz of our kindred, with whose maidens thou wast? Behold, he winnoweth barley to night in the threshingfloor.",
+          "decoded": "And now, isn't Boaz one of our relatives, with whose female servants you were? Look, he is separating the barley from the chaff tonight on the threshing floor.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "Wash thyself therefore, and anoint thee, and put thy raiment upon thee, and get thee down to the floor: but make not thyself known unto the man, until he shall have done eating and drinking.",
+          "decoded": "So wash yourself, put on perfume, put on your clothes, and go down to the threshing floor. But do not let the man know who you are until he has finished eating and drinking.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "And it shall be, when he lieth down, that thou shalt mark the place where he shall lie, and thou shalt go in, and uncover his feet, and lay thee down; and he will tell thee what thou shalt do.",
+          "decoded": "And it will happen, when he lies down, that you will notice the place where he lies, and you will go in, uncover his feet, and lie down; and he will tell you what you should do.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "And she said unto her, All that thou sayest unto me I will do.",
+          "decoded": "And she said to her, Everything you tell me to do, I will do.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "And she went down unto the floor, and did according to all that her mother in law bade her.",
+          "decoded": "She went down to the threshing floor and did everything her mother-in-law told her to do.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "And when Boaz had eaten and drunk, and his heart was merry, he went to lie down at the end of the heap of corn: and she came softly, and uncovered his feet, and laid her down.",
+          "decoded": "After Boaz had eaten and drunk and was in good spirits, he went to lie down at the far end of the pile of grain. Then she came quietly, uncovered his feet, and lay down.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "And it came to pass at midnight, that the man was afraid, and turned himself: and, behold, a woman lay at his feet.",
+          "decoded": "At midnight, the man became afraid and turned around; and there was a woman lying at his feet.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "And he said, Who art thou? And she answered, I am Ruth thine handmaid: spread therefore thy skirt over thine handmaid; for thou art a near kinsman.",
+          "decoded": "And he said, Who are you? And she answered, I am Ruth, your servant: therefore, spread your garment over your servant; because you are a close relative.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "And he said, Blessed be thou of the LORD, my daughter: for thou hast shewed more kindness in the latter end than at the beginning, inasmuch as thou followedst not young men, whether poor or rich.",
+          "decoded": "And he said, Blessed are you by the LORD, my daughter, because you have shown more kindness at the end than at the beginning, since you did not pursue young men, whether poor or rich.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And now, my daughter, fear not; I will do to thee all that thou requirest: for all the city of my people doth know that thou art a virtuous woman.",
+          "decoded": "And now, my daughter, do not be afraid; I will do everything you ask: because everyone in my town knows that you are a woman of noble character.",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "And now it is true that I am thy near kinsman: howbeit there is a kinsman nearer than I.",
+          "decoded": "And now it is true that I am your close relative; however, there is a relative who is closer than I am.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "Tarry this night, and it shall be in the morning, that if he will perform unto thee the part of a kinsman, well; let him do the kinsman’s part: but if he will not do the part of a kinsman to thee, then will I do the part of a kinsman to thee, as the LORD liveth: lie down until the morning.",
+          "decoded": "Stay here tonight, and in the morning, if he is willing to act as your relative, good; let him do his duty as a relative. But if he is not willing to act as your relative, then I will do my duty as your relative, as the LORD lives. Lie down until morning.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "And she lay at his feet until the morning: and she rose up before one could know another. And he said, Let it not be known that a woman came into the floor.",
+          "decoded": "She stayed lying at his feet until morning, and she got up before anyone could recognize the other. He said, Let it not be known that a woman came into the threshing floor.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "Also he said, Bring the vail that thou hast upon thee, and hold it. And when she held it, he measured six measures of barley, and laid it on her: and she went into the city.",
+          "decoded": "He also said, Bring the veil that you have on you, and hold it. When she held it, he measured out six measures of barley and put it on her. Then she went into the city.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "And when she came to her mother in law, she said, Who art thou, my daughter? And she told her all that the man had done to her.",
+          "decoded": "When she came to her mother-in-law, she said, \"Who are you, my daughter?\" And she told her everything the man had done to her.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "And she said, These six measures of barley gave he me; for he said to me, Go not empty unto thy mother in law.",
+          "decoded": "And she said, He gave me six measures of barley because he told me, Do not go back to your mother-in-law empty-handed.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Then said she, Sit still, my daughter, until thou know how the matter will fall: for the man will not be in rest, until he have finished the thing this day.",
+          "decoded": "Then she said, Sit still, my daughter, until you know how the matter will turn out, because the man will not rest until he has finished the matter today.",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "",
+      "verses": [
+        {
+          "verse": 1,
+          "kjv": "Then went Boaz up to the gate, and sat him down there: and, behold, the kinsman of whom Boaz spake came by; unto whom he said, Ho, such a one! turn aside, sit down here. And he turned aside, and sat down.",
+          "decoded": "Then Boaz went up to the city gate and sat down there. The relative about whom Boaz had spoken came by, and Boaz said to him, 'Hey, you! Come over here and sit down.' So he came over and sat down.",
+          "context": ""
+        },
+        {
+          "verse": 2,
+          "kjv": "And he took ten men of the elders of the city, and said, Sit ye down here. And they sat down.",
+          "decoded": "He took ten men who were elders of the city and said, 'Sit down here.' They sat down.",
+          "context": ""
+        },
+        {
+          "verse": 3,
+          "kjv": "And he said unto the kinsman, Naomi, that is come again out of the country of Moab, selleth a parcel of land, which was our brother Elimelech’s:",
+          "decoded": "And he said to the relative, Naomi, who has returned from the country of Moab, is selling a piece of land that belonged to our brother Elimelech.",
+          "context": ""
+        },
+        {
+          "verse": 4,
+          "kjv": "And I thought to advertise thee, saying, Buy it before the inhabitants, and before the elders of my people. If thou wilt redeem it, redeem it: but if thou wilt not redeem it, then tell me, that I may know: for there is none to redeem it beside thee; and I am after thee. And he said, I will redeem it.",
+          "decoded": "And I planned to inform you, saying, Buy it in front of the people and the elders of my community. If you want to redeem it, redeem it; but if you do not want to redeem it, then tell me, so I will know, because there is no one else to redeem it except you, and I am next after you. And he said, I will redeem it.",
+          "context": ""
+        },
+        {
+          "verse": 5,
+          "kjv": "Then said Boaz, What day thou buyest the field of the hand of Naomi, thou must buy it also of Ruth the Moabitess, the wife of the dead, to raise up the name of the dead upon his inheritance.",
+          "decoded": "Then Boaz said, On the day you buy the field from Naomi, you must also buy it from Ruth the Moabitess, the widow, to preserve the name of the deceased on his inheritance.",
+          "context": ""
+        },
+        {
+          "verse": 6,
+          "kjv": "And the kinsman said, I cannot redeem it for myself, lest I mar mine own inheritance: redeem thou my right to thyself; for I cannot redeem it.",
+          "decoded": "And the relative said, I cannot buy it for myself, because I might damage my own inheritance. You buy my right for yourself, because I cannot buy it.",
+          "context": ""
+        },
+        {
+          "verse": 7,
+          "kjv": "Now this was the manner in former time in Israel concerning redeeming and concerning changing, for to confirm all things; a man plucked off his shoe, and gave it to his neighbour: and this was a testimony in Israel.",
+          "decoded": "This was the custom in Israel in the past regarding redeeming and exchanging to confirm everything: a man would take off his shoe and give it to his neighbor; this served as a legal witness in Israel.",
+          "context": ""
+        },
+        {
+          "verse": 8,
+          "kjv": "Therefore the kinsman said unto Boaz, Buy it for thee. So he drew off his shoe.",
+          "decoded": "Therefore the relative said to Boaz, 'Buy it for yourself.' So he took off his shoe.",
+          "context": ""
+        },
+        {
+          "verse": 9,
+          "kjv": "And Boaz said unto the elders, and unto all the people, Ye are witnesses this day, that I have bought all that was Elimelech’s, and all that was Chilion’s and Mahlon’s, of the hand of Naomi.",
+          "decoded": "And Boaz said to the elders and to all the people, You are witnesses today that I have bought all that belonged to Elimelech, and all that belonged to Chilion and Mahlon, from Naomi.",
+          "context": ""
+        },
+        {
+          "verse": 10,
+          "kjv": "Moreover Ruth the Moabitess, the wife of Mahlon, have I purchased to be my wife, to raise up the name of the dead upon his inheritance, that the name of the dead be not cut off from among his brethren, and from the gate of his place: ye are witnesses this day.",
+          "decoded": "Furthermore, I have acquired Ruth the Moabitess, the wife of Mahlon, to be my wife, to continue the name of the deceased on his inheritance, so that the name of the deceased will not be eliminated among his relatives and from the town gate; you are witnesses today.",
+          "context": ""
+        },
+        {
+          "verse": 11,
+          "kjv": "And all the people that were in the gate, and the elders, said, We are witnesses. The LORD make the woman that is come into thine house like Rachel and like Leah, which two did build the house of Israel: and do thou worthily in Ephratah, and be famous in Bethlehem:",
+          "decoded": "All the people who were at the city gate, along with the elders, said, \"We are witnesses. May the LORD make the woman who has come into your house like Rachel and Leah, who together built the house of Israel. May you act honorably in Ephrathah and become well known in Bethlehem.\"",
+          "context": ""
+        },
+        {
+          "verse": 12,
+          "kjv": "And let thy house be like the house of Pharez, whom Tamar bare unto Judah, of the seed which the LORD shall give thee of this young woman.",
+          "decoded": "And may your family be like the family of Pharez, whom Tamar gave birth to for Judah, from the offspring that the LORD will give you from this young woman.",
+          "context": ""
+        },
+        {
+          "verse": 13,
+          "kjv": "So Boaz took Ruth, and she was his wife: and when he went in unto her, the LORD gave her conception, and she bare a son.",
+          "decoded": "So Boaz married Ruth, and she became his wife. When he slept with her, the LORD enabled her to become pregnant, and she gave birth to a son.",
+          "context": ""
+        },
+        {
+          "verse": 14,
+          "kjv": "And the women said unto Naomi, Blessed be the LORD, which hath not left thee this day without a kinsman, that his name may be famous in Israel.",
+          "decoded": "And the women said to Naomi, Blessed be the LORD, who has not left you today without a relative, so that his name may be well known in Israel.",
+          "context": ""
+        },
+        {
+          "verse": 15,
+          "kjv": "And he shall be unto thee a restorer of thy life, and a nourisher of thine old age: for thy daughter in law, which loveth thee, which is better to thee than seven sons, hath born him.",
+          "decoded": "And he will be to you a restorer of your life and a supporter in your old age; because your daughter-in-law, who loves you and is better to you than seven sons, has given birth to him.",
+          "context": ""
+        },
+        {
+          "verse": 16,
+          "kjv": "And Naomi took the child, and laid it in her bosom, and became nurse unto it.",
+          "decoded": "And Naomi took the child, held it close to her chest, and became its caregiver.",
+          "context": ""
+        },
+        {
+          "verse": 17,
+          "kjv": "And the women her neighbours gave it a name, saying, There is a son born to Naomi; and they called his name Obed: he is the father of Jesse, the father of David.",
+          "decoded": "The women who lived near her gave the baby a name, saying, 'Naomi has a son now.' They named him Obed. He is the father of Jesse, who is the father of David.",
+          "context": ""
+        },
+        {
+          "verse": 18,
+          "kjv": "Now these are the generations of Pharez: Pharez begat Hezron,",
+          "decoded": "These are the descendants of Pharez: Pharez fathered Hezron,",
+          "context": ""
+        },
+        {
+          "verse": 19,
+          "kjv": "And Hezron begat Ram, and Ram begat Amminadab,",
+          "decoded": "Hezron became the father of Ram, and Ram became the father of Amminadab,",
+          "context": ""
+        },
+        {
+          "verse": 20,
+          "kjv": "And Amminadab begat Nahshon, and Nahshon begat Salmon,",
+          "decoded": "Amminadab became the father of Nahshon, and Nahshon became the father of Salmon,",
+          "context": ""
+        },
+        {
+          "verse": 21,
+          "kjv": "And Salmon begat Boaz, and Boaz begat Obed,",
+          "decoded": "Salmon became the father of Boaz, and Boaz became the father of Obed,",
+          "context": ""
+        },
+        {
+          "verse": 22,
+          "kjv": "And Obed begat Jesse, and Jesse begat David.",
+          "decoded": "Obed became the father of Jesse, and Jesse became the father of David.",
+          "context": ""
+        }
+      ]
+    }
+  ]
+}

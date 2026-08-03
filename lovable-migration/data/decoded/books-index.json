@@ -1,0 +1,464 @@
+[
+  {
+    "bookName": "Genesis",
+    "slug": "genesis",
+    "totalChapters": 50,
+    "totalVerses": 1533,
+    "description": "The Book of Genesis \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Exodus",
+    "slug": "exodus",
+    "totalChapters": 40,
+    "totalVerses": 1213,
+    "description": "The Book of Exodus \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Leviticus",
+    "slug": "leviticus",
+    "totalChapters": 27,
+    "totalVerses": 859,
+    "description": "The Book of Leviticus \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Numbers",
+    "slug": "numbers",
+    "totalChapters": 36,
+    "totalVerses": 1288,
+    "description": "The Book of Numbers \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Deuteronomy",
+    "slug": "deuteronomy",
+    "totalChapters": 34,
+    "totalVerses": 959,
+    "description": "The Book of Deuteronomy \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Joshua",
+    "slug": "joshua",
+    "totalChapters": 24,
+    "totalVerses": 658,
+    "description": "The Book of Joshua \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Judges",
+    "slug": "judges",
+    "totalChapters": 21,
+    "totalVerses": 618,
+    "description": "The Book of Judges \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Ruth",
+    "slug": "ruth",
+    "totalChapters": 4,
+    "totalVerses": 85,
+    "description": "The Book of Ruth \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 Samuel",
+    "slug": "1-samuel",
+    "totalChapters": 31,
+    "totalVerses": 810,
+    "description": "The Book of 1 Samuel \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 Samuel",
+    "slug": "2-samuel",
+    "totalChapters": 24,
+    "totalVerses": 695,
+    "description": "The Book of 2 Samuel \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 Kings",
+    "slug": "1-kings",
+    "totalChapters": 22,
+    "totalVerses": 816,
+    "description": "The Book of 1 Kings \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 Kings",
+    "slug": "2-kings",
+    "totalChapters": 25,
+    "totalVerses": 719,
+    "description": "The Book of 2 Kings \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 Chronicles",
+    "slug": "1-chronicles",
+    "totalChapters": 29,
+    "totalVerses": 942,
+    "description": "The Book of 1 Chronicles \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 Chronicles",
+    "slug": "2-chronicles",
+    "totalChapters": 36,
+    "totalVerses": 822,
+    "description": "The Book of 2 Chronicles \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Ezra",
+    "slug": "ezra",
+    "totalChapters": 10,
+    "totalVerses": 280,
+    "description": "The Book of Ezra \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Nehemiah",
+    "slug": "nehemiah",
+    "totalChapters": 13,
+    "totalVerses": 406,
+    "description": "The Book of Nehemiah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Esther",
+    "slug": "esther",
+    "totalChapters": 10,
+    "totalVerses": 167,
+    "description": "The Book of Esther \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Job",
+    "slug": "job",
+    "totalChapters": 42,
+    "totalVerses": 1070,
+    "description": "The Book of Job \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Psalms",
+    "slug": "psalms",
+    "totalChapters": 150,
+    "totalVerses": 2461,
+    "description": "The Book of Psalms \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Proverbs",
+    "slug": "proverbs",
+    "totalChapters": 31,
+    "totalVerses": 915,
+    "description": "The Book of Proverbs \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Ecclesiastes",
+    "slug": "ecclesiastes",
+    "totalChapters": 12,
+    "totalVerses": 222,
+    "description": "The Book of Ecclesiastes \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Song of Solomon",
+    "slug": "song-of-solomon",
+    "totalChapters": 8,
+    "totalVerses": 117,
+    "description": "The Book of Song of Solomon \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Isaiah",
+    "slug": "isaiah",
+    "totalChapters": 66,
+    "totalVerses": 1292,
+    "description": "The Book of Isaiah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Jeremiah",
+    "slug": "jeremiah",
+    "totalChapters": 52,
+    "totalVerses": 1364,
+    "description": "The Book of Jeremiah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Lamentations",
+    "slug": "lamentations",
+    "totalChapters": 5,
+    "totalVerses": 154,
+    "description": "The Book of Lamentations \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Ezekiel",
+    "slug": "ezekiel",
+    "totalChapters": 48,
+    "totalVerses": 1273,
+    "description": "The Book of Ezekiel \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Daniel",
+    "slug": "daniel",
+    "totalChapters": 12,
+    "totalVerses": 357,
+    "description": "The Book of Daniel \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Hosea",
+    "slug": "hosea",
+    "totalChapters": 14,
+    "totalVerses": 197,
+    "description": "The Book of Hosea \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Joel",
+    "slug": "joel",
+    "totalChapters": 3,
+    "totalVerses": 73,
+    "description": "The Book of Joel \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Amos",
+    "slug": "amos",
+    "totalChapters": 9,
+    "totalVerses": 146,
+    "description": "The Book of Amos \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Obadiah",
+    "slug": "obadiah",
+    "totalChapters": 1,
+    "totalVerses": 21,
+    "description": "The Book of Obadiah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Jonah",
+    "slug": "jonah",
+    "totalChapters": 4,
+    "totalVerses": 48,
+    "description": "The Book of Jonah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Micah",
+    "slug": "micah",
+    "totalChapters": 7,
+    "totalVerses": 105,
+    "description": "The Book of Micah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Nahum",
+    "slug": "nahum",
+    "totalChapters": 3,
+    "totalVerses": 47,
+    "description": "The Book of Nahum \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Habakkuk",
+    "slug": "habakkuk",
+    "totalChapters": 3,
+    "totalVerses": 56,
+    "description": "The Book of Habakkuk \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Zephaniah",
+    "slug": "zephaniah",
+    "totalChapters": 3,
+    "totalVerses": 53,
+    "description": "The Book of Zephaniah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Haggai",
+    "slug": "haggai",
+    "totalChapters": 2,
+    "totalVerses": 38,
+    "description": "The Book of Haggai \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Zechariah",
+    "slug": "zechariah",
+    "totalChapters": 14,
+    "totalVerses": 211,
+    "description": "The Book of Zechariah \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Malachi",
+    "slug": "malachi",
+    "totalChapters": 4,
+    "totalVerses": 55,
+    "description": "The Book of Malachi \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Matthew",
+    "slug": "matthew",
+    "totalChapters": 28,
+    "totalVerses": 1071,
+    "description": "The Book of Matthew \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Mark",
+    "slug": "mark",
+    "totalChapters": 16,
+    "totalVerses": 671,
+    "description": "The Book of Mark \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Luke",
+    "slug": "luke",
+    "totalChapters": 24,
+    "totalVerses": 1141,
+    "description": "The Book of Luke \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "John",
+    "slug": "john",
+    "totalChapters": 21,
+    "totalVerses": 868,
+    "description": "The Book of John \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Acts",
+    "slug": "acts",
+    "totalChapters": 28,
+    "totalVerses": 996,
+    "description": "The Book of Acts \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Romans",
+    "slug": "romans",
+    "totalChapters": 16,
+    "totalVerses": 430,
+    "description": "The Book of Romans \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 Corinthians",
+    "slug": "1-corinthians",
+    "totalChapters": 16,
+    "totalVerses": 434,
+    "description": "The Book of 1 Corinthians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 Corinthians",
+    "slug": "2-corinthians",
+    "totalChapters": 13,
+    "totalVerses": 255,
+    "description": "The Book of 2 Corinthians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Galatians",
+    "slug": "galatians",
+    "totalChapters": 6,
+    "totalVerses": 148,
+    "description": "The Book of Galatians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Ephesians",
+    "slug": "ephesians",
+    "totalChapters": 6,
+    "totalVerses": 154,
+    "description": "The Book of Ephesians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Philippians",
+    "slug": "philippians",
+    "totalChapters": 4,
+    "totalVerses": 104,
+    "description": "The Book of Philippians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Colossians",
+    "slug": "colossians",
+    "totalChapters": 4,
+    "totalVerses": 95,
+    "description": "The Book of Colossians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 Thessalonians",
+    "slug": "1-thessalonians",
+    "totalChapters": 5,
+    "totalVerses": 89,
+    "description": "The Book of 1 Thessalonians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 Thessalonians",
+    "slug": "2-thessalonians",
+    "totalChapters": 3,
+    "totalVerses": 46,
+    "description": "The Book of 2 Thessalonians \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 Timothy",
+    "slug": "1-timothy",
+    "totalChapters": 6,
+    "totalVerses": 112,
+    "description": "The Book of 1 Timothy \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 Timothy",
+    "slug": "2-timothy",
+    "totalChapters": 4,
+    "totalVerses": 82,
+    "description": "The Book of 2 Timothy \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Titus",
+    "slug": "titus",
+    "totalChapters": 3,
+    "totalVerses": 45,
+    "description": "The Book of Titus \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Philemon",
+    "slug": "philemon",
+    "totalChapters": 1,
+    "totalVerses": 25,
+    "description": "The Book of Philemon \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Hebrews",
+    "slug": "hebrews",
+    "totalChapters": 13,
+    "totalVerses": 299,
+    "description": "The Book of Hebrews \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "James",
+    "slug": "james",
+    "totalChapters": 5,
+    "totalVerses": 107,
+    "description": "The Book of James \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 Peter",
+    "slug": "1-peter",
+    "totalChapters": 5,
+    "totalVerses": 105,
+    "description": "The Book of 1 Peter \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 Peter",
+    "slug": "2-peter",
+    "totalChapters": 3,
+    "totalVerses": 61,
+    "description": "The Book of 2 Peter \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "1 John",
+    "slug": "1-john",
+    "totalChapters": 5,
+    "totalVerses": 105,
+    "description": "The Book of 1 John \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "2 John",
+    "slug": "2-john",
+    "totalChapters": 1,
+    "totalVerses": 13,
+    "description": "The Book of 2 John \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "3 John",
+    "slug": "3-john",
+    "totalChapters": 1,
+    "totalVerses": 14,
+    "description": "The Book of 3 John \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Jude",
+    "slug": "jude",
+    "totalChapters": 1,
+    "totalVerses": 25,
+    "description": "The Book of Jude \u2014 every verse decoded into plain, modern English (DMLV)."
+  },
+  {
+    "bookName": "Revelation",
+    "slug": "revelation",
+    "totalChapters": 22,
+    "totalVerses": 399,
+    "description": "The Book of Revelation \u2014 every verse decoded into plain, modern English (DMLV)."
+  }
+]

@@ -6,3 +6,10 @@ id = "Ca041Zk_PxALMkIc7QxDe"
 uri = "file://builds/faith-empire-1.6.3-19.aab.tar.gz"
 type = "unspecified"
 title = "Faith Empire 1.6.3 (build 19) — Android AAB (tar.gz)"
+
+[[outputs]]
+id = "v1uH53gxbUPdlfHQZb5MQ"
+uri = "file://lovable-migration/decoded-faith-empire-lovable-package.zip"
+type = "unspecified"
+title = "Lovable Migration Package (complete)"
+description = "Master prompt + 5 spec documents + all app data (365 devotionals, 66 decoded books, prayers, database exports) for rebuilding Decoded Faith Empire on lovable.dev."
